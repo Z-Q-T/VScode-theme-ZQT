@@ -1,0 +1,31 @@
+{
+	"name": "zqt-theme",
+	"description": "A theme based on Dark+(default dark)",
+	"displayName": "ZQT Theme",
+	"categories": [
+		"Themes"
+	],
+	"version": "0.0.1",
+	"publisher": "ZQT (original publisher: vscode)",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.40.1"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"id": "ZQT Dark+",
+				"label": "ZQT Dark+",
+				"uiTheme": "vs-dark",
+				"path": "./themes/zqt_theme.json"
+			}
+		],
+		"iconThemes": [
+			{
+				"id": "vs-minimal",
+				"label": "Minimal (Visual Studio Code)",
+				"path": "./fileicons/vs_minimal-icon-theme.json"
+			}
+		]
+	}
+}
