@@ -9,10 +9,21 @@
 		"editor.selectionBackground": "#0084ff75",
 		"editor.inactiveSelectionBackground": "#3A3D41",
 		"editor.selectionHighlightBackground": "#f6b6ff3f",
-		"editorIndentGuide.background": "#404040",
-		"editorIndentGuide.activeBackground": "#707070",
+		"minimap.selectionHighlight": "#1c69b17a",
 
-		"editor.lineHighlightBackground": "#ffffff18",
+		"editor.findMatchBackground": "#23fc365b",
+		"editor.findMatchHighlightBackground":"#d117ff5b",
+		"minimap.findMatchHighlight":"#d42affe7",
+
+		"editor.hoverHighlightBackground":"#faea5727",
+
+		"editorLink.activeForeground": "#ff730042",
+
+		"editor.lineHighlightBackground": "#ffffff16",
+		"editor.rangeHighlightBackground": "#7ccbff31",
+
+		"editorIndentGuide.background": "#404040",
+		"editorIndentGuide.activeBackground": "#686868",
 		
 		"list.dropBackground": "#383B3D",
 		"activityBarBadge.background": "#007ACC",
@@ -34,7 +45,9 @@
 		"sideBarSectionHeader.background":"#444",
 		"sideBarSectionHeader.foreground": "#cfcfcf",
 
-		"tab.unfocusedActiveBackground": "#252525",
+		"tab.unfocusedActiveBackground": "#292929",
 		"tab.unfocusedActiveForeground": "#7c7c7c",
+		
+		
 	}
 }
