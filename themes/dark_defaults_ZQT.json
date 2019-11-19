@@ -30,5 +30,11 @@
 		"statusBarItem.remoteBackground": "#2AA19899",
 		"statusBarItem.prominentBackground": "#003847",
 		"statusBarItem.prominentHoverBackground": "#003847",
+
+		"sideBarSectionHeader.background":"#444",
+		"sideBarSectionHeader.foreground": "#cfcfcf",
+
+		"tab.unfocusedActiveBackground": "#252525",
+		"tab.unfocusedActiveForeground": "#7c7c7c",
 	}
 }
