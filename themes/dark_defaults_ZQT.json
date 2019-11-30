@@ -55,7 +55,11 @@
 		"editorIndentGuide.background": "#404040",
 		"editorIndentGuide.activeBackground": "#686868",
 		
+		"editorRuler.foreground": "#3c3c3c",
 		
+		"editorBracketMatch.background":"#ffee001f",
+		"editorBracketMatch.border": "#ffee00c5",
+
 		"activityBarBadge.background": "#007ACC",
 		
 		"input.placeholderForeground": "#A6A6A6",
@@ -72,10 +76,6 @@
 		"statusBarItem.prominentBackground": "#003847",
 		"statusBarItem.prominentHoverBackground": "#003847",
 
-		
-
-
-		
 		
 	}
 }
