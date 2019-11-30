@@ -34,8 +34,8 @@
 		"editor.selectionHighlightBackground": "#f6b6ff3f",
 		"minimap.selectionHighlight": "#1c69b17a",
 
-		"editor.wordHighlightBackground":"#2bff005d",
-		"editor.wordHighlightStrongBackground": "#ff910070",
+		"editor.wordHighlightBackground":"#2bff0041",
+		"editor.wordHighlightStrongBackground": "#ff9d1d62",
 		
 		"editor.findMatchBackground": "#23fc365b",
 		"editor.findMatchHighlightBackground":"#d117ff5b",
@@ -57,7 +57,7 @@
 		
 		"editorRuler.foreground": "#3c3c3c",
 		
-		"editorBracketMatch.background":"#ffee001f",
+		"editorBracketMatch.background":"#ffee0000",
 		"editorBracketMatch.border": "#ffee00c5",
 
 		"activityBarBadge.background": "#007ACC",
