@@ -43,11 +43,15 @@
 
 		"editor.hoverHighlightBackground":"#faea5727",
 
-		"editorLink.activeForeground": "#ff730042",
-
 		"editor.lineHighlightBackground": "#ffffff16",
 		"editor.rangeHighlightBackground": "#7ccbff31",
 
+		"editorLink.activeForeground": "#ff730042",
+
+		"editor.findRangeHighlightBackground": "#ff990021",
+		
+		"editorWhitespace.foreground": "#2a465a",
+		
 		"editorIndentGuide.background": "#404040",
 		"editorIndentGuide.activeBackground": "#686868",
 		
