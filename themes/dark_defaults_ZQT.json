@@ -2,6 +2,19 @@
 	"$schema": "vscode://schemas/color-theme",
 	"name": "Dark Default Colors ZQT",
 	"colors": {
+		"widget.shadow":"#000",
+
+		"scrollbar.shadow": "#000",
+		"scrollbarSlider.background":"#ffffff25",
+		"scrollbarSlider.hoverBackground":"#ffffff40",
+		"scrollbarSlider.activeBackground":"#ffffff60",
+
+		
+		"list.dropBackground": "#3B3B3B",
+		"list.hoverBackground":"#ffffff48",
+		"list.errorForeground": "#ff0015",
+		"list.warningForeground":"#ff9100",
+
 		"editor.background": "#1E1E1E",
 		"editor.foreground": "#dfdfdf",
 		"editorLineNumber.foreground": "#777",
@@ -25,7 +38,7 @@
 		"editorIndentGuide.background": "#404040",
 		"editorIndentGuide.activeBackground": "#686868",
 		
-		"list.dropBackground": "#383B3D",
+		
 		"activityBarBadge.background": "#007ACC",
 		"sideBarTitle.foreground": "#BBBBBB",
 		"input.placeholderForeground": "#A6A6A6",
