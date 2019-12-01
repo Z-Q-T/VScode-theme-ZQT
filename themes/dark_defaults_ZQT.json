@@ -60,6 +60,24 @@
 		"editorBracketMatch.background":"#ffee0000",
 		"editorBracketMatch.border": "#ffee00c5",
 
+		"editorOverviewRuler.findMatchForeground": "#d42affe7",
+		"editorOverviewRuler.rangeHighlightForeground": "#7ccbff31",
+		"editorOverviewRuler.selectionHighlightForeground": "#f6b6ff3f",
+		"editorOverviewRuler.wordHighlightForeground": "#2bff0041",
+		"editorOverviewRuler.wordHighlightStrongForeground": "#ff9d1d62",
+		"editorOverviewRuler.modifiedForeground":"#fbff00",
+		"editorOverviewRuler.addedForeground":"#00ff6a",
+		"editorOverviewRuler.deletedForeground":"#ff0040",
+		"editorOverviewRuler.errorForeground":"#ff0015",
+		"editorOverviewRuler.warningForeground":"#ff8800",
+		"editorOverviewRuler.infoForeground":"#0077ff",
+		"editorOverviewRuler.bracketMatchForeground":"#fffb0042",
+
+		"editorError.foreground":"#ff0015",
+		"editorWarning.foreground":"#ff8800",
+		"editorInfo.foreground": "#0077ff",
+		"editorHint.foreground": "#19d400",
+
 		"activityBarBadge.background": "#007ACC",
 		
 		"input.placeholderForeground": "#A6A6A6",
