@@ -88,6 +88,8 @@
 		"editorGutter.deletedBackground":"#ff0040b9",
 		"editorGutter.commentRangeForeground":"#686868",
 
+		"editorWidget.background": "#2a2a2a",
+
 		"activityBarBadge.background": "#007ACC",
 		
 		"input.placeholderForeground": "#A6A6A6",
