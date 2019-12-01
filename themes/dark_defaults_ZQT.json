@@ -113,9 +113,23 @@
 
 		"titleBar.activeForeground":"#ddd",
 		
-		"menu.background": "#252525",
+		"menu.background": "#2a2a2a",
 		"menu.foreground": "#CCCCCC",
 		
+		"notifications.background":"#2a2a2a",
+
+		"quickInput.background": "#2a2a2a",
+
+		"gitDecoration.modifiedResourceForeground": "#ffee00c0",
+		"gitDecoration.addedResourceForeground": "#00ff80a9",
+		"gitDecoration.deletedResourceForeground":"#ff2870b9",
+		"gitDecoration.untrackedResourceForeground": "#858585",
+		"gitDecoration.ignoredResourceForeground": "#686868",
+		"gitDecoration.conflictingResourceForeground": "#aa45aa",
+		"gitDecoration.submoduleResourceForeground": "#888dc2",
+
+		"breadcrumb.background":"#202020",
+
 		"input.placeholderForeground": "#A6A6A6",
 		"settings.textInputBackground": "#292929",
 		"settings.numberInputBackground": "#292929",
