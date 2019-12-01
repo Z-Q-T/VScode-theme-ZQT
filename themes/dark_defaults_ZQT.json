@@ -65,9 +65,9 @@
 		"editorOverviewRuler.selectionHighlightForeground": "#f6b6ff3f",
 		"editorOverviewRuler.wordHighlightForeground": "#2bff0041",
 		"editorOverviewRuler.wordHighlightStrongForeground": "#ff9d1d62",
-		"editorOverviewRuler.modifiedForeground":"#fbff00",
-		"editorOverviewRuler.addedForeground":"#00ff6a",
-		"editorOverviewRuler.deletedForeground":"#ff0040",
+		"editorOverviewRuler.modifiedForeground":"#ffee00c0",
+		"editorOverviewRuler.addedForeground":"#00ff6aa9",
+		"editorOverviewRuler.deletedForeground":"#ff0040b9",
 		"editorOverviewRuler.errorForeground":"#ff0015",
 		"editorOverviewRuler.warningForeground":"#ff8800",
 		"editorOverviewRuler.infoForeground":"#0077ff",
@@ -77,6 +77,16 @@
 		"editorWarning.foreground":"#ff8800",
 		"editorInfo.foreground": "#0077ff",
 		"editorHint.foreground": "#19d400",
+
+		"diffEditor.insertedTextBackground": "#00ff6a42",
+		"diffEditor.removedTextBackground":"#ff004048",
+
+		"editorUnnecessaryCode.opacity": "#00000085",
+
+		"editorGutter.modifiedBackground":"#ffee00c0",
+		"editorGutter.addedBackground":"#00ff6aa9",
+		"editorGutter.deletedBackground":"#ff0040b9",
+		"editorGutter.commentRangeForeground":"#686868",
 
 		"activityBarBadge.background": "#007ACC",
 		
@@ -94,6 +104,5 @@
 		"statusBarItem.prominentBackground": "#003847",
 		"statusBarItem.prominentHoverBackground": "#003847",
 
-		
 	}
 }
