@@ -8,12 +8,11 @@
 		"scrollbarSlider.background":"#ffffff25",
 		"scrollbarSlider.hoverBackground":"#ffffff40",
 		"scrollbarSlider.activeBackground":"#ffffff60",
-
 		
 		"list.dropBackground": "#3B3B3B",
 		"list.hoverBackground":"#ffffff48",
-		"list.errorForeground": "#ff0015",
-		"list.warningForeground":"#ff8800",
+		"list.errorForeground": "#ff3b4b",
+		"list.warningForeground":"#ff7b00",
 
 		"activityBarBadge.background": "#007ACC",
 
@@ -45,7 +44,6 @@
 
 		"editor.findMatchBackground": "#23fc3562",
 		"editor.findMatchHighlightBackground":"#d42aff62",
-		
 
 		"editor.hoverHighlightBackground":"#faea5727",
 
@@ -68,12 +66,12 @@
 
 		"editorOverviewRuler.findMatchForeground": "#d42affe7",
 		"editorOverviewRuler.rangeHighlightForeground": "#7ccbff31",
-		"editorOverviewRuler.selectionHighlightForeground": "#35d4bf41",
-		"editorOverviewRuler.wordHighlightForeground": "#2bff0041",
+		"editorOverviewRuler.selectionHighlightForeground": "#35d4bf50",
+		"editorOverviewRuler.wordHighlightForeground": "#73ff0041",
 		"editorOverviewRuler.wordHighlightStrongForeground": "#ff9d1d62",
-		"editorOverviewRuler.modifiedForeground":"#ffee00c0",
+		"editorOverviewRuler.modifiedForeground":"#fdd72dc0",
 		"editorOverviewRuler.addedForeground":"#00ff80a9",
-		"editorOverviewRuler.deletedForeground":"#ff2870b9",
+		"editorOverviewRuler.deletedForeground":"#ff4683b9",
 		"editorOverviewRuler.errorForeground":"#ff0015",
 		"editorOverviewRuler.warningForeground":"#ff8800",
 		"editorOverviewRuler.infoForeground":"#0077ff",
@@ -89,9 +87,9 @@
 
 		"editorUnnecessaryCode.opacity": "#00000085",
 
-		"editorGutter.modifiedBackground":"#ffee00c0",
+		"editorGutter.modifiedBackground":"#fdd72dc0",
 		"editorGutter.addedBackground":"#00ff80a9",
-		"editorGutter.deletedBackground":"#ff2870b9",
+		"editorGutter.deletedBackground":"#ff4683b9",
 		"editorGutter.commentRangeForeground":"#686868",
 
 		"editorWidget.background": "#2a2a2a",
@@ -119,9 +117,9 @@
 
 		"quickInput.background": "#2a2a2a",
 
-		"gitDecoration.modifiedResourceForeground": "#ffee00c0",
+		"gitDecoration.modifiedResourceForeground": "#fdd72dc0",
 		"gitDecoration.addedResourceForeground": "#00ff80a9",
-		"gitDecoration.deletedResourceForeground":"#ff2870b9",
+		"gitDecoration.deletedResourceForeground":"#ff4683b9",
 		"gitDecoration.untrackedResourceForeground": "#858585",
 		"gitDecoration.ignoredResourceForeground": "#686868",
 		"gitDecoration.conflictingResourceForeground": "#aa45aa",
@@ -137,6 +135,7 @@
 		"settings.textInputBackground": "#292929",
 		"settings.numberInputBackground": "#292929",
 
-
 	}
 }
+
+
