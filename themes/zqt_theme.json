@@ -12,7 +12,7 @@
 				"source.powershell variable.other.member"
 			],
 			"settings": {
-				"foreground": "#DCDCAA"
+				"foreground": "#95eea4"
 			}
 		},
 		{
@@ -117,7 +117,7 @@
 				"support.constant.color"
 			],
 			"settings": {
-				"foreground": "#da81cb"
+				"foreground": "#c4779b"
 			}
 		},
 		{
