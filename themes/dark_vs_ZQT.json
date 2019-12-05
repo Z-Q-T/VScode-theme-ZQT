@@ -63,19 +63,19 @@
 		{
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "#6ac8ec"
+				"foreground": "#2eaa9a"
 			}
 		},
 		{
 			"scope": "entity.name.tag.css",
 			"settings": {
-				"foreground": "#6ac8ec"
+				"foreground": "#2eaa9a"
 			}
 		},
 		{
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#84f5aa"
+				"foreground": "#82dcff"
 			}
 		},
 		{
@@ -91,7 +91,7 @@
 				"entity.other.attribute-name.scss"
 			],
 			"settings": {
-				"foreground": "#ff9eb3"
+				"foreground": "#f0a1b5"
 			}
 		},
 		{
@@ -228,7 +228,7 @@
 				"entity.name.operator.custom-literal.string",
 			],
 			"settings": {
-				"foreground": "#ff9eb3"
+				"foreground": "#f0a1b5"
 			}
 		},
 		{
@@ -279,7 +279,7 @@
 				"source.coffee.embedded"
 			],
 			"settings": {
-				"foreground": "#8dddb5"
+				"foreground": "#8fc3ee"
 			}
 		},
 		{
