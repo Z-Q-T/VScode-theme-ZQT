@@ -51,7 +51,7 @@
 				"keyword.operator.minus.exponent"
 			],
 			"settings": {
-				"foreground": "#b5cea8"
+				"foreground": "#f0938c"
 			}
 		},
 		{
@@ -63,19 +63,19 @@
 		{
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "#7cc2fc"
+				"foreground": "#6ac8ec"
 			}
 		},
 		{
 			"scope": "entity.name.tag.css",
 			"settings": {
-				"foreground": "#d7ba7d"
+				"foreground": "#6ac8ec"
 			}
 		},
 		{
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#9cdcfe"
+				"foreground": "#84f5aa"
 			}
 		},
 		{
@@ -91,7 +91,7 @@
 				"entity.other.attribute-name.scss"
 			],
 			"settings": {
-				"foreground": "#d7ba7d"
+				"foreground": "#ff9eb3"
 			}
 		},
 		{
@@ -228,7 +228,7 @@
 				"entity.name.operator.custom-literal.string",
 			],
 			"settings": {
-				"foreground": "#ce9178"
+				"foreground": "#ff9eb3"
 			}
 		},
 		{
@@ -279,7 +279,7 @@
 				"source.coffee.embedded"
 			],
 			"settings": {
-				"foreground": "#98f0dd"
+				"foreground": "#8dddb5"
 			}
 		},
 		{
@@ -320,7 +320,7 @@
 		{
 			"scope": "keyword.other.unit",
 			"settings": {
-				"foreground": "#b5cea8"
+				"foreground": "#e5e9ad"
 			}
 		},
 		{
