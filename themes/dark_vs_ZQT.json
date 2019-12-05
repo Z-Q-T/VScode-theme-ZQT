@@ -51,7 +51,7 @@
 				"keyword.operator.minus.exponent"
 			],
 			"settings": {
-				"foreground": "#ff8282"
+				"foreground": "#eb8072"
 			}
 		},
 		{
@@ -63,19 +63,19 @@
 		{
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "#21ddcd"
+				"foreground": "#45e7da"
 			}
 		},
 		{
 			"scope": "entity.name.tag.css",
 			"settings": {
-				"foreground": "#21ddcd"
+				"foreground": "#45e7da"
 			}
 		},
 		{
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#84dcff"
+				"foreground": "#0d989c"
 			}
 		},
 		{
@@ -279,7 +279,7 @@
 				"source.coffee.embedded"
 			],
 			"settings": {
-				"foreground": "#a3d6eb"
+				"foreground": "#79aad3"
 			}
 		},
 		{
@@ -320,7 +320,7 @@
 		{
 			"scope": "keyword.other.unit",
 			"settings": {
-				"foreground": "#5c98f1"
+				"foreground": "#a4dbff"
 			}
 		},
 		{
