@@ -112,12 +112,20 @@
 				"support.constant.font-name",
 				"support.constant.media-type",
 				"support.constant.media",
-				"constant.other.color.rgb-value",
 				"constant.other.rgb-value",
 				"support.constant.color"
 			],
 			"settings": {
-				"foreground": "#c9578c"
+				"foreground": "#f0a9e6"
+			}
+		},
+		{
+			"name": "CSS property value",
+			"scope": [
+				"constant.other.color.rgb-value",
+			],
+			"settings": {
+				"foreground": "#f8b074"
 			}
 		},
 		{
