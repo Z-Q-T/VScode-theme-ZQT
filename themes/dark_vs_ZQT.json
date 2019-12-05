@@ -75,7 +75,7 @@
 		{
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#8bd9f8"
+				"foreground": "#84dcff"
 			}
 		},
 		{
@@ -279,7 +279,7 @@
 				"source.coffee.embedded"
 			],
 			"settings": {
-				"foreground": "#90c9f7"
+				"foreground": "#a3d6eb"
 			}
 		},
 		{
