@@ -15,7 +15,17 @@
 				"foreground": "#d379ee"
 			}
 		},
-
+		{
+			"scope": [
+				"support.function.misc.css",
+				"support.function.gradient.css",
+				"support.function.url.css",
+				"support.function.transform.css",
+			],
+			"settings": {
+				"foreground": "#5fd38f"
+			}
+		},
 		{
 			"name": "Types declaration and references",
 			"scope": [
@@ -95,6 +105,15 @@
 			],
 			"settings": {
 				"foreground": "#9CDCFE"
+			}
+		},
+		{
+			"scope": [
+				"variable.css",
+				"variable.argument.css",
+			],
+			"settings": {
+				"foreground": "#fedc9c"
 			}
 		},
 		{
