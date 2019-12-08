@@ -38,7 +38,7 @@
 		"editorLineNumber.foreground": "#666666",
 		
 		"editor.selectionBackground": "#0084ff8c",
-		"editor.inactiveSelectionBackground": "#282d31",
+		"editor.inactiveSelectionBackground": "#536a7e63",
 		"editor.selectionHighlightBackground": "#dd68f53d",
 		
 		"editor.wordHighlightBackground":"#5afc6231",
@@ -52,7 +52,7 @@
 		"editor.lineHighlightBackground": "#ffffff16",
 		"editor.rangeHighlightBackground": "#dc2aff31",
 
-		"editorLink.activeForeground": "#ff730042",
+		"editorLink.activeForeground": "#73ff009f",
 
 		"editor.findRangeHighlightBackground": "#ff990021",
 		
@@ -69,7 +69,7 @@
 		"editorOverviewRuler.findMatchForeground": "#d42affbd",
 		"editorOverviewRuler.rangeHighlightForeground": "#7ccbff31",
 		"editorOverviewRuler.selectionHighlightForeground": "#dd68f53d",
-		"editorOverviewRuler.wordHighlightForeground": "#5afc623a",
+		"editorOverviewRuler.wordHighlightForeground": "#5afc6248",
 		"editorOverviewRuler.wordHighlightStrongForeground": "#ff9d1d4d",
 		"editorOverviewRuler.modifiedForeground":"#ffe23de5",
 		"editorOverviewRuler.addedForeground":"#00ff80a9",
@@ -77,7 +77,7 @@
 		"editorOverviewRuler.errorForeground":"#ff0015",
 		"editorOverviewRuler.warningForeground":"#ff8800",
 		"editorOverviewRuler.infoForeground":"#0077ff",
-		"editorOverviewRuler.bracketMatchForeground":"#fffb0042",
+		"editorOverviewRuler.bracketMatchForeground":"#4aabeccc",
 
 		"editorError.foreground":"#ff0015",
 		"editorWarning.foreground":"#ff8800",
