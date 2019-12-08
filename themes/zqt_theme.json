@@ -81,7 +81,7 @@
 				"entity.name.operator"
 			],
 			"settings": {
-				"foreground": "#C586C0"
+				"foreground": "#23e79c"
 			}
 		},
 		{
@@ -125,7 +125,7 @@
 				"constant.other.color.rgb-value",
 			],
 			"settings": {
-				"foreground": "#f8b074"
+				"foreground": "#f89e74"
 			}
 		},
 		{
@@ -185,6 +185,12 @@
 			"scope": "entity.name.label",
 			"settings": {
 				"foreground": "#C8C8C8"
+			}
+		},
+		{
+			"scope": "keyword.other.important.css",
+			"settings": {
+				"foreground": "#58a6ff"
 			}
 		}
 	]

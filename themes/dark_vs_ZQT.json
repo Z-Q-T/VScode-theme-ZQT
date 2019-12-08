@@ -51,7 +51,7 @@
 				"keyword.operator.minus.exponent"
 			],
 			"settings": {
-				"foreground": "#eb8072"
+				"foreground": "#e98e8e"
 			}
 		},
 		{
@@ -63,13 +63,13 @@
 		{
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "#45e7da"
+				"foreground": "#5be0d5"
 			}
 		},
 		{
 			"scope": "entity.name.tag.css",
 			"settings": {
-				"foreground": "#45e7da"
+				"foreground": "#5be0d5"
 			}
 		},
 		{
@@ -320,7 +320,7 @@
 		{
 			"scope": "keyword.other.unit",
 			"settings": {
-				"foreground": "#a4dbff"
+				"foreground": "#b0c4e9"
 			}
 		},
 		{
