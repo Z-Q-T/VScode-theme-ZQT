@@ -12,9 +12,10 @@
 				"source.powershell variable.other.member"
 			],
 			"settings": {
-				"foreground": "#95eea4"
+				"foreground": "#d379ee"
 			}
 		},
+
 		{
 			"name": "Types declaration and references",
 			"scope": [
@@ -178,7 +179,7 @@
 		{
 			"scope": "constant.character.escape",
 			"settings": {
-				"foreground": "#d7ba7d"
+				"foreground": "#f0bea7"
 			}
 		},
 		{
@@ -190,7 +191,8 @@
 		{
 			"scope": "keyword.other.important.css",
 			"settings": {
-				"foreground": "#58a6ff"
+				"fontStyle": "italic",
+				"foreground": "#adffad"
 			}
 		}
 	]
