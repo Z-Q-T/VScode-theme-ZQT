@@ -14,7 +14,7 @@
 		"list.dropBackground": "#3B3B3B",
 		"list.hoverBackground":"#ffffff48",
 		"list.errorForeground": "#ff3b4b",
-		"list.warningForeground":"#ff7b00",
+		"list.warningForeground":"#ff8800",
 
 		"activityBarBadge.background": "#007ACC",
 
@@ -37,17 +37,17 @@
 		"editor.foreground": "#dfdfdf",
 		"editorLineNumber.foreground": "#666666",
 		
-		"editor.selectionBackground": "#0084ff75",
+		"editor.selectionBackground": "#0084ff8c",
 		"editor.inactiveSelectionBackground": "#282d31",
-		"editor.selectionHighlightBackground": "#35d4bf41",
+		"editor.selectionHighlightBackground": "#3cf0a538",
 		
-		"editor.wordHighlightBackground":"#73ff0041",
-		"editor.wordHighlightStrongBackground": "#ff9d1d62",
+		"editor.wordHighlightBackground":"#5afc6231",
+		"editor.wordHighlightStrongBackground": "#ff9d1d46",
 
 		"editor.findMatchBackground": "#23fc3562",
 		"editor.findMatchHighlightBackground":"#d42aff62",
 
-		"editor.hoverHighlightBackground":"#faea5727",
+		"editor.hoverHighlightBackground":"#ffe70f36",
 
 		"editor.lineHighlightBackground": "#ffffff16",
 		"editor.rangeHighlightBackground": "#dc2aff31",
@@ -66,21 +66,21 @@
 		"editorBracketMatch.background":"#ffee0000",
 		"editorBracketMatch.border": "#4aacec",
 
-		"editorOverviewRuler.findMatchForeground": "#d42affe7",
+		"editorOverviewRuler.findMatchForeground": "#d42affbd",
 		"editorOverviewRuler.rangeHighlightForeground": "#7ccbff31",
 		"editorOverviewRuler.selectionHighlightForeground": "#35d4bf50",
 		"editorOverviewRuler.wordHighlightForeground": "#73ff0041",
 		"editorOverviewRuler.wordHighlightStrongForeground": "#ff9d1d62",
-		"editorOverviewRuler.modifiedForeground":"#ffde26d3",
+		"editorOverviewRuler.modifiedForeground":"#ffe23de5",
 		"editorOverviewRuler.addedForeground":"#00ff80a9",
 		"editorOverviewRuler.deletedForeground":"#ff4683b9",
 		"editorOverviewRuler.errorForeground":"#ff0015",
-		"editorOverviewRuler.warningForeground":"#ffa600",
+		"editorOverviewRuler.warningForeground":"#ff8800",
 		"editorOverviewRuler.infoForeground":"#0077ff",
 		"editorOverviewRuler.bracketMatchForeground":"#fffb0042",
 
 		"editorError.foreground":"#ff0015",
-		"editorWarning.foreground":"#ffa600",
+		"editorWarning.foreground":"#ff8800",
 		"editorInfo.foreground": "#0077ff",
 		"editorHint.foreground": "#19d400",
 
@@ -89,7 +89,7 @@
 
 		"editorUnnecessaryCode.opacity": "#00000085",
 
-		"editorGutter.modifiedBackground":"#ffde26d3",
+		"editorGutter.modifiedBackground":"#ffe23de5",
 		"editorGutter.addedBackground":"#00ff80a9",
 		"editorGutter.deletedBackground":"#ff4683b9",
 		"editorGutter.commentRangeForeground":"#686868",
@@ -119,7 +119,7 @@
 
 		"quickInput.background": "#2a2a2a",
 
-		"gitDecoration.modifiedResourceForeground": "#ffde26d3",
+		"gitDecoration.modifiedResourceForeground": "#ffe23de5",
 		"gitDecoration.addedResourceForeground": "#00ff80a9",
 		"gitDecoration.deletedResourceForeground":"#ff4683b9",
 		"gitDecoration.untrackedResourceForeground": "#858585",
