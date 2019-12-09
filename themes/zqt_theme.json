@@ -21,9 +21,10 @@
 				"support.function.gradient.css",
 				"support.function.url.css",
 				"support.function.transform.css",
+				"support.function.calc.css",
 			],
 			"settings": {
-				"foreground": "#5fd38f"
+				"foreground": "#41a8fc"
 			}
 		},
 		{

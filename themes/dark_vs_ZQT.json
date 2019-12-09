@@ -51,7 +51,7 @@
 				"keyword.operator.minus.exponent"
 			],
 			"settings": {
-				"foreground": "#f18383"
+				"foreground": "#f88080"
 			}
 		},
 		{
@@ -82,10 +82,7 @@
 			"scope": [
 				"entity.other.attribute-name.class.css",
 				"entity.other.attribute-name.class.mixin.css",
-				"entity.other.attribute-name.id.css",
 				"entity.other.attribute-name.parent-selector.css",
-				"entity.other.attribute-name.pseudo-class.css",
-				"entity.other.attribute-name.pseudo-element.css",
 				"source.css.less entity.other.attribute-name.id",
 				"entity.other.attribute-name.attribute.scss",
 				"entity.other.attribute-name.scss"
@@ -115,7 +112,7 @@
 				"entity.other.attribute-name.pseudo-element.css",
 			],
 			"settings": {
-				"foreground": "#919cff"
+				"foreground": "#7d90fa"
 			}
 		},
 		{
@@ -311,7 +308,15 @@
 				"support.type.property-name.css",
 			],
 			"settings": {
-				"foreground": "#76bae2"
+				"foreground": "#a8cff3"
+			}
+		},
+		{
+			"scope": [
+				"support.type.vendored.property-name.css",
+			],
+			"settings": {
+				"foreground": "#c6e0ee"
 			}
 		},
 		{
@@ -352,7 +357,7 @@
 		{
 			"scope": "keyword.other.unit",
 			"settings": {
-				"foreground": "#92d3e4"
+				"foreground": "#55c1ff"
 			}
 		},
 		{
