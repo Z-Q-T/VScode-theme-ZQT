@@ -51,7 +51,7 @@
 				"keyword.operator.minus.exponent"
 			],
 			"settings": {
-				"foreground": "#f8809e"
+				"foreground": "#ee86a0"
 			}
 		},
 		{
@@ -357,7 +357,7 @@
 		{
 			"scope": "keyword.other.unit",
 			"settings": {
-				"foreground": "#82b0ff"
+				"foreground": "#81a8ec"
 			}
 		},
 		{
