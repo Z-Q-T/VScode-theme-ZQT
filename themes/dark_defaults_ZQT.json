@@ -52,6 +52,8 @@
 		"editor.lineHighlightBackground": "#ffffff16",
 		"editor.rangeHighlightBackground": "#a724ff2f",
 
+		"editorUnicodeHighlight.border": "#5c5122",
+
 		"editorLink.activeForeground": "#73ff009f",
 
 		"editor.findRangeHighlightBackground": "#ff990021",
