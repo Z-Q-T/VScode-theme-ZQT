@@ -52,7 +52,7 @@
 		"editor.lineHighlightBackground": "#ffffff16",
 		"editor.rangeHighlightBackground": "#a724ff2f",
 
-		"editorUnicodeHighlight.border": "#5c5122",
+		"editorUnicodeHighlight.border": "#6a6b423c",
 
 		"editorLink.activeForeground": "#73ff009f",
 
@@ -101,7 +101,7 @@
 		"peekViewEditor.background": "#2a2a2a",
 
 		"panel.background":"#222",
-		"panel.dropBackground": "#90909030",
+		"panel.dropBorder": "#90909030",
 
 		"statusBar.foreground": "#dddddd",
 		"statusBar.background": "#0172bd",
