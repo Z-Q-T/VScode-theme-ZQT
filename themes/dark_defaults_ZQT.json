@@ -28,7 +28,7 @@
 		"minimap.findMatchHighlight":"#a724ffe7",
 
 		"editorGroup.dropBackground": "#90909030",
-		"editorGroupHeader.tabsBackground": "#252525",
+		"editorGroupHeader.tabsBackground": "#303030",
 		"tab.unfocusedActiveBackground": "#252525",
 		"tab.unfocusedActiveForeground": "#7c7c7c",
 		"tab.hoverBackground": "#ffffff28",

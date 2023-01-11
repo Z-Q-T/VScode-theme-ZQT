@@ -193,7 +193,7 @@
 		{
 			"scope": "constant.character",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#499ef2"
 			}
 		},
 		{
@@ -214,6 +214,35 @@
 				"fontStyle": "italic",
 				"foreground": "#adffad"
 			}
+		},{
+			"name": "Function Call Variable",
+			"scope": "variable.other.property",
+			"settings": { "fontStyle": "", "foreground": "#86b7e4" }
+		},
+		{
+			"name": "Class Variable",
+			"scope": "variable.other.object.property.js",
+			"settings": { "fontStyle": "", "foreground": "#65c7d2" }
+		},
+		{
+			"name": "Class Variable",
+			"scope": "variable.other.object.js",
+			"settings": { "fontStyle": "", "foreground": "#7bddb4" }
+		},
+		{
+			"name": "Class Variable",
+			"scope": "storage.type.function.js",
+			"settings": { "fontStyle": "", "foreground": "#e5ffa5" }
+		},
+		{
+			"name": "Class Variable",
+			"scope": "variable.other.readwrite.js",
+			"settings": { "fontStyle": "", "foreground": "#f9b7e5" }
+		},
+		{
+			"name": "Class Variable",
+			"scope": "keyword.control.conditional.js",
+			"settings": { "fontStyle": "", "foreground": "#b5f071" }
 		}
 	]
 }

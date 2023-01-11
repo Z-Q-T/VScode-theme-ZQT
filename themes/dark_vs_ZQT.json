@@ -75,7 +75,7 @@
 		{
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#0d989c"
+				"foreground": "#21b4ca"
 			}
 		},
 		{
@@ -249,7 +249,7 @@
 				"entity.name.operator.custom-literal.string",
 			],
 			"settings": {
-				"foreground": "#f7a2b8"
+				"foreground": "#e8a8a8"
 			}
 		},
 		{
