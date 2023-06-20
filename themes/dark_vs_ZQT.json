@@ -1,6 +1,7 @@
 {
 	"$schema": "vscode://schemas/color-theme",
 	"name": "Dark (Visual Studio) ZQT",
+	"//description":"通用的代码高亮",
 	"include": "./dark_defaults_ZQT.json",
 	"tokenColors": [
 		{
@@ -67,52 +68,21 @@
 			}
 		},
 		{
-			"scope": "entity.name.tag.css",
+			"name": "Function declarations",
+			"scope": [
+				"entity.name.function",
+				"support.function",
+				"support.constant.handlebars",
+				"source.powershell variable.other.member"
+			],
 			"settings": {
-				"foreground": "#5ecab8"
+				"foreground": "#d379ee"
 			}
 		},
 		{
 			"scope": "entity.other.attribute-name",
 			"settings": {
 				"foreground": "#21b4ca"
-			}
-		},
-		{
-			"scope": [
-				"entity.other.attribute-name.class.css",
-				"entity.other.attribute-name.class.mixin.css",
-				"entity.other.attribute-name.parent-selector.css",
-				"source.css.less entity.other.attribute-name.id",
-				"entity.other.attribute-name.attribute.scss",
-				"entity.other.attribute-name.scss"
-			],
-			"settings": {
-				"foreground": "#e091c6"
-			}
-		},
-		{
-			"scope": [
-				"entity.other.attribute-name.id.css",
-			],
-			"settings": {
-				"foreground": "#f05cbe"
-			}
-		},
-		{
-			"scope": [
-				"entity.other.attribute-name.pseudo-class.css",
-			],
-			"settings": {
-				"foreground": "#b09aff"
-			}
-		},
-		{
-			"scope": [
-				"entity.other.attribute-name.pseudo-element.css",
-			],
-			"settings": {
-				"foreground": "#a8c9a4"
 			}
 		},
 		{
@@ -210,12 +180,7 @@
 				"foreground": "#b5cea8"
 			}
 		},
-		{
-			"scope": "meta.structure.dictionary.key.python",
-			"settings": {
-				"foreground": "#9cdcfe"
-			}
-		},
+		
 		{
 			"scope": "meta.diff.header",
 			"settings": {
@@ -294,8 +259,6 @@
 			"scope": [
 				"support.type.vendored.property-name",
 				"support.type.property-name",
-				"variable.css",
-				"variable.scss",
 				"variable.other.less",
 				"source.coffee.embedded"
 			],
@@ -303,22 +266,7 @@
 				"foreground": "#79aad3"
 			}
 		},
-		{
-			"scope": [
-				"support.type.property-name.css",
-			],
-			"settings": {
-				"foreground": "#a8cff3"
-			}
-		},
-		{
-			"scope": [
-				"support.type.vendored.property-name.css",
-			],
-			"settings": {
-				"foreground": "#c6e0ee"
-			}
-		},
+
 		{
 			"scope": "keyword",
 			"settings": {
@@ -334,7 +282,7 @@
 		{
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#d4d4d4"
+				"foreground": "#3dd8c1"
 			}
 		},
 		{
@@ -347,7 +295,7 @@
 				"keyword.operator.typeid",
 				"keyword.operator.alignas",
 				"keyword.operator.instanceof",
-				"keyword.operator.logical.python",
+				// "keyword.operator.logical.python",
 				"keyword.operator.wordlike"
 			],
 			"settings": {
@@ -398,6 +346,110 @@
 			"settings": {
 				"foreground": "#569cd6"
 			}
+		},
+		{
+			"name": "Types declaration and references, TS grammar specific",
+			"scope": [
+				"meta.type.cast.expr",
+				"meta.type.new.expr",
+				"support.constant.math",
+				"support.constant.dom",
+				"support.constant.json",
+				"entity.other.inherited-class"
+			],
+			"settings": {
+				"foreground": "#4EC9B0"
+			}
+		},
+		{
+			"name": "Control flow / Special keywords",
+			"scope": [
+				"keyword.control",
+				"source.cpp keyword.operator.new",
+				"keyword.operator.delete",
+				"keyword.other.using",
+				"keyword.other.operator",
+				"entity.name.operator"
+			],
+			"settings": {
+				"foreground": "#23e79c"
+			}
+		},
+		{
+			"name": "Variable and parameter name",
+			"scope": [
+				"variable",
+				"meta.definition.variable.name",
+				"support.variable",
+				"entity.name.variable"
+			],
+			"settings": {
+				"foreground": "#f7b16b"
+			}
+		},
+		{
+			"name": "Regular expression groups",
+			"scope": [
+				"punctuation.definition.group.regexp",
+				"punctuation.definition.group.assertion.regexp",
+				"punctuation.definition.character-class.regexp",
+				"punctuation.character.set.begin.regexp",
+				"punctuation.character.set.end.regexp",
+				"keyword.operator.negation.regexp",
+				"support.other.parenthesis.regexp"
+			],
+			"settings": {
+				"foreground": "#CE9178"
+			}
+		},
+		{
+			"scope": [
+				"constant.character.character-class.regexp",
+				"constant.other.character-class.set.regexp",
+				"constant.other.character-class.regexp",
+				"constant.character.set.regexp"
+			],
+			"settings": {
+				"foreground": "#d16969"
+			}
+		},
+		{
+			"scope": [
+				"keyword.operator.or.regexp",
+				"keyword.control.anchor.regexp"
+			],
+			"settings": {
+				"foreground": "#DCDCAA"
+			}
+		},
+		{
+			"scope": "keyword.operator.quantifier.regexp",
+			"settings": {
+				"foreground": "#d7ba7d"
+			}
+		},
+		{
+			"scope": "constant.character",
+			"settings": {
+				"foreground": "#499ef2"
+			}
+		},
+		{
+			"scope": "constant.character.escape",
+			"settings": {
+				"foreground": "#f0bea7"
+			}
+		},
+		{
+			"scope": "entity.name.label",
+			"settings": {
+				"foreground": "#C8C8C8"
+			}
+		},
+{
+			"name": "Function Call Variable",
+			"scope": "variable.other.property",
+			"settings": { "fontStyle": "", "foreground": "#86b7e4" }
 		}
 	]
 }

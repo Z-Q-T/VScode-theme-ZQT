@@ -1,6 +1,7 @@
 {
 	"$schema": "vscode://schemas/color-theme",
 	"name": "Dark Default Colors ZQT",
+	"//description":"编辑器的界面外观",
 	"colors": {
 		"widget.shadow":"#000",
 		
@@ -14,7 +15,7 @@
 		"list.dropBackground": "#3B3B3B",
 		"list.hoverBackground":"#ffffff40",
 		"list.errorForeground": "#ff3b3b",
-		"list.warningForeground":"#ff951c",
+		"list.warningForeground":"#ff98a8",
 
 		"activityBarBadge.background": "#007ACC",
 
@@ -77,12 +78,12 @@
 		"editorOverviewRuler.addedForeground":"#00ff80a9",
 		"editorOverviewRuler.deletedForeground":"#ff46839f",
 		"editorOverviewRuler.errorForeground":"#ff0000",
-		"editorOverviewRuler.warningForeground":"#ff951c9f",
+		"editorOverviewRuler.warningForeground":"#ff98a89f",
 		"editorOverviewRuler.infoForeground":"#0077ff",
 		"editorOverviewRuler.bracketMatchForeground":"#4aabec",
 
 		"editorError.foreground":"#ff0000",
-		"editorWarning.foreground":"#ff951c",
+		"editorWarning.foreground":"#ff98a8",
 		"editorInfo.foreground": "#0077ff",
 		"editorHint.foreground": "#19d400",
 
