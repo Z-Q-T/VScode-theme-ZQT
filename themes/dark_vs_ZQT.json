@@ -71,12 +71,19 @@
 			"name": "Function declarations",
 			"scope": [
 				"entity.name.function",
-				"support.function",
 				"support.constant.handlebars",
 				"source.powershell variable.other.member"
 			],
 			"settings": {
-				"foreground": "#d379ee"
+				"foreground": "#f279d2"
+			}
+		},
+		{
+			"scope": [
+				"support.function",
+			],
+			"settings": {
+				"foreground": "#9090ff"
 			}
 		},
 		{
@@ -190,15 +197,15 @@
 		{
 			"scope": "storage",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#59a5e3"
 			}
 		},
-		{
-			"scope": "storage.type",
-			"settings": {
-				"foreground": "#569cd6"
-			}
-		},
+		// {
+		// 	"scope": "storage.type",
+		// 	"settings": {
+		// 		"foreground": "#569cd6"
+		// 	}
+		// },
 		{
 			"scope": [
 				"storage.modifier",
@@ -274,15 +281,9 @@
 			}
 		},
 		{
-			"scope": "keyword.control",
-			"settings": {
-				"foreground": "#569cd6"
-			}
-		},
-		{
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#3dd8c1"
+				"foreground": "#a8ffbb"
 			}
 		},
 		{
@@ -372,7 +373,7 @@
 				"entity.name.operator"
 			],
 			"settings": {
-				"foreground": "#23e79c"
+				"foreground": "#11d1ba"
 			}
 		},
 		{
