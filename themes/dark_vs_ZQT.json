@@ -283,7 +283,7 @@
 		{
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#a8ffbb"
+				"foreground": "#9dccf5"
 			}
 		},
 		{
