@@ -15,7 +15,7 @@
 		"list.dropBackground": "#3B3B3B",
 		"list.hoverBackground":"#ffffff40",
 		"list.errorForeground": "#ff3b3b",
-		"list.warningForeground":"#ff8746",
+		"list.warningForeground":"#f88f57",
 
 		"activityBarBadge.background": "#007ACC",
 
@@ -25,7 +25,7 @@
 		"sideBarSectionHeader.background":"#444",
 		"sideBarSectionHeader.foreground": "#cfcfcf",
 
-		"minimap.selectionHighlight": "#0084ff8c",
+		"minimap.selectionHighlight": "#0084ffb6",
 		"minimap.findMatchHighlight":"#8a24ce7f",
 
 		"editorGroup.dropBackground": "#90909030",
@@ -38,7 +38,7 @@
 
 		"editor.background": "#1E1E1E",
 		"editor.foreground": "#dfdfdf",
-		"editor.selectionBackground": "#0084ff8c",
+		"editor.selectionBackground": "#0084ffb6",
 		"editor.inactiveSelectionBackground": "#536a7e63",
 		"editor.selectionHighlightBackground": "#613eff8c",
 		"editor.wordHighlightBackground":"#c9b80030",
@@ -66,19 +66,19 @@
 		
 		"editorOverviewRuler.findMatchForeground": "#8a24ce7f",
 		"editorOverviewRuler.rangeHighlightForeground": "#7ccbff31",
-		"editorOverviewRuler.selectionHighlightForeground": "#5c40db7f",
+		"editorOverviewRuler.selectionHighlightForeground": "#613eff8c",
 		"editorOverviewRuler.wordHighlightForeground": "#c9b80080",
 		"editorOverviewRuler.wordHighlightStrongForeground": "#f1730b80",
 		"editorOverviewRuler.modifiedForeground":"#ffe23de5",
 		"editorOverviewRuler.addedForeground":"#00ff80a9",
 		"editorOverviewRuler.deletedForeground":"#ff46839f",
 		"editorOverviewRuler.errorForeground":"#ff0000",
-		"editorOverviewRuler.warningForeground":"#ff8746",
+		"editorOverviewRuler.warningForeground":"#f88f57",
 		"editorOverviewRuler.infoForeground":"#0077ff",
 		"editorOverviewRuler.bracketMatchForeground":"#4aabec",
 
 		"editorError.foreground":"#ff0000",
-		"editorWarning.foreground":"#ff8746",
+		"editorWarning.foreground":"#f88f57",
 		"editorInfo.foreground": "#0077ff",
 		"editorHint.foreground": "#19d400",
 
