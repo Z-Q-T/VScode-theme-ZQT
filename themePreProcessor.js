@@ -1,35 +1,43 @@
 let DFLT = "default";
 let TRANSPARENT = "#00000000";
+let DEBUG_RED = "#ff0000";
+let DEBUG_GREEN = "#00ff00";
 let shadow = "#000";
 
 let backgroundLevel0 = "#1E1E1E";
 let backgroundLevel1 = "#2a2a2a";
-let backgroundLevel2 = "#333";
-let foregroundLevel0 = "#EEE";
-let foregroundLevel1 = "#dfdfdf";
+let backgroundLevel2 = "#363636";
+let foregroundLevel0 = "#eee";
+let foregroundLevel1 = "#ddd";
 let foregroundLevel2 = "#ccc";
 
-let modified ="#ffe23de5";
-let added ="#00ff80a9";
-let deleted ="#ff46839f";
-let untracked="#858585";
-let ignored="#686868";
-let conflicting="#aa45aa";
-let submodule="#888dc2";
+let modified = "#ffe23daa";
+let added = "#00ff80aa";
+let deleted = "#ff4683aa";
+let untracked = "#858585";
+let ignored = "#686868";
+let conflicting = "#aa45aa";
+let submodule = "#888dc2";
 
-let error = "#ff3b3b";
-let warning = "#f88f57";
-let info="#0077ff";
-let hint="#19d400";
+let errorStrong = "#ff3b3b";
+let errorSoft = "#7f1d1d";//soft是strong的颜色值减半
+let errorTransparent = "#ff3b3b7f";//transparent是strong加半透明
+let warningStrong = "#ff9d5b";
+let warningSoft = "#7f4e2d";
+let warningTransparent = "#ff9d5b7f";
+let infoStrong = "#0077ff";
+let infoSoft = "#003b7f";
+let infoTransparent = "#0077ff7f";
+let hintStrong = "#19d400";
 
 let activeSelect = "#0084ffb6";
 let inactiveSelect = "#536a7e63";
 let otherSelect = "#613eff8c";
 
 let drop = "#90909030";
-let placeholder = "#A6A6A6";
+let placeholder = "#a5bbcc";
 let sliderNormal = "#ffffff20";
-let sliderHover = "#ffffff30";
+let hover = "#ffffff30";
 let sliderActive = "#ffffff45";
 let sideBarBKG = "#252525";
 let sideBarSectionHeaderBKG = "#444";
@@ -55,20 +63,20 @@ let editorRulerForeground = "#333";
 let BracketMatchBackground = "#ffffff00";
 let BracketMatchBorder = "#4aacec";
 let rangeHighlightForeground = "#7ccbff31";
-let diffEditorInsertedTextBackground="#00ff8042";
-let diffEditorRemovedTextBackground="#ff468348";
-let UnusedCodeOpacity= "#00000085";
-let commentRangeForeground="#686868";
-let statusBarForeground= "#dddddd";
-let statusBarBackground="#2359af";
-let statusBarDebuggingForeground="#0f0f0f";
-let statusBarDebuggingBackground= "#ceb32c";
-let statusBarNoFolderBackground= "#444";
-let statusBarItemRemoteBackground= "#1284ff99";
-let statusBarItemRemoteForeground= "#FFF";
-let statusBarItemProminentBackground= "#003847";
-let statusBarItemProminentHoverBackground= "#003847";
-let titleBarActiveForeground="#ddd";
+let diffEditorInsertedTextBackground = "#00ff8042";
+let diffEditorRemovedTextBackground = "#ff468348";
+let UnusedCodeOpacity = "#00000085";
+let commentRangeForeground = "#686868";
+let statusBarForeground = "#dddddd";
+let statusBarBackground = "#2359af";
+let statusBarDebuggingForeground = "#0f0f0f";
+let statusBarDebuggingBackground = "#ceb32c";
+let statusBarNoFolderBackground = "#444";
+let statusBarItemRemoteBackground = "#1284ff99";
+let statusBarItemRemoteForeground = "#FFF";
+let statusBarItemProminentBackground = "#003847";
+let statusBarItemProminentHoverBackground = "#003847";
+let titleBarActiveForeground = "#ddd";
 
 let jsonObject = {
 	//Contrast colors
@@ -81,19 +89,19 @@ let jsonObject = {
 
 	["focusBorder"]: activeSelect,
 	["foreground"]: foregroundLevel0,
-	["disabledForeground"]: DFLT,
+	["disabledForeground"]: foregroundLevel2,
 	["widget.border"]: DFLT,
 	["widget.shadow"]: shadow,
-	["selection.background"]: DFLT,
-	["descriptionForeground"]: DFLT,
-	["errorForeground"]: DFLT,
+	["selection.background"]: activeSelect,
+	["descriptionForeground"]: foregroundLevel0,
+	["errorForeground"]: errorStrong,
 	["icon.foreground"]: DFLT,
 	["sash.hoverBorder"]: DFLT,
 
 	//Window border
 	//The theme colors for VS Code window border.
 
-	["window.activeBorder"]: DFLT,
+	["window.activeBorder"]: activeSelect,
 	["window.inactiveBorder"]: DFLT,
 	//The window border colors are only supported on macOS and Linux (not Windows) and only when the custom title bar is enabled (["window.titleBarStyle"]: "custom").
 
@@ -112,7 +120,7 @@ let jsonObject = {
 	//Action colors
 	//A set of colors to control the interactions with actions across the workbench.
 
-	["toolbar.hoverBackground"]: DFLT,
+	["toolbar.hoverBackground"]: hover,
 	["toolbar.hoverOutline"]: DFLT,
 	["toolbar.activeBackground"]: DFLT,
 	["editorActionList.background"]: DFLT,
@@ -160,28 +168,28 @@ let jsonObject = {
 	["input.foreground"]: DFLT,
 	["input.placeholderForeground"]: placeholder,
 	["inputOption.activeBackground"]: DFLT,
-	["inputOption.activeBorder"]: DFLT,
+	["inputOption.activeBorder"]: activeSelect,
 	["inputOption.activeForeground"]: DFLT,
 	["inputOption.hoverBackground"]: DFLT,
-	["inputValidation.errorBackground"]: DFLT,
+	["inputValidation.errorBackground"]: errorSoft,
 	["inputValidation.errorForeground"]: DFLT,
-	["inputValidation.errorBorder"]: DFLT,
-	["inputValidation.infoBackground"]: DFLT,
+	["inputValidation.errorBorder"]: errorStrong,
+	["inputValidation.infoBackground"]: infoSoft,
 	["inputValidation.infoForeground"]: DFLT,
-	["inputValidation.infoBorder"]: DFLT,
-	["inputValidation.warningBackground"]: DFLT,
+	["inputValidation.infoBorder"]: infoStrong,
+	["inputValidation.warningBackground"]: warningSoft,
 	["inputValidation.warningForeground"]: DFLT,
-	["inputValidation.warningBorder"]: DFLT,
+	["inputValidation.warningBorder"]: warningStrong,
 
 	//Scrollbar control
 
 	["scrollbar.shadow"]: shadow,
 	["scrollbarSlider.activeBackground"]: sliderActive,
 	["scrollbarSlider.background"]: sliderNormal,
-	["scrollbarSlider.hoverBackground"]: sliderHover,
+	["scrollbarSlider.hoverBackground"]: hover,
 
 	//Badge
-	//Badges are small information labels, for example, search results count.
+	//Badges are small infoStrongrmation labels, for example, search results count.
 
 	["badge.foreground"]: DFLT,
 	["badge.background"]: DFLT,
@@ -279,15 +287,15 @@ let jsonObject = {
 
 	["minimap.findMatchHighlight"]: findMatchAll,
 	["minimap.selectionHighlight"]: activeSelect,
-	["minimap.errorHighlight"]: error,
-	["minimap.warningHighlight"]: warning,
+	["minimap.errorHighlight"]: errorStrong,
+	["minimap.warningHighlight"]: warningStrong,
 	["minimap.background"]: DFLT,
 	["minimap.selectionOccurrenceHighlight"]: DFLT,
 	["minimap.foregroundOpacity"]: DFLT,
-	["minimap.infoHighlight"]: info,
+	["minimap.infoHighlight"]: infoStrong,
 	["minimap.chatEditHighlight"]: DFLT,
 	["minimapSlider.background"]: sliderNormal,
-	["minimapSlider.hoverBackground"]: sliderHover,
+	["minimapSlider.hoverBackground"]: hover,
 	["minimapSlider.activeBackground"]: sliderActive,
 	["minimapGutter.addedBackground"]: added,
 	["minimapGutter.modifiedBackground"]: modified,
@@ -326,7 +334,7 @@ let jsonObject = {
 	["tab.inactiveForeground"]: DFLT,
 	["tab.unfocusedActiveForeground"]: tabUnfocusedActiveForeground,
 	["tab.unfocusedInactiveForeground"]: DFLT,
-	["tab.hoverBackground"]: sliderHover,
+	["tab.hoverBackground"]: hover,
 	["tab.unfocusedHoverBackground"]: DFLT,
 	["tab.hoverForeground"]: DFLT,
 	["tab.unfocusedHoverForeground"]: DFLT,
@@ -453,7 +461,7 @@ let jsonObject = {
 	["editorIndentGuide.activeBackground5"]: IndentGuideActive,
 	["editorIndentGuide.activeBackground6"]: IndentGuideActive,
 
-	//To see the editor inline hints, set ["editor.inlineSuggest.enabled"]:
+	//To see the editor inline hintStrongs, set ["editor.inlineSuggest.enabled"]:
 
 	["editorInlayHint.background"]: DFLT,
 	["editorInlayHint.foreground"]: DFLT,
@@ -529,23 +537,23 @@ let jsonObject = {
 	["editorOverviewRuler.deletedForeground"]: deleted,
 	["editorOverviewRuler.errorForeground"]: DFLT,
 	["editorOverviewRuler.warningForeground"]: DFLT,
-	["editorOverviewRuler.infoForeground"]: info,
+	["editorOverviewRuler.infoForeground"]: infoStrong,
 	["editorOverviewRuler.bracketMatchForeground"]: DFLT,
 	["editorOverviewRuler.inlineChatInserted"]: DFLT,
 	["editorOverviewRuler.inlineChatRemoved"]: DFLT,
 
-	//Errors and warnings:
+	//Errors and warningStrongs:
 
-	["editorError.foreground"]: error,
+	["editorError.foreground"]: errorStrong,
 	["editorError.border"]: DFLT,
 	["editorError.background"]: DFLT,
-	["editorWarning.foreground"]: warning,
+	["editorWarning.foreground"]: warningStrong,
 	["editorWarning.border"]: DFLT,
 	["editorWarning.background"]: DFLT,
-	["editorInfo.foreground"]: info,
+	["editorInfo.foreground"]: infoStrong,
 	["editorInfo.border"]: DFLT,
 	["editorInfo.background"]: DFLT,
-	["editorHint.foreground"]: hint,
+	["editorHint.foreground"]: hintStrong,
 	["editorHint.border"]: DFLT,
 	["problemsErrorIcon.foreground"]: DFLT,
 	["problemsWarningIcon.foreground"]: DFLT,
@@ -683,7 +691,7 @@ let jsonObject = {
 	["debugExceptionWidget.background"]: DFLT,
 	["debugExceptionWidget.border"]: DFLT,
 
-	//The editor marker view shows when navigating to errors and warnings in the editor (Go to Next Error or Warning command).
+	//The editor marker view shows when navigating to errorStrongs and warningStrongs in the editor (Go to Next Error or Warning command).
 
 	["editorMarkerNavigation.background"]: DFLT,
 	["editorMarkerNavigationError.background"]: DFLT,
@@ -784,7 +792,8 @@ let jsonObject = {
 	["statusBarItem.hoverBackground"]: DFLT,
 	["statusBarItem.prominentForeground"]: DFLT,
 	["statusBarItem.prominentBackground"]: statusBarItemProminentBackground,
-	["statusBarItem.prominentHoverForeground"]: statusBarItemProminentHoverBackground,
+	["statusBarItem.prominentHoverForeground"]:
+		statusBarItemProminentHoverBackground,
 	["statusBarItem.prominentHoverBackground"]: DFLT,
 	["statusBarItem.remoteBackground"]: statusBarItemRemoteBackground,
 	["statusBarItem.remoteForeground"]: statusBarItemRemoteForeground,
