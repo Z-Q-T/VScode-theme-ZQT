@@ -1,11 +1,14 @@
 let DFLT = "default";
 let TRANSPARENT = "#00000000";
+let shadow = "#000";
+
 let backgroundLevel0 = "#1E1E1E";
 let backgroundLevel1 = "#2a2a2a";
 let backgroundLevel2 = "#333";
 let foregroundLevel0 = "#EEE";
 let foregroundLevel1 = "#dfdfdf";
 let foregroundLevel2 = "#ccc";
+
 let modified ="#ffe23de5";
 let added ="#00ff80a9";
 let deleted ="#ff46839f";
@@ -13,20 +16,22 @@ let untracked="#858585";
 let ignored="#686868";
 let conflicting="#aa45aa";
 let submodule="#888dc2";
+
 let error = "#ff3b3b";
 let warning = "#f88f57";
 let info="#0077ff";
 let hint="#19d400";
+
 let activeSelect = "#0084ffb6";
 let inactiveSelect = "#536a7e63";
 let otherSelect = "#613eff8c";
-let shadow = "#000";
+
+let drop = "#90909030";
 let placeholder = "#A6A6A6";
 let sliderNormal = "#ffffff20";
 let sliderHover = "#ffffff30";
 let sliderActive = "#ffffff45";
 let sideBarBKG = "#252525";
-let drop = "#90909030";
 let sideBarSectionHeaderBKG = "#444";
 let sideBarSectionHeaderFRG = "#cfcfcf";
 let findMatchCurrent = "#4375ff98";
@@ -35,8 +40,8 @@ let editorGroupHeaderTabsBackground = "#303030";
 let tabUnfocusedActiveBackground = "#252525";
 let tabUnfocusedActiveForeground = "#7c7c7c";
 let editorLineNumberForeground = "#666666";
-let wordHighlightRead = "#c9b80080";
-let wordHighlightWrite = "#f1730b80";
+let wordHighlightRead = "#c9b800dd";
+let wordHighlightWrite = "#f1730bdd";
 let hoverHighlightBackground = "#b4b4b436";
 let lineHighlightBackground = "#ffffff16";
 let rangeHighlightBackground = "#a724ff2f";
@@ -46,7 +51,7 @@ let editorLinkActiveForeground = "#73ff009f";
 let editorWhitespaceForeground = "#4692c55e";
 let IndentGuide = "#404040";
 let IndentGuideActive = "#686868";
-let editorRulerForeground = "#3c3c3c";
+let editorRulerForeground = "#333";
 let BracketMatchBackground = "#ffffff00";
 let BracketMatchBorder = "#4aacec";
 let rangeHighlightForeground = "#7ccbff31";
@@ -55,11 +60,11 @@ let diffEditorRemovedTextBackground="#ff468348";
 let UnusedCodeOpacity= "#00000085";
 let commentRangeForeground="#686868";
 let statusBarForeground= "#dddddd";
-let statusBarBackground="#0172bd";
+let statusBarBackground="#2359af";
 let statusBarDebuggingForeground="#0f0f0f";
 let statusBarDebuggingBackground= "#ceb32c";
 let statusBarNoFolderBackground= "#444";
-let statusBarItemRemoteBackground= "#2AA19899";
+let statusBarItemRemoteBackground= "#1284ff99";
 let statusBarItemRemoteForeground= "#FFF";
 let statusBarItemProminentBackground= "#003847";
 let statusBarItemProminentHoverBackground= "#003847";
@@ -366,9 +371,9 @@ let jsonObject = {
 
 	//occurrences
 
-	["editor.wordHighlightRead"]: TRANSPARENT,
+	["editor.wordHighlightBackground"]: TRANSPARENT,
 	["editor.wordHighlightBorder"]: wordHighlightRead,
-	["editor.wordHighlightWrite"]: TRANSPARENT,
+	["editor.wordHighlightStrongBackground"]: TRANSPARENT,
 	["editor.wordHighlightStrongBorder"]: wordHighlightWrite,
 	["editor.wordHighlightTextBackground"]: DFLT,
 	["editor.wordHighlightTextBorder"]: DFLT,
@@ -1245,5 +1250,5 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonObject, "./theme.json");
+saveObjectToTxtFile(jsonObject, "theme.json");
 // console.log(jsonObject);
