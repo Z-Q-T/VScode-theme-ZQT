@@ -26,15 +26,18 @@ let WHITE = "#FFF";
 let shadow = "#000";
 let drop = "#90909030";
 let placeholder = "#a5bbcc";
+let hover = "#ffffff30";
+let click = "#ffffff50";
 
-let modified = "#ffe23daa";
-let added = "#00ff80aa";
-let deleted = "#ff4683aa";
-let renamed = "#b246ffaa";
-let untracked = "#858585";
-let ignored = "#686868";
-let conflicting = "#aa45aa";
-let submodule = "#888dc2";
+let modifiedStrong = "#ffe23d";
+let modifiedTransparent = "#ffe23d7f";
+let addedStrong = "#00ff80";
+let deletedStrong = "#ff4683";
+let renamedStrong = "#b246ff";
+let untrackedStrong = "#999999";
+let ignoredStrong = "#686868";
+let conflictingStrong = "#db4e1b";
+let submoduleStrong = "#5f69db";
 
 let errorStrong = "#ff3b3b";
 let errorSoft = "#7f1d1d"; //soft是strong的颜色值减半
@@ -57,7 +60,6 @@ let selectOthersTransparentTransparent = "#5718eb7f";
 
 let sliderNormal = "#ffffff20";
 let sliderActive = "#ffffff45";
-let hover = "#ffffff30";
 let findMatchCurrent = "#4375ff98";
 let findMatchAll = "#8a24ce7f";
 let wordHighlightRead = "#c9b800dd";
@@ -82,7 +84,7 @@ let UnusedCodeOpacity = "#00000085";
 let commentRangeForeground = "#686868";
 
 let statusBarForeground = "#dddddd";
-let statusBarBackground = "#2359af";
+let statusBarBackground = "#2d3b53";
 let statusBarDebuggingForeground = "#0f0f0f";
 let statusBarDebuggingBackground = "#ceb32c";
 let statusBarNoFolderBackground = "#444";
@@ -315,9 +317,9 @@ let jsonObject = {
 	["minimapSlider.background"]: sliderNormal,
 	["minimapSlider.hoverBackground"]: hover,
 	["minimapSlider.activeBackground"]: sliderActive,
-	["minimapGutter.addedBackground"]: added,
-	["minimapGutter.modifiedBackground"]: modified,
-	["minimapGutter.deletedBackground"]: deleted,
+	["minimapGutter.addedBackground"]: addedStrong,
+	["minimapGutter.modifiedBackground"]: modifiedStrong,
+	["minimapGutter.deletedBackground"]: deletedStrong,
 	["editorMinimap.inlineChatInserted"]: DFLT,
 
 	//Editor Groups & Tabs
@@ -550,9 +552,9 @@ let jsonObject = {
 	["editorOverviewRuler.wordHighlightForeground"]: wordHighlightRead,
 	["editorOverviewRuler.wordHighlightStrongForeground"]: wordHighlightWrite,
 	["editorOverviewRuler.wordHighlightTextForeground"]: DFLT,
-	["editorOverviewRuler.modifiedForeground"]: modified,
-	["editorOverviewRuler.addedForeground"]: added,
-	["editorOverviewRuler.deletedForeground"]: deleted,
+	["editorOverviewRuler.modifiedForeground"]: modifiedStrong,
+	["editorOverviewRuler.addedForeground"]: addedStrong,
+	["editorOverviewRuler.deletedForeground"]: deletedStrong,
 	["editorOverviewRuler.errorForeground"]: DFLT,
 	["editorOverviewRuler.warningForeground"]: DFLT,
 	["editorOverviewRuler.infoForeground"]: infoStrong,
@@ -585,9 +587,9 @@ let jsonObject = {
 	//The gutter contains the glyph margins and the line numbers:
 
 	["editorGutter.background"]: DFLT,
-	["editorGutter.modifiedBackground"]: modified,
-	["editorGutter.addedBackground"]: added,
-	["editorGutter.deletedBackground"]: deleted,
+	["editorGutter.modifiedBackground"]: modifiedStrong,
+	["editorGutter.addedBackground"]: addedStrong,
+	["editorGutter.deletedBackground"]: deletedStrong,
 	["editorGutter.commentRangeForeground"]: commentRangeForeground,
 	["editorGutter.commentGlyphForeground"]: DFLT,
 	["editorGutter.commentUnresolvedGlyphForeground"]: DFLT,
@@ -797,37 +799,36 @@ let jsonObject = {
 	//The Status Bar is shown in the bottom of the workbench.
 
 	["statusBar.background"]: GREY30,
-	["statusBar.foreground"]: statusBarForeground,
+	["statusBar.foreground"]: GREY90,
 	["statusBar.border"]: DFLT,
 	["statusBar.debuggingBackground"]: statusBarDebuggingBackground,
 	["statusBar.debuggingForeground"]: GREY20,
 	["statusBar.debuggingBorder"]: DFLT,
-	["statusBar.noFolderForeground"]: DFLT,
-	["statusBar.noFolderBackground"]: GREY35,
+	["statusBar.noFolderForeground"]: GREY75,
+	["statusBar.noFolderBackground"]: GREY25,
 	["statusBar.noFolderBorder"]: DFLT,
-	["statusBarItem.activeBackground"]: DFLT,
+	["statusBar.focusBorder"]: selectActiveStrong,
+	["statusBarItem.activeBackground"]: click,
 	["statusBarItem.hoverForeground"]: DFLT,
-	["statusBarItem.hoverBackground"]: DFLT,
+	["statusBarItem.hoverBackground"]: hover,
 	["statusBarItem.prominentForeground"]: DFLT,
 	["statusBarItem.prominentBackground"]: statusBarItemProminentBackground,
-	["statusBarItem.prominentHoverForeground"]:
-		statusBarItemProminentHoverBackground,
-	["statusBarItem.prominentHoverBackground"]: DFLT,
-	["statusBarItem.remoteBackground"]: statusBarItemRemoteBackground,
-	["statusBarItem.remoteForeground"]: statusBarItemRemoteForeground,
+	["statusBarItem.prominentHoverForeground"]:DFLT,
+	["statusBarItem.prominentHoverBackground"]: hover,
+	["statusBarItem.remoteBackground"]: GREY35,
+	["statusBarItem.remoteForeground"]: DFLT,
 	["statusBarItem.remoteHoverBackground"]: DFLT,
 	["statusBarItem.remoteHoverForeground"]: DFLT,
-	["statusBarItem.errorBackground"]: DFLT,
+	["statusBarItem.errorBackground"]: errorStrong,
 	["statusBarItem.errorForeground"]: DFLT,
 	["statusBarItem.errorHoverBackground"]: DFLT,
 	["statusBarItem.errorHoverForeground"]: DFLT,
-	["statusBarItem.warningBackground"]: DFLT,
+	["statusBarItem.warningBackground"]: warningStrong,
 	["statusBarItem.warningForeground"]: DFLT,
 	["statusBarItem.warningHoverBackground"]: DFLT,
 	["statusBarItem.warningHoverForeground"]: DFLT,
 	["statusBarItem.compactHoverBackground"]: DFLT,
 	["statusBarItem.focusBorder"]: DFLT,
-	["statusBar.focusBorder"]: DFLT,
 	["statusBarItem.offlineBackground"]: DFLT,
 	["statusBarItem.offlineForeground"]: DFLT,
 	["statusBarItem.offlineHoverForeground"]: DFLT,
@@ -836,21 +837,21 @@ let jsonObject = {
 	//Prominent items stand out from other Status Bar entries to indicate importance. One example is the Toggle Tab Key Moves Focus command change mode indicator.
 	//Title Bar colors
 
-	["titleBar.activeBackground"]: DFLT,
-	["titleBar.activeForeground"]: titleBarActiveForeground,
-	["titleBar.inactiveBackground"]: DFLT,
-	["titleBar.inactiveForeground"]: DFLT,
+	["titleBar.activeBackground"]: GREY30,
+	["titleBar.activeForeground"]: GREY90,
+	["titleBar.inactiveBackground"]: GREY35,
+	["titleBar.inactiveForeground"]: GREY75,
 	["titleBar.border"]: DFLT,
 
 	//Menu Bar colors
 
 	["menubar.selectionForeground"]: DFLT,
-	["menubar.selectionBackground"]: DFLT,
+	["menubar.selectionBackground"]: hover,
 	["menubar.selectionBorder"]: DFLT,
 	["menu.foreground"]: GREY90,
 	["menu.background"]: GREY30,
 	["menu.selectionForeground"]: DFLT,
-	["menu.selectionBackground"]: DFLT,
+	["menu.selectionBackground"]: hover,
 	["menu.selectionBorder"]: DFLT,
 	["menu.separatorBackground"]: DFLT,
 	["menu.border"]: DFLT,
@@ -858,9 +859,9 @@ let jsonObject = {
 	//Command Center colors
 
 	["commandCenter.foreground"]: DFLT,
+	["commandCenter.background"]: GREY35,
 	["commandCenter.activeForeground"]: DFLT,
-	["commandCenter.background"]: DFLT,
-	["commandCenter.activeBackground"]: DFLT,
+	["commandCenter.activeBackground"]: hover,
 	["commandCenter.border"]: DFLT,
 	["commandCenter.inactiveForeground"]: DFLT,
 	["commandCenter.inactiveBorder"]: DFLT,
@@ -875,7 +876,7 @@ let jsonObject = {
 
 	["notificationCenter.border"]: DFLT,
 	["notificationCenterHeader.foreground"]: DFLT,
-	["notificationCenterHeader.background"]: DFLT,
+	["notificationCenterHeader.background"]: GREY35,
 	["notificationToast.border"]: DFLT,
 	["notifications.foreground"]: DFLT,
 	["notifications.background"]: GREY30,
@@ -929,10 +930,10 @@ let jsonObject = {
 	//	The "feature contribution" section of an extension's marketplace page
 	//The following customizations are available:
 
-	["keybindingLabel.background"]: DFLT,
-	["keybindingLabel.foreground"]: DFLT,
+	["keybindingLabel.background"]: GREY40,
+	["keybindingLabel.foreground"]: GREY90,
 	["keybindingLabel.border"]: DFLT,
-	["keybindingLabel.bottomBorder"]: DFLT,
+	["keybindingLabel.bottomBorder"]: TRANSPARENT,
 
 	//Keyboard shortcut table colors
 
@@ -941,7 +942,7 @@ let jsonObject = {
 
 	//Integrated Terminal colors
 
-	["terminal.background"]: BLACK,
+	["terminal.background"]: GREY10,
 	["terminal.border"]: DFLT,
 	["terminal.foreground"]: DFLT,
 	["terminal.ansiBlack"]: DFLT,
@@ -1062,16 +1063,16 @@ let jsonObject = {
 
 	//Git colors
 
-	["gitDecoration.addedResourceForeground"]: DEBUG_GREEN,
-	["gitDecoration.modifiedResourceForeground"]: modified,
-	["gitDecoration.deletedResourceForeground"]: deleted,
-	["gitDecoration.renamedResourceForeground"]: renamed,
+	["gitDecoration.addedResourceForeground"]: addedStrong,
+	["gitDecoration.modifiedResourceForeground"]: modifiedStrong,
+	["gitDecoration.deletedResourceForeground"]: deletedStrong,
+	["gitDecoration.renamedResourceForeground"]: renamedStrong,
 	["gitDecoration.stageModifiedResourceForeground"]: DFLT,
 	["gitDecoration.stageDeletedResourceForeground"]: DFLT,
-	["gitDecoration.untrackedResourceForeground"]: untracked,
-	["gitDecoration.ignoredResourceForeground"]: ignored,
-	["gitDecoration.conflictingResourceForeground"]: conflicting,
-	["gitDecoration.submoduleResourceForeground"]: submodule,
+	["gitDecoration.untrackedResourceForeground"]: untrackedStrong,
+	["gitDecoration.ignoredResourceForeground"]: ignoredStrong,
+	["gitDecoration.conflictingResourceForeground"]: conflictingStrong,
+	["gitDecoration.submoduleResourceForeground"]: submoduleStrong,
 	["git.blame.editorDecorationForeground"]: DFLT,
 
 	//Source Control Graph colors
@@ -1094,7 +1095,7 @@ let jsonObject = {
 	//Note:
 
 	["settings.headerForeground"]: DFLT,
-	["settings.modifiedItemIndicator"]: modified,
+	["settings.modifiedItemIndicator"]: modifiedStrong,
 	["settings.dropdownBackground"]: GREY30,
 	["settings.dropdownForeground"]: DFLT,
 	["settings.dropdownBorder"]: DFLT,
