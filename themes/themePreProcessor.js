@@ -29,11 +29,13 @@ let placeholder = "#7f7f7f";
 let hover = "#ffffff30";
 let click = "#ffffff50";
 
-let addSoft = "#6edd7c";
-// let addedSoft="#3b723e";
-let addSoftTRANSPARENT = "#6edd7c3f";
+let addStrong = "#2de35b";
+let addSoft = "#6edd8a";
+let addSoftTRANSPARENT = "#6edd8a3f";
+let modifyStrong = "#f3bd28";
 let modifySoft = "#edc862";
 let modifySoftTRANSPARENT = "#edc8623f";
+let deleteStrong = "#f5306c";
 let deleteSoft = "#f0769b";
 let deleteSoftTRANSPARENT = "#f0769b3f";
 let renameSoft = "#dd946e";
@@ -54,19 +56,19 @@ let infoTRANSPARENT = "#0080ff7f";
 let hintStrong = "#3A9F49";
 
 let selectActiveStrong = "#3377ff";
-let selectActiveSoft = "#00427f";
+// let selectActiveSoft = "#00427f";
 let selectActiveTRANSPARENT = "#3377ff7f";
-let selectInactiveStrong = "#2e5173";
-let selectInactiveSoft = "#445361";
+let selectInactiveStrong = "#4d5e80";
+// let selectInactiveSoft = "#445361";
 let selectInactiveTRANSPARENT = "#4d5e803f";
-let selectOthersTRANSPARENT = "#5718eb7f";
+let selectOthersTRANSPARENT = "#3377ff3f";
 
 let findMatchAllStrong = "#6b2ee6";
-let findMatchAllTRANSPARENT = "#6b2ee63f";
+let findMatchAllTRANSPARENT = "#5f29cc7f";
 
-let wordHighlightRead = "#c9b800dd";
-let wordHighlightWrite = "#f1730bdd";
-let wordHighlightText = "#8dec02dd";
+let wordHighlightRead = "#008ce3bf";
+let wordHighlightWrite = "#0bf189bf";
+let wordHighlightText = "#02bdd6bf";
 
 let sliderNormal = "#ffffff20";
 let sliderActive = "#ffffff45";
@@ -96,8 +98,6 @@ let statusBarDebuggingBackground = "#ceb32c";
 // let statusBarItemRemoteForeground = "#FFF";
 let statusBarItemProminentBackground = "#003847";
 // let statusBarItemProminentHoverBackground = "#003847";
-
-
 
 let jsonObject = {
 	//Contrast colors
@@ -222,7 +222,7 @@ let jsonObject = {
 		//Progress bar
 
 		["progressBar.background"]: DFLT,
-		// TODO检查到这里
+
 		//Lists and trees
 		//Colors for list and trees like the File Explorer. An active list/tree has keyboard focus, an inactive does not.
 
@@ -322,9 +322,9 @@ let jsonObject = {
 		["minimapSlider.background"]: sliderNormal,
 		["minimapSlider.hoverBackground"]: hover,
 		["minimapSlider.activeBackground"]: click,
-		["minimapGutter.addedBackground"]: addSoft,
-		["minimapGutter.modifiedBackground"]: modifySoft,
-		["minimapGutter.deletedBackground"]: deleteSoft,
+		["minimapGutter.addedBackground"]: addStrong,
+		["minimapGutter.modifiedBackground"]: modifyStrong,
+		["minimapGutter.deletedBackground"]: deleteStrong,
 		["editorMinimap.inlineChatInserted"]: DFLT,
 
 		//Editor Groups & Tabs
@@ -397,8 +397,7 @@ let jsonObject = {
 		["editor.selectionBackground"]: selectActiveTRANSPARENT,
 		["editor.selectionForeground"]: DFLT,
 		["editor.inactiveSelectionBackground"]: selectInactiveTRANSPARENT,
-		["editor.selectionHighlightBackground"]:
-			selectOthersTRANSPARENT,
+		["editor.selectionHighlightBackground"]: selectOthersTRANSPARENT,
 		["editor.selectionHighlightBorder"]: DFLT,
 
 		//Word highlight colors are visible when the cursor is inside a symbol or a word. Depending on the language support available for the file type, all matching references and declarations are highlighted and read and write accesses get different colors. If document symbol language support is not available, this falls back to word highlighting.
@@ -553,16 +552,14 @@ let jsonObject = {
 		["editorOverviewRuler.background"]: DFLT,
 		["editorOverviewRuler.border"]: DFLT,
 		["editorOverviewRuler.findMatchForeground"]: findMatchAllStrong,
-		["editorOverviewRuler.rangeHighlightForeground"]:
-			rangeHighlightForeground,
-		["editorOverviewRuler.selectionHighlightForeground"]: DFLT,
+		["editorOverviewRuler.rangeHighlightForeground"]: rangeHighlightForeground,
+		["editorOverviewRuler.selectionHighlightForeground"]: selectActiveStrong,
 		["editorOverviewRuler.wordHighlightForeground"]: wordHighlightRead,
-		["editorOverviewRuler.wordHighlightStrongForeground"]:
-			wordHighlightWrite,
-		["editorOverviewRuler.wordHighlightTextForeground"]: DFLT,
-		["editorOverviewRuler.modifiedForeground"]: modifySoft,
-		["editorOverviewRuler.addedForeground"]: addSoft,
-		["editorOverviewRuler.deletedForeground"]: deleteSoft,
+		["editorOverviewRuler.wordHighlightStrongForeground"]: wordHighlightWrite,
+		["editorOverviewRuler.wordHighlightTextForeground"]: wordHighlightText,
+		["editorOverviewRuler.modifiedForeground"]: modifyStrong,
+		["editorOverviewRuler.addedForeground"]: addStrong,
+		["editorOverviewRuler.deletedForeground"]: deleteStrong,
 		["editorOverviewRuler.errorForeground"]: errorStrong,
 		["editorOverviewRuler.warningForeground"]: warningStrong,
 		["editorOverviewRuler.infoForeground"]: infoStrong,
@@ -595,9 +592,9 @@ let jsonObject = {
 		//The gutter contains the glyph margins and the line numbers:
 
 		["editorGutter.background"]: DFLT,
-		["editorGutter.modifiedBackground"]: modifySoft,
-		["editorGutter.addedBackground"]: addSoft,
-		["editorGutter.deletedBackground"]: deleteSoft,
+		["editorGutter.modifiedBackground"]: modifyStrong,
+		["editorGutter.addedBackground"]: addStrong,
+		["editorGutter.deletedBackground"]: deleteStrong,
 		["editorGutter.commentRangeForeground"]: commentRangeForeground,
 		["editorGutter.commentGlyphForeground"]: DFLT,
 		["editorGutter.commentUnresolvedGlyphForeground"]: DFLT,
@@ -641,7 +638,7 @@ let jsonObject = {
 		["diffEditor.removedTextBorder"]: TRANSPARENT,
 		["diffEditor.border"]: DFLT,
 		["diffEditor.diagonalFill"]: DFLT,
-		["diffEditor.insertedLineBackground"]:addSoftTRANSPARENT ,
+		["diffEditor.insertedLineBackground"]: addSoftTRANSPARENT,
 		["diffEditor.removedLineBackground"]: deleteSoftTRANSPARENT,
 		["diffEditorGutter.insertedLineBackground"]: TRANSPARENT,
 		["diffEditorGutter.removedLineBackground"]: TRANSPARENT,
@@ -1289,3 +1286,5 @@ function saveObjectToTxtFile(obj, filePath) {
 
 saveObjectToTxtFile(jsonObject, "./interface_ZQT.json");
 // console.log(jsonObject);
+
+//TODO	要解决Ruler中间一列的色块有可能重叠的问题，加透明度
