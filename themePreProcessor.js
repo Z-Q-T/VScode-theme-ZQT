@@ -2,14 +2,30 @@ let DFLT = "default";
 let TRANSPARENT = "#00000000";
 let DEBUG_RED = "#ff0000";
 let DEBUG_GREEN = "#00ff00";
-let shadow = "#000";
+let BLACK = "#000";
+let GREY10 = "#030303"; //按照oklch色域
+let GREY15 = "#0b0b0b";
+let GREY20 = "#161616";
+let GREY25 = "#222222";
+let GREY30 = "#2e2e2e";
+let GREY35 = "#3a3a3a";
+let GREY40 = "#484848";
+let GREY45 = "#555555";
+let GREY50 = "#636363";
+let GREY55 = "#717171";
+let GREY60 = "#808080";
+let GREY65 = "#8f8f8f";
+let GREY70 = "#9e9e9e";
+let GREY75 = "#aeaeae";
+let GREY80 = "#bebebe";
+let GREY85 = "#cecece";
+let GREY90 = "#dedede";
+let GREY95 = "#eeeeee";
+let WHITE = "#FFF";
 
-let backgroundLevel0 = "#1E1E1E";
-let backgroundLevel1 = "#2a2a2a";
-let backgroundLevel2 = "#363636";
-let foregroundLevel0 = "#eee";
-let foregroundLevel1 = "#ddd";
-let foregroundLevel2 = "#ccc";
+let shadow = "#000";
+let drop = "#90909030";
+let placeholder = "#a5bbcc";
 
 let modified = "#ffe23daa";
 let added = "#00ff80aa";
@@ -20,8 +36,8 @@ let conflicting = "#aa45aa";
 let submodule = "#888dc2";
 
 let errorStrong = "#ff3b3b";
-let errorSoft = "#7f1d1d";//soft是strong的颜色值减半
-let errorTransparent = "#ff3b3b7f";//transparent是strong加半透明
+let errorSoft = "#7f1d1d"; //soft是strong的颜色值减半
+let errorTransparent = "#ff3b3b7f"; //transparent是strong加半透明
 let warningStrong = "#ff9d5b";
 let warningSoft = "#7f4e2d";
 let warningTransparent = "#ff9d5b7f";
@@ -30,26 +46,22 @@ let infoSoft = "#003b7f";
 let infoTransparent = "#0077ff7f";
 let hintStrong = "#19d400";
 
-let activeSelect = "#0084ffb6";
-let inactiveSelect = "#536a7e63";
-let otherSelect = "#613eff8c";
+let selectActiveStrong = "#0084ff";
+let selectActiveSoft = "#00427f";
+let selectActiveTransparent = "#0084ff7f";
+let selectInactiveStrong = "#88a6c2";
+let selectInactiveSoft = "#445361";
+let selectInactiveTransparent = "#88a6c27f";
+let selectOthers = "#613eff7f";
 
-let drop = "#90909030";
-let placeholder = "#a5bbcc";
 let sliderNormal = "#ffffff20";
-let hover = "#ffffff30";
 let sliderActive = "#ffffff45";
-let sideBarBKG = "#252525";
-let sideBarSectionHeaderBKG = "#444";
-let sideBarSectionHeaderFRG = "#cfcfcf";
+let hover = "#ffffff30";
 let findMatchCurrent = "#4375ff98";
 let findMatchAll = "#8a24ce7f";
-let editorGroupHeaderTabsBackground = "#303030";
-let tabUnfocusedActiveBackground = "#252525";
-let tabUnfocusedActiveForeground = "#7c7c7c";
-let editorLineNumberForeground = "#666666";
 let wordHighlightRead = "#c9b800dd";
 let wordHighlightWrite = "#f1730bdd";
+let wordHighlightText = "#8dec02dd";
 let hoverHighlightBackground = "#b4b4b436";
 let lineHighlightBackground = "#ffffff16";
 let rangeHighlightBackground = "#a724ff2f";
@@ -87,13 +99,13 @@ let jsonObject = {
 
 	//Base colors
 
-	["focusBorder"]: activeSelect,
-	["foreground"]: foregroundLevel0,
-	["disabledForeground"]: foregroundLevel2,
+	["focusBorder"]: selectActiveStrong,
+	["foreground"]: GREY95,
+	["disabledForeground"]: GREY85,
 	["widget.border"]: DFLT,
 	["widget.shadow"]: shadow,
-	["selection.background"]: activeSelect,
-	["descriptionForeground"]: foregroundLevel0,
+	["selection.background"]: selectActiveStrong,
+	["descriptionForeground"]: GREY95,
 	["errorForeground"]: errorStrong,
 	["icon.foreground"]: DFLT,
 	["sash.hoverBorder"]: DFLT,
@@ -101,7 +113,7 @@ let jsonObject = {
 	//Window border
 	//The theme colors for VS Code window border.
 
-	["window.activeBorder"]: activeSelect,
+	["window.activeBorder"]: selectActiveStrong,
 	["window.inactiveBorder"]: DFLT,
 	//The window border colors are only supported on macOS and Linux (not Windows) and only when the custom title bar is enabled (["window.titleBarStyle"]: "custom").
 
@@ -168,7 +180,7 @@ let jsonObject = {
 	["input.foreground"]: DFLT,
 	["input.placeholderForeground"]: placeholder,
 	["inputOption.activeBackground"]: DFLT,
-	["inputOption.activeBorder"]: activeSelect,
+	["inputOption.activeBorder"]: selectActiveStrong,
 	["inputOption.activeForeground"]: DFLT,
 	["inputOption.hoverBackground"]: DFLT,
 	["inputValidation.errorBackground"]: errorSoft,
@@ -197,7 +209,7 @@ let jsonObject = {
 	//Progress bar
 
 	["progressBar.background"]: DFLT,
-
+	// TODO检查到这里
 	//Lists and trees
 	//Colors for list and trees like the File Explorer. An active list/tree has keyboard focus, an inactive does not.
 
@@ -211,7 +223,7 @@ let jsonObject = {
 	["list.focusOutline"]: DFLT,
 	["list.focusAndSelectionOutline"]: DFLT,
 	["list.highlightForeground"]: DFLT,
-	["list.hoverBackground"]: DFLT,
+	["list.hoverBackground"]: hover,
 	["list.hoverForeground"]: DFLT,
 	["list.inactiveSelectionBackground"]: DFLT,
 	["list.inactiveSelectionForeground"]: DFLT,
@@ -242,10 +254,10 @@ let jsonObject = {
 	["activityBar.foreground"]: DFLT,
 	["activityBar.inactiveForeground"]: DFLT,
 	["activityBar.border"]: DFLT,
-	["activityBarBadge.background"]: DFLT,
+	["activityBarBadge.background"]: infoStrong,
 	["activityBarBadge.foreground"]: DFLT,
 	["activityBar.activeBorder"]: DFLT,
-	["activityBar.activeBackground"]: DFLT,
+	["activityBar.activeBackground"]: selectActiveSoft,
 	["activityBar.activeFocusBorder"]: DFLT,
 	["activityBarTop.foreground"]: DFLT,
 	["activityBarTop.activeBorder"]: DFLT,
@@ -254,9 +266,9 @@ let jsonObject = {
 	["activityBarTop.background"]: DFLT,
 	["activityBarTop.activeBackground"]: DFLT,
 	["activityWarningBadge.foreground"]: DFLT,
-	["activityWarningBadge.background"]: DFLT,
+	["activityWarningBadge.background"]: warningStrong,
 	["activityErrorBadge.foreground"]: DFLT,
-	["activityErrorBadge.background"]: DFLT,
+	["activityErrorBadge.background"]: errorStrong,
 
 	//Profiles
 
@@ -267,13 +279,13 @@ let jsonObject = {
 	//Side Bar
 	//The Side Bar contains views like the Explorer and Search.
 
-	["sideBar.background"]: sideBarBKG,
+	["sideBar.background"]: GREY30,
 	["sideBar.foreground"]: DFLT,
 	["sideBar.border"]: DFLT,
 	["sideBar.dropBackground"]: drop,
 	["sideBarTitle.foreground"]: DFLT,
-	["sideBarSectionHeader.background"]: sideBarSectionHeaderBKG,
-	["sideBarSectionHeader.foreground"]: sideBarSectionHeaderFRG,
+	["sideBarSectionHeader.background"]: GREY40,
+	["sideBarSectionHeader.foreground"]: DFLT,
 	["sideBarSectionHeader.border"]: DFLT,
 	["sideBarActivityBarTop.border"]: DFLT,
 	["sideBarTitle.background"]: DFLT,
@@ -286,7 +298,7 @@ let jsonObject = {
 	//The Minimap shows a minified version of the current file.
 
 	["minimap.findMatchHighlight"]: findMatchAll,
-	["minimap.selectionHighlight"]: activeSelect,
+	["minimap.selectionHighlight"]: selectActiveTransparent,
 	["minimap.errorHighlight"]: errorStrong,
 	["minimap.warningHighlight"]: warningStrong,
 	["minimap.background"]: DFLT,
@@ -308,7 +320,7 @@ let jsonObject = {
 	["editorGroup.border"]: DFLT,
 	["editorGroup.dropBackground"]: drop,
 	["editorGroupHeader.noTabsBackground"]: DFLT,
-	["editorGroupHeader.tabsBackground"]: editorGroupHeaderTabsBackground,
+	["editorGroupHeader.tabsBackground"]: GREY30,
 	["editorGroupHeader.tabsBorder"]: DFLT,
 	["editorGroupHeader.border"]: DFLT,
 	["editorGroup.emptyBackground"]: DFLT,
@@ -316,9 +328,14 @@ let jsonObject = {
 	["editorGroup.dropIntoPromptForeground"]: DFLT,
 	["editorGroup.dropIntoPromptBackground"]: DFLT,
 	["editorGroup.dropIntoPromptBorder"]: DFLT,
-	["tab.activeBackground"]: DFLT,
-	["tab.unfocusedActiveBackground"]: tabUnfocusedActiveBackground,
-	["tab.activeForeground"]: DFLT,
+	["tab.activeBackground"]: GREY20,
+	["tab.activeForeground"]: GREY95,
+	["tab.inactiveBackground"]: GREY35,
+	["tab.inactiveForeground"]: GREY95,
+	["tab.unfocusedActiveBackground"]: GREY35,
+	["tab.unfocusedActiveForeground"]: GREY85,
+	["tab.unfocusedInactiveBackground"]: GREY40,
+	["tab.unfocusedInactiveForeground"]: GREY85,
 	["tab.border"]: DFLT,
 	["tab.activeBorder"]: DFLT,
 	["tab.selectedBorderTop"]: DFLT,
@@ -326,14 +343,9 @@ let jsonObject = {
 	["tab.selectedForeground"]: DFLT,
 	["tab.dragAndDropBorder"]: DFLT,
 	["tab.unfocusedActiveBorder"]: DFLT,
-	["tab.activeBorderTop"]: DFLT,
-	["tab.unfocusedActiveBorderTop"]: DFLT,
+	["tab.activeBorderTop"]: selectActiveStrong,
+	["tab.unfocusedActiveBorderTop"]: selectActiveTransparent,
 	["tab.lastPinnedBorder"]: DFLT,
-	["tab.inactiveBackground"]: DFLT,
-	["tab.unfocusedInactiveBackground"]: DFLT,
-	["tab.inactiveForeground"]: DFLT,
-	["tab.unfocusedActiveForeground"]: tabUnfocusedActiveForeground,
-	["tab.unfocusedInactiveForeground"]: DFLT,
 	["tab.hoverBackground"]: hover,
 	["tab.unfocusedHoverBackground"]: DFLT,
 	["tab.hoverForeground"]: DFLT,
@@ -353,10 +365,10 @@ let jsonObject = {
 
 	//All other editor colors are listed here:
 
-	["editor.background"]: backgroundLevel0,
-	["editor.foreground"]: foregroundLevel1,
-	["editorLineNumber.foreground"]: editorLineNumberForeground,
-	["editorLineNumber.activeForeground"]: DFLT,
+	["editor.background"]: GREY20,
+	["editor.foreground"]: GREY90,
+	["editorLineNumber.foreground"]: GREY50,
+	["editorLineNumber.activeForeground"]: GREY70,
 	["editorLineNumber.dimmedForeground"]: DFLT,
 	["editorCursor.background"]: DFLT,
 	["editorCursor.foreground"]: DFLT,
@@ -369,10 +381,10 @@ let jsonObject = {
 
 	//Selection colors are visible when selecting one or more characters. In addition to the selection also all regions with the same content are highlighted.
 
-	["editor.selectionBackground"]: activeSelect,
+	["editor.selectionBackground"]: selectActiveStrong,
 	["editor.selectionForeground"]: DFLT,
-	["editor.inactiveSelectionBackground"]: inactiveSelect,
-	["editor.selectionHighlightBackground"]: otherSelect,
+	["editor.inactiveSelectionBackground"]: selectInactiveTransparent,
+	["editor.selectionHighlightBackground"]: selectOthers,
 	["editor.selectionHighlightBorder"]: DFLT,
 
 	//Word highlight colors are visible when the cursor is inside a symbol or a word. Depending on the language support available for the file type, all matching references and declarations are highlighted and read and write accesses get different colors. If document symbol language support is not available, this falls back to word highlighting.
@@ -383,8 +395,8 @@ let jsonObject = {
 	["editor.wordHighlightBorder"]: wordHighlightRead,
 	["editor.wordHighlightStrongBackground"]: TRANSPARENT,
 	["editor.wordHighlightStrongBorder"]: wordHighlightWrite,
-	["editor.wordHighlightTextBackground"]: DFLT,
-	["editor.wordHighlightTextBorder"]: DFLT,
+	["editor.wordHighlightTextBackground"]: TRANSPARENT,
+	["editor.wordHighlightTextBorder"]: wordHighlightText,
 
 	//Find colors depend on the current find string in the Find/Replace dialog.
 	//Find matches
@@ -661,7 +673,7 @@ let jsonObject = {
 	//The Editor widget is shown in front of the editor content. Examples are the Find/Replace dialog, the suggestion widget, and the editor hover.
 
 	["editorWidget.foreground"]: DFLT,
-	["editorWidget.background"]: backgroundLevel1,
+	["editorWidget.background"]: GREY30,
 	["editorWidget.border"]: DFLT,
 	["editorWidget.resizeBorder"]: DFLT,
 	["editorSuggestWidget.background"]: DFLT,
@@ -706,7 +718,7 @@ let jsonObject = {
 	//Peek view
 
 	["peekView.border"]: DFLT,
-	["peekViewEditor.background"]: backgroundLevel1,
+	["peekViewEditor.background"]: GREY30,
 	["peekViewEditorGutter.background"]: DFLT,
 	["peekViewEditor.matchHighlightBackground"]: DFLT,
 	["peekViewEditor.matchHighlightBorder"]: DFLT,
@@ -754,7 +766,7 @@ let jsonObject = {
 	//Panel colors
 	//Panels are shown below the editor area and contain views like Output and Integrated Terminal.
 
-	["panel.background"]: backgroundLevel1,
+	["panel.background"]: GREY30,
 	["panel.border"]: DFLT,
 	["panel.dropBorder"]: drop,
 	["panelTitle.activeBorder"]: DFLT,
@@ -829,8 +841,8 @@ let jsonObject = {
 	["menubar.selectionForeground"]: DFLT,
 	["menubar.selectionBackground"]: DFLT,
 	["menubar.selectionBorder"]: DFLT,
-	["menu.foreground"]: foregroundLevel1,
-	["menu.background"]: backgroundLevel1,
+	["menu.foreground"]: GREY90,
+	["menu.background"]: GREY30,
 	["menu.selectionForeground"]: DFLT,
 	["menu.selectionBackground"]: DFLT,
 	["menu.selectionBorder"]: DFLT,
@@ -860,7 +872,7 @@ let jsonObject = {
 	["notificationCenterHeader.background"]: DFLT,
 	["notificationToast.border"]: DFLT,
 	["notifications.foreground"]: DFLT,
-	["notifications.background"]: backgroundLevel1,
+	["notifications.background"]: GREY30,
 	["notifications.border"]: DFLT,
 	["notificationLink.foreground"]: DFLT,
 	["notificationsErrorIcon.foreground"]: DFLT,
@@ -895,7 +907,7 @@ let jsonObject = {
 
 	["pickerGroup.border"]: DFLT,
 	["pickerGroup.foreground"]: DFLT,
-	["quickInput.background"]: backgroundLevel1,
+	["quickInput.background"]: GREY30,
 	["quickInput.foreground"]: DFLT,
 	["quickInputList.focusBackground"]: DFLT,
 	["quickInputList.focusForeground"]: DFLT,
@@ -923,7 +935,7 @@ let jsonObject = {
 
 	//Integrated Terminal colors
 
-	["terminal.background"]: DFLT,
+	["terminal.background"]: BLACK,
 	["terminal.border"]: DFLT,
 	["terminal.foreground"]: DFLT,
 	["terminal.ansiBlack"]: DFLT,
@@ -1085,10 +1097,10 @@ let jsonObject = {
 	["settings.checkboxForeground"]: DFLT,
 	["settings.checkboxBorder"]: DFLT,
 	["settings.rowHoverBackground"]: DFLT,
-	["settings.textInputBackground"]: backgroundLevel2,
+	["settings.textInputBackground"]: GREY35,
 	["settings.textInputForeground"]: DFLT,
 	["settings.textInputBorder"]: DFLT,
-	["settings.numberInputBackground"]: backgroundLevel2,
+	["settings.numberInputBackground"]: GREY35,
 	["settings.numberInputForeground"]: DFLT,
 	["settings.numberInputBorder"]: DFLT,
 	["settings.focusedRowBackground"]: DFLT,
@@ -1101,9 +1113,9 @@ let jsonObject = {
 	//The theme colors for breadcrumbs navigation:
 
 	["breadcrumb.foreground"]: DFLT,
-	["breadcrumb.background"]: backgroundLevel1,
-	["breadcrumb.focusForeground"]: foregroundLevel2,
-	["breadcrumb.activeSelectionForeground"]: foregroundLevel1,
+	["breadcrumb.background"]: GREY30,
+	["breadcrumb.focusForeground"]: GREY85,
+	["breadcrumb.activeSelectionForeground"]: GREY90,
 	["breadcrumbPicker.background"]: DFLT,
 
 	//Snippets colors
