@@ -29,42 +29,40 @@ let placeholder = "#7f7f7f";
 let hover = "#ffffff30";
 let click = "#ffffff50";
 
-let modifiedStrong = "#edc862";
-let modifiedTransparent = "#edc8623f";
-let addedStrong = "#6edd7c";
+let addSoft = "#6edd7c";
 // let addedSoft="#3b723e";
-let addedTransparent = "#6edd7c3f";
-let deletedStrong = "#f0769b";
-let deletedTransparent = "#f0769b3f";
-let renamedStrong = "#dd946e";
-let untrackedStrong = "#6fc2e2";
-let ignoredStrong = "#9e9e9e";
-let conflictingStrong = "#b16edd";
-let submoduleStrong = "#7b79e0";
+let addSoftTRANSPARENT = "#6edd7c3f";
+let modifySoft = "#edc862";
+let modifySoftTRANSPARENT = "#edc8623f";
+let deleteSoft = "#f0769b";
+let deleteSoftTRANSPARENT = "#f0769b3f";
+let renameSoft = "#dd946e";
+let untrackSoft = "#6fc2e2";
+let ignoreSoft = "#9e9e9e";
+let conflictSoft = "#b16edd";
+let submoduleSoft = "#7b79e0";
 
 let errorStrong = "#ff3b3b";
 let errorSoft = "#7f1d1d"; //soft是strong的颜色值减半
-let errorTransparent = "#ff3b3b7f"; //transparent是strong加半透明
+let errorTRANSPARENT = "#ff3b3b7f"; //transparent是strong加半透明
 let warningStrong = "#FF9B19";
 let warningSoft = "#7f4d0c";
-let warningTransparent = "#FF9B197f";
+let warningTRANSPARENT = "#FF9B197f";
 let infoStrong = "#0080ff";
 let infoSoft = "#00407f";
-let infoTransparent = "#0080ff7f";
+let infoTRANSPARENT = "#0080ff7f";
 let hintStrong = "#3A9F49";
 
 let selectActiveStrong = "#3377ff";
 let selectActiveSoft = "#00427f";
-let selectActiveTransparent = "#3377ff7f";
+let selectActiveTRANSPARENT = "#3377ff7f";
 let selectInactiveStrong = "#2e5173";
 let selectInactiveSoft = "#445361";
-let selectInactiveTransparent = "#2e51737f";
-let selectOthersTransparent = "#5718eb7f";
+let selectInactiveTRANSPARENT = "#4d5e803f";
+let selectOthersTRANSPARENT = "#5718eb7f";
 
-let findMatchCurrentStrong = "#3030f2";
-let findMatchCurrentTransparent = "#3030f27f";
 let findMatchAllStrong = "#6b2ee6";
-let findMatchAllTransparent = "#6b2ee63f";
+let findMatchAllTRANSPARENT = "#6b2ee63f";
 
 let wordHighlightRead = "#c9b800dd";
 let wordHighlightWrite = "#f1730bdd";
@@ -73,7 +71,7 @@ let wordHighlightText = "#8dec02dd";
 let sliderNormal = "#ffffff20";
 let sliderActive = "#ffffff45";
 
-let hoverHighlightBackground = "#b4b4b436";
+// let hoverHighlightBackground = "#b4b4b436";
 let lineHighlightBackground = "#ffffff11";
 let rangeHighlightBackground = "#a724ff2f";
 let findRangeHighlightBackground = "#ff990021";
@@ -89,15 +87,15 @@ let rangeHighlightForeground = "#7ccbff31";
 let UnusedCodeOpacity = "#00000085";
 let commentRangeForeground = "#686868";
 
-let statusBarForeground = "#dddddd";
-let statusBarBackground = "#2d3b53";
-let statusBarDebuggingForeground = "#0f0f0f";
+// let statusBarForeground = "#dddddd";
+// let statusBarBackground = "#2d3b53";
+// let statusBarDebuggingForeground = "#0f0f0f";
 let statusBarDebuggingBackground = "#ceb32c";
-let statusBarNoFolderBackground = "#444";
-let statusBarItemRemoteBackground = "#1284ff99";
-let statusBarItemRemoteForeground = "#FFF";
+// let statusBarNoFolderBackground = "#444";
+// let statusBarItemRemoteBackground = "#1284ff99";
+// let statusBarItemRemoteForeground = "#FFF";
 let statusBarItemProminentBackground = "#003847";
-let statusBarItemProminentHoverBackground = "#003847";
+// let statusBarItemProminentHoverBackground = "#003847";
 
 
 
@@ -312,8 +310,8 @@ let jsonObject = {
 		//Minimap
 		//The Minimap shows a minified version of the current file.
 
-		["minimap.findMatchHighlight"]: findMatchAllTransparent,
-		["minimap.selectionHighlight"]: selectActiveTransparent,
+		["minimap.findMatchHighlight"]: findMatchAllTRANSPARENT,
+		["minimap.selectionHighlight"]: selectActiveTRANSPARENT,
 		["minimap.errorHighlight"]: errorStrong,
 		["minimap.warningHighlight"]: warningStrong,
 		["minimap.background"]: DFLT,
@@ -324,9 +322,9 @@ let jsonObject = {
 		["minimapSlider.background"]: sliderNormal,
 		["minimapSlider.hoverBackground"]: hover,
 		["minimapSlider.activeBackground"]: click,
-		["minimapGutter.addedBackground"]: addedStrong,
-		["minimapGutter.modifiedBackground"]: modifiedStrong,
-		["minimapGutter.deletedBackground"]: deletedStrong,
+		["minimapGutter.addedBackground"]: addSoft,
+		["minimapGutter.modifiedBackground"]: modifySoft,
+		["minimapGutter.deletedBackground"]: deleteSoft,
 		["editorMinimap.inlineChatInserted"]: DFLT,
 
 		//Editor Groups & Tabs
@@ -359,7 +357,7 @@ let jsonObject = {
 		["tab.dragAndDropBorder"]: DFLT,
 		["tab.unfocusedActiveBorder"]: DFLT,
 		["tab.activeBorderTop"]: selectActiveStrong,
-		["tab.unfocusedActiveBorderTop"]: selectInactiveTransparent,
+		["tab.unfocusedActiveBorderTop"]: selectInactiveTRANSPARENT,
 		["tab.lastPinnedBorder"]: DFLT,
 		["tab.hoverBackground"]: hover,
 		["tab.unfocusedHoverBackground"]: DFLT,
@@ -396,11 +394,11 @@ let jsonObject = {
 
 		//Selection colors are visible when selecting one or more characters. In addition to the selection also all regions with the same content are highlighted.
 
-		["editor.selectionBackground"]: selectActiveTransparent,
+		["editor.selectionBackground"]: selectActiveTRANSPARENT,
 		["editor.selectionForeground"]: DFLT,
-		["editor.inactiveSelectionBackground"]: selectInactiveTransparent,
+		["editor.inactiveSelectionBackground"]: selectInactiveTRANSPARENT,
 		["editor.selectionHighlightBackground"]:
-			selectOthersTransparent,
+			selectOthersTRANSPARENT,
 		["editor.selectionHighlightBorder"]: DFLT,
 
 		//Word highlight colors are visible when the cursor is inside a symbol or a word. Depending on the language support available for the file type, all matching references and declarations are highlighted and read and write accesses get different colors. If document symbol language support is not available, this falls back to word highlighting.
@@ -417,10 +415,10 @@ let jsonObject = {
 		//Find colors depend on the current find string in the Find/Replace dialog.
 		//Find matches
 
-		["editor.findMatchBackground"]: selectActiveTransparent,
+		["editor.findMatchBackground"]: selectActiveTRANSPARENT,
 		["editor.findMatchForeground"]: DFLT,
 		["editor.findMatchHighlightForeground"]: DFLT,
-		["editor.findMatchHighlightBackground"]: findMatchAllTransparent,
+		["editor.findMatchHighlightBackground"]: findMatchAllTRANSPARENT,
 		["editor.findRangeHighlightBackground"]: findRangeHighlightBackground,
 		["editor.findMatchBorder"]: DFLT,
 		["editor.findMatchHighlightBorder"]: DFLT,
@@ -562,9 +560,9 @@ let jsonObject = {
 		["editorOverviewRuler.wordHighlightStrongForeground"]:
 			wordHighlightWrite,
 		["editorOverviewRuler.wordHighlightTextForeground"]: DFLT,
-		["editorOverviewRuler.modifiedForeground"]: modifiedStrong,
-		["editorOverviewRuler.addedForeground"]: addedStrong,
-		["editorOverviewRuler.deletedForeground"]: deletedStrong,
+		["editorOverviewRuler.modifiedForeground"]: modifySoft,
+		["editorOverviewRuler.addedForeground"]: addSoft,
+		["editorOverviewRuler.deletedForeground"]: deleteSoft,
 		["editorOverviewRuler.errorForeground"]: errorStrong,
 		["editorOverviewRuler.warningForeground"]: warningStrong,
 		["editorOverviewRuler.infoForeground"]: infoStrong,
@@ -597,9 +595,9 @@ let jsonObject = {
 		//The gutter contains the glyph margins and the line numbers:
 
 		["editorGutter.background"]: DFLT,
-		["editorGutter.modifiedBackground"]: modifiedStrong,
-		["editorGutter.addedBackground"]: addedStrong,
-		["editorGutter.deletedBackground"]: deletedStrong,
+		["editorGutter.modifiedBackground"]: modifySoft,
+		["editorGutter.addedBackground"]: addSoft,
+		["editorGutter.deletedBackground"]: deleteSoft,
 		["editorGutter.commentRangeForeground"]: commentRangeForeground,
 		["editorGutter.commentGlyphForeground"]: DFLT,
 		["editorGutter.commentUnresolvedGlyphForeground"]: DFLT,
@@ -637,14 +635,14 @@ let jsonObject = {
 		//Diff editor colors
 		//For coloring inserted and removed text, use either a background or a border color but not both.
 
-		["diffEditor.insertedTextBackground"]: addedTransparent,
+		["diffEditor.insertedTextBackground"]: addSoftTRANSPARENT,
 		["diffEditor.insertedTextBorder"]: TRANSPARENT,
-		["diffEditor.removedTextBackground"]: deletedTransparent,
+		["diffEditor.removedTextBackground"]: deleteSoftTRANSPARENT,
 		["diffEditor.removedTextBorder"]: TRANSPARENT,
 		["diffEditor.border"]: DFLT,
 		["diffEditor.diagonalFill"]: DFLT,
-		["diffEditor.insertedLineBackground"]:addedTransparent ,
-		["diffEditor.removedLineBackground"]: deletedTransparent,
+		["diffEditor.insertedLineBackground"]:addSoftTRANSPARENT ,
+		["diffEditor.removedLineBackground"]: deleteSoftTRANSPARENT,
 		["diffEditorGutter.insertedLineBackground"]: TRANSPARENT,
 		["diffEditorGutter.removedLineBackground"]: TRANSPARENT,
 		["diffEditorOverview.insertedForeground"]: DFLT,
@@ -1073,16 +1071,16 @@ let jsonObject = {
 
 		//Git colors
 
-		["gitDecoration.addedResourceForeground"]: addedStrong,
-		["gitDecoration.modifiedResourceForeground"]: modifiedStrong,
-		["gitDecoration.deletedResourceForeground"]: deletedStrong,
-		["gitDecoration.renamedResourceForeground"]: renamedStrong,
+		["gitDecoration.addedResourceForeground"]: addSoft,
+		["gitDecoration.modifiedResourceForeground"]: modifySoft,
+		["gitDecoration.deletedResourceForeground"]: deleteSoft,
+		["gitDecoration.renamedResourceForeground"]: renameSoft,
 		["gitDecoration.stageModifiedResourceForeground"]: DFLT,
 		["gitDecoration.stageDeletedResourceForeground"]: DFLT,
-		["gitDecoration.untrackedResourceForeground"]: untrackedStrong,
-		["gitDecoration.ignoredResourceForeground"]: ignoredStrong,
-		["gitDecoration.conflictingResourceForeground"]: conflictingStrong,
-		["gitDecoration.submoduleResourceForeground"]: submoduleStrong,
+		["gitDecoration.untrackedResourceForeground"]: untrackSoft,
+		["gitDecoration.ignoredResourceForeground"]: ignoreSoft,
+		["gitDecoration.conflictingResourceForeground"]: conflictSoft,
+		["gitDecoration.submoduleResourceForeground"]: submoduleSoft,
 		["git.blame.editorDecorationForeground"]: DFLT,
 
 		//Source Control Graph colors
@@ -1105,7 +1103,7 @@ let jsonObject = {
 		//Note:
 
 		["settings.headerForeground"]: DFLT,
-		["settings.modifiedItemIndicator"]: modifiedStrong,
+		["settings.modifiedItemIndicator"]: modifySoft,
 		["settings.dropdownBackground"]: GREY30,
 		["settings.dropdownForeground"]: DFLT,
 		["settings.dropdownBorder"]: DFLT,
