@@ -29,42 +29,42 @@ let placeholder = "#7f7f7f";
 let hover = "#ffffff30";
 let click = "#ffffff50";
 
-let modifiedStrong = "#ffe23d";
-let modifiedTransparent = "#ffe23d7f";
-// let addedStrong = "#08f680";
-let addedStrong = "#30bd44"; //oklch(0.7,0.2,145)
-let addedSoft="#3b723e";//oklch(0.5,0.1,145)
-let addedTransparent = "#30bd447f";
-let deletedStrong = "#fe5c8e"; //oklch(0.7,0.2,5)
-// let deletedStrong = "#ff4683";
-let deletedTransparent = "#fe5c8e7f";
-let renamedStrong = "#b246ff";
-let untrackedStrong = "#999999";
-let ignoredStrong = "#686868";
-let conflictingStrong = "#db4e1b";
-let submoduleStrong = "#5f69db";
+let modifiedStrong = "#edc862";
+let modifiedTransparent = "#edc8623f";
+let addedStrong = "#6edd7c";
+// let addedSoft="#3b723e";
+let addedTransparent = "#6edd7c3f";
+let deletedStrong = "#f0769b";
+let deletedTransparent = "#f0769b3f";
+let renamedStrong = "#dd946e";
+let untrackedStrong = "#6fc2e2";
+let ignoredStrong = "#9e9e9e";
+let conflictingStrong = "#b16edd";
+let submoduleStrong = "#7b79e0";
 
 let errorStrong = "#ff3b3b";
 let errorSoft = "#7f1d1d"; //soft是strong的颜色值减半
 let errorTransparent = "#ff3b3b7f"; //transparent是strong加半透明
-let warningStrong = "#ff9d5b";
-let warningSoft = "#7f4e2d";
-let warningTransparent = "#ff9d5b7f";
-let infoStrong = "#0077ff";
-let infoSoft = "#003b7f";
-let infoTransparent = "#0077ff7f";
-let hintStrong = "#19d400";
+let warningStrong = "#FF9B19";
+let warningSoft = "#7f4d0c";
+let warningTransparent = "#FF9B197f";
+let infoStrong = "#0080ff";
+let infoSoft = "#00407f";
+let infoTransparent = "#0080ff7f";
+let hintStrong = "#3A9F49";
 
-let selectActiveStrong = "#0084ff";
+let selectActiveStrong = "#3377ff";
 let selectActiveSoft = "#00427f";
-let selectActiveTransparent = "#0084ff7f";
+let selectActiveTransparent = "#3377ff7f";
 let selectInactiveStrong = "#2e5173";
 let selectInactiveSoft = "#445361";
 let selectInactiveTransparent = "#2e51737f";
-let selectOthersTransparentTransparent = "#5718eb7f";
+let selectOthersTransparent = "#5718eb7f";
 
-let findMatchCurrent = "#4375ff98";
-let findMatchAll = "#8a24ce7f";
+let findMatchCurrentStrong = "#3030f2";
+let findMatchCurrentTransparent = "#3030f27f";
+let findMatchAllStrong = "#6b2ee6";
+let findMatchAllTransparent = "#6b2ee63f";
 
 let wordHighlightRead = "#c9b800dd";
 let wordHighlightWrite = "#f1730bdd";
@@ -74,7 +74,7 @@ let sliderNormal = "#ffffff20";
 let sliderActive = "#ffffff45";
 
 let hoverHighlightBackground = "#b4b4b436";
-let lineHighlightBackground = "#ffffff16";
+let lineHighlightBackground = "#ffffff11";
 let rangeHighlightBackground = "#a724ff2f";
 let findRangeHighlightBackground = "#ff990021";
 let editorUnicodeHighlightBorder = "#6a6b423c";
@@ -312,7 +312,7 @@ let jsonObject = {
 		//Minimap
 		//The Minimap shows a minified version of the current file.
 
-		["minimap.findMatchHighlight"]: findMatchAll,
+		["minimap.findMatchHighlight"]: findMatchAllTransparent,
 		["minimap.selectionHighlight"]: selectActiveTransparent,
 		["minimap.errorHighlight"]: errorStrong,
 		["minimap.warningHighlight"]: warningStrong,
@@ -400,7 +400,7 @@ let jsonObject = {
 		["editor.selectionForeground"]: DFLT,
 		["editor.inactiveSelectionBackground"]: selectInactiveTransparent,
 		["editor.selectionHighlightBackground"]:
-			selectOthersTransparentTransparent,
+			selectOthersTransparent,
 		["editor.selectionHighlightBorder"]: DFLT,
 
 		//Word highlight colors are visible when the cursor is inside a symbol or a word. Depending on the language support available for the file type, all matching references and declarations are highlighted and read and write accesses get different colors. If document symbol language support is not available, this falls back to word highlighting.
@@ -417,10 +417,10 @@ let jsonObject = {
 		//Find colors depend on the current find string in the Find/Replace dialog.
 		//Find matches
 
-		["editor.findMatchBackground"]: findMatchCurrent,
+		["editor.findMatchBackground"]: selectActiveTransparent,
 		["editor.findMatchForeground"]: DFLT,
 		["editor.findMatchHighlightForeground"]: DFLT,
-		["editor.findMatchHighlightBackground"]: findMatchAll,
+		["editor.findMatchHighlightBackground"]: findMatchAllTransparent,
 		["editor.findRangeHighlightBackground"]: findRangeHighlightBackground,
 		["editor.findMatchBorder"]: DFLT,
 		["editor.findMatchHighlightBorder"]: DFLT,
@@ -438,7 +438,7 @@ let jsonObject = {
 
 		//The hover highlight is shown behind the symbol for which a hover is shown.
 
-		["editor.hoverHighlightBackground"]: hoverHighlightBackground,
+		["editor.hoverHighlightBackground"]: hover,
 
 		//The current line is typically shown as either background highlight or a border (not both).
 
@@ -554,7 +554,7 @@ let jsonObject = {
 
 		["editorOverviewRuler.background"]: DFLT,
 		["editorOverviewRuler.border"]: DFLT,
-		["editorOverviewRuler.findMatchForeground"]: DFLT,
+		["editorOverviewRuler.findMatchForeground"]: findMatchAllStrong,
 		["editorOverviewRuler.rangeHighlightForeground"]:
 			rangeHighlightForeground,
 		["editorOverviewRuler.selectionHighlightForeground"]: DFLT,
@@ -565,8 +565,8 @@ let jsonObject = {
 		["editorOverviewRuler.modifiedForeground"]: modifiedStrong,
 		["editorOverviewRuler.addedForeground"]: addedStrong,
 		["editorOverviewRuler.deletedForeground"]: deletedStrong,
-		["editorOverviewRuler.errorForeground"]: DFLT,
-		["editorOverviewRuler.warningForeground"]: DFLT,
+		["editorOverviewRuler.errorForeground"]: errorStrong,
+		["editorOverviewRuler.warningForeground"]: warningStrong,
 		["editorOverviewRuler.infoForeground"]: infoStrong,
 		["editorOverviewRuler.bracketMatchForeground"]: DFLT,
 		["editorOverviewRuler.inlineChatInserted"]: DFLT,
@@ -585,9 +585,9 @@ let jsonObject = {
 		["editorInfo.background"]: DFLT,
 		["editorHint.foreground"]: hintStrong,
 		["editorHint.border"]: DFLT,
-		["problemsErrorIcon.foreground"]: DFLT,
-		["problemsWarningIcon.foreground"]: DFLT,
-		["problemsInfoIcon.foreground"]: DFLT,
+		["problemsErrorIcon.foreground"]: errorStrong,
+		["problemsWarningIcon.foreground"]: warningStrong,
+		["problemsInfoIcon.foreground"]: infoStrong,
 
 		//Unused source code:
 
