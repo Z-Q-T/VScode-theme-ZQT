@@ -1,8 +1,8 @@
 {
 	"$schema": "vscode://schemas/color-theme",
-	"name": "Dark (Visual Studio) ZQT",
+	"name": "Universal Code Highlight - ZQT Theme",
 	"//description":"通用的代码高亮",
-	"include": "./dark_defaults_ZQT.json",
+	"include": "./interface_ZQT.json",
 	"tokenColors": [
 		{
 			"scope": [

@@ -1,6 +1,6 @@
 {
 	"$schema": "vscode://schemas/color-theme",
-	"name": "Dark Default Colors ZQT",
+	"name": "User Interface Colours - ZQT Theme",
 	"//description":"编辑器的界面外观",
 	"colors":{
 		"contrastActiveBorder": "default",

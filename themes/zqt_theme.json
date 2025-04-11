@@ -1,8 +1,8 @@
 {
 	"$schema": "vscode://schemas/color-theme",
-	"name": "ZQT Theme",
+	"name": "Specific Code Highlight - ZQT Theme",
 	"//description":"各个语言专有的代码高亮",
-	"include": "./dark_vs_ZQT.json",
+	"include": "./codeHighlightUniversal_ZQT.json",
 	"tokenColors": [
 
 		{
