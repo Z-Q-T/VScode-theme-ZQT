@@ -30,6 +30,7 @@ let placeholder = "#a5bbcc";
 let modified = "#ffe23daa";
 let added = "#00ff80aa";
 let deleted = "#ff4683aa";
+let renamed = "#b246ffaa";
 let untracked = "#858585";
 let ignored = "#686868";
 let conflicting = "#aa45aa";
@@ -49,10 +50,10 @@ let hintStrong = "#19d400";
 let selectActiveStrong = "#0084ff";
 let selectActiveSoft = "#00427f";
 let selectActiveTransparent = "#0084ff7f";
-let selectInactiveStrong = "#88a6c2";
+let selectInactiveStrong = "#2e5173";
 let selectInactiveSoft = "#445361";
-let selectInactiveTransparent = "#88a6c27f";
-let selectOthers = "#613eff7f";
+let selectInactiveTransparent = "#2e51737f";
+let selectOthersTransparentTransparent = "#5718eb7f";
 
 let sliderNormal = "#ffffff20";
 let sliderActive = "#ffffff45";
@@ -79,6 +80,7 @@ let diffEditorInsertedTextBackground = "#00ff8042";
 let diffEditorRemovedTextBackground = "#ff468348";
 let UnusedCodeOpacity = "#00000085";
 let commentRangeForeground = "#686868";
+
 let statusBarForeground = "#dddddd";
 let statusBarBackground = "#2359af";
 let statusBarDebuggingForeground = "#0f0f0f";
@@ -93,7 +95,11 @@ let titleBarActiveForeground = "#ddd";
 let jsonObject = {
 	//Contrast colors
 	//The contrast colors are typically only set for high contrast themes. If set, they add an additional border around items across the UI to increase the contrast.
-
+	
+		["$schema"]: "vscode://schemas/color-theme",
+		["name"]: "User Interface Colours - ZQT Theme",
+		["//description"]:"编辑器的界面外观",
+		["colors"]:{
 	["contrastActiveBorder"]: DFLT,
 	["contrastBorder"]: DFLT,
 
@@ -249,7 +255,7 @@ let jsonObject = {
 	//Activity Bar
 	//The Activity Bar is usually displayed either on the far left or right of the workbench and allows fast switching between views of the Side Bar.
 
-	["activityBar.background"]: DFLT,
+	["activityBar.background"]: GREY30,
 	["activityBar.dropBorder"]: DFLT,
 	["activityBar.foreground"]: DFLT,
 	["activityBar.inactiveForeground"]: DFLT,
@@ -279,7 +285,7 @@ let jsonObject = {
 	//Side Bar
 	//The Side Bar contains views like the Explorer and Search.
 
-	["sideBar.background"]: GREY30,
+	["sideBar.background"]: GREY25,
 	["sideBar.foreground"]: DFLT,
 	["sideBar.border"]: DFLT,
 	["sideBar.dropBackground"]: drop,
@@ -319,8 +325,8 @@ let jsonObject = {
 
 	["editorGroup.border"]: DFLT,
 	["editorGroup.dropBackground"]: drop,
-	["editorGroupHeader.noTabsBackground"]: DFLT,
-	["editorGroupHeader.tabsBackground"]: GREY30,
+	["editorGroupHeader.noTabsBackground"]: GREY20,
+	["editorGroupHeader.tabsBackground"]: GREY25,
 	["editorGroupHeader.tabsBorder"]: DFLT,
 	["editorGroupHeader.border"]: DFLT,
 	["editorGroup.emptyBackground"]: DFLT,
@@ -330,11 +336,11 @@ let jsonObject = {
 	["editorGroup.dropIntoPromptBorder"]: DFLT,
 	["tab.activeBackground"]: GREY20,
 	["tab.activeForeground"]: GREY95,
-	["tab.inactiveBackground"]: GREY35,
+	["tab.inactiveBackground"]: GREY30,
 	["tab.inactiveForeground"]: GREY95,
-	["tab.unfocusedActiveBackground"]: GREY35,
+	["tab.unfocusedActiveBackground"]: GREY25,
 	["tab.unfocusedActiveForeground"]: GREY85,
-	["tab.unfocusedInactiveBackground"]: GREY40,
+	["tab.unfocusedInactiveBackground"]: GREY30,
 	["tab.unfocusedInactiveForeground"]: GREY85,
 	["tab.border"]: DFLT,
 	["tab.activeBorder"]: DFLT,
@@ -344,7 +350,7 @@ let jsonObject = {
 	["tab.dragAndDropBorder"]: DFLT,
 	["tab.unfocusedActiveBorder"]: DFLT,
 	["tab.activeBorderTop"]: selectActiveStrong,
-	["tab.unfocusedActiveBorderTop"]: selectActiveTransparent,
+	["tab.unfocusedActiveBorderTop"]: selectInactiveTransparent,
 	["tab.lastPinnedBorder"]: DFLT,
 	["tab.hoverBackground"]: hover,
 	["tab.unfocusedHoverBackground"]: DFLT,
@@ -381,10 +387,10 @@ let jsonObject = {
 
 	//Selection colors are visible when selecting one or more characters. In addition to the selection also all regions with the same content are highlighted.
 
-	["editor.selectionBackground"]: selectActiveStrong,
+	["editor.selectionBackground"]: selectActiveTransparent,
 	["editor.selectionForeground"]: DFLT,
 	["editor.inactiveSelectionBackground"]: selectInactiveTransparent,
-	["editor.selectionHighlightBackground"]: selectOthers,
+	["editor.selectionHighlightBackground"]: selectOthersTransparentTransparent,
 	["editor.selectionHighlightBorder"]: DFLT,
 
 	//Word highlight colors are visible when the cursor is inside a symbol or a word. Depending on the language support available for the file type, all matching references and declarations are highlighted and read and write accesses get different colors. If document symbol language support is not available, this falls back to word highlighting.
@@ -790,14 +796,14 @@ let jsonObject = {
 	//Status Bar colors
 	//The Status Bar is shown in the bottom of the workbench.
 
-	["statusBar.background"]: statusBarBackground,
+	["statusBar.background"]: GREY30,
 	["statusBar.foreground"]: statusBarForeground,
 	["statusBar.border"]: DFLT,
 	["statusBar.debuggingBackground"]: statusBarDebuggingBackground,
-	["statusBar.debuggingForeground"]: statusBarDebuggingForeground,
+	["statusBar.debuggingForeground"]: GREY20,
 	["statusBar.debuggingBorder"]: DFLT,
 	["statusBar.noFolderForeground"]: DFLT,
-	["statusBar.noFolderBackground"]: statusBarNoFolderBackground,
+	["statusBar.noFolderBackground"]: GREY35,
 	["statusBar.noFolderBorder"]: DFLT,
 	["statusBarItem.activeBackground"]: DFLT,
 	["statusBarItem.hoverForeground"]: DFLT,
@@ -1056,10 +1062,10 @@ let jsonObject = {
 
 	//Git colors
 
-	["gitDecoration.addedResourceForeground"]: added,
+	["gitDecoration.addedResourceForeground"]: DEBUG_GREEN,
 	["gitDecoration.modifiedResourceForeground"]: modified,
 	["gitDecoration.deletedResourceForeground"]: deleted,
-	["gitDecoration.renamedResourceForeground"]: DFLT,
+	["gitDecoration.renamedResourceForeground"]: renamed,
 	["gitDecoration.stageModifiedResourceForeground"]: DFLT,
 	["gitDecoration.stageDeletedResourceForeground"]: DFLT,
 	["gitDecoration.untrackedResourceForeground"]: untracked,
@@ -1089,18 +1095,18 @@ let jsonObject = {
 
 	["settings.headerForeground"]: DFLT,
 	["settings.modifiedItemIndicator"]: modified,
-	["settings.dropdownBackground"]: DFLT,
+	["settings.dropdownBackground"]: GREY30,
 	["settings.dropdownForeground"]: DFLT,
 	["settings.dropdownBorder"]: DFLT,
 	["settings.dropdownListBorder"]: DFLT,
-	["settings.checkboxBackground"]: DFLT,
+	["settings.checkboxBackground"]: GREY30,
 	["settings.checkboxForeground"]: DFLT,
 	["settings.checkboxBorder"]: DFLT,
-	["settings.rowHoverBackground"]: DFLT,
-	["settings.textInputBackground"]: GREY35,
+	["settings.rowHoverBackground"]: hover,
+	["settings.textInputBackground"]: GREY30,
 	["settings.textInputForeground"]: DFLT,
 	["settings.textInputBorder"]: DFLT,
-	["settings.numberInputBackground"]: GREY35,
+	["settings.numberInputBackground"]: GREY30,
 	["settings.numberInputForeground"]: DFLT,
 	["settings.numberInputBorder"]: DFLT,
 	["settings.focusedRowBackground"]: DFLT,
@@ -1112,8 +1118,8 @@ let jsonObject = {
 	//Breadcrumbs colors
 	//The theme colors for breadcrumbs navigation:
 
-	["breadcrumb.foreground"]: DFLT,
-	["breadcrumb.background"]: GREY30,
+	["breadcrumb.foreground"]: GREY75,
+	["breadcrumb.background"]: GREY20,
 	["breadcrumb.focusForeground"]: GREY85,
 	["breadcrumb.activeSelectionForeground"]: GREY90,
 	["breadcrumbPicker.background"]: DFLT,
@@ -1253,7 +1259,7 @@ let jsonObject = {
 	["gauge.warningForeground"]: DFLT,
 	["gauge.errorBackground"]: DFLT,
 	["gauge.errorForeground"]: DFLT,
-};
+}};
 
 const fs = require("fs");
 
@@ -1271,5 +1277,5 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonObject, "theme.json");
+saveObjectToTxtFile(jsonObject, "./interface_ZQT.json");
 // console.log(jsonObject);
