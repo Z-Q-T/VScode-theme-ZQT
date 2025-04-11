@@ -30,12 +30,14 @@ let hover = "#ffffff30";
 let click = "#ffffff50";
 
 let addStrong = "#2de35b";
+let addStrongTRANSPARENT = "#2de35b7f";
 let addSoft = "#6edd8a";
 let addSoftTRANSPARENT = "#6edd8a3f";
 let modifyStrong = "#f3bd28";
 let modifySoft = "#edc862";
 let modifySoftTRANSPARENT = "#edc8623f";
 let deleteStrong = "#f5306c";
+let deleteStrongTRANSPARENT = "#f5306c7f";
 let deleteSoft = "#f0769b";
 let deleteSoftTRANSPARENT = "#f0769b3f";
 let renameSoft = "#dd946e";
@@ -51,9 +53,10 @@ let warningStrong = "#FF9B19";
 let warningSoft = "#7f4d0c";
 let warningTRANSPARENT = "#FF9B197f";
 let infoStrong = "#0080ff";
-let infoSoft = "#00407f";
+let infoSoft = "#193b7f";
 let infoTRANSPARENT = "#0080ff7f";
-let hintStrong = "#3A9F49";
+let hintStrong = "#36b348";
+let hintSoft = "#1b5924";
 
 let selectActiveStrong = "#3377ff";
 // let selectActiveSoft = "#00427f";
@@ -63,7 +66,7 @@ let selectInactiveStrong = "#4d5e80";
 let selectInactiveTRANSPARENT = "#4d5e803f";
 let selectOthersTRANSPARENT = "#3377ff3f";
 
-let findMatchAllStrong = "#6b2ee6";
+let findMatchAllStrong = "#5f29ccbf";
 let findMatchAllTRANSPARENT = "#5f29cc7f";
 
 let wordHighlightRead = "#008ce3bf";
@@ -71,24 +74,21 @@ let wordHighlightWrite = "#0bf189bf";
 let wordHighlightText = "#02bdd6bf";
 
 let sliderNormal = "#ffffff20";
-let sliderActive = "#ffffff45";
-
+// let sliderActive = "#ffffff45";
 // let hoverHighlightBackground = "#b4b4b436";
 let lineHighlightBackground = "#ffffff11";
 let rangeHighlightBackground = "#a724ff2f";
 let findRangeHighlightBackground = "#ff990021";
-let editorUnicodeHighlightBorder = "#6a6b423c";
 let editorLinkActiveForeground = "#73ff009f";
-let editorWhitespaceForeground = "#4692c55e";
 let IndentGuide = "#404040";
 let IndentGuideActive = "#686868";
-let editorRulerForeground = "#333";
-let BracketMatchBackground = "#ffffff00";
-let BracketMatchBorder = "#4aacec";
+let editorWhitespaceForeground = "#4692c55e";
+let editorUnicodeHighlightBorder = "#6a6b423c";
+let BracketMatchBackground = "#ffaa003f";
+let BracketMatchBorder = "#ffaa007f";
 let rangeHighlightForeground = "#7ccbff31";
 let UnusedCodeOpacity = "#00000085";
 let commentRangeForeground = "#686868";
-
 // let statusBarForeground = "#dddddd";
 // let statusBarBackground = "#2d3b53";
 // let statusBarDebuggingForeground = "#0f0f0f";
@@ -209,7 +209,7 @@ let jsonObject = {
 		//Scrollbar control
 
 		["scrollbar.shadow"]: shadow,
-		["scrollbarSlider.activeBackground"]: sliderActive,
+		["scrollbarSlider.activeBackground"]: click,
 		["scrollbarSlider.background"]: sliderNormal,
 		["scrollbarSlider.hoverBackground"]: hover,
 
@@ -467,7 +467,7 @@ let jsonObject = {
 
 		//To see the editor white spaces, enable Toggle Render Whitespace.
 
-		["editorWhitespace.foreground"]: editorWhitespaceForeground,
+		["editorWhitespace.foreground"]: infoSoft,
 
 		//To see the editor indent guides, set ["editor.guides.indentation"]:
 
@@ -497,7 +497,7 @@ let jsonObject = {
 
 		//To see editor rulers, define their location with "editor.rulers"
 
-		["editorRuler.foreground"]: editorRulerForeground,
+		["editorRuler.foreground"]: GREY30,
 
 		["editor.linkedEditingBackground"]: DFLT,
 
@@ -553,7 +553,7 @@ let jsonObject = {
 		["editorOverviewRuler.border"]: DFLT,
 		["editorOverviewRuler.findMatchForeground"]: findMatchAllStrong,
 		["editorOverviewRuler.rangeHighlightForeground"]: rangeHighlightForeground,
-		["editorOverviewRuler.selectionHighlightForeground"]: selectActiveStrong,
+		["editorOverviewRuler.selectionHighlightForeground"]: selectActiveTRANSPARENT,
 		["editorOverviewRuler.wordHighlightForeground"]: wordHighlightRead,
 		["editorOverviewRuler.wordHighlightStrongForeground"]: wordHighlightWrite,
 		["editorOverviewRuler.wordHighlightTextForeground"]: wordHighlightText,
@@ -632,9 +632,9 @@ let jsonObject = {
 		//Diff editor colors
 		//For coloring inserted and removed text, use either a background or a border color but not both.
 
-		["diffEditor.insertedTextBackground"]: addSoftTRANSPARENT,
+		["diffEditor.insertedTextBackground"]: addStrongTRANSPARENT,
 		["diffEditor.insertedTextBorder"]: TRANSPARENT,
-		["diffEditor.removedTextBackground"]: deleteSoftTRANSPARENT,
+		["diffEditor.removedTextBackground"]: deleteStrongTRANSPARENT,
 		["diffEditor.removedTextBorder"]: TRANSPARENT,
 		["diffEditor.border"]: DFLT,
 		["diffEditor.diagonalFill"]: DFLT,
