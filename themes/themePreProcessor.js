@@ -33,6 +33,7 @@ let modifiedStrong = "#ffe23d";
 let modifiedTransparent = "#ffe23d7f";
 // let addedStrong = "#08f680";
 let addedStrong = "#30bd44"; //oklch(0.7,0.2,145)
+let addedSoft="#3b723e";//oklch(0.5,0.1,145)
 let addedTransparent = "#30bd447f";
 let deletedStrong = "#fe5c8e"; //oklch(0.7,0.2,5)
 // let deletedStrong = "#ff4683";
@@ -62,13 +63,16 @@ let selectInactiveSoft = "#445361";
 let selectInactiveTransparent = "#2e51737f";
 let selectOthersTransparentTransparent = "#5718eb7f";
 
-let sliderNormal = "#ffffff20";
-let sliderActive = "#ffffff45";
 let findMatchCurrent = "#4375ff98";
 let findMatchAll = "#8a24ce7f";
+
 let wordHighlightRead = "#c9b800dd";
 let wordHighlightWrite = "#f1730bdd";
 let wordHighlightText = "#8dec02dd";
+
+let sliderNormal = "#ffffff20";
+let sliderActive = "#ffffff45";
+
 let hoverHighlightBackground = "#b4b4b436";
 let lineHighlightBackground = "#ffffff16";
 let rangeHighlightBackground = "#a724ff2f";
@@ -82,8 +86,6 @@ let editorRulerForeground = "#333";
 let BracketMatchBackground = "#ffffff00";
 let BracketMatchBorder = "#4aacec";
 let rangeHighlightForeground = "#7ccbff31";
-let diffEditorInsertedTextBackground = "#00ff8042";
-let diffEditorRemovedTextBackground = "#ff468348";
 let UnusedCodeOpacity = "#00000085";
 let commentRangeForeground = "#686868";
 
@@ -96,7 +98,8 @@ let statusBarItemRemoteBackground = "#1284ff99";
 let statusBarItemRemoteForeground = "#FFF";
 let statusBarItemProminentBackground = "#003847";
 let statusBarItemProminentHoverBackground = "#003847";
-let titleBarActiveForeground = "#ddd";
+
+
 
 let jsonObject = {
 	//Contrast colors
@@ -268,8 +271,8 @@ let jsonObject = {
 		["activityBar.border"]: DFLT,
 		["activityBarBadge.background"]: infoStrong,
 		["activityBarBadge.foreground"]: DFLT,
-		["activityBar.activeBorder"]: DFLT,
-		["activityBar.activeBackground"]: selectActiveSoft,
+		["activityBar.activeBorder"]: selectActiveStrong,
+		["activityBar.activeBackground"]: GREY25,
 		["activityBar.activeFocusBorder"]: DFLT,
 		["activityBarTop.foreground"]: DFLT,
 		["activityBarTop.activeBorder"]: DFLT,
@@ -320,7 +323,7 @@ let jsonObject = {
 		["minimap.chatEditHighlight"]: DFLT,
 		["minimapSlider.background"]: sliderNormal,
 		["minimapSlider.hoverBackground"]: hover,
-		["minimapSlider.activeBackground"]: sliderActive,
+		["minimapSlider.activeBackground"]: click,
 		["minimapGutter.addedBackground"]: addedStrong,
 		["minimapGutter.modifiedBackground"]: modifiedStrong,
 		["minimapGutter.deletedBackground"]: deletedStrong,
@@ -634,22 +637,22 @@ let jsonObject = {
 		//Diff editor colors
 		//For coloring inserted and removed text, use either a background or a border color but not both.
 
-		["diffEditor.insertedTextBackground"]: DFLT,
-		["diffEditor.insertedTextBorder"]: addedStrong,
-		["diffEditor.removedTextBackground"]: DFLT,
-		["diffEditor.removedTextBorder"]: deletedStrong,
+		["diffEditor.insertedTextBackground"]: addedTransparent,
+		["diffEditor.insertedTextBorder"]: TRANSPARENT,
+		["diffEditor.removedTextBackground"]: deletedTransparent,
+		["diffEditor.removedTextBorder"]: TRANSPARENT,
 		["diffEditor.border"]: DFLT,
 		["diffEditor.diagonalFill"]: DFLT,
-		["diffEditor.insertedLineBackground"]: addedTransparent,
+		["diffEditor.insertedLineBackground"]:addedTransparent ,
 		["diffEditor.removedLineBackground"]: deletedTransparent,
-		["diffEditorGutter.insertedLineBackground"]: DFLT,
-		["diffEditorGutter.removedLineBackground"]: DFLT,
+		["diffEditorGutter.insertedLineBackground"]: TRANSPARENT,
+		["diffEditorGutter.removedLineBackground"]: TRANSPARENT,
 		["diffEditorOverview.insertedForeground"]: DFLT,
 		["diffEditorOverview.removedForeground"]: DFLT,
 		["diffEditor.unchangedRegionBackground"]: GREY30,
 		["diffEditor.unchangedRegionForeground"]: DFLT,
 		["diffEditor.unchangedRegionShadow"]: shadow,
-		["diffEditor.unchangedCodeBackground"]: DFLT,
+		["diffEditor.unchangedCodeBackground"]: GREY30,
 		["diffEditor.move.border"]: DFLT,
 		["diffEditor.moveActive.border"]: DFLT,
 		["multiDiffEditor.headerBackground"]: DFLT,
