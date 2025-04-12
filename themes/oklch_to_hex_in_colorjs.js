@@ -20,9 +20,13 @@ for (let L of lightnessArray) {
 // 将每个 OKLCH 转换为 AdobeRGB HEX
 for (let [L, C, H] of combinations) {
 	const oklchColor = new Color("oklch", [L, C, H]);
-	const adobeRgbColor = oklchColor.to("a98rgb"); // 转换到 AdobeRGB 色域
-	const hexColor = adobeRgbColor.to("srgb").toString({ format: "hex" }); // 转换为 HEX
-	hexColors.push(`H: ${H}, L: ${L}, C: ${C} -> ${hexColor}`);
+	if (oklchColor.inGamut("a98rgb")) {
+		const adobeRgbColor = oklchColor.to("a98rgb"); // 转换到 AdobeRGB 色域
+		const hexColor = adobeRgbColor.to("srgb").toString({ format: "hex" }); // 转换为 HEX
+		hexColors.push(`H: ${H}, L: ${L}, C: ${C} -> ${hexColor}`);
+	}else {
+		hexColors.push(`H: ${H}, L: ${L}, C: ${C} -> out of gamut`);
+	}
 }
 
 // 将结果写入本地 txt 文件
