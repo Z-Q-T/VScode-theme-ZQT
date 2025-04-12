@@ -72,12 +72,14 @@ let findMatchAllTRANSPARENT = "#5f29cc7f";
 let rangeHighlight = "#5f29cc3f";
 let findRangeHighlightBackground = "#5f29cc3f";
 
+let linkEdit="#33ffff5f";
+
 let wordHighlightRead = "#00bde3bf";
 let wordHighlightWrite = "#7ef10bbf";
 let wordHighlightText = "#02d66cbf";
-let unicodeHighlight = "#9146827f";
-let BracketMatchStrong = "#ffaa00bf";
-let BracketMatchTRANSPARENT = "#ffaa003f";
+let unicodeHighlight = "#8080407f";
+let BracketMatchStrong = "#ff00ffbf";
+let BracketMatchTRANSPARENT = "#ff00ff3f";
 let lineHighlightBackground = "#ffffff11";
 let IndentGuide = "#404040";
 let IndentGuideActive = "#686868";
@@ -498,8 +500,7 @@ let jsonObject = {
 		//To see editor rulers, define their location with "editor.rulers"
 
 		["editorRuler.foreground"]: GREY30,
-
-		["editor.linkedEditingBackground"]: DFLT,
+		["editor.linkedEditingBackground"]: linkEdit,
 
 		//CodeLens:
 
@@ -628,6 +629,8 @@ let jsonObject = {
 		["inlineEdit.modifiedChangedTextBackground"]: DFLT,
 		["inlineEdit.originalBorder"]: DFLT,
 		["inlineEdit.modifiedBorder"]: DFLT,
+		["inlineEdit.tabWillAcceptModifiedBorder"]: DFLT,
+		["inlineEdit.tabWillAcceptOriginalBorder"]: DFLT,
 
 		//Diff editor colors
 		//For coloring inserted and removed text, use either a background or a border color but not both.
