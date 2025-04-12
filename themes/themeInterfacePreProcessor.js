@@ -190,7 +190,7 @@ let jsonObject = {
 		//Input control
 		//Colors for input controls such as in the Search view or the Find/Replace dialog.
 
-		["input.background"]: DFLT,
+		["input.background"]: GREY35,
 		["input.border"]: DFLT,
 		["input.foreground"]: DFLT,
 		["input.placeholderForeground"]: placeholder,

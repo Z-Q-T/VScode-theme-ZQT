@@ -56,7 +56,7 @@
     "dropdown.listBackground": "default",
     "dropdown.border": "default",
     "dropdown.foreground": "default",
-    "input.background": "default",
+    "input.background": "#3a3a3a",
     "input.border": "default",
     "input.foreground": "default",
     "input.placeholderForeground": "#7f7f7f",

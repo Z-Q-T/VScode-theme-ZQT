@@ -17,22 +17,14 @@ for (let L of lightnessArray) {
 	}
 }
 
-// 将每个 OKLCH 转换为 HEX
+// 将每个 OKLCH 转换为 AdobeRGB HEX
 for (let [L, C, H] of combinations) {
 	const oklchColor = new Color("oklch", [L, C, H]);
-	let hexColor;
-
-	try {
-		const adobeRgbColor = oklchColor.to("a98rgb"); // 转换到 AdobeRGB 色域
-		const srgbColor = adobeRgbColor.to("srgb"); // 转换到 sRGB 色域
-		hexColor = srgbColor.toString({ format: "hex" }); // 转换为 HEX
-	} catch (error) {
-		// 如果超出目标色域，设置为纯白色
-		hexColor = "#FFFFFF";
-	}
-
+	const adobeRgbColor = oklchColor.to("a98rgb"); // 转换到 AdobeRGB 色域
+	const hexColor = adobeRgbColor.to("srgb").toString({ format: "hex" }); // 转换为 HEX
 	hexColors.push(`H: ${H}, L: ${L}, C: ${C} -> ${hexColor}`);
 }
+
 // 将结果写入本地 txt 文件
 fs.writeFileSync("hexColors.txt", hexColors.join("\n"), "utf-8");
 
