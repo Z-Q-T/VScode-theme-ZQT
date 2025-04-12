@@ -302,7 +302,7 @@
     "editorBracketPairGuide.background4": "default",
     "editorBracketPairGuide.background5": "default",
     "editorBracketPairGuide.background6": "default",
-    "editor.foldBackground": "#3a593f",
+    "editor.foldBackground": "#3a593f7f",
     "editor.foldPlaceholderForeground": "#36b348",
     "editorOverviewRuler.background": "default",
     "editorOverviewRuler.border": "default",

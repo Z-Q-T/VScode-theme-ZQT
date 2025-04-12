@@ -28,7 +28,7 @@ let drop = "#90909030";
 let placeholder = "#7f7f7f";
 let hover = "#ffffff30";
 let click = "#ffffff50";
-let foldArea = "#3a593f";
+let foldArea = "#3a593f7f";
 
 let addStrong = "#2de35b";
 let addStrongTRANSPARENT = "#2de35b7f";
