@@ -21,7 +21,9 @@
 		},
 		{
 			"scope": "comment",
-			"settings": {}
+			"settings": {
+				"foreground": "#7f7f7f"
+			}
 		},
 		{
 			"scope": "decorator",
@@ -68,7 +70,7 @@
 		{
 			"scope": "keyword",
 			"settings": {
-				"foreground": "#FFF"
+				"foreground": "#ffa8fc"
 			}
 		},
 		{
@@ -128,13 +130,13 @@
 		{
 			"scope": "storage",
 			"settings": {
-				"foreground": "#FFF"
+				"foreground": "#f4c947"
 			}
 		},
 		{
 			"scope": "string",
 			"settings": {
-				"foreground": "#FFF"
+				"foreground": "#b5c87d"
 			}
 		},
 		{
@@ -164,7 +166,7 @@
 		{
 			"scope": "variable",
 			"settings": {
-				"foreground": "#FFF"
+				"foreground": "#6dd3c0"
 			}
 		}
 	]
