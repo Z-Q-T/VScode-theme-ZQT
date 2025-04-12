@@ -28,6 +28,7 @@ let drop = "#90909030";
 let placeholder = "#7f7f7f";
 let hover = "#ffffff30";
 let click = "#ffffff50";
+let foldArea = "#3a593f";
 
 let addStrong = "#2de35b";
 let addStrongTRANSPARENT = "#2de35b7f";
@@ -60,34 +61,33 @@ let hintSoft = "#1b5924";
 
 let selectActiveStrong = "#3377ff";
 // let selectActiveSoft = "#00427f";
-let selectActiveTRANSPARENT = "#3377ff7f";
+let selectActiveTRANSPARENT = "#3377ffbf";
+let selectOthersTRANSPARENT = "#3377ff5f";
 let selectInactiveStrong = "#4d5e80";
 // let selectInactiveSoft = "#445361";
-let selectInactiveTRANSPARENT = "#4d5e803f";
-let selectOthersTRANSPARENT = "#3377ff3f";
+let selectInactiveTRANSPARENT = "#4d5e805f";
 
 let findMatchAllStrong = "#5f29ccbf";
 let findMatchAllTRANSPARENT = "#5f29cc7f";
+let rangeHighlight = "#5f29cc3f";
+let findRangeHighlightBackground = "#5f29cc3f";
 
-let wordHighlightRead = "#008ce3bf";
-let wordHighlightWrite = "#0bf189bf";
-let wordHighlightText = "#02bdd6bf";
+let wordHighlightRead = "#00bde3bf";
+let wordHighlightWrite = "#7ef10bbf";
+let wordHighlightText = "#02d66cbf";
+let unicodeHighlight = "#9146827f";
+let BracketMatchStrong = "#ffaa00bf";
+let BracketMatchTRANSPARENT = "#ffaa003f";
+let lineHighlightBackground = "#ffffff11";
+let IndentGuide = "#404040";
+let IndentGuideActive = "#686868";
+let UnusedCodeOpacity = "#00000085";
 
 let sliderNormal = "#ffffff20";
 // let sliderActive = "#ffffff45";
 // let hoverHighlightBackground = "#b4b4b436";
-let lineHighlightBackground = "#ffffff11";
-let rangeHighlightBackground = "#a724ff2f";
-let findRangeHighlightBackground = "#ff990021";
-let editorLinkActiveForeground = "#73ff009f";
-let IndentGuide = "#404040";
-let IndentGuideActive = "#686868";
+// let editorLinkActiveForeground = "#73ff009f";
 let editorWhitespaceForeground = "#4692c55e";
-let editorUnicodeHighlightBorder = "#6a6b423c";
-let BracketMatchBackground = "#ffaa003f";
-let BracketMatchBorder = "#ffaa007f";
-let rangeHighlightForeground = "#7ccbff31";
-let UnusedCodeOpacity = "#00000085";
 let commentRangeForeground = "#686868";
 // let statusBarForeground = "#dddddd";
 // let statusBarBackground = "#2d3b53";
@@ -448,16 +448,16 @@ let jsonObject = {
 
 		//The color for unicode highlights
 
-		["editorUnicodeHighlight.border"]: editorUnicodeHighlightBorder,
+		["editorUnicodeHighlight.border"]: unicodeHighlight,
 		["editorUnicodeHighlight.background"]: DFLT,
 
 		//The link color is visible when clicking on a link.
 
-		["editorLink.activeForeground"]: editorLinkActiveForeground,
+		["editorLink.activeForeground"]: selectActiveStrong,
 
 		//The range highlight is visible when selecting a search result.
 
-		["editor.rangeHighlightBackground"]: rangeHighlightBackground,
+		["editor.rangeHighlightBackground"]: rangeHighlight,
 		["editor.rangeHighlightBorder"]: DFLT,
 
 		//The symbol highlight is visible when navigating to a symbol via a command such as Go to Definition.
@@ -513,8 +513,8 @@ let jsonObject = {
 
 		//Bracket matches:
 
-		["editorBracketMatch.background"]: BracketMatchBackground,
-		["editorBracketMatch.border"]: BracketMatchBorder,
+		["editorBracketMatch.background"]: BracketMatchTRANSPARENT,
+		["editorBracketMatch.border"]: BracketMatchStrong,
 
 		//Bracket pair colorization:
 
@@ -543,8 +543,8 @@ let jsonObject = {
 
 		//Folding:
 
-		["editor.foldBackground"]: DFLT,
-		["editor.foldPlaceholderForeground"]: placeholder,
+		["editor.foldBackground"]: foldArea,
+		["editor.foldPlaceholderForeground"]: hintStrong,
 
 		//Overview ruler:
 		//This ruler is located beneath the scroll bar on the right edge of the editor and gives an overview of the decorations in the editor.
@@ -552,7 +552,7 @@ let jsonObject = {
 		["editorOverviewRuler.background"]: DFLT,
 		["editorOverviewRuler.border"]: DFLT,
 		["editorOverviewRuler.findMatchForeground"]: findMatchAllStrong,
-		["editorOverviewRuler.rangeHighlightForeground"]: rangeHighlightForeground,
+		["editorOverviewRuler.rangeHighlightForeground"]: rangeHighlight,
 		["editorOverviewRuler.selectionHighlightForeground"]: selectActiveTRANSPARENT,
 		["editorOverviewRuler.wordHighlightForeground"]: wordHighlightRead,
 		["editorOverviewRuler.wordHighlightStrongForeground"]: wordHighlightWrite,
@@ -563,7 +563,7 @@ let jsonObject = {
 		["editorOverviewRuler.errorForeground"]: errorStrong,
 		["editorOverviewRuler.warningForeground"]: warningStrong,
 		["editorOverviewRuler.infoForeground"]: infoStrong,
-		["editorOverviewRuler.bracketMatchForeground"]: DFLT,
+		["editorOverviewRuler.bracketMatchForeground"]: BracketMatchStrong,
 		["editorOverviewRuler.inlineChatInserted"]: DFLT,
 		["editorOverviewRuler.inlineChatRemoved"]: DFLT,
 
