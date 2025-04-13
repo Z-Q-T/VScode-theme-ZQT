@@ -17,7 +17,7 @@
 				"id": "ZQT Dark+",
 				"label": "ZQT Dark+",
 				"uiTheme": "vs-dark",
-				"path": "./themes/zqt_theme.json"
+				"path": "./themes/theme-ZQT.json"
 			}
 		],
 		"iconThemes": [

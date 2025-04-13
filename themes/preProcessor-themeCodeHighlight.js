@@ -73,18 +73,22 @@ const colorRules = [
 const jsonData = generateTokenColors(colorRules);
 
 // 将JSON写入文件（同步写法，适合简单脚本）
-fs.writeFileSync(
-	"codeHighlightUniversal_ZQT.json", // 文件名
-	JSON.stringify(jsonData, null, "\t"), // 格式化JSON（2空格缩进）
-	"utf8",
-	(err) => {
+// fs.writeFileSync(	"theme-ZQT_codeHighlightUniversal.json",	JSON.stringify(jsonData, null, "\t"),	"utf8");
+
+function saveObjectToTxtFile(obj, filePath) {
+	// 将对象转换为格式化的JSON字符串
+	const content = JSON.stringify(obj, null, "\t");
+
+	// 写入文件
+	fs.writeFile(filePath, content, (err) => {
 		if (err) {
 			console.error("写入文件出错:", err);
 		} else {
 			console.log("对象已成功保存到文件");
 		}
-	} // 文件编码
-);
+	});
+}
 
+saveObjectToTxtFile(jsonData, "./theme-ZQT_codeHighlightUniversal.json");
 // saveObjectToTxtFile(jsonObject, "./_ZQT.json");
 // // console.log(jsonObject);

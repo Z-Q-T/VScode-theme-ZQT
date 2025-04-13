@@ -1279,7 +1279,7 @@ import fs from 'fs';
 
 function saveObjectToTxtFile(obj, filePath) {
 	// 将对象转换为格式化的JSON字符串
-	const content = JSON.stringify(obj, null, 2);
+	const content = JSON.stringify(obj, null, "\t");
 
 	// 写入文件
 	fs.writeFile(filePath, content, (err) => {
@@ -1291,5 +1291,5 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonObject, "./interface_ZQT.json");
+saveObjectToTxtFile(jsonObject, "./theme-ZQT_interface.json");
 // console.log(jsonObject);
