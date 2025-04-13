@@ -2,7 +2,7 @@ import Color from "colorjs.io";
 import fs from "fs"; // 引入文件系统模块
 
 let lightnessArray = [0.70, 0.75, 0.80, 0.85, 0.90];
-let chromaArray = [0.05, 0.10, 0.15, 0.20, 0.25];
+let chromaArray = ["05", "10", "15", "20", "25"];
 let hueArra = ["000", "030", "060", "090", "120", "150", "180", "210", "240", "270", "300", "330"];
 
 let combinations = [];
@@ -19,13 +19,13 @@ for (let L of lightnessArray) {
 
 // 将每个 OKLCH 转换为 AdobeRGB HEX
 for (let [L, C, H] of combinations) {
-	const oklchColor = new Color("oklch", [L, C, Number(H)]);
+	const oklchColor = new Color("oklch", [L, Number(C)/100, Number(H)]);
 	if (oklchColor.inGamut("a98rgb")) {
 		const adobeRgbColor = oklchColor.to("a98rgb"); // 转换到 AdobeRGB 色域
 		const hexColor = adobeRgbColor.to("srgb").toString({ format: "hex" }); // 转换为 HEX
-		hexColors.push(`let L${L*100}_C${C*100}_H${H} = "${hexColor}" // ${hexColor}`);
+		hexColors.push(`let L${L*100}_C${C}_H${H} = "${hexColor}"; // ${hexColor}`);
 	}else {
-		hexColors.push(`let L${L*100}_C${C*100}_H${H} = "out of gamut"`);
+		hexColors.push(`let L${L*100}_C${C}_H${H} = "out of gamut";`);
 	}
 }
 

@@ -816,27 +816,27 @@ let jsonObject = {
 
 		//Bracket matches:
 
-		["editorBracketMatch.background"]: BracketMatchTRANSPARENT,
+		["editorBracketMatch.background"]: TRANSPARENT,
 		["editorBracketMatch.border"]: BracketMatchStrong,
 
 		//Bracket pair colorization:
 
-		["editorBracketHighlight.foreground1"]: L75_C15_H060,
-		["editorBracketHighlight.foreground2"]: L75_C15_H150,
-		["editorBracketHighlight.foreground3"]: L75_C15_H090,
-		["editorBracketHighlight.foreground4"]: L75_C15_H180,
-		["editorBracketHighlight.foreground5"]: L75_C15_H120,
-		["editorBracketHighlight.foreground6"]: L75_C15_H210,
+		["editorBracketHighlight.foreground1"]: L75_C15_H210,
+		["editorBracketHighlight.foreground2"]: L75_C15_H120,
+		["editorBracketHighlight.foreground3"]: L75_C15_H180,
+		["editorBracketHighlight.foreground4"]: L75_C15_H090,
+		["editorBracketHighlight.foreground5"]: L75_C15_H150,
+		["editorBracketHighlight.foreground6"]: L75_C15_H060,
 		["editorBracketHighlight.unexpectedBracket.foreground"]: errorStrong,
 
 		//Bracket pair guides:
 
-		["editorBracketPairGuide.activeBackground1"]: L70_C10_H060,
-		["editorBracketPairGuide.activeBackground2"]: L70_C10_H150,
-		["editorBracketPairGuide.activeBackground3"]: L70_C10_H090,
-		["editorBracketPairGuide.activeBackground4"]: L70_C10_H180,
-		["editorBracketPairGuide.activeBackground5"]: L70_C10_H120,
-		["editorBracketPairGuide.activeBackground6"]: L70_C10_H210,
+		["editorBracketPairGuide.activeBackground1"]: L70_C10_H210,
+		["editorBracketPairGuide.activeBackground2"]: L70_C10_H120,
+		["editorBracketPairGuide.activeBackground3"]: L70_C10_H180,
+		["editorBracketPairGuide.activeBackground4"]: L70_C10_H090,
+		["editorBracketPairGuide.activeBackground5"]: L70_C10_H150,
+		["editorBracketPairGuide.activeBackground6"]: L70_C10_H060,
 		["editorBracketPairGuide.background1"]: DFLT,
 		["editorBracketPairGuide.background2"]: DFLT,
 		["editorBracketPairGuide.background3"]: DFLT,

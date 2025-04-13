@@ -37,7 +37,7 @@
 		{
 			"scope": "entity",
 			"settings": {
-				"foreground": "#b5c87d"
+				"foreground": "#c5d88d"
 			}
 		},
 		{
@@ -74,6 +74,12 @@
 			"scope": "keyword",
 			"settings": {
 				"foreground": "#ff92ba"
+			}
+		},
+		{
+			"scope": "keyword.operator",
+			"settings": {
+				"foreground": "#ff9a88"
 			}
 		},
 		{
@@ -157,7 +163,7 @@
 		{
 			"scope": "support",
 			"settings": {
-				"foreground": "#FFF"
+				"foreground": "#ffa44e"
 			}
 		},
 		{

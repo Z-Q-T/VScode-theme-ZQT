@@ -9,6 +9,7 @@ let WHITE = "#FFF";
 //C20及以上的纯度太高了，尽量少用，或者只有个别需要特别醒目的再用
 //H210和H240比较接近蓝色，也尽量不用。尤其是H240特别尽量不用
 //避免使用大红大橙，以防和报错信息混淆
+//内置关键词：红。自写关键词（数值、字符串）：绿。中间关键词（函数、对象）：黄。元：蓝
 let L70_C05_H000 = "#ba929d"; // #ba929d
 let L70_C05_H030 = "#bc938c"; // #bc938c
 let L70_C05_H060 = "#b69880"; // #b69880
@@ -337,13 +338,14 @@ const colorRules = [
 	{ scopes: "constant", color: L80_C15_H180 },
 	{ scopes: "constant.language.boolean", color: L80_C15_H000 },
 	{ scopes: "decorator", color: WHITE },
-	{ scopes: "entity", color: L80_C10_H120 },
+	{ scopes: "entity", color: L85_C10_H120 },
 	{ scopes: "enum", color: WHITE },
 	{ scopes: "enumMember", color: WHITE },
 	{ scopes: "event", color: WHITE },
 	{ scopes: "function", color: WHITE },
 	{ scopes: "interface", color: WHITE },
 	{ scopes: "keyword", color: L80_C15_H000 },
+	{ scopes: "keyword.operator", color: L80_C15_H030 },
 	{ scopes: "label", color: WHITE },
 	{ scopes: "macro", color: WHITE },
 	{ scopes: "meta", color: WHITE },
@@ -357,7 +359,7 @@ const colorRules = [
 	{ scopes: "storage", color: L80_C15_H330 },
 	{ scopes: "string", color: L80_C05_H150 },
 	{ scopes: "struct", color: WHITE },
-	{ scopes: "support", color: WHITE },
+	{ scopes: "support", color: L80_C15_H060 },
 	{ scopes: "type", color: WHITE },
 	{ scopes: "typeParameter", color: WHITE },
 	{ scopes: "variable", color: L80_C10_H090 },
