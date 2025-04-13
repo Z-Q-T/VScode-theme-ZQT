@@ -5,16 +5,7 @@
 	"include": "./interface_ZQT.json",
 	"tokenColors": [
 		{
-			"scope": [
-				"namespace",
-				"class"
-			],
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
-			"scope": "constant",
+			"scope": "class",
 			"settings": {
 				"foreground": "#FFF"
 			}
@@ -26,6 +17,18 @@
 			}
 		},
 		{
+			"scope": "constant",
+			"settings": {
+				"foreground": "#00dcc1"
+			}
+		},
+		{
+			"scope": "constant.language.boolean",
+			"settings": {
+				"foreground": "#ff92ba"
+			}
+		},
+		{
 			"scope": "decorator",
 			"settings": {
 				"foreground": "#FFF"
@@ -34,7 +37,7 @@
 		{
 			"scope": "entity",
 			"settings": {
-				"foreground": "#FFF"
+				"foreground": "#b5c87d"
 			}
 		},
 		{
@@ -70,7 +73,7 @@
 		{
 			"scope": "keyword",
 			"settings": {
-				"foreground": "#ffa8fc"
+				"foreground": "#ff92ba"
 			}
 		},
 		{
@@ -86,13 +89,19 @@
 			}
 		},
 		{
+			"scope": "meta",
+			"settings": {
+				"foreground": "#FFF"
+			}
+		},
+		{
 			"scope": "method",
 			"settings": {
 				"foreground": "#FFF"
 			}
 		},
 		{
-			"scope": "meta",
+			"scope": "namespace",
 			"settings": {
 				"foreground": "#FFF"
 			}
@@ -130,13 +139,13 @@
 		{
 			"scope": "storage",
 			"settings": {
-				"foreground": "#f4c947"
+				"foreground": "#f398eb"
 			}
 		},
 		{
 			"scope": "string",
 			"settings": {
-				"foreground": "#b5c87d"
+				"foreground": "#a8c7ad"
 			}
 		},
 		{
@@ -166,7 +175,7 @@
 		{
 			"scope": "variable",
 			"settings": {
-				"foreground": "#6dd3c0"
+				"foreground": "#d7bb70"
 			}
 		}
 	]
