@@ -9,7 +9,11 @@ let WHITE = "#FFF";
 //C20及以上的纯度太高了，尽量少用，或者只有个别需要特别醒目的再用
 //？？H210和H240比较接近蓝色，也尽量不用。尤其是H240特别尽量不用
 //避免使用大红大橙，以防和报错信息混淆
-//内置关键词：红。自写关键词（数值、字符串）：绿。中间关键词（函数、对象）：黄。元：蓝
+//内置：红，340、0、20、40
+//自写-可复用（函数、对象）：黄，60、80、100、120
+//自写-不可复用（数值、字符串）：绿，140、160、180、200
+//蓝，220、240、260
+//紫，280、300、320
 let L70_C05_H000 = "#ba929d"; // #ba929d
 let L70_C05_H020 = "#bc9392"; // #bc9392
 let L70_C05_H040 = "#bb9587"; // #bb9587
@@ -82,6 +86,7 @@ let L70_C20_H220 = "#00b2dd"; // #00b2dd
 //let L70_C20_H300 = "out of gamut";
 let L70_C20_H320 = "#d36dea"; // #d36dea
 let L70_C20_H340 = "#eb63c5"; // #eb63c5
+
 let L75_C05_H000 = "#caa1ac"; // #caa1ac
 let L75_C05_H020 = "#cca2a1"; // #cca2a1
 let L75_C05_H040 = "#cba496"; // #cba496
@@ -154,6 +159,7 @@ let L75_C20_H200 = "#00c9d2"; // #00c9d2
 //let L75_C20_H300 = "out of gamut";
 let L75_C20_H320 = "#e47dfb"; // #e47dfb
 let L75_C20_H340 = "#fd73d5"; // #fd73d5
+
 let L80_C05_H000 = "#dab1bc"; // #dab1bc
 let L80_C05_H020 = "#dcb2b0"; // #dcb2b0
 let L80_C05_H040 = "#dbb4a6"; // #dbb4a6
@@ -226,6 +232,7 @@ let L80_C20_H200 = "#00dae5"; // #00dae5
 //let L80_C20_H300 = "out of gamut";
 //let L80_C20_H320 = "out of gamut";
 let L80_C20_H340 = "#ff88e3"; // #ff88e3
+
 let L85_C05_H000 = "#ebc1cc"; // #ebc1cc
 let L85_C05_H020 = "#edc1c0"; // #edc1c0
 let L85_C05_H040 = "#ecc4b6"; // #ecc4b6
@@ -322,17 +329,17 @@ const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
 	{ scopes: "class", color: WHITE },
 	{ scopes: "comment", color: GREY },
-	{ scopes: "constant", color: L75_C15_H180 },
-	{ scopes: "constant.language.boolean", color: L75_C15_H000 },
+	{ scopes: "constant", color: L75_C15_H180 },//自写-不可复用
+	{ scopes: "constant.language.boolean", color: L75_C15_H000 },//内置
 	{ scopes: "decorator", color: WHITE },
-	{ scopes: "entity", color: L75_C15_H080 },
+	{ scopes: "entity", color: L75_C15_H080 },//自写-可复用
 	{ scopes: "enum", color: WHITE },
 	{ scopes: "enumMember", color: WHITE },
 	{ scopes: "event", color: WHITE },
 	{ scopes: "function", color: WHITE },
 	{ scopes: "interface", color: WHITE },
-	{ scopes: "keyword", color: L75_C15_H020 },
-	{ scopes: "keyword.operator", color: L75_C15_H040 },
+	{ scopes: "keyword", color: L75_C15_H020 },//内置
+	{ scopes: "keyword.operator", color: L75_C15_H040 },//内置
 	{ scopes: "label", color: WHITE },
 	{ scopes: "macro", color: WHITE },
 	{ scopes: "meta", color: WHITE },
@@ -343,13 +350,13 @@ const colorRules = [
 	{ scopes: "parameter", color: WHITE },
 	{ scopes: "property", color: WHITE },
 	{ scopes: "regexp", color: WHITE },
-	{ scopes: "storage", color: L75_C15_H340 },
-	{ scopes: "string", color: L75_C10_H180 },
+	{ scopes: "storage", color: L75_C10_H340 },//内置
+	{ scopes: "string", color: L75_C10_H160 },//自写-不可复用
 	{ scopes: "struct", color: WHITE },
-	{ scopes: "support", color: L75_C15_H060 },
+	{ scopes: "support", color: L75_C15_H000 },//内置？
 	{ scopes: "type", color: WHITE },
 	{ scopes: "typeParameter", color: WHITE },
-	{ scopes: "variable", color: L75_C10_H140 },
+	{ scopes: "variable", color: L75_C05_H080 },//自写-可复用
 ];
 
 // 生成JSON对象

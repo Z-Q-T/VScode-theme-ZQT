@@ -145,13 +145,13 @@
 		{
 			"scope": "storage",
 			"settings": {
-				"foreground": "#ec86cc"
+				"foreground": "#d995c2"
 			}
 		},
 		{
 			"scope": "string",
 			"settings": {
-				"foreground": "#5cc3b0"
+				"foreground": "#72c298"
 			}
 		},
 		{
@@ -163,7 +163,7 @@
 		{
 			"scope": "support",
 			"settings": {
-				"foreground": "#f2943c"
+				"foreground": "#f982aa"
 			}
 		},
 		{
@@ -181,7 +181,7 @@
 		{
 			"scope": "variable",
 			"settings": {
-				"foreground": "#8cbe81"
+				"foreground": "#bfab8b"
 			}
 		}
 	]
