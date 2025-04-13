@@ -25,7 +25,7 @@ for (let [L, C, H] of combinations) {
 		const hexColor = adobeRgbColor.to("srgb").toString({ format: "hex" }); // 转换为 HEX
 		hexColors.push(`let L${L*100}_C${C}_H${H} = "${hexColor}"; // ${hexColor}`);
 	}else {
-		hexColors.push(`let L${L*100}_C${C}_H${H} = "out of gamut";`);
+		hexColors.push(`//let L${L*100}_C${C}_H${H} = "out of gamut";`);
 	}
 }
 
