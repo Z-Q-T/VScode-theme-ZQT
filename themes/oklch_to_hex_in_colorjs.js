@@ -1,10 +1,10 @@
 import Color from "colorjs.io";
 import fs from "fs"; // 引入文件系统模块
 
-let lightnessArray = [0.70, 0.75, 0.80, 0.85, 0.90];
-let chromaArray = ["05", "10", "15", "20", "25"];
-let hueArra = ["000", "030", "060", "090", "120", "150", "180", "210", "240", "270", "300", "330"];
-
+let lightnessArray = [0.70, 0.75, 0.80, 0.85];
+let chromaArray = ["05", "10", "15", "20"];
+let hueArra = ["000", "020", "040", "060", "080", "100", "120", "140", "160", "180", "200", "220", "240", "260", "280", "300", "320", "340"];
+//TODO: 颜色改成20一档
 let combinations = [];
 let hexColors = [];
 
