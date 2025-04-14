@@ -2,7 +2,7 @@
 	"$schema": "vscode://schemas/color-theme",
 	"name": "Universal Code Highlight - ZQT Theme",
 	"//description": "通用的代码高亮",
-	"include": "./interface_ZQT.json",
+	"include": "./theme-ZQT_interface.json",
 	"tokenColors": [
 		{
 			"scope": "class",
@@ -17,15 +17,27 @@
 			}
 		},
 		{
-			"scope": "constant",
+			"scope": "invalid",
 			"settings": {
-				"foreground": "#00c7ae"
+				"foreground": "#ff0000"
 			}
 		},
 		{
-			"scope": "constant.language.boolean",
+			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#f183a7"
+				"foreground": "#14bbc2"
+			}
+		},
+		{
+			"scope": "constant.character",
+			"settings": {
+				"foreground": "#57bc8a"
+			}
+		},
+		{
+			"scope": "constant.language",
+			"settings": {
+				"foreground": "#ea7ca1"
 			}
 		},
 		{
@@ -37,7 +49,31 @@
 		{
 			"scope": "entity",
 			"settings": {
-				"foreground": "#ea9344"
+				"foreground": "#e38d3d"
+			}
+		},
+		{
+			"scope": "entity.name.function",
+			"settings": {
+				"foreground": "#e38d3d"
+			}
+		},
+		{
+			"scope": "entity.name.type",
+			"settings": {
+				"foreground": "#e38d3d"
+			}
+		},
+		{
+			"scope": "entity.name.tag",
+			"settings": {
+				"foreground": "#e38d3d"
+			}
+		},
+		{
+			"scope": "entity.other.attribute-name",
+			"settings": {
+				"foreground": "#e38d3d"
 			}
 		},
 		{
@@ -73,13 +109,19 @@
 		{
 			"scope": "keyword",
 			"settings": {
-				"foreground": "#f68486"
+				"foreground": "#ef7e80"
+			}
+		},
+		{
+			"scope": "keyword.control",
+			"settings": {
+				"foreground": "#ef7e80"
 			}
 		},
 		{
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#f48a64"
+				"foreground": "#ed835e"
 			}
 		},
 		{
@@ -97,7 +139,7 @@
 		{
 			"scope": "meta",
 			"settings": {
-				"foreground": "#FFF"
+				"foreground": "#3faff3"
 			}
 		},
 		{
@@ -137,21 +179,27 @@
 			}
 		},
 		{
-			"scope": "regexp",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
 			"scope": "storage",
 			"settings": {
-				"foreground": "#d692bf"
+				"foreground": "#cf8cb8"
 			}
 		},
 		{
 			"scope": "string",
 			"settings": {
-				"foreground": "#6fbe95"
+				"foreground": "#77b493"
+			}
+		},
+		{
+			"scope": "string.regexp",
+			"settings": {
+				"foreground": "#FFF"
+			}
+		},
+		{
+			"scope": "string.interpolated",
+			"settings": {
+				"foreground": "#3fbf86"
 			}
 		},
 		{
@@ -163,7 +211,7 @@
 		{
 			"scope": "support",
 			"settings": {
-				"foreground": "#f183a7"
+				"foreground": "#ea7ca1"
 			}
 		},
 		{
@@ -181,7 +229,7 @@
 		{
 			"scope": "variable",
 			"settings": {
-				"foreground": "#c6a670"
+				"foreground": "#bf9f6a"
 			}
 		}
 	]

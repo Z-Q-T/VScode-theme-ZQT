@@ -5,9 +5,8 @@ let DEBUG_GREEN = "#00ff00";
 let BLACK = "#000";
 let GREY = "#7f7f7f";
 let WHITE = "#FFF";
-//？？？L70的比较暗，尽量不要用。L90可能太亮了，也少用
-//C20及以上的纯度太高了，尽量少用，或者只有个别需要特别醒目的再用
-//？？H210和H240比较接近蓝色，也尽量不用。尤其是H240特别尽量不用
+
+//H220和H240比较接近蓝色，尽量不用
 //避免使用大红大橙，以防和报错信息混淆
 //内置：红，340、0、20、40
 //自写-可复用（函数、对象）：黄，60、80、100、120
@@ -16,15 +15,15 @@ let WHITE = "#FFF";
 //紫，280、300、320
 import colour from "./color_palette.js";
 
-import fs from 'fs';
+import fs from "fs";
 
-// 方法2：动态生成JSON的函数
+// 动态生成JSON的函数
 function generateTokenColors(rules) {
 	return {
 		$schema: "vscode://schemas/color-theme",
 		name: "Universal Code Highlight - ZQT Theme",
 		"//description": "通用的代码高亮",
-		include: "./interface_ZQT.json",
+		include: "./theme-ZQT_interface.json",
 		tokenColors: rules.map((rule) => ({
 			scope: rule.scopes, // 支持字符串或数组
 			settings: {
@@ -37,36 +36,28 @@ function generateTokenColors(rules) {
 // 定义规则数据
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
-	{ scopes: "class", color: WHITE },
 	{ scopes: "comment", color: GREY },
-	{ scopes: "constant", color: colour.L74_C14_H180 },//自写-不可复用
-	{ scopes: "constant.language.boolean", color: colour.L74_C14_H000 },//内置
-	{ scopes: "decorator", color: WHITE },
-	{ scopes: "entity", color: colour.L74_C14_H060 },//自写-可复用
-	{ scopes: "enum", color: WHITE },
-	{ scopes: "enumMember", color: WHITE },
-	{ scopes: "event", color: WHITE },
-	{ scopes: "function", color: WHITE },
-	{ scopes: "interface", color: WHITE },
-	{ scopes: "keyword", color: colour.L74_C14_H020 },//内置
-	{ scopes: "keyword.operator", color: colour.L74_C14_H040 },//内置
-	{ scopes: "label", color: WHITE },
-	{ scopes: "macro", color: WHITE },
-	{ scopes: "meta", color: WHITE },
-	{ scopes: "method", color: WHITE },
-	{ scopes: "namespace", color: WHITE },
-	{ scopes: "number", color: WHITE },
-	{ scopes: "operator", color: WHITE },
-	{ scopes: "parameter", color: WHITE },
-	{ scopes: "property", color: WHITE },
-	{ scopes: "regexp", color: WHITE },
-	{ scopes: "storage", color: colour.L74_C10_H340 },//内置
-	{ scopes: "string", color: colour.L74_C10_H160 },//自写-不可复用
-	{ scopes: "struct", color: WHITE },
-	{ scopes: "support", color: colour.L74_C14_H000 },//内置？
-	{ scopes: "type", color: WHITE },
-	{ scopes: "typeParameter", color: WHITE },
-	{ scopes: "variable", color: colour.L74_C08_H080 },//自写-可复用
+	{ scopes: "invalid", color: DEBUG_RED },
+	{ scopes: "constant.numeric", color: colour.L72_C12_H200 }, //自写-不可复用
+	{ scopes: "constant.character", color: colour.L72_C12_H160 }, //内置
+	{ scopes: "constant.language", color: colour.L72_C14_H000 }, //内置
+	{ scopes: "entity", color: colour.L72_C14_H060 }, //自写-可复用
+	{ scopes: "entity.name.function", color: colour.L72_C14_H060 }, //自写-可复用
+	{ scopes: "entity.name.tag", color: colour.L72_C14_H060 }, //内置
+	{ scopes: "entity.other.attribute-name", color: colour.L72_C14_H060 }, //内置
+	{ scopes: "keyword", color: colour.L72_C14_H020 }, //内置
+	{ scopes: "keyword.control", color: colour.L72_C14_H020 }, //内置
+	{ scopes: "keyword.operator", color: colour.L72_C14_H040 }, //内置
+	{ scopes: "meta", color: colour.L72_C14_H240 },//元
+	{ scopes: "storage", color: colour.L72_C10_H340 }, //内置
+	{ scopes: "string", color: colour.L72_C08_H160 }, //自写-不可复用
+	{ scopes: "string.regexp", color: WHITE },//半自写
+	{ scopes: "string.interpolated", color: colour.L72_C14_H160 },//半自写
+	{ scopes: "support", color: colour.L72_C14_H000 }, //内置
+	{ scopes: "support.function", color: colour.L72_C14_H000 }, //内置
+	{ scopes: "variable", color: colour.L72_C08_H080 }, //自写-可复用
+	{ scopes: "variable.parameter", color: colour.L72_C08_H080 }, //自写-可复用
+	{ scopes: "variable.language", color: colour.L72_C08_H080 }, //内置
 ];
 
 // 生成JSON对象
