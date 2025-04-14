@@ -5,21 +5,15 @@
 	"include": "./theme-ZQT_interface.json",
 	"tokenColors": [
 		{
-			"scope": "class",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
 			"scope": "comment",
 			"settings": {
-				"foreground": "#7f7f7f"
+				"foreground": "#636363"
 			}
 		},
 		{
 			"scope": "invalid",
 			"settings": {
-				"foreground": "#ff0000"
+				"foreground": "#ff3b3b"
 			}
 		},
 		{
@@ -41,12 +35,6 @@
 			}
 		},
 		{
-			"scope": "decorator",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
 			"scope": "entity",
 			"settings": {
 				"foreground": "#e38d3d"
@@ -54,12 +42,6 @@
 		},
 		{
 			"scope": "entity.name.function",
-			"settings": {
-				"foreground": "#e38d3d"
-			}
-		},
-		{
-			"scope": "entity.name.type",
 			"settings": {
 				"foreground": "#e38d3d"
 			}
@@ -74,36 +56,6 @@
 			"scope": "entity.other.attribute-name",
 			"settings": {
 				"foreground": "#e38d3d"
-			}
-		},
-		{
-			"scope": "enum",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
-			"scope": "enumMember",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
-			"scope": "event",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
-			"scope": "function",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
-			"scope": "interface",
-			"settings": {
-				"foreground": "#FFF"
 			}
 		},
 		{
@@ -125,57 +77,21 @@
 			}
 		},
 		{
-			"scope": "label",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
-			"scope": "macro",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
 			"scope": "meta",
 			"settings": {
-				"foreground": "#3faff3"
+				"foreground": "#55aee8"
 			}
 		},
 		{
-			"scope": "method",
+			"scope": "punctuation",
 			"settings": {
-				"foreground": "#FFF"
+				"foreground": "#bebebe"
 			}
 		},
 		{
-			"scope": "namespace",
+			"scope": "punctuation.definition.comment",
 			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
-			"scope": "number",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
-			"scope": "operator",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
-			"scope": "parameter",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
-			"scope": "property",
-			"settings": {
-				"foreground": "#FFF"
+				"foreground": "#636363"
 			}
 		},
 		{
@@ -203,31 +119,31 @@
 			}
 		},
 		{
-			"scope": "struct",
-			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
 			"scope": "support",
 			"settings": {
 				"foreground": "#ea7ca1"
 			}
 		},
 		{
-			"scope": "type",
+			"scope": "support.function",
 			"settings": {
-				"foreground": "#FFF"
-			}
-		},
-		{
-			"scope": "typeParameter",
-			"settings": {
-				"foreground": "#FFF"
+				"foreground": "#ea7ca1"
 			}
 		},
 		{
 			"scope": "variable",
+			"settings": {
+				"foreground": "#c59c6d"
+			}
+		},
+		{
+			"scope": "variable.parameter",
+			"settings": {
+				"foreground": "#bf9f6a"
+			}
+		},
+		{
+			"scope": "variable.language",
 			"settings": {
 				"foreground": "#bf9f6a"
 			}

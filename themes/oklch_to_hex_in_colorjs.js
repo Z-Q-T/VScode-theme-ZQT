@@ -1,27 +1,45 @@
 import Color from "colorjs.io";
 import fs from "fs"; // 引入文件系统模块
 
-let lightnessArray = [0.7, 0.72, 0.74, 0.76, 0.78];
+let lightnessArray = [0.7, 0.72, 0.74, 0.76];
 let chromaArray = ["06", "08", "10", "12", "14"];
 let hueArray = [
 	"000",
+	"010",
 	"020",
+	"030",
 	"040",
+	"050",
 	"060",
+	"070",
 	"080",
+	"090",
 	"100",
+	"110",
 	"120",
+	"130",
 	"140",
+	"150",
 	"160",
+	"170",
 	"180",
+	"190",
 	"200",
+	"210",
 	"220",
+	"230",
 	"240",
+	"250",
 	"260",
+	"270",
 	"280",
+	"290",
 	"300",
+	"310",
 	"320",
+	"330",
 	"340",
+	"350",
 ];
 //TODO: 颜色改成20一档
 let combinations = [];
@@ -51,4 +69,4 @@ hexColors.push("}");
 // 将结果写入本地 txt 文件
 fs.writeFileSync("color_palette.js", hexColors.join("\n"), "utf-8");
 
-console.log("HEX 色值已写入 hexColors.txt 文件");
+console.log("HEX色值已写入文件");
