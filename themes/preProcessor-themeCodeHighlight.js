@@ -27,17 +27,11 @@ let errorStrong = "#ff3b3b";
 //——————以下注释作废——————//
 //H220和H240比较接近蓝色，尽量不用
 //避免使用大红大橙，以防和报错信息混淆
-//内置：红，340、0、20、40
-//自写-可复用（函数、对象）：黄，60、80、100、120
-//自写-不可复用（数值、字符串）：绿，140、160、180、200
-//蓝，220、240、260
-//紫，280、300、320
 //——————以上注释作废——————//
 
-//TODO
-//自写-不可复用：红橙，330-80
-//自写-可复用：黄绿，90-200
-//内置：蓝，210-320
+//红橙，330-80
+//黄绿，90-200
+//蓝，210-320
 
 import colour from "./color_palette.js";
 
@@ -66,30 +60,30 @@ let commentColour = GREY50;
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
 	{ scopes: "comment", color: commentColour },
+	{ scopes: "punctuation.definition.comment", color: commentColour }, 
 	{ scopes: "invalid", color: errorStrong },
-	{ scopes: "constant.numeric", color: colour.L72_C12_H180 }, //自写-不可复用
 	{ scopes: "constant.character", color: entityCharacterColour }, //内置
+	{ scopes: "punctuation.definition.entity", color: entityCharacterColour }, 
 	{ scopes: "constant.language", color: colour.L72_C14_H000 }, //内置
-	{ scopes: "entity", color: colour.L72_C14_H060 }, //自写-可复用
-	{ scopes: "entity.name.function", color: colour.L72_C14_H070 }, //自写-可复用
 	{ scopes: "entity.name.tag", color: colour.L72_C10_H350 }, //内置
 	{ scopes: "entity.other.attribute-name", color: colour.L72_C08_H070 }, //内置
 	{ scopes: "keyword", color: colour.L72_C14_H020 }, //内置
 	{ scopes: "keyword.control", color: colour.L72_C12_H030 }, //内置
 	{ scopes: "keyword.operator", color: colour.L74_C14_H010 }, //内置
-	{ scopes: "meta", color: colour.L72_C08_H230 }, //元
-	{ scopes: "punctuation", color: colour.L72_C06_H250 }, //元
-	{ scopes: "punctuation.definition.comment", color: commentColour }, //元
-	{ scopes: "punctuation.definition.entity", color: entityCharacterColour }, //元
+	{ scopes: "punctuation", color: colour.L72_C06_H250 },
 	{ scopes: "storage", color: colour.L72_C10_H340 }, //内置
-	{ scopes: "string", color: colour.L72_C08_H160 }, //自写-不可复用
-	{ scopes: "string.regexp", color: colour.L74_C14_H310 }, //半自写
-	{ scopes: "string.interpolated", color: colour.L72_C14_H290 }, //半自写
 	{ scopes: "support", color: colour.L72_C14_H000 }, //内置
 	{ scopes: "support.function", color: colour.L72_C14_H000 }, //内置
+	{ scopes: "variable.language", color: colour.L72_C08_H10 }, //内置
+	{ scopes: "meta", color: colour.L72_C08_H230 }, //元
+	{ scopes: "string.regexp", color: colour.L74_C14_H310 }, //半自写
+	{ scopes: "string.interpolated", color: colour.L72_C14_H290 }, //半自写
+	{ scopes: "entity", color: colour.L72_C14_H060 }, //自写-可复用
+	{ scopes: "entity.name.function", color: colour.L72_C14_H070 }, //自写-可复用
 	{ scopes: "variable", color: colour.L72_C08_H080 }, //自写-可复用
 	{ scopes: "variable.parameter", color: colour.L72_C08_H100 }, //自写-可复用
-	{ scopes: "variable.language", color: colour.L72_C08_H10 }, //内置
+	{ scopes: "constant.numeric", color: colour.L72_C12_H180 }, //自写-不可复用
+	{ scopes: "string", color: colour.L72_C08_H160 }, //自写-不可复用
 ];
 
 // 生成JSON对象

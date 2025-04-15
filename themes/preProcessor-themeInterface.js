@@ -803,7 +803,7 @@ let jsonObject = {
 		["panelStickyScroll.border"]: DFLT,
 		["panelStickyScroll.shadow"]: shadow,
 		["panelSectionHeader.border"]: DFLT,
-		["outputView.background"]: GREY15,
+		["outputView.background"]: GREY20,
 		["outputViewStickyScroll.background"]: DFLT,
 
 		//Status Bar colors
@@ -953,7 +953,7 @@ let jsonObject = {
 
 		//Integrated Terminal colors
 
-		["terminal.background"]: GREY10,
+		["terminal.background"]: GREY15,
 		["terminal.border"]: DFLT,
 		["terminal.foreground"]: DFLT,
 		["terminal.ansiBlack"]: DFLT,
