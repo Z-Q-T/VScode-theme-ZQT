@@ -23,7 +23,7 @@ let GREY90 = "#dedede";
 let GREY95 = "#eeeeee";
 let WHITE = "#FFF";
 
-import colour from "./color_palette.js";
+import colour from "./palette-color.js";
 
 let shadow = "#000";
 let drop = "#90909030";
@@ -43,11 +43,11 @@ let deleteStrong = "#ff5199";//oklch(0.7 0.22 0)
 let deleteStrongTRANSPARENT = "#ff51997f";
 let deleteSoft = "#d6809c";//oklch(0.7 0.11 0)
 let deleteSoftTRANSPARENT = "#f0769b3f";
-let renameSoft = "#dd946e";
-let untrackSoft = "#6fc2e2";
-let ignoreSoft = "#9e9e9e";
-let conflictSoft = "#b16edd";
-let submoduleSoft = "#7b79e0";
+let renameStrong = "#cdc301";
+let untrackStrong = "#55b2ea";
+let ignoreStrong = "#9e9e9e";
+let conflictStrong = "#b16edd";
+let submoduleStrong = "#7b79e0";
 
 let errorStrong = "#fc4734";//oklch(0.66 0.22 30)
 let errorSoft = "#62160e"; //oklch(0.33 0.11 30)
@@ -1077,13 +1077,13 @@ let jsonObject = {
 		["gitDecoration.addedResourceForeground"]: addStrong,
 		["gitDecoration.modifiedResourceForeground"]: modifyStrong,
 		["gitDecoration.deletedResourceForeground"]: deleteStrong,
-		["gitDecoration.renamedResourceForeground"]: renameSoft,
+		["gitDecoration.renamedResourceForeground"]: renameStrong,
 		["gitDecoration.stageModifiedResourceForeground"]: DFLT,
 		["gitDecoration.stageDeletedResourceForeground"]: DFLT,
-		["gitDecoration.untrackedResourceForeground"]: untrackSoft,
-		["gitDecoration.ignoredResourceForeground"]: ignoreSoft,
-		["gitDecoration.conflictingResourceForeground"]: conflictSoft,
-		["gitDecoration.submoduleResourceForeground"]: submoduleSoft,
+		["gitDecoration.untrackedResourceForeground"]: untrackStrong,
+		["gitDecoration.ignoredResourceForeground"]: ignoreStrong,
+		["gitDecoration.conflictingResourceForeground"]: conflictStrong,
+		["gitDecoration.submoduleResourceForeground"]: submoduleStrong,
 		["git.blame.editorDecorationForeground"]: DFLT,
 
 		//Source Control Graph colors

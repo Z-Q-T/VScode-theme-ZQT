@@ -26,7 +26,7 @@ let WHITE = "#FFF";
 let errorStrong = "#fc4734";//oklch(0.66 0.22 30)
 
 
-import colour from "./color_palette.js";
+import colour from "./palette-color.js";
 
 import fs from "fs";
 
@@ -51,35 +51,36 @@ let commentColour = GREY50;
 //[10,30]的范围太接近大红色，避免使用高色度颜色
 //通常的用亮度L72，特殊的可以更亮
 //一大长串的用色度C08，短的可以更饱和
+//html和css由于不是编程语言，因此单独处理
+//scopes里的token至少要有两个，单个的token宁愿不写（特殊的除外）
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
-	{ scopes: "comment", color: commentColour },//done
-	{ scopes: "punctuation.definition.comment", color: commentColour }, //done
-	{ scopes: "constant.character", color: entityCharacterColour }, //done
-	{ scopes: "punctuation.definition.entity", color: entityCharacterColour }, //done
-	{ scopes: "invalid", color: errorStrong },//done
+	{ scopes: "comment", color: commentColour },//
+	{ scopes: "punctuation.definition.comment", color: commentColour }, //
+	{ scopes: "constant.character", color: entityCharacterColour }, //&lt;、&ensp;、\031
+	{ scopes: "punctuation.definition.entity", color: entityCharacterColour }, //
+	{ scopes: "invalid", color: errorStrong },//
 
-	{ scopes: "constant.language", color: colour.L72_C14_H270 }, //done
-	{ scopes: "constant.numeric", color: colour.L72_C12_H210 }, //done
-	{ scopes: "entity.name.function", color: colour.L74_C10_H040 }, //done
-	{ scopes: "entity.name.tag", color: colour.L72_C08_H320 }, //done
-	{ scopes: "entity.other.attribute-name", color: colour.L72_C08_H080 }, //done
-	{ scopes: "entity", color: colour.L72_C10_H200 }, 
-	{ scopes: "keyword.control", color: colour.L72_C12_H000 }, //done
-	{ scopes: "keyword.operator", color: colour.L74_C10_H280 }, //done
+	{ scopes: "constant.language", color: colour.L72_C14_H270 }, //true、False
+	{ scopes: "constant.numeric", color: colour.L72_C12_H210 }, //数值：423、1.67
+	{ scopes: "entity.name.function", color: colour.L74_C10_H040 }, //函数名：calcAll()
+	// { scopes: "entity", color: colour.L72_C10_H200 }, 
+	{ scopes: "keyword.control", color: colour.L72_C12_H000 }, //for、while、else、return
+	{ scopes: "keyword.operator", color: colour.L74_C10_H280 }, //运算符：+、-、*、/、||、==
 	{ scopes: "keyword", color: colour.L72_C14_H250 },
-	{ scopes: "meta", color: colour.L72_C06_H240 }, //done
-	{ scopes: "punctuation.definition", color: colour.L76_C06_H080 },//done
-	{ scopes: "punctuation.separator", color: GREY80 },//done
-	{ scopes: "storage", color: colour.L72_C12_H320 }, //done
-	{ scopes: "string.interpolated", color: colour.L74_C14_H160 }, //done
-	{ scopes: "string.regexp", color: colour.L74_C14_H140 }, //done
-	{ scopes: "string", color: colour.L72_C06_H150 }, //done
-	{ scopes: "support.function", color: colour.L74_C12_H020 }, //done
+	// { scopes: "meta", color: colour.L72_C06_H240 }, 
+	{ scopes: "punctuation.definition", color: colour.L76_C06_H080 },//""、<>
+	{ scopes: "punctuation.separator", color: GREY80 },//,、;
+	{ scopes: "storage", color: colour.L72_C12_H320 }, //var、let、const、function
+	{ scopes: "string.interpolated", color: colour.L74_C14_H160 }, //$(pwd)、`date`
+	{ scopes: "string.regexp", color: colour.L74_C14_H140 }, // /(\w+ab)/
+	{ scopes: "string", color: colour.L72_C06_H150 }, //字符串："bienzu"、"32i4hen9"
+	{ scopes: "support.function", color: colour.L74_C12_H020 }, //print()
+	{ scopes: "support.type", color: colour.L74_C10_H060 }, //float()
 	{ scopes: "support", color: colour.L74_C12_H100 }, 
-	{ scopes: "variable.language", color: colour.L74_C10_H120 }, //done
-	{ scopes: "variable.parameter", color: colour.L74_C10_H070 }, //done
-	{ scopes: "variable", color: colour.L72_C08_H080 }, //done
+	{ scopes: "variable.language", color: colour.L74_C10_H120 }, //this
+	{ scopes: "variable.parameter", color: colour.L74_C10_H070 }, //def cmpt(s, A, t):
+	{ scopes: "variable", color: colour.L72_C08_H080 }, //combinations、targetvalue
 ];
 //js、html、python都好了，再改一改css就好了
 
