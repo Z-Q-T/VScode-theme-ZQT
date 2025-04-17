@@ -23,8 +23,7 @@ let GREY90 = "#dedede";
 let GREY95 = "#eeeeee";
 let WHITE = "#FFF";
 
-let errorStrong = "#fc4734";//oklch(0.66 0.22 30)
-
+let errorStrong = "#fc4734"; //oklch(0.66 0.22 30)
 
 import colour from "./palette-color.js";
 
@@ -53,36 +52,46 @@ let commentColour = GREY50;
 //一大长串的用色度C08，短的可以更饱和
 //html和css由于不是编程语言，因此单独处理
 //scopes里的token至少要有两个，单个的token宁愿不写（特殊的除外）
+//越常见的色度越低，防止扎眼
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
-	{ scopes: "comment", color: commentColour },//
+	{ scopes: "comment", color: commentColour }, //
 	{ scopes: "punctuation.definition.comment", color: commentColour }, //
+	{ scopes: "invalid", color: errorStrong }, //
+	//函数
+	{ scopes: "entity.name.function", color: colour.L74_C10_H040 }, //函数名：calcAll()
+	{ scopes: "support.function", color: colour.L74_C12_H030 }, //print()
+	{ scopes: "variable.parameter", color: colour.L74_C06_H060 }, //def cmpt(s, A, t):
+	//变量名
+	{ scopes: "variable.language", color: colour.L74_C10_H120 }, //this
+	{ scopes: "variable", color: colour.L72_C06_H090 }, //combinations、targetvalue
+	{ scopes: "support.variable", color: colour.L74_C12_H090 }, //.length
+	//变量值
+	{ scopes: "constant.language", color: colour.L72_C14_H160 }, //true、False
+	{ scopes: "constant.numeric", color: colour.L72_C10_H200 }, //数值：423、1.67
+	{ scopes: "string", color: colour.L72_C06_H150 }, //字符串："bienzu"、"32i4hen9"
+	{ scopes: "string.regexp", color: colour.L74_C14_H140 }, // /(\w+ab)/
+	{ scopes: ["string.interpolated", "string.template"], color: colour.L72_C14_H150 }, //$(pwd)、`date`
 	{ scopes: "constant.character", color: entityCharacterColour }, //&lt;、&ensp;、\031
 	{ scopes: "punctuation.definition.entity", color: entityCharacterColour }, //
-	{ scopes: "invalid", color: errorStrong },//
-
-	{ scopes: "constant.language", color: colour.L72_C14_H270 }, //true、False
-	{ scopes: "constant.numeric", color: colour.L72_C12_H210 }, //数值：423、1.67
-	{ scopes: "entity.name.function", color: colour.L74_C10_H040 }, //函数名：calcAll()
-	// { scopes: "entity", color: colour.L72_C10_H200 }, 
+	//控制语句
 	{ scopes: "keyword.control", color: colour.L72_C12_H000 }, //for、while、else、return
+	//运算符
 	{ scopes: "keyword.operator", color: colour.L74_C10_H280 }, //运算符：+、-、*、/、||、==
+	//类型
+	{ scopes: "storage.type", color: colour.L72_C12_H320 }, //var、let、const、function
+	{ scopes: "support.type", color: colour.L74_C10_H050 }, //float()
+	{ scopes: "entity.name.type", color: colour.L74_C10_H040 }, //
+	//标点
+	{ scopes: "punctuation.definition", color: colour.L76_C08_H070 }, //""、<>
+	{ scopes: "punctuation.separator", color: GREY80 }, //,、;
+	
 	{ scopes: "keyword", color: colour.L72_C14_H250 },
-	// { scopes: "meta", color: colour.L72_C06_H240 }, 
-	{ scopes: "punctuation.definition", color: colour.L76_C06_H080 },//""、<>
-	{ scopes: "punctuation.separator", color: GREY80 },//,、;
-	{ scopes: "storage", color: colour.L72_C12_H320 }, //var、let、const、function
-	{ scopes: "string.interpolated", color: colour.L74_C14_H160 }, //$(pwd)、`date`
-	{ scopes: "string.regexp", color: colour.L74_C14_H140 }, // /(\w+ab)/
-	{ scopes: "string", color: colour.L72_C06_H150 }, //字符串："bienzu"、"32i4hen9"
-	{ scopes: "support.function", color: colour.L74_C12_H020 }, //print()
-	{ scopes: "support.type", color: colour.L74_C10_H060 }, //float()
-	{ scopes: "support", color: colour.L74_C12_H100 }, 
-	{ scopes: "variable.language", color: colour.L74_C10_H120 }, //this
-	{ scopes: "variable.parameter", color: colour.L74_C10_H070 }, //def cmpt(s, A, t):
-	{ scopes: "variable", color: colour.L72_C08_H080 }, //combinations、targetvalue
+	{ scopes: "storage", color: colour.L72_C12_H320 }, //
+	{ scopes: "support", color: colour.L74_C12_H100 },
+	// { scopes: "entity", color: colour.L72_C10_H200 },
+	// { scopes: "meta", color: colour.L72_C06_H240 },
 ];
-//js、html、python都好了，再改一改css就好了
 
 // 生成JSON对象
 const jsonData = generateTokenColors(colorRules);

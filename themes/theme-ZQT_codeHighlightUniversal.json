@@ -37,13 +37,13 @@
 		{
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#839ffc"
+				"foreground": "#3fbf86"
 			}
 		},
 		{
 			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#1db8ce"
+				"foreground": "#48b7bd"
 			}
 		},
 		{
@@ -73,7 +73,7 @@
 		{
 			"scope": "punctuation.definition",
 			"settings": {
-				"foreground": "#c5ad86"
+				"foreground": "#d2a979"
 			}
 		},
 		{
@@ -89,9 +89,12 @@
 			}
 		},
 		{
-			"scope": "string.interpolated",
+			"scope": [
+				"string.interpolated",
+				"string.template"
+			],
 			"settings": {
-				"foreground": "#47c58c"
+				"foreground": "#5bbd74"
 			}
 		},
 		{
@@ -109,13 +112,19 @@
 		{
 			"scope": "support.function",
 			"settings": {
-				"foreground": "#ed8b8b"
+				"foreground": "#ed8d7d"
 			}
 		},
 		{
 			"scope": "support.type",
 			"settings": {
-				"foreground": "#d99c68"
+				"foreground": "#de9871"
+			}
+		},
+		{
+			"scope": "support.variable",
+			"settings": {
+				"foreground": "#c8a747"
 			}
 		},
 		{
@@ -133,13 +142,13 @@
 		{
 			"scope": "variable.parameter",
 			"settings": {
-				"foreground": "#d3a062"
+				"foreground": "#c8a285"
 			}
 		},
 		{
 			"scope": "variable",
 			"settings": {
-				"foreground": "#bf9f6a"
+				"foreground": "#b3a379"
 			}
 		}
 	]

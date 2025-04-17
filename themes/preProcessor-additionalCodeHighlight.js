@@ -48,13 +48,14 @@ function generateTokenColors(rules) {
 //一大长串的用色度C08，短的可以更饱和
 //html和css由于不是编程语言，因此单独处理
 //scopes里的token至少要有两个，单个的token宁愿不写（特殊的除外）
+//越常见的色度越低，防止扎眼
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
-	{ scopes: "keyword.other.important.css", color: colour.L74_C12_H020 },
 	{ scopes: "entity.name.tag", color: colour.L72_C08_H320 }, 
 	{ scopes: "meta.attribute", color: colour.L72_C08_H080 }, 
 	{ scopes: "meta.attribute.id.html", color: colour.L72_C08_H040 }, 
 	{ scopes: "meta.attribute.class.html", color: colour.L72_C08_H0120 }, 
+	{ scopes: "keyword.other.important.css", color: colour.L74_C12_H020 },
 ];
 //js、html、python都好了，再改一改css就好了
 
