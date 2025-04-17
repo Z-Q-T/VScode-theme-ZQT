@@ -23,15 +23,8 @@ let GREY90 = "#dedede";
 let GREY95 = "#eeeeee";
 let WHITE = "#FFF";
 
-let errorStrong = "#ff3b3b";
-//——————以下注释作废——————//
-//H220和H240比较接近蓝色，尽量不用
-//避免使用大红大橙，以防和报错信息混淆
-//——————以上注释作废——————//
+let errorStrong = "#fc4734";//oklch(0.66 0.22 30)
 
-//红橙，330-80
-//黄绿，90-200
-//蓝，210-320
 
 import colour from "./color_palette.js";
 
@@ -53,37 +46,39 @@ function generateTokenColors(rules) {
 	};
 }
 
-let entityCharacterColour = colour.L72_C12_H160;
+let entityCharacterColour = colour.L74_C12_H180;
 let commentColour = GREY50;
-
-// 定义规则数据
+//[10,30]的范围太接近大红色，避免使用高色度颜色
+//通常的用亮度L72，特殊的可以更亮
+//一大长串的用色度C08，短的可以更饱和
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
-	{ scopes: "comment", color: commentColour },
-	{ scopes: "punctuation.definition.comment", color: commentColour }, 
-	{ scopes: "invalid", color: errorStrong },
-	{ scopes: "constant.character", color: entityCharacterColour }, //内置
-	{ scopes: "punctuation.definition.entity", color: entityCharacterColour }, 
-	{ scopes: "constant.language", color: colour.L72_C14_H000 }, //内置
-	{ scopes: "entity.name.tag", color: colour.L72_C10_H350 }, //内置
-	{ scopes: "entity.other.attribute-name", color: colour.L72_C08_H070 }, //内置
-	{ scopes: "keyword", color: colour.L72_C14_H020 }, //内置
-	{ scopes: "keyword.control", color: colour.L72_C12_H030 }, //内置
-	{ scopes: "keyword.operator", color: colour.L74_C14_H010 }, //内置
+	{ scopes: "comment", color: commentColour },//done
+	{ scopes: "punctuation.definition.comment", color: commentColour }, //done
+	{ scopes: "constant.character", color: entityCharacterColour }, //done
+	{ scopes: "punctuation.definition.entity", color: entityCharacterColour }, //done
+	{ scopes: "invalid", color: errorStrong },//done
+
+	{ scopes: "constant.language", color: colour.L72_C14_H270 }, //done
+	{ scopes: "constant.numeric", color: colour.L72_C12_H210 }, //done
+	{ scopes: "entity.name.function", color: colour.L74_C10_H040 }, //done
+	{ scopes: "entity.name.tag", color: colour.L72_C08_H320 }, //done
+	{ scopes: "entity.other.attribute-name", color: colour.L72_C08_H080 }, //done
+	{ scopes: "entity", color: colour.L72_C10_H200 }, 
+	{ scopes: "keyword.control", color: colour.L72_C12_H000 }, //done
+	{ scopes: "keyword.operator", color: colour.L74_C10_H280 }, //done
+	{ scopes: "keyword", color: colour.L72_C14_H020 },
+	{ scopes: "meta", color: colour.L72_C06_H060 }, 
 	{ scopes: "punctuation", color: colour.L72_C06_H250 },
-	{ scopes: "storage", color: colour.L72_C10_H340 }, //内置
-	{ scopes: "support", color: colour.L72_C14_H000 }, //内置
-	{ scopes: "support.function", color: colour.L72_C14_H000 }, //内置
-	{ scopes: "variable.language", color: colour.L72_C08_H10 }, //内置
-	{ scopes: "meta", color: colour.L72_C08_H230 }, //元
-	{ scopes: "string.regexp", color: colour.L74_C14_H310 }, //半自写
-	{ scopes: "string.interpolated", color: colour.L72_C14_H290 }, //半自写
-	{ scopes: "entity", color: colour.L72_C14_H060 }, //自写-可复用
-	{ scopes: "entity.name.function", color: colour.L72_C14_H070 }, //自写-可复用
-	{ scopes: "variable", color: colour.L72_C08_H080 }, //自写-可复用
-	{ scopes: "variable.parameter", color: colour.L72_C08_H100 }, //自写-可复用
-	{ scopes: "constant.numeric", color: colour.L72_C12_H180 }, //自写-不可复用
-	{ scopes: "string", color: colour.L72_C08_H160 }, //自写-不可复用
+	{ scopes: "storage", color: colour.L72_C12_H320 }, //done
+	{ scopes: "string.interpolated", color: colour.L74_C14_H160 }, //done
+	{ scopes: "string.regexp", color: colour.L74_C14_H140 }, //done
+	{ scopes: "string", color: colour.L72_C06_H150 }, //done
+	{ scopes: "support.function", color: colour.L72_C14_H000 }, 
+	{ scopes: "support", color: colour.L72_C14_H000 }, 
+	{ scopes: "variable.language", color: colour.L72_C08_H10 }, 
+	{ scopes: "variable.parameter", color: colour.L72_C08_H100 }, 
+	{ scopes: "variable", color: colour.L72_C08_H080 }, //done
 ];
 
 // 生成JSON对象
@@ -107,5 +102,5 @@ function saveObjectToTxtFile(obj, filePath) {
 }
 
 saveObjectToTxtFile(jsonData, "./theme-ZQT_codeHighlightUniversal.json");
-// saveObjectToTxtFile(jsonObject, "./_ZQT.json");
-// // console.log(jsonObject);
+// saveObjectToTxtFjsonObject, "./_ZQT.json");
+// // console.loonObject);

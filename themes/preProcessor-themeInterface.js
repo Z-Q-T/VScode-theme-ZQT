@@ -32,16 +32,16 @@ let hover = "#ffffff30";
 let click = "#ffffff50";
 let foldArea = "#3a593f7f";
 
-let addStrong = "#2de35b";
-let addStrongTRANSPARENT = "#2de35b7f";
-let addSoft = "#6edd8a";
+let addStrong = "#02e36a";//oklch(0.8 0.22 150)
+let addStrongTRANSPARENT = "#02e36a7f";
+let addSoft = "#89d298";//oklch(0.8 0.11 150)
 let addSoftTRANSPARENT = "#6edd8a3f";
-let modifyStrong = "#f3bd28";
-let modifySoft = "#edc862";
+let modifyStrong = "#ffa900";//oklch(0.8 0.18 75)
+let modifySoft = "#e0b67b";//oklch(0.8 0.09 75)
 let modifySoftTRANSPARENT = "#edc8623f";
-let deleteStrong = "#f5306c";
-let deleteStrongTRANSPARENT = "#f5306c7f";
-let deleteSoft = "#f0769b";
+let deleteStrong = "#ff5199";//oklch(0.7 0.22 0)
+let deleteStrongTRANSPARENT = "#ff51997f";
+let deleteSoft = "#d6809c";//oklch(0.7 0.11 0)
 let deleteSoftTRANSPARENT = "#f0769b3f";
 let renameSoft = "#dd946e";
 let untrackSoft = "#6fc2e2";
@@ -49,15 +49,15 @@ let ignoreSoft = "#9e9e9e";
 let conflictSoft = "#b16edd";
 let submoduleSoft = "#7b79e0";
 
-let errorStrong = "#ff3b3b";
-let errorSoft = "#7f1d1d"; //soft是strong的颜色值减半
-let errorTRANSPARENT = "#ff3b3b7f"; //transparent是strong加半透明
-let warningStrong = "#FF9B19";
-let warningSoft = "#7f4d0c";
-let warningTRANSPARENT = "#FF9B197f";
+let errorStrong = "#fc4734";//oklch(0.66 0.22 30)
+let errorSoft = "#62160e"; //oklch(0.33 0.11 30)
+// let errorTRANSPARENT = "#fc47347f"; //transparent是strong加半透明
+let warningStrong = "#eada78";//oklch(0.88 0.12 100)
+let warningSoft = "#5a532a";//oklch(0.44 0.06 100)
+// let warningTRANSPARENT = "#FF9B197f";
 let infoStrong = "#0080ff";
 let infoSoft = "#193b7f";
-let infoTRANSPARENT = "#0080ff7f";
+// let infoTRANSPARENT = "#0080ff7f";
 let hintStrong = "#36b348";
 let hintSoft = "#1b5924";
 
@@ -249,8 +249,8 @@ let jsonObject = {
 		["list.inactiveFocusBackground"]: DFLT,
 		["list.inactiveFocusOutline"]: DFLT,
 		["list.invalidItemForeground"]: DFLT,
-		["list.errorForeground"]: DFLT,
-		["list.warningForeground"]: DFLT,
+		["list.errorForeground"]: errorStrong,
+		["list.warningForeground"]: warningStrong,
 		["listFilterWidget.background"]: DFLT,
 		["listFilterWidget.outline"]: DFLT,
 		["listFilterWidget.noMatchesOutline"]: DFLT,
@@ -1074,9 +1074,9 @@ let jsonObject = {
 
 		//Git colors
 
-		["gitDecoration.addedResourceForeground"]: addSoft,
-		["gitDecoration.modifiedResourceForeground"]: modifySoft,
-		["gitDecoration.deletedResourceForeground"]: deleteSoft,
+		["gitDecoration.addedResourceForeground"]: addStrong,
+		["gitDecoration.modifiedResourceForeground"]: modifyStrong,
+		["gitDecoration.deletedResourceForeground"]: deleteStrong,
 		["gitDecoration.renamedResourceForeground"]: renameSoft,
 		["gitDecoration.stageModifiedResourceForeground"]: DFLT,
 		["gitDecoration.stageDeletedResourceForeground"]: DFLT,
@@ -1106,7 +1106,7 @@ let jsonObject = {
 		//Note:
 
 		["settings.headerForeground"]: DFLT,
-		["settings.modifiedItemIndicator"]: modifySoft,
+		["settings.modifiedItemIndicator"]: modifyStrong,
 		["settings.dropdownBackground"]: GREY30,
 		["settings.dropdownForeground"]: DFLT,
 		["settings.dropdownBorder"]: DFLT,
