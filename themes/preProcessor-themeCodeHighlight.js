@@ -67,19 +67,21 @@ const colorRules = [
 	{ scopes: "entity", color: colour.L72_C10_H200 }, 
 	{ scopes: "keyword.control", color: colour.L72_C12_H000 }, //done
 	{ scopes: "keyword.operator", color: colour.L74_C10_H280 }, //done
-	{ scopes: "keyword", color: colour.L72_C14_H020 },
-	{ scopes: "meta", color: colour.L72_C06_H060 }, 
-	{ scopes: "punctuation", color: colour.L72_C06_H250 },
+	{ scopes: "keyword", color: colour.L72_C14_H250 },
+	{ scopes: "meta", color: colour.L72_C06_H240 }, //done
+	{ scopes: "punctuation.definition", color: colour.L76_C06_H080 },//done
+	{ scopes: "punctuation.separator", color: GREY80 },//done
 	{ scopes: "storage", color: colour.L72_C12_H320 }, //done
 	{ scopes: "string.interpolated", color: colour.L74_C14_H160 }, //done
 	{ scopes: "string.regexp", color: colour.L74_C14_H140 }, //done
 	{ scopes: "string", color: colour.L72_C06_H150 }, //done
-	{ scopes: "support.function", color: colour.L72_C14_H000 }, 
-	{ scopes: "support", color: colour.L72_C14_H000 }, 
-	{ scopes: "variable.language", color: colour.L72_C08_H10 }, 
-	{ scopes: "variable.parameter", color: colour.L72_C08_H100 }, 
+	{ scopes: "support.function", color: colour.L74_C12_H020 }, //done
+	{ scopes: "support", color: colour.L74_C12_H100 }, 
+	{ scopes: "variable.language", color: colour.L74_C10_H120 }, //done
+	{ scopes: "variable.parameter", color: colour.L74_C10_H070 }, //done
 	{ scopes: "variable", color: colour.L72_C08_H080 }, //done
 ];
+//js、html、python都好了，再改一改css就好了
 
 // 生成JSON对象
 const jsonData = generateTokenColors(colorRules);

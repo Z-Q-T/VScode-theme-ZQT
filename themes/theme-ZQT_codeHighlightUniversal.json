@@ -85,19 +85,25 @@
 		{
 			"scope": "keyword",
 			"settings": {
-				"foreground": "#ef7e80"
+				"foreground": "#59aaf8"
 			}
 		},
 		{
 			"scope": "meta",
 			"settings": {
-				"foreground": "#c19c7f"
+				"foreground": "#83aac7"
 			}
 		},
 		{
-			"scope": "punctuation",
+			"scope": "punctuation.definition",
 			"settings": {
-				"foreground": "#88a8c9"
+				"foreground": "#c5ad86"
+			}
+		},
+		{
+			"scope": "punctuation.separator",
+			"settings": {
+				"foreground": "#bebebe"
 			}
 		},
 		{
@@ -127,23 +133,25 @@
 		{
 			"scope": "support.function",
 			"settings": {
-				"foreground": "#ea7ca1"
+				"foreground": "#ed8b8b"
 			}
 		},
 		{
 			"scope": "support",
 			"settings": {
-				"foreground": "#ea7ca1"
+				"foreground": "#bdac4a"
 			}
 		},
 		{
 			"scope": "variable.language",
-			"settings": {}
+			"settings": {
+				"foreground": "#a3b46b"
+			}
 		},
 		{
 			"scope": "variable.parameter",
 			"settings": {
-				"foreground": "#b0a66b"
+				"foreground": "#d3a062"
 			}
 		},
 		{
