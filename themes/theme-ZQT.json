@@ -5,32 +5,10 @@
 	"include": "./theme-ZQT_codeHighlightUniversal.json",
 	"tokenColors": [
 		{
-			"scope": "keyword.other.important.css",
-			"settings": {
-				"foreground": "#ed8b8b"
-			}
-		},
-		{
 			"scope": "entity.name.tag",
 			"settings": {
 				"foreground": "#bb95c4"
 			}
-		},
-		{
-			"scope": "meta.attribute",
-			"settings": {
-				"foreground": "#bf9f6a"
-			}
-		},
-		{
-			"scope": "meta.attribute.id.html",
-			"settings": {
-				"foreground": "#d1947f"
-			}
-		},
-		{
-			"scope": "meta.attribute.class.html",
-			"settings": {}
 		}
 	]
 }
