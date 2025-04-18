@@ -46,7 +46,7 @@ function generateTokenColors(rules) {
 }
 
 //[10,30]的范围太接近大红色，避免使用高色度颜色
-//通常的用亮度L72，特殊的可以更亮
+//通常的用亮度L72，特殊的可以用L74。L76只用于括号高亮
 //一大长串的用色度C08，短的可以更饱和
 //scopes里的token至少要有两个，单个的token宁愿不写（特殊的除外）
 //越常见的色度越低，防止扎眼
@@ -72,10 +72,10 @@ const colorRules = [
 	//值
 	{ scopes: "constant.language", color: colour.L72_C14_H260 }, //true、False、undefined
 	{ scopes: "constant.numeric", color: colour.L74_C12_H320 }, //数值：423、1.67
-	{ scopes: "string", color: colour.L74_C06_H340 }, //字符串："bienzu"、"32i4hen9"
-	{ scopes: "string.regexp", color: colour.L74_C12_H340 }, // /(\w+ab)/
-	{ scopes: ["string.interpolated", "string.template"], color: colour.L74_C12_H340 }, //$(pwd)、`date`
-	{ scopes: ["constant.character","punctuation.definition.entity"], color: colour.L72_C14_H340 }, //&lt;、&ensp;、\031
+	{ scopes: "string", color: colour.L72_C06_H340 }, //字符串："bienzu"、"32i4hen9"
+	{ scopes: "string.regexp", color: colour.L72_C12_H340 }, // /(\w+ab)/
+	{ scopes: ["string.interpolated", "string.template"], color: colour.L72_C12_H340 }, //$(pwd)、`date`
+	{ scopes: ["constant.character","punctuation.definition.entity"], color: colour.L72_C12_H340 }, //&lt;、&ensp;、\031
 	//控制语句
 	{ scopes: "keyword.control", color: colour.L72_C12_H000 }, //for、while、else、return
 	//运算符
@@ -88,9 +88,9 @@ const colorRules = [
 	{ scopes: "punctuation.definition", color: colour.L70_C06_H240 }, //""、<>
 	{ scopes: "punctuation.separator", color: GREY80 }, //,、;
 	
-	{ scopes: "keyword", color: colour.L76_C14_H000 },//未明确指定的
-	{ scopes: "storage", color: colour.L76_C14_H000 }, //
-	{ scopes: "support", color: colour.L76_C14_H000 },
+	// { scopes: "keyword", color: colour.L76_C14_H000 },//未明确指定的
+	// { scopes: "storage", color: colour.L76_C14_H000 }, //
+	// { scopes: "support", color: colour.L76_C14_H000 },
 	// { scopes: "entity", color: colour.L72_C10_H200 },
 	// { scopes: "meta", color: colour.L72_C06_H240 },
 ];

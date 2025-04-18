@@ -73,13 +73,13 @@
 		{
 			"scope": "string",
 			"settings": {
-				"foreground": "#c69db7"
+				"foreground": "#bf96b0"
 			}
 		},
 		{
 			"scope": "string.regexp",
 			"settings": {
-				"foreground": "#dd8cc3"
+				"foreground": "#d686bc"
 			}
 		},
 		{
@@ -88,7 +88,7 @@
 				"string.template"
 			],
 			"settings": {
-				"foreground": "#dd8cc3"
+				"foreground": "#d686bc"
 			}
 		},
 		{
@@ -97,7 +97,7 @@
 				"punctuation.definition.entity"
 			],
 			"settings": {
-				"foreground": "#de80c0"
+				"foreground": "#d686bc"
 			}
 		},
 		{
@@ -140,24 +140,6 @@
 			"scope": "punctuation.separator",
 			"settings": {
 				"foreground": "#bebebe"
-			}
-		},
-		{
-			"scope": "keyword",
-			"settings": {
-				"foreground": "#f889ad"
-			}
-		},
-		{
-			"scope": "storage",
-			"settings": {
-				"foreground": "#f889ad"
-			}
-		},
-		{
-			"scope": "support",
-			"settings": {
-				"foreground": "#f889ad"
 			}
 		}
 	]
