@@ -15,7 +15,7 @@
 		"errorForeground": "#fc4734",
 		"icon.foreground": "default",
 		"sash.hoverBorder": "default",
-		"window.activeBorder": "#3377ff",
+		"window.activeBorder": "default",
 		"window.inactiveBorder": "default",
 		"textBlockQuote.background": "default",
 		"textBlockQuote.border": "default",

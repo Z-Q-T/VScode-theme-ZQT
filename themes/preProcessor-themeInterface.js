@@ -131,7 +131,7 @@ let jsonObject = {
 		//Window border
 		//The theme colors for VS Code window border.
 
-		["window.activeBorder"]: selectActiveStrong,
+		["window.activeBorder"]: DFLT,
 		["window.inactiveBorder"]: DFLT,
 		//The window border colors are only supported on macOS and Linux (not Windows) and only when the custom title bar is enabled (["window.titleBarStyle"]: "custom").
 
