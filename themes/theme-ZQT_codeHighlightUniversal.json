@@ -7,13 +7,13 @@
 		{
 			"scope": "comment",
 			"settings": {
-				"foreground": "#636363"
+				"foreground": "#717171"
 			}
 		},
 		{
 			"scope": "punctuation.definition.comment",
 			"settings": {
-				"foreground": "#636363"
+				"foreground": "#717171"
 			}
 		},
 		{

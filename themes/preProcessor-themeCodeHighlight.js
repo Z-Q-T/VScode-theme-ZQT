@@ -55,7 +55,7 @@ function generateTokenColors(rules) {
 //变量：绿
 //值-类型：紫红
 //support的颜色在对应原颜色的基础上，L+2，C+6
-let commentColour = GREY50;
+let commentColour = GREY55;
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
 	{ scopes: "comment", color: commentColour }, //
