@@ -25,7 +25,7 @@
 		{
 			"scope": "entity.name.function",
 			"settings": {
-				"foreground": "#bf9f6a"
+				"foreground": "#c69e58"
 			}
 		},
 		{
@@ -43,19 +43,31 @@
 		{
 			"scope": "variable.parameter",
 			"settings": {
-				"foreground": "#9ab580"
+				"foreground": "#90b888"
+			}
+		},
+		{
+			"scope": "variable.other.property",
+			"settings": {
+				"foreground": "#ada67a"
+			}
+		},
+		{
+			"scope": "support.variable.property",
+			"settings": {
+				"foreground": "#bdac4a"
 			}
 		},
 		{
 			"scope": "variable",
 			"settings": {
-				"foreground": "#98ad85"
+				"foreground": "#91ae8b"
 			}
 		},
 		{
 			"scope": "support.variable",
 			"settings": {
-				"foreground": "#92ba66"
+				"foreground": "#81bd74"
 			}
 		},
 		{
@@ -67,7 +79,7 @@
 		{
 			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#cc91da"
+				"foreground": "#b49ce1"
 			}
 		},
 		{
@@ -109,19 +121,19 @@
 		{
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#d59c7d"
+				"foreground": "#d79a85"
 			}
 		},
 		{
 			"scope": "storage.type",
 			"settings": {
-				"foreground": "#ac9ad0"
+				"foreground": "#989ee2"
 			}
 		},
 		{
 			"scope": "support.type",
 			"settings": {
-				"foreground": "#b995f6"
+				"foreground": "#9a9fff"
 			}
 		},
 		{

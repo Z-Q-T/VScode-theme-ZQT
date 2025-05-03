@@ -62,16 +62,18 @@ const colorRules = [
 	{ scopes: "punctuation.definition.comment", color: commentColour }, //
 	{ scopes: "invalid", color: errorStrong }, //
 	//函数
-	{ scopes: "entity.name.function", color: colour.L72_C08_H080 }, //函数名：calcAll()
+	{ scopes: "entity.name.function", color: colour.L72_C10_H080 }, //函数名：calcAll()
 	{ scopes: "support.function", color: colour.L74_C14_H080 }, //print()
 	//变量名
 	{ scopes: "variable.language", color: colour.L74_C10_H160 }, //this
-	{ scopes: "variable.parameter", color: colour.L74_C08_H130 }, //def cmpt(s, A, t):
-	{ scopes: "variable", color: colour.L72_C06_H130 }, //combinations、targetvalue //
-	{ scopes: "support.variable", color: colour.L74_C12_H130 }, //.length
+	{ scopes: "variable.parameter", color: colour.L74_C08_H140 }, //def cmpt(s, A, t):
+	{ scopes: "variable.other.property", color: colour.L72_C06_H100 }, 
+	{ scopes: "support.variable.property", color: colour.L74_C12_H100 }, //.length
+	{ scopes: "variable", color: colour.L72_C06_H140 }, //combinations、targetvalue //
+	{ scopes: "support.variable", color: colour.L74_C12_H140 }, //.length
 	//值
 	{ scopes: "constant.language", color: colour.L72_C14_H260 }, //true、False、undefined
-	{ scopes: "constant.numeric", color: colour.L74_C12_H320 }, //数值：423、1.67
+	{ scopes: "constant.numeric", color: colour.L74_C10_H300 }, //数值：423、1.67
 	{ scopes: "string", color: colour.L72_C06_H340 }, //字符串："bienzu"、"32i4hen9"
 	{ scopes: "string.regexp", color: colour.L72_C12_H340 }, // /(\w+ab)/
 	{ scopes: ["string.interpolated", "string.template"], color: colour.L72_C12_H340 }, //$(pwd)、`date`
@@ -79,10 +81,10 @@ const colorRules = [
 	//控制语句
 	{ scopes: "keyword.control", color: colour.L72_C12_H000 }, //for、while、else、return
 	//运算符
-	{ scopes: "keyword.operator", color: colour.L74_C08_H050 }, //运算符：+、-、*、/、||、==
+	{ scopes: "keyword.operator", color: colour.L74_C08_H040 }, //运算符：+、-、*、/、||、==
 	//类型 
-	{ scopes: "storage.type", color: colour.L72_C08_H300 }, //var、let、const、function
-	{ scopes: "support.type", color: colour.L74_C14_H300 }, //float()
+	{ scopes: "storage.type", color: colour.L72_C10_H280 }, //var、let、const、function
+	{ scopes: "support.type", color: colour.L74_C14_H280 }, //float()
 	{ scopes: "entity.name.type", color: colour.L74_C10_H260 }, //这是啥？不知道
 	//标点
 	{ scopes: "punctuation.definition", color: colour.L70_C06_H240 }, //""、<>

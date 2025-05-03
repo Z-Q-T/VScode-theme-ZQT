@@ -522,12 +522,12 @@ let jsonObject = {
 
 		//Bracket pair colorization:
 
-		["editorBracketHighlight.foreground1"]: colour.L76_C14_H220,
-		["editorBracketHighlight.foreground2"]: colour.L76_C14_H100,
-		["editorBracketHighlight.foreground3"]: colour.L76_C14_H340,
-		["editorBracketHighlight.foreground4"]: colour.L76_C14_H180,
-		["editorBracketHighlight.foreground5"]: colour.L76_C14_H060,
-		["editorBracketHighlight.foreground6"]: colour.L76_C14_H300,
+		["editorBracketHighlight.foreground1"]: colour.L76_C10_H220,
+		["editorBracketHighlight.foreground2"]: colour.L76_C10_H100,
+		["editorBracketHighlight.foreground3"]: colour.L76_C10_H340,
+		["editorBracketHighlight.foreground4"]: colour.L76_C10_H180,
+		["editorBracketHighlight.foreground5"]: colour.L76_C10_H060,
+		["editorBracketHighlight.foreground6"]: colour.L76_C10_H300,
 		["editorBracketHighlight.unexpectedBracket.foreground"]: errorStrong,
 
 		//Bracket pair guides:
