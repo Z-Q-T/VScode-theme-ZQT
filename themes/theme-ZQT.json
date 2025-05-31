@@ -106,6 +106,22 @@
 			}
 		},
 		{
+			"scope": [
+				"meta.function-call.python"
+			],
+			"settings": {
+				"foreground": "#c69e58"
+			}
+		},
+		{
+			"scope": [
+				"meta.function-call.arguments.python"
+			],
+			"settings": {
+				"foreground": "#90b888"
+			}
+		},
+		{
 			"scope": "keyword.other.important.css",
 			"settings": {
 				"foreground": "#42c2e6"

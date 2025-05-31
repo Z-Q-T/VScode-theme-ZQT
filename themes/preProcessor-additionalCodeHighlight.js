@@ -63,6 +63,8 @@ const colorRules = [
 	{ scopes: ["support.constant.property-value.css","constant.numeric.css"], color: colour.L72_C06_H340 }, 
 	{ scopes: "support.function.misc.css", color: colour.L74_C10_H000 }, 
 	{ scopes: ["variable.css","variable.argument.css"], color: colour.L72_C12_H020 }, 
+	{ scopes: ["meta.function-call.python"], color: colour.L72_C10_H080 }, 
+	{ scopes: ["meta.function-call.arguments.python"], color: colour.L74_C08_H140 }, 
 
 	{ scopes: "keyword.other.important.css", color: colour.L76_C12_H220 },
 ];
