@@ -101,7 +101,7 @@ let statusBarDebuggingBackground = "#ceb32c";
 // let statusBarNoFolderBackground = "#444";
 // let statusBarItemRemoteBackground = "#1284ff99";
 // let statusBarItemRemoteForeground = "#FFF";
-let statusBarItemProminentBackground = "#003847";
+let statusBarItemProminentBackground = "#505000";
 // let statusBarItemProminentHoverBackground = "#003847";
 
 let jsonObject = {
@@ -831,11 +831,11 @@ let jsonObject = {
 		["statusBarItem.remoteHoverBackground"]: hover,
 		["statusBarItem.remoteHoverForeground"]: DFLT,
 		["statusBarItem.errorBackground"]: errorStrong,
-		["statusBarItem.errorForeground"]: DFLT,
+		["statusBarItem.errorForeground"]: GREY20,
 		["statusBarItem.errorHoverBackground"]: DFLT,
 		["statusBarItem.errorHoverForeground"]: DFLT,
 		["statusBarItem.warningBackground"]: warningStrong,
-		["statusBarItem.warningForeground"]: DFLT,
+		["statusBarItem.warningForeground"]: GREY30,
 		["statusBarItem.warningHoverBackground"]: DFLT,
 		["statusBarItem.warningHoverForeground"]: DFLT,
 		["statusBarItem.compactHoverBackground"]: DFLT,
