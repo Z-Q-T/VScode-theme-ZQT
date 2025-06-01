@@ -101,7 +101,7 @@ let statusBarDebuggingBackground = "#ceb32c";
 // let statusBarNoFolderBackground = "#444";
 // let statusBarItemRemoteBackground = "#1284ff99";
 // let statusBarItemRemoteForeground = "#FFF";
-let statusBarItemProminentBackground = "#505000";
+let statusBarItemProminentBackground = "#503080";
 // let statusBarItemProminentHoverBackground = "#003847";
 
 let jsonObject = {
