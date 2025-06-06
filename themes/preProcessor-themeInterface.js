@@ -101,7 +101,8 @@ let statusBarDebuggingBackground = "#ceb32c";
 // let statusBarNoFolderBackground = "#444";
 // let statusBarItemRemoteBackground = "#1284ff99";
 // let statusBarItemRemoteForeground = "#FFF";
-let statusBarItemProminentBackground = "#503040";
+let statusBarItemProminentForeground = "#eebbaa";
+let statusBarItemProminentBackground = "#eebbaa";
 // let statusBarItemProminentHoverBackground = "#003847";
 
 let jsonObject = {
@@ -822,9 +823,9 @@ let jsonObject = {
 		["statusBarItem.activeBackground"]: click,
 		["statusBarItem.hoverForeground"]: DFLT,
 		["statusBarItem.hoverBackground"]: hover,
-		["statusBarItem.prominentForeground"]: DFLT,
-		["statusBarItem.prominentBackground"]: statusBarItemProminentBackground,
-		["statusBarItem.prominentHoverForeground"]: DFLT,
+		["statusBarItem.prominentForeground"]: warningStrong,
+		["statusBarItem.prominentBackground"]: GREY35,
+		["statusBarItem.prominentHoverForeground"]: warningStrong,
 		["statusBarItem.prominentHoverBackground"]: hover,
 		["statusBarItem.remoteBackground"]: GREY35,
 		["statusBarItem.remoteForeground"]: DFLT,
