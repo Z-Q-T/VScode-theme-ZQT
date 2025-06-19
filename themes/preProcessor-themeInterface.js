@@ -45,7 +45,7 @@ let deleteSoft = "#d6809c";//oklch(0.7 0.11 0)
 let deleteSoftTRANSPARENT = "#f0769b3f";
 let renameStrong = "#cde301";
 let untrackStrong = "#55b2ea";
-let ignoreStrong = "#9e9e9e";
+let ignoreStrong = "#beae9e";
 let conflictStrong = "#b16edd";
 let submoduleStrong = "#7b79e0";
 

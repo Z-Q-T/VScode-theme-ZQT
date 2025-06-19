@@ -721,7 +721,7 @@
 		"gitDecoration.stageModifiedResourceForeground": "default",
 		"gitDecoration.stageDeletedResourceForeground": "default",
 		"gitDecoration.untrackedResourceForeground": "#55b2ea",
-		"gitDecoration.ignoredResourceForeground": "#9e9e9e",
+		"gitDecoration.ignoredResourceForeground": "#beae9e",
 		"gitDecoration.conflictingResourceForeground": "#b16edd",
 		"gitDecoration.submoduleResourceForeground": "#7b79e0",
 		"git.blame.editorDecorationForeground": "default",
