@@ -30,7 +30,8 @@ let drop = "#90909030";
 let placeholder = "#7f7f7f";
 let hover = "#ffffff30";
 let click = "#ffffff50";
-let foldArea = "#3a593f7f";
+let foldArea = "#00a0cc2f";
+let foldHint = "#00a0cc";
 
 let addStrong = "#00c14a";//oklch(0.7 0.22 150)
 let addStrongTRANSPARENT = "#02e36a7f";
@@ -549,7 +550,7 @@ let jsonObject = {
 		//Folding:
 
 		["editor.foldBackground"]: foldArea,
-		["editor.foldPlaceholderForeground"]: hintStrong,
+		["editor.foldPlaceholderForeground"]: foldHint,
 
 		//Overview ruler:
 		//This ruler is located beneath the scroll bar on the right edge of the editor and gives an overview of the decorations in the editor.
