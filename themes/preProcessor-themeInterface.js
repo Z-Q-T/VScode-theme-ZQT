@@ -640,9 +640,9 @@ let jsonObject = {
 		//Diff editor colors
 		//For coloring inserted and removed text, use either a background or a border color but not both.
 
-		["diffEditor.insertedTextBackground"]: addStrongTRANSPARENT,
+		["diffEditor.insertedTextBackground"]: addSoftTRANSPARENT,
 		["diffEditor.insertedTextBorder"]: TRANSPARENT,
-		["diffEditor.removedTextBackground"]: deleteStrongTRANSPARENT,
+		["diffEditor.removedTextBackground"]: deleteSoftTRANSPARENT,
 		["diffEditor.removedTextBorder"]: TRANSPARENT,
 		["diffEditor.border"]: DFLT,
 		["diffEditor.diagonalFill"]: DFLT,
