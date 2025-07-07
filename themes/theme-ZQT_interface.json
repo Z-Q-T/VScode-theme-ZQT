@@ -11,7 +11,7 @@
 		"widget.border": "default",
 		"widget.shadow": "#000",
 		"selection.background": "#3377ff",
-		"descriptionForeground": "#eeeeee",
+		"descriptionForeground": "#dedede",
 		"errorForeground": "#fc4734",
 		"icon.foreground": "default",
 		"sash.hoverBorder": "default",

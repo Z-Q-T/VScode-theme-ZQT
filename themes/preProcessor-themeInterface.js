@@ -125,7 +125,7 @@ let jsonObject = {
 		["widget.border"]: DFLT,
 		["widget.shadow"]: shadow,
 		["selection.background"]: selectActiveStrong,
-		["descriptionForeground"]: GREY95,
+		["descriptionForeground"]: GREY90,
 		["errorForeground"]: errorStrong,
 		["icon.foreground"]: DFLT,
 		["sash.hoverBorder"]: DFLT,
