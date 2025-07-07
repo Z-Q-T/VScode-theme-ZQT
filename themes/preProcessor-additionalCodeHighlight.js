@@ -49,24 +49,24 @@ function generateTokenColors(rules) {
 //越常见的色度越低，防止扎眼
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
-	{ scopes: ["entity.name.tag","entity.name.tag.css"], color: colour.L74_C08_H280 }, 
-	{ scopes: ["entity.name.tag.custom"], color: colour.L72_C14_H280 }, 
-	{ scopes: "meta.attribute", color: colour.L72_C10_H130 }, 
-	{ scopes: ["meta.attribute.class.html","entity.other.attribute-name.class.css"], color: colour.L72_C12_H080 }, 
-	{ scopes: ["meta.attribute.id.html","entity.other.attribute-name.id.css"], color: colour.L72_C12_H040 }, 
-	{ scopes: "punctuation.definition.entity.css", color: colour.L70_C06_H240 }, 
-	{ scopes: "entity.other.attribute-name.css", color: colour.L72_C12_H150 }, 
-	{ scopes: "entity.other.attribute-name.pseudo-element.css", color: colour.L74_C10_H310 }, 
-	{ scopes: "entity.other.attribute-name.pseudo-class.css", color: colour.L72_C14_H110 }, 
-	{ scopes: "support.type.property-name", color: colour.L72_C06_H130 }, 
-	{ scopes: "support.type.vendored.property-name.css", color: colour.L72_C08_H170 }, 
-	{ scopes: ["support.constant.property-value.css","constant.numeric.css"], color: colour.L72_C06_H340 }, 
-	{ scopes: "support.function.misc.css", color: colour.L74_C10_H000 }, 
-	{ scopes: ["variable.css","variable.argument.css"], color: colour.L72_C12_H020 }, 
-	{ scopes: ["meta.function-call.python"], color: colour.L72_C10_H080 }, 
-	{ scopes: ["meta.function-call.arguments.python"], color: colour.L74_C08_H140 }, 
+	{ scopes: ["entity.name.tag","entity.name.tag.css"], color: colour.L76_C08_H280 }, 
+	{ scopes: ["entity.name.tag.custom"], color: colour.L74_C14_H280 }, 
+	{ scopes: "meta.attribute", color: colour.L74_C10_H130 }, 
+	{ scopes: ["meta.attribute.class.html","entity.other.attribute-name.class.css"], color: colour.L74_C12_H080 }, 
+	{ scopes: ["meta.attribute.id.html","entity.other.attribute-name.id.css"], color: colour.L74_C12_H040 }, 
+	{ scopes: "punctuation.definition.entity.css", color: colour.L72_C06_H240 }, 
+	{ scopes: "entity.other.attribute-name.css", color: colour.L74_C12_H150 }, 
+	{ scopes: "entity.other.attribute-name.pseudo-element.css", color: colour.L76_C10_H310 }, 
+	{ scopes: "entity.other.attribute-name.pseudo-class.css", color: colour.L74_C14_H110 }, 
+	{ scopes: "support.type.property-name", color: colour.L74_C06_H130 }, 
+	{ scopes: "support.type.vendored.property-name.css", color: colour.L74_C08_H170 }, 
+	{ scopes: ["support.constant.property-value.css","constant.numeric.css"], color: colour.L74_C06_H340 }, 
+	{ scopes: "support.function.misc.css", color: colour.L76_C10_H000 }, 
+	{ scopes: ["variable.css","variable.argument.css"], color: colour.L74_C12_H020 }, 
+	{ scopes: ["meta.function-call.python"], color: colour.L74_C10_H080 }, 
+	{ scopes: ["meta.function-call.arguments.python"], color: colour.L76_C08_H140 }, 
 
-	{ scopes: "keyword.other.important.css", color: colour.L76_C12_H220 },
+	{ scopes: "keyword.other.important.css", color: colour.L76_C14_H220 },
 ];
 //js、html、python都好了，再改一改css就好了
 

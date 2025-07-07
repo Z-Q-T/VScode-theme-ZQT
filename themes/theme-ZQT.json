@@ -10,7 +10,7 @@
 				"entity.name.tag.css"
 			],
 			"settings": {
-				"foreground": "#a0a6dd"
+				"foreground": "#a7ace4"
 			}
 		},
 		{
@@ -18,13 +18,13 @@
 				"entity.name.tag.custom"
 			],
 			"settings": {
-				"foreground": "#9499fa"
+				"foreground": "#9a9fff"
 			}
 		},
 		{
 			"scope": "meta.attribute",
 			"settings": {
-				"foreground": "#90b16d"
+				"foreground": "#96b874"
 			}
 		},
 		{
@@ -33,7 +33,7 @@
 				"entity.other.attribute-name.class.css"
 			],
 			"settings": {
-				"foreground": "#cc9c42"
+				"foreground": "#d2a249"
 			}
 		},
 		{
@@ -42,43 +42,43 @@
 				"entity.other.attribute-name.id.css"
 			],
 			"settings": {
-				"foreground": "#e4896a"
+				"foreground": "#eb9070"
 			}
 		},
 		{
 			"scope": "punctuation.definition.entity.css",
 			"settings": {
-				"foreground": "#7da4c0"
+				"foreground": "#83aac7"
 			}
 		},
 		{
 			"scope": "entity.other.attribute-name.css",
 			"settings": {
-				"foreground": "#69ba7c"
+				"foreground": "#6fc082"
 			}
 		},
 		{
 			"scope": "entity.other.attribute-name.pseudo-element.css",
 			"settings": {
-				"foreground": "#be99da"
+				"foreground": "#c59fe1"
 			}
 		},
 		{
 			"scope": "entity.other.attribute-name.pseudo-class.css",
 			"settings": {
-				"foreground": "#aaac31"
+				"foreground": "#b1b239"
 			}
 		},
 		{
 			"scope": "support.type.property-name",
 			"settings": {
-				"foreground": "#98ad85"
+				"foreground": "#9eb38b"
 			}
 		},
 		{
 			"scope": "support.type.vendored.property-name.css",
 			"settings": {
-				"foreground": "#6fb59d"
+				"foreground": "#75bca3"
 			}
 		},
 		{
@@ -87,13 +87,13 @@
 				"constant.numeric.css"
 			],
 			"settings": {
-				"foreground": "#bf96b0"
+				"foreground": "#c69db7"
 			}
 		},
 		{
 			"scope": "support.function.misc.css",
 			"settings": {
-				"foreground": "#df90a8"
+				"foreground": "#e696ae"
 			}
 		},
 		{
@@ -102,7 +102,7 @@
 				"variable.argument.css"
 			],
 			"settings": {
-				"foreground": "#e68485"
+				"foreground": "#ed8b8b"
 			}
 		},
 		{
@@ -110,7 +110,7 @@
 				"meta.function-call.python"
 			],
 			"settings": {
-				"foreground": "#c69e58"
+				"foreground": "#cca45e"
 			}
 		},
 		{
@@ -118,13 +118,13 @@
 				"meta.function-call.arguments.python"
 			],
 			"settings": {
-				"foreground": "#90b888"
+				"foreground": "#96be8e"
 			}
 		},
 		{
 			"scope": "keyword.other.important.css",
 			"settings": {
-				"foreground": "#42c2e6"
+				"foreground": "#00c5ee"
 			}
 		}
 	]
