@@ -714,7 +714,7 @@
 		"welcomePage.tileBorder": "default",
 		"walkThrough.embeddedEditorBackground": "default",
 		"walkthrough.stepTitle.foreground": "default",
-		"gitDecoration.addedResourceForeground": "#00c14a",
+		"gitDecoration.addedResourceForeground": "#69b27a",
 		"gitDecoration.modifiedResourceForeground": "#e0b67b",
 		"gitDecoration.deletedResourceForeground": "#d6809c",
 		"gitDecoration.renamedResourceForeground": "#cde301",

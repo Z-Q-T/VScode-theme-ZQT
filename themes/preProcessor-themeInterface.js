@@ -1076,7 +1076,7 @@ let jsonObject = {
 
 		//Git colors
 
-		["gitDecoration.addedResourceForeground"]: addStrong,
+		["gitDecoration.addedResourceForeground"]: addSoft,
 		["gitDecoration.modifiedResourceForeground"]: modifySoft,
 		["gitDecoration.deletedResourceForeground"]: deleteSoft,
 		["gitDecoration.renamedResourceForeground"]: renameStrong,
