@@ -120,8 +120,8 @@ let jsonObject = {
 		//Base colors
 
 		["focusBorder"]: selectActiveStrong,
-		["foreground"]: GREY95,
-		["disabledForeground"]: GREY85,
+		["foreground"]: GREY90,
+		["disabledForeground"]: GREY80,
 		["widget.border"]: DFLT,
 		["widget.shadow"]: shadow,
 		["selection.background"]: selectActiveStrong,
@@ -300,7 +300,7 @@ let jsonObject = {
 		//The Side Bar contains views like the Explorer and Search.
 
 		["sideBar.background"]: GREY25,
-		["sideBar.foreground"]: GREY95,
+		["sideBar.foreground"]: GREY90,
 		["sideBar.border"]: DFLT,
 		["sideBar.dropBackground"]: drop,
 		["sideBarTitle.foreground"]: GREY95,
