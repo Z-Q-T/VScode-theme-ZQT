@@ -44,9 +44,9 @@ let deleteStrong = "#ff5199";//oklch(0.7 0.22 0)
 let deleteStrongTRANSPARENT = "#ff51997f";
 let deleteSoft = "#d6809c";//oklch(0.7 0.11 0)
 let deleteSoftTRANSPARENT = "#f0769b3f";
-let renameStrong = "#cde301";
+let renameStrong = "#94e301";
 let untrackStrong = "#55b2ea";
-let ignoreStrong = "#beae9e";
+let ignoreStrong = "#718f8b";
 let conflictStrong = "#b16edd";
 let submoduleStrong = "#7b79e0";
 
