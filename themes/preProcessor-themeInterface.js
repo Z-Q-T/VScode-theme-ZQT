@@ -37,8 +37,8 @@ let addStrong = "#00c14a";//oklch(0.7 0.22 150)
 let addStrongTRANSPARENT = "#02e36a7f";
 let addSoft = "#69b27a";//oklch(0.7 0.11 150)
 let addSoftTRANSPARENT = "#6edd8a3f";
-let modifyStrong = "#ffa900";//oklch(0.8 0.18 75)
-let modifySoft = "#e0b67b";//oklch(0.8 0.09 75)
+let modifyStrong = "#d78d00";//oklch(0.7 0.16 75)
+let modifySoft = "#bc9865";//oklch(0.7 0.08 75)
 let modifySoftTRANSPARENT = "#edc8623f";
 let deleteStrong = "#ff5199";//oklch(0.7 0.22 0)
 let deleteStrongTRANSPARENT = "#ff51997f";
@@ -46,7 +46,7 @@ let deleteSoft = "#d6809c";//oklch(0.7 0.11 0)
 let deleteSoftTRANSPARENT = "#f0769b3f";
 let renameStrong = "#94e301";
 let untrackStrong = "#55b2ea";
-let ignoreStrong = "#718f8b";
+let ignoreStrong = "#848484";
 let conflictStrong = "#b16edd";
 let submoduleStrong = "#7b79e0";
 
@@ -478,14 +478,14 @@ let jsonObject = {
 
 		//To see the editor indent guides, set ["editor.guides.indentation"]:
 
-		["editorIndentGuide.background"]: IndentGuide,
+		// ["editorIndentGuide.background"]: IndentGuide,
 		["editorIndentGuide.background1"]: IndentGuide,
 		["editorIndentGuide.background2"]: IndentGuide,
 		["editorIndentGuide.background3"]: IndentGuide,
 		["editorIndentGuide.background4"]: IndentGuide,
 		["editorIndentGuide.background5"]: IndentGuide,
 		["editorIndentGuide.background6"]: IndentGuide,
-		["editorIndentGuide.activeBackground"]: IndentGuideActive,
+		// ["editorIndentGuide.activeBackground"]: IndentGuideActive,
 		["editorIndentGuide.activeBackground1"]: IndentGuideActive,
 		["editorIndentGuide.activeBackground2"]: IndentGuideActive,
 		["editorIndentGuide.activeBackground3"]: IndentGuideActive,
