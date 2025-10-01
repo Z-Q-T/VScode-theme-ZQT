@@ -60,9 +60,9 @@ for (let [L, C, H] of combinations) {
 	if (oklchColor.inGamut("a98rgb")) {
 		const adobeRgbColor = oklchColor.to("a98rgb"); // 转换到 AdobeRGB 色域
 		const hexColor = adobeRgbColor.to("srgb").toString({ format: "hex" }); // 转换为 HEX
-		hexColors.push(`L${L * 100}_C${C}_H${H}: "${hexColor}", // ${hexColor}`);
+		hexColors.push(`L${Math.round(L * 100)}_C${C}_H${H}: "${hexColor}", // ${hexColor}`);
 	} else {
-		hexColors.push(`//L${L * 100}_C${C}_H${H}: "out of gamut",`);
+		hexColors.push(`//L${Math.round(L * 100)}_C${C}_H${H}: "out of gamut",`);
 	}
 }
 hexColors.push("}");
