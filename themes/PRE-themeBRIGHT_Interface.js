@@ -17,20 +17,20 @@ let click = "#00000055";
 
 let addLight = "#40cc6d";//oklch(0.75 0.18 150)
 let addLightTRANSPARENT = "#40cc6d44";
-let addDark = "#6fb07d";//oklch(0.7 0.10 150)
 let modifyLight = "#c8ae00";//oklch(0.75 0.18 100)
 let deleteLight = "#ff76a9";//oklch(0.75 0.18 0)
 let deleteLightTRANSPARENT = "#ff76a944";
-let deleteDark = "#d2849c";//oklch(0.7 0.10 0)
 
-let gitModify = "#934f00";//oklch(0.5 0.12 60)
-let gitRename = "#046dafff";
-let gitUntrack = "#70a50fff";
-let gitIgnore = "#959595ff";
-let gitConflict = "#dd6edbff";
-let gitSubmodule = "#7b79e0";
-let SourceControlGraphRef = "#e9aa2dff";
-let SourceControlGraphRemote = "#4960dfff";
+let gitAdd = "#21763c";//oklch(0.5 0.12 150)
+let gitModify = "#746300";//oklch(0.5 0.12 100)
+let gitDelete = "#984260";//oklch(0.5 0.12 0)
+let gitRename = "#0090b1";//oklch(0.6 0.12 220)
+let gitUntrack = "#688e3b";//oklch(0.6 0.12 130)
+let gitIgnore = "#959595";
+let gitConflict = "#a067ac";//oklch(0.6 0.12 320)
+let gitSubmodule = "#495da7";//oklch(0.5 0.12 270)
+let SourceControlGraphRef = "#888";
+let SourceControlGraphRemote = "#444";
 
 let errorLight = "#df8071"; //oklch(0.7 0.12 30)
 let errorDark = "#d64938";//oklch(0.6 0.18 30)
@@ -1054,12 +1054,12 @@ let jsonObject = {
 
 		//Git colors
 
-		["gitDecoration.addedResourceForeground"]: addDark,
+		["gitDecoration.addedResourceForeground"]: gitAdd,
 		["gitDecoration.modifiedResourceForeground"]: gitModify,
-		["gitDecoration.deletedResourceForeground"]: deleteDark,
+		["gitDecoration.deletedResourceForeground"]: gitDelete,
 		["gitDecoration.renamedResourceForeground"]: gitRename,
 		["gitDecoration.stageModifiedResourceForeground"]: gitModify,
-		["gitDecoration.stageDeletedResourceForeground"]: deleteLight,
+		["gitDecoration.stageDeletedResourceForeground"]: gitDelete,
 		["gitDecoration.untrackedResourceForeground"]: gitUntrack,
 		["gitDecoration.ignoredResourceForeground"]: gitIgnore,
 		["gitDecoration.conflictingResourceForeground"]: gitConflict,
@@ -1078,7 +1078,7 @@ let jsonObject = {
 		["scmGraph.historyItemHoverDeletionsForeground"]: DFLT,
 		["scmGraph.historyItemRefColor"]: SourceControlGraphRef,
 		["scmGraph.historyItemRemoteRefColor"]: SourceControlGraphRemote,
-		["scmGraph.historyItemBaseRefColor"]: DFLT,
+		["scmGraph.historyItemBaseRefColor"]: DEBUG_GREEN,
 		["scmGraph.historyItemHoverDefaultLabelForeground"]: DFLT,
 		["scmGraph.historyItemHoverDefaultLabelBackground"]: DFLT,
 
