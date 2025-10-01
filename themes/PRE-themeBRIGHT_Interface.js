@@ -3,24 +3,6 @@ let TRANSPARENT = "#00000000";
 let DEBUG_RED = "#ff0000";
 let DEBUG_GREEN = "#00ff00";
 let BLACK = "#000";
-let GREY10 = "#030303"; //按照oklch色域 #030303
-let GREY15 = "#0b0b0b";
-let GREY20 = "#161616";
-let GREY25 = "#222222";
-let GREY30 = "#2e2e2e";
-let GREY35 = "#3a3a3a";
-let GREY40 = "#484848";
-let GREY45 = "#555555";
-let GREY50 = "#636363";
-let GREY55 = "#717171";
-let GREY60 = "#808080";
-let GREY65 = "#8f8f8f";
-let GREY70 = "#9e9e9e";
-let GREY75 = "#aeaeae";
-let GREY80 = "#bebebe";
-let GREY85 = "#cecece";
-let GREY90 = "#dedede";
-let GREY95 = "#eeeeee";
 let WHITE = "#FFF";
 
 import grey from "./greyscales.js";
@@ -125,12 +107,12 @@ let jsonObject = {
 		//Base colors
 
 		["focusBorder"]: selectActiveStrong,
-		["foreground"]: GREY90,
-		["disabledForeground"]: GREY80,
+		["foreground"]: grey.G15,
+		["disabledForeground"]: grey.G25,
 		["widget.border"]: DFLT,
 		["widget.shadow"]: shadow,
 		["selection.background"]: selectActiveStrong,
-		["descriptionForeground"]: GREY90,
+		["descriptionForeground"]: grey.G15,
 		["errorForeground"]: errorStrong,
 		["icon.foreground"]: DFLT,
 		["sash.hoverBorder"]: DFLT,
@@ -200,7 +182,7 @@ let jsonObject = {
 		//Input control
 		//Colors for input controls such as in the Search view or the Find/Replace dialog.
 
-		["input.background"]: GREY35,
+		["input.background"]: grey.G70,
 		["input.border"]: DFLT,
 		["input.foreground"]: DFLT,
 		["input.placeholderForeground"]: placeholder,
@@ -274,7 +256,7 @@ let jsonObject = {
 		//Activity Bar
 		//The Activity Bar is usually displayed either on the far left or right of the workbench and allows fast switching between views of the Side Bar.
 
-		["activityBar.background"]: GREY30,
+		["activityBar.background"]: grey.G75,
 		["activityBar.dropBorder"]: DFLT,
 		["activityBar.foreground"]: DFLT,
 		["activityBar.inactiveForeground"]: DFLT,
@@ -282,7 +264,7 @@ let jsonObject = {
 		["activityBarBadge.background"]: infoStrong,
 		["activityBarBadge.foreground"]: DFLT,
 		["activityBar.activeBorder"]: selectActiveStrong,
-		["activityBar.activeBackground"]: GREY25,
+		["activityBar.activeBackground"]: grey.G80,
 		["activityBar.activeFocusBorder"]: DFLT,
 		["activityBarTop.foreground"]: DFLT,
 		["activityBarTop.activeBorder"]: DFLT,
@@ -304,13 +286,13 @@ let jsonObject = {
 		//Side Bar
 		//The Side Bar contains views like the Explorer and Search.
 
-		["sideBar.background"]: GREY25,
-		["sideBar.foreground"]: GREY90,
+		["sideBar.background"]: grey.G80,
+		["sideBar.foreground"]: grey.G15,
 		["sideBar.border"]: DFLT,
 		["sideBar.dropBackground"]: drop,
-		["sideBarTitle.foreground"]: GREY95,
-		["sideBarSectionHeader.background"]: GREY40,
-		["sideBarSectionHeader.foreground"]: GREY95,
+		["sideBarTitle.foreground"]: grey.G10,
+		["sideBarSectionHeader.background"]: grey.G65,
+		["sideBarSectionHeader.foreground"]: grey.G10,
 		["sideBarSectionHeader.border"]: DFLT,
 		["sideBarActivityBarTop.border"]: DFLT,
 		["sideBarTitle.background"]: DFLT,
@@ -344,8 +326,8 @@ let jsonObject = {
 
 		["editorGroup.border"]: DFLT,
 		["editorGroup.dropBackground"]: drop,
-		["editorGroupHeader.noTabsBackground"]: GREY20,
-		["editorGroupHeader.tabsBackground"]: GREY25,
+		["editorGroupHeader.noTabsBackground"]: grey.G85,
+		["editorGroupHeader.tabsBackground"]: grey.G80,
 		["editorGroupHeader.tabsBorder"]: DFLT,
 		["editorGroupHeader.border"]: DFLT,
 		["editorGroup.emptyBackground"]: DFLT,
@@ -353,14 +335,14 @@ let jsonObject = {
 		["editorGroup.dropIntoPromptForeground"]: DFLT,
 		["editorGroup.dropIntoPromptBackground"]: DFLT,
 		["editorGroup.dropIntoPromptBorder"]: DFLT,
-		["tab.activeBackground"]: GREY20,
-		["tab.activeForeground"]: GREY95,
-		["tab.inactiveBackground"]: GREY30,
-		["tab.inactiveForeground"]: GREY95,
-		["tab.unfocusedActiveBackground"]: GREY25,
-		["tab.unfocusedActiveForeground"]: GREY85,
-		["tab.unfocusedInactiveBackground"]: GREY30,
-		["tab.unfocusedInactiveForeground"]: GREY85,
+		["tab.activeBackground"]: grey.G85,
+		["tab.activeForeground"]: grey.G10,
+		["tab.inactiveBackground"]: grey.G75,
+		["tab.inactiveForeground"]: grey.G10,
+		["tab.unfocusedActiveBackground"]: grey.G80,
+		["tab.unfocusedActiveForeground"]: grey.G20,
+		["tab.unfocusedInactiveBackground"]: grey.G75,
+		["tab.unfocusedInactiveForeground"]: grey.G20,
 		["tab.border"]: DFLT,
 		["tab.activeBorder"]: DFLT,
 		["tab.selectedBorderTop"]: DFLT,
@@ -390,10 +372,10 @@ let jsonObject = {
 
 		//All other editor colors are listed here:
 
-		["editor.background"]: GREY20,
-		["editor.foreground"]: GREY90,
-		["editorLineNumber.foreground"]: GREY50,
-		["editorLineNumber.activeForeground"]: GREY70,
+		["editor.background"]: grey.G85,
+		["editor.foreground"]: grey.G15,
+		["editorLineNumber.foreground"]: grey.G55,
+		["editorLineNumber.activeForeground"]: grey.G35,
 		["editorLineNumber.dimmedForeground"]: DFLT,
 		["editorCursor.background"]: DFLT,
 		["editorCursor.foreground"]: DFLT,
@@ -657,10 +639,10 @@ let jsonObject = {
 		["diffEditorGutter.removedLineBackground"]: TRANSPARENT,
 		["diffEditorOverview.insertedForeground"]: DFLT,
 		["diffEditorOverview.removedForeground"]: DFLT,
-		["diffEditor.unchangedRegionBackground"]: GREY30,
+		["diffEditor.unchangedRegionBackground"]: grey.G75,
 		["diffEditor.unchangedRegionForeground"]: DFLT,
 		["diffEditor.unchangedRegionShadow"]: shadow,
-		["diffEditor.unchangedCodeBackground"]: GREY30,
+		["diffEditor.unchangedCodeBackground"]: grey.G75,
 		["diffEditor.move.border"]: DFLT,
 		["diffEditor.moveActive.border"]: DFLT,
 		["multiDiffEditor.headerBackground"]: DFLT,
@@ -699,7 +681,7 @@ let jsonObject = {
 		//The Editor widget is shown in front of the editor content. Examples are the Find/Replace dialog, the suggestion widget, and the editor hover.
 
 		["editorWidget.foreground"]: DFLT,
-		["editorWidget.background"]: GREY30,
+		["editorWidget.background"]: grey.G75,
 		["editorWidget.border"]: DFLT,
 		["editorWidget.resizeBorder"]: DFLT,
 		["editorSuggestWidget.background"]: DFLT,
@@ -744,7 +726,7 @@ let jsonObject = {
 		//Peek view
 
 		["peekView.border"]: DFLT,
-		["peekViewEditor.background"]: GREY30,
+		["peekViewEditor.background"]: grey.G75,
 		["peekViewEditorGutter.background"]: DFLT,
 		["peekViewEditor.matchHighlightBackground"]: DFLT,
 		["peekViewEditor.matchHighlightBorder"]: DFLT,
@@ -792,13 +774,13 @@ let jsonObject = {
 		//Panel colors
 		//Panels are shown below the editor area and contain views like Output and Integrated Terminal.
 
-		["panel.background"]: GREY25,
+		["panel.background"]: grey.G80,
 		["panel.border"]: DFLT,
 		["panel.dropBorder"]: drop,
 		["panelTitle.activeBorder"]: selectActiveStrong,
-		["panelTitle.activeForeground"]: GREY95,
-		["panelTitle.inactiveForeground"]: GREY70,
-		["panelTitle.border"]: GREY35,
+		["panelTitle.activeForeground"]: grey.G10,
+		["panelTitle.inactiveForeground"]: grey.G35,
+		["panelTitle.border"]: grey.G70,
 		["panelTitleBadge.background"]: DFLT,
 		["panelTitleBadge.foreground"]: DFLT,
 		["panelInput.border"]: DFLT,
@@ -810,39 +792,39 @@ let jsonObject = {
 		["panelStickyScroll.border"]: DFLT,
 		["panelStickyScroll.shadow"]: shadow,
 		["panelSectionHeader.border"]: DFLT,
-		["outputView.background"]: GREY20,
+		["outputView.background"]: grey.G85,
 		["outputViewStickyScroll.background"]: DFLT,
 
 		//Status Bar colors
 		//The Status Bar is shown in the bottom of the workbench.
 
-		["statusBar.background"]: GREY30,
-		["statusBar.foreground"]: GREY90,
+		["statusBar.background"]: grey.G75,
+		["statusBar.foreground"]: grey.G15,
 		["statusBar.border"]: DFLT,
 		["statusBar.debuggingBackground"]: statusBarDebuggingBackground,
-		["statusBar.debuggingForeground"]: GREY20,
+		["statusBar.debuggingForeground"]: grey.G85,
 		["statusBar.debuggingBorder"]: DFLT,
-		["statusBar.noFolderBackground"]: GREY20,
-		["statusBar.noFolderForeground"]: GREY75,
-		["statusBar.noFolderBorder"]: GREY35,
+		["statusBar.noFolderBackground"]: grey.G85,
+		["statusBar.noFolderForeground"]: grey.G30,
+		["statusBar.noFolderBorder"]: grey.G70,
 		["statusBar.focusBorder"]: selectActiveStrong,
 		["statusBarItem.activeBackground"]: click,
 		["statusBarItem.hoverForeground"]: DFLT,
 		["statusBarItem.hoverBackground"]: hover,
 		["statusBarItem.prominentForeground"]: warningStrong,
-		["statusBarItem.prominentBackground"]: GREY35,
+		["statusBarItem.prominentBackground"]: grey.G70,
 		["statusBarItem.prominentHoverForeground"]: warningStrong,
 		["statusBarItem.prominentHoverBackground"]: hover,
-		["statusBarItem.remoteBackground"]: GREY35,
+		["statusBarItem.remoteBackground"]: grey.G70,
 		["statusBarItem.remoteForeground"]: DFLT,
 		["statusBarItem.remoteHoverBackground"]: hover,
 		["statusBarItem.remoteHoverForeground"]: DFLT,
 		["statusBarItem.errorBackground"]: errorStrong,
-		["statusBarItem.errorForeground"]: GREY20,
+		["statusBarItem.errorForeground"]: grey.G85,
 		["statusBarItem.errorHoverBackground"]: DFLT,
 		["statusBarItem.errorHoverForeground"]: DFLT,
 		["statusBarItem.warningBackground"]: warningStrong,
-		["statusBarItem.warningForeground"]: GREY30,
+		["statusBarItem.warningForeground"]: grey.G75,
 		["statusBarItem.warningHoverBackground"]: DFLT,
 		["statusBarItem.warningHoverForeground"]: DFLT,
 		["statusBarItem.compactHoverBackground"]: DFLT,
@@ -855,10 +837,10 @@ let jsonObject = {
 		//Prominent items stand out from other Status Bar entries to indicate importance. One example is the Toggle Tab Key Moves Focus command change mode indicator.
 		//Title Bar colors
 
-		["titleBar.activeBackground"]: GREY30,
-		["titleBar.activeForeground"]: GREY90,
-		["titleBar.inactiveBackground"]: GREY35,
-		["titleBar.inactiveForeground"]: GREY75,
+		["titleBar.activeBackground"]: grey.G75,
+		["titleBar.activeForeground"]: grey.G15,
+		["titleBar.inactiveBackground"]: grey.G70,
+		["titleBar.inactiveForeground"]: grey.G30,
 		["titleBar.border"]: DFLT,
 
 		//Menu Bar colors
@@ -866,8 +848,8 @@ let jsonObject = {
 		["menubar.selectionForeground"]: DFLT,
 		["menubar.selectionBackground"]: hover,
 		["menubar.selectionBorder"]: DFLT,
-		["menu.foreground"]: GREY90,
-		["menu.background"]: GREY30,
+		["menu.foreground"]: grey.G15,
+		["menu.background"]: grey.G75,
 		["menu.selectionForeground"]: DFLT,
 		["menu.selectionBackground"]: hover,
 		["menu.selectionBorder"]: DFLT,
@@ -877,7 +859,7 @@ let jsonObject = {
 		//Command Center colors
 
 		["commandCenter.foreground"]: DFLT,
-		["commandCenter.background"]: GREY35,
+		["commandCenter.background"]: grey.G70,
 		["commandCenter.activeForeground"]: DFLT,
 		["commandCenter.activeBackground"]: hover,
 		["commandCenter.border"]: DFLT,
@@ -894,10 +876,10 @@ let jsonObject = {
 
 		["notificationCenter.border"]: DFLT,
 		["notificationCenterHeader.foreground"]: DFLT,
-		["notificationCenterHeader.background"]: GREY35,
+		["notificationCenterHeader.background"]: grey.G70,
 		["notificationToast.border"]: DFLT,
 		["notifications.foreground"]: DFLT,
-		["notifications.background"]: GREY30,
+		["notifications.background"]: grey.G75,
 		["notifications.border"]: DFLT,
 		["notificationLink.foreground"]: DFLT,
 		["notificationsErrorIcon.foreground"]: DFLT,
@@ -932,7 +914,7 @@ let jsonObject = {
 
 		["pickerGroup.border"]: DFLT,
 		["pickerGroup.foreground"]: DFLT,
-		["quickInput.background"]: GREY30,
+		["quickInput.background"]: grey.G75,
 		["quickInput.foreground"]: DFLT,
 		["quickInputList.focusBackground"]: DFLT,
 		["quickInputList.focusForeground"]: DFLT,
@@ -948,8 +930,8 @@ let jsonObject = {
 		//	The "feature contribution" section of an extension's marketplace page
 		//The following customizations are available:
 
-		["keybindingLabel.background"]: GREY40,
-		["keybindingLabel.foreground"]: GREY90,
+		["keybindingLabel.background"]: grey.G65,
+		["keybindingLabel.foreground"]: grey.G15,
 		["keybindingLabel.border"]: DFLT,
 		["keybindingLabel.bottomBorder"]: TRANSPARENT,
 
@@ -960,7 +942,7 @@ let jsonObject = {
 
 		//Integrated Terminal colors
 
-		["terminal.background"]: GREY15,
+		["terminal.background"]: grey.G90,
 		["terminal.border"]: DFLT,
 		["terminal.foreground"]: DFLT,
 		["terminal.ansiBlack"]: DFLT,
@@ -1114,18 +1096,18 @@ let jsonObject = {
 
 		["settings.headerForeground"]: DFLT,
 		["settings.modifiedItemIndicator"]: modifyStrong,
-		["settings.dropdownBackground"]: GREY30,
+		["settings.dropdownBackground"]: grey.G75,
 		["settings.dropdownForeground"]: DFLT,
 		["settings.dropdownBorder"]: DFLT,
 		["settings.dropdownListBorder"]: DFLT,
-		["settings.checkboxBackground"]: GREY30,
+		["settings.checkboxBackground"]: grey.G75,
 		["settings.checkboxForeground"]: DFLT,
 		["settings.checkboxBorder"]: DFLT,
 		["settings.rowHoverBackground"]: hover,
-		["settings.textInputBackground"]: GREY30,
+		["settings.textInputBackground"]: grey.G75,
 		["settings.textInputForeground"]: DFLT,
 		["settings.textInputBorder"]: DFLT,
-		["settings.numberInputBackground"]: GREY30,
+		["settings.numberInputBackground"]: grey.G75,
 		["settings.numberInputForeground"]: DFLT,
 		["settings.numberInputBorder"]: DFLT,
 		["settings.focusedRowBackground"]: DFLT,
@@ -1137,10 +1119,10 @@ let jsonObject = {
 		//Breadcrumbs colors
 		//The theme colors for breadcrumbs navigation:
 
-		["breadcrumb.foreground"]: GREY75,
-		["breadcrumb.background"]: GREY20,
-		["breadcrumb.focusForeground"]: GREY85,
-		["breadcrumb.activeSelectionForeground"]: GREY90,
+		["breadcrumb.foreground"]: grey.G30,
+		["breadcrumb.background"]: grey.G85,
+		["breadcrumb.focusForeground"]: grey.G20,
+		["breadcrumb.activeSelectionForeground"]: grey.G15,
 		["breadcrumbPicker.background"]: DFLT,
 
 		//Snippets colors
