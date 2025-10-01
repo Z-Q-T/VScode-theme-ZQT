@@ -32,19 +32,19 @@
 		{
 			"scope": "variable.language",
 			"settings": {
-				"foreground": "#009962"
+				"foreground": "#17895b"
 			}
 		},
 		{
 			"scope": "variable.parameter",
 			"settings": {
-				"foreground": "#57914a"
+				"foreground": "#4f8444"
 			}
 		},
 		{
 			"scope": "variable.other.property",
 			"settings": {
-				"foreground": "#887b2c"
+				"foreground": "#7c6f1e"
 			}
 		},
 		{
@@ -54,37 +54,37 @@
 		{
 			"scope": "variable",
 			"settings": {
-				"foreground": "#59894f"
+				"foreground": "#4e7d43"
 			}
 		},
 		{
 			"scope": "support.variable",
 			"settings": {
-				"foreground": "#449630"
+				"foreground": "#478638"
 			}
 		},
 		{
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#007cdf"
+				"foreground": "#1b71bc"
 			}
 		},
 		{
 			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#8e6ac7"
+				"foreground": "#8062b0"
 			}
 		},
 		{
 			"scope": "string",
 			"settings": {
-				"foreground": "#a1628d"
+				"foreground": "#955681"
 			}
 		},
 		{
 			"scope": "string.regexp",
 			"settings": {
-				"foreground": "#b54d98"
+				"foreground": "#9f4d86"
 			}
 		},
 		{
@@ -93,7 +93,7 @@
 				"string.template"
 			],
 			"settings": {
-				"foreground": "#b54d98"
+				"foreground": "#9f4d86"
 			}
 		},
 		{
@@ -102,43 +102,43 @@
 				"punctuation.definition.entity"
 			],
 			"settings": {
-				"foreground": "#b54d98"
+				"foreground": "#9f4d86"
 			}
 		},
 		{
 			"scope": "keyword.control",
 			"settings": {
-				"foreground": "#c24976"
+				"foreground": "#a9496b"
 			}
 		},
 		{
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#bb6546"
+				"foreground": "#aa5c40"
 			}
 		},
 		{
 			"scope": "storage.type",
 			"settings": {
-				"foreground": "#6c6ecb"
+				"foreground": "#6265b3"
 			}
 		},
 		{
 			"scope": "support.type",
 			"settings": {
-				"foreground": "#7071dd"
+				"foreground": "#6769bf"
 			}
 		},
 		{
 			"scope": "entity.name.type",
 			"settings": {
-				"foreground": "#4c7fd3"
+				"foreground": "#4974ba"
 			}
 		},
 		{
 			"scope": "punctuation.definition",
 			"settings": {
-				"foreground": "#347ca9"
+				"foreground": "#27709c"
 			}
 		},
 		{
