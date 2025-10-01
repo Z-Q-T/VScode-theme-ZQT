@@ -37,22 +37,18 @@ let errorLight = "#df8071"; //oklch(0.7 0.12 30)
 let errorDark = "#d64938";//oklch(0.6 0.18 30)
 let warningLight = "#fbad00";//oklch(0.8 0.2 80)
 let warningDark = "#ac7400";//oklch(0.6 0.18 80)
-let infoLight = "#0080ff";
-let infoDark = "#193b7f";
+let infoLight = "#69a1e8";//oklch(0.7 0.12 255)
+let infoDark = "#207fe8";//oklch(0.6 0.18 255)
 let hintLight = "#36b348";
 
-let selectActiveStrong = "#3377ff";
-// let selectActiveSoft = "#00427f";
-let selectActiveTRANSPARENT = "#3377ffbf";
-let selectOthersTRANSPARENT = "#3377ff5f";
-let selectInactiveStrong = "#4d5e80";
-// let selectInactiveSoft = "#445361";
-let selectInactiveTRANSPARENT = "#4d5e805f";
+let selectActiveDark = "#5285ff";//oklch(0.65 0.2 265)
+let selectActiveDarkTRANSPARENT = "#5285ffbb";
+let selectInactiveDark = "#b6becb";//oklch(0.80 0.02 260)
+let selectInactiveDarkTRANSPARENT = "#b6becb77";
+let selectOthersTRANSPARENT = "#3e89ff22";
 
-let findMatchAllStrong = "#5f29ccbf";
-let findMatchAllTRANSPARENT = "#5f29cc7f";
-let rangeHighlight = "#5f29cc3f";
-let findRangeHighlightBackground = "#5f29cc3f";
+let findMatchAllTRANSPARENT1 = "#9076f377";//oklch(0.65 0.18 290)
+let findMatchAllTRANSPARENT2 = "#9076f322";
 
 let linkEdit = "#33ffff5f";
 
@@ -99,12 +95,12 @@ let jsonObject = {
 
 		//Base colors
 
-		["focusBorder"]: selectActiveStrong,
+		["focusBorder"]: selectActiveDark,
 		["foreground"]: grey.G20,
 		["disabledForeground"]: grey.G30,
 		["widget.border"]: DFLT,
 		["widget.shadow"]: shadow,
-		["selection.background"]: selectActiveStrong,
+		["selection.background"]: selectActiveDarkTRANSPARENT,
 		["descriptionForeground"]: grey.G20,
 		["errorForeground"]: errorLight,
 		["icon.foreground"]: DFLT,
@@ -180,7 +176,7 @@ let jsonObject = {
 		["input.foreground"]: DFLT,
 		["input.placeholderForeground"]: placeholder,
 		["inputOption.activeBackground"]: DFLT,
-		["inputOption.activeBorder"]: selectActiveStrong,
+		["inputOption.activeBorder"]: selectActiveDark,
 		["inputOption.activeForeground"]: DFLT,
 		["inputOption.hoverBackground"]: DFLT,
 		["inputValidation.errorBackground"]: errorLight,
@@ -201,7 +197,7 @@ let jsonObject = {
 		["scrollbarSlider.hoverBackground"]: hover,
 
 		//Badge
-		//Badges are small infoLightrmation labels, for example, search results count.
+		//Badges are small information labels, for example, search results count.
 
 		["badge.foreground"]: DFLT,
 		["badge.background"]: DFLT,
@@ -213,19 +209,19 @@ let jsonObject = {
 		//Lists and trees
 		//Colors for list and trees like the File Explorer. An active list/tree has keyboard focus, an inactive does not.
 
-		["list.activeSelectionBackground"]: DFLT,
-		["list.activeSelectionForeground"]: DFLT,
+		["list.activeSelectionBackground"]: selectActiveDarkTRANSPARENT,
+		["list.activeSelectionForeground"]: grey.G20,
 		["list.activeSelectionIconForeground"]: DFLT,
 		["list.dropBackground"]: DFLT,
 		["list.focusBackground"]: DFLT,
 		["list.focusForeground"]: DFLT,
 		["list.focusHighlightForeground"]: DFLT,
-		["list.focusOutline"]: DFLT,
+		["list.focusOutline"]: selectActiveDark,
 		["list.focusAndSelectionOutline"]: DFLT,
 		["list.highlightForeground"]: DFLT,
 		["list.hoverBackground"]: hover,
 		["list.hoverForeground"]: DFLT,
-		["list.inactiveSelectionBackground"]: DFLT,
+		["list.inactiveSelectionBackground"]: selectInactiveDarkTRANSPARENT,
 		["list.inactiveSelectionForeground"]: DFLT,
 		["list.inactiveSelectionIconForeground"]: DFLT,
 		["list.inactiveFocusBackground"]: DFLT,
@@ -254,9 +250,9 @@ let jsonObject = {
 		["activityBar.foreground"]: grey.G20,
 		["activityBar.inactiveForeground"]: grey.G40,
 		["activityBar.border"]: DFLT,
-		["activityBarBadge.background"]: infoLight,
+		["activityBarBadge.background"]: infoDark,
 		["activityBarBadge.foreground"]: DFLT,
-		["activityBar.activeBorder"]: selectActiveStrong,
+		["activityBar.activeBorder"]: selectActiveDark,
 		["activityBar.activeBackground"]: grey.G85,
 		["activityBar.activeFocusBorder"]: DFLT,
 		["activityBarTop.foreground"]: DFLT,
@@ -297,8 +293,8 @@ let jsonObject = {
 		//Minimap
 		//The Minimap shows a minified version of the current file.
 
-		["minimap.findMatchHighlight"]: findMatchAllTRANSPARENT,
-		["minimap.selectionHighlight"]: selectActiveTRANSPARENT,
+		["minimap.findMatchHighlight"]: findMatchAllTRANSPARENT2,
+		["minimap.selectionHighlight"]: selectActiveDarkTRANSPARENT,
 		["minimap.errorHighlight"]: errorLight,
 		["minimap.warningHighlight"]: warningLight,
 		["minimap.background"]: DFLT,
@@ -343,8 +339,8 @@ let jsonObject = {
 		["tab.selectedForeground"]: DFLT,
 		["tab.dragAndDropBorder"]: DFLT,
 		["tab.unfocusedActiveBorder"]: DFLT,
-		["tab.activeBorderTop"]: selectActiveStrong,
-		["tab.unfocusedActiveBorderTop"]: selectInactiveTRANSPARENT,
+		["tab.activeBorderTop"]: selectActiveDark,
+		["tab.unfocusedActiveBorderTop"]: selectInactiveDarkTRANSPARENT,
 		["tab.lastPinnedBorder"]: DFLT,
 		["tab.hoverBackground"]: hover,
 		["tab.unfocusedHoverBackground"]: DFLT,
@@ -381,9 +377,9 @@ let jsonObject = {
 
 		//Selection colors are visible when selecting one or more characters. In addition to the selection also all regions with the same content are highlighted.
 
-		["editor.selectionBackground"]: selectActiveTRANSPARENT,
+		["editor.selectionBackground"]: selectActiveDarkTRANSPARENT,
 		["editor.selectionForeground"]: DFLT,
-		["editor.inactiveSelectionBackground"]: selectInactiveTRANSPARENT,
+		["editor.inactiveSelectionBackground"]: selectInactiveDarkTRANSPARENT,
 		["editor.selectionHighlightBackground"]: selectOthersTRANSPARENT,
 		["editor.selectionHighlightBorder"]: DFLT,
 
@@ -401,11 +397,11 @@ let jsonObject = {
 		//Find colors depend on the current find string in the Find/Replace dialog.
 		//Find matches
 
-		["editor.findMatchBackground"]: selectActiveTRANSPARENT,
+		["editor.findMatchBackground"]: selectActiveDarkTRANSPARENT,
 		["editor.findMatchForeground"]: DFLT,
 		["editor.findMatchHighlightForeground"]: DFLT,
-		["editor.findMatchHighlightBackground"]: findMatchAllTRANSPARENT,
-		["editor.findRangeHighlightBackground"]: findRangeHighlightBackground,
+		["editor.findMatchHighlightBackground"]: findMatchAllTRANSPARENT1,
+		["editor.findRangeHighlightBackground"]: findMatchAllTRANSPARENT2,
 		["editor.findMatchBorder"]: DFLT,
 		["editor.findMatchHighlightBorder"]: DFLT,
 		["editor.findRangeHighlightBorder"]: DFLT,
@@ -440,11 +436,11 @@ let jsonObject = {
 
 		//The link color is visible when clicking on a link.
 
-		["editorLink.activeForeground"]: selectActiveStrong,
+		["editorLink.activeForeground"]: selectActiveDark,
 
 		//The range highlight is visible when selecting a search result.
 
-		["editor.rangeHighlightBackground"]: rangeHighlight,
+		["editor.rangeHighlightBackground"]: findMatchAllTRANSPARENT2,
 		["editor.rangeHighlightBorder"]: DFLT,
 
 		//The symbol highlight is visible when navigating to a symbol via a command such as Go to Definition.
@@ -454,7 +450,7 @@ let jsonObject = {
 
 		//To see the editor white spaces, enable Toggle Render Whitespace.
 
-		["editorWhitespace.foreground"]: infoDark,
+		["editorWhitespace.foreground"]: infoLight,
 
 		//To see the editor indent guides, set ["editor.guides.indentation"]:
 
@@ -537,9 +533,9 @@ let jsonObject = {
 
 		["editorOverviewRuler.background"]: DFLT,
 		["editorOverviewRuler.border"]: DFLT,
-		["editorOverviewRuler.findMatchForeground"]: findMatchAllStrong,
-		["editorOverviewRuler.rangeHighlightForeground"]: rangeHighlight,
-		["editorOverviewRuler.selectionHighlightForeground"]: selectActiveTRANSPARENT,
+		["editorOverviewRuler.findMatchForeground"]: findMatchAllTRANSPARENT1,
+		["editorOverviewRuler.rangeHighlightForeground"]: findMatchAllTRANSPARENT2,
+		["editorOverviewRuler.selectionHighlightForeground"]: selectActiveDarkTRANSPARENT,
 		["editorOverviewRuler.wordHighlightForeground"]: wordHighlightRead,
 		["editorOverviewRuler.wordHighlightStrongForeground"]: wordHighlightWrite,
 		["editorOverviewRuler.wordHighlightTextForeground"]: wordHighlightText,
@@ -770,7 +766,7 @@ let jsonObject = {
 		["panel.background"]: grey.G80,
 		["panel.border"]: DFLT,
 		["panel.dropBorder"]: drop,
-		["panelTitle.activeBorder"]: selectActiveStrong,
+		["panelTitle.activeBorder"]: selectActiveDark,
 		["panelTitle.activeForeground"]: grey.G15,
 		["panelTitle.inactiveForeground"]: grey.G40,
 		["panelTitle.border"]: grey.G75,
@@ -785,7 +781,7 @@ let jsonObject = {
 		["panelStickyScroll.border"]: DFLT,
 		["panelStickyScroll.shadow"]: shadow,
 		["panelSectionHeader.border"]: DFLT,
-		["outputView.background"]: grey.G90,
+		["outputView.background"]: grey.G85,
 		["outputViewStickyScroll.background"]: DFLT,
 
 		//Status Bar colors
@@ -800,7 +796,7 @@ let jsonObject = {
 		["statusBar.noFolderBackground"]: grey.G90,
 		["statusBar.noFolderForeground"]: grey.G35,
 		["statusBar.noFolderBorder"]: grey.G75,
-		["statusBar.focusBorder"]: selectActiveStrong,
+		["statusBar.focusBorder"]: selectActiveDark,
 		["statusBarItem.activeBackground"]: click,
 		["statusBarItem.hoverForeground"]: DFLT,
 		["statusBarItem.hoverBackground"]: hover,
