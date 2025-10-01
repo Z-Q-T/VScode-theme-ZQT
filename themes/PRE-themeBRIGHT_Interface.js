@@ -5,10 +5,10 @@ let DEBUG_GREEN = "#00ff00";
 let BLACK = "#000";
 let WHITE = "#FFF";
 
-import grey from "./greyscales.js";
-import colour from "./coloursBRIGHT.js";
+import grey from "./palette-greyscales.js";
+import colour from "./palette-coloursBRIGHT.js";
 
-let shadow = "#000";
+let shadow = "#44444466";
 let drop = "#90909030";
 let placeholder = "#7f7f7f";
 let hover = "#ffffff30";
@@ -16,37 +16,30 @@ let click = "#ffffff50";
 let foldArea = "#00a0cc2f";
 let foldHint = "#00a0cc";
 
-let addStrong = "#00c14a";//oklch(0.7 0.22 150)
-let addStrongTRANSPARENT = "#02e36a7f";
-let addSoft = "#69b27a";//oklch(0.7 0.11 150)
-let addSoftTRANSPARENT = "#6edd8a3f";
-let modifyStrong = "#d78d00";//oklch(0.7 0.16 75)
-let modifySoft = "#bc9865";//oklch(0.7 0.08 75)
-let modifySoftTRANSPARENT = "#edc8623f";
-let deleteStrong = "#ff5199";//oklch(0.7 0.22 0)
-let deleteStrongTRANSPARENT = "#ff51997f";
-let deleteSoft = "#d6809c";//oklch(0.7 0.11 0)
-let deleteSoftTRANSPARENT = "#f0769b3f";
-let renameStrong = "#55b2ea";
-let untrackStrong = "#94e301";
-let ignoreStrong = "#848484";
-let conflictStrong = "#b16edd";
-let submoduleStrong = "#7b79e0";
+let addLight = "#40cc6d";//oklch(0.75 0.18 150)
+let addDark = "#00bf54";//oklch(0.7 0.2 150)
+let addDarkTRANSPARENT = "#6edd8a3f";
+let modifyLight = "#c8ae00";//oklch(0.75 0.18 100)
+let deleteLight = "#ff76a9";//oklch(0.75 0.18 0)
+let deleteDark = "#d6809c";//oklch(0.7 0.11 0)
+let deleteDarkTRANSPARENT = "#f0769b3f";
 
+let gitModify = "#9d6300";//oklch(0.55 0.12 70)
+let gitRename = "#046dafff";
+let gitUntrack = "#70a50fff";
+let gitIgnore = "#959595ff";
+let gitConflict = "#b16edd";
+let gitSubmodule = "#7b79e0";
 let SourceControlGraphRef = "#bb8822";
 let SourceControlGraphRemote = "#3344aa";
 
-let errorStrong = "#fc4734";//oklch(0.66 0.22 30)
-let errorSoft = "#62160e"; //oklch(0.33 0.11 30)
-// let errorTRANSPARENT = "#fc47347f"; //transparent是strong加半透明
-let warningStrong = "#eada78";//oklch(0.88 0.12 100)
-let warningSoft = "#5a532a";//oklch(0.44 0.06 100)
-// let warningTRANSPARENT = "#FF9B197f";
-let infoStrong = "#0080ff";
-let infoSoft = "#193b7f";
-// let infoTRANSPARENT = "#0080ff7f";
-let hintStrong = "#36b348";
-let hintSoft = "#1b5924";
+let errorLight = "#df8071"; //oklch(0.7 0.12 30)
+let errorDark = "#d64938";//oklch(0.6 0.18 30)
+let warningLight = "#fbad00";//oklch(0.8 0.2 80)
+let warningDark = "#ac7400";//oklch(0.6 0.18 80)
+let infoLight = "#0080ff";
+let infoDark = "#193b7f";
+let hintLight = "#36b348";
 
 let selectActiveStrong = "#3377ff";
 // let selectActiveSoft = "#00427f";
@@ -107,13 +100,13 @@ let jsonObject = {
 		//Base colors
 
 		["focusBorder"]: selectActiveStrong,
-		["foreground"]: grey.G15,
-		["disabledForeground"]: grey.G25,
+		["foreground"]: grey.G20,
+		["disabledForeground"]: grey.G30,
 		["widget.border"]: DFLT,
 		["widget.shadow"]: shadow,
 		["selection.background"]: selectActiveStrong,
-		["descriptionForeground"]: grey.G15,
-		["errorForeground"]: errorStrong,
+		["descriptionForeground"]: grey.G20,
+		["errorForeground"]: errorLight,
 		["icon.foreground"]: DFLT,
 		["sash.hoverBorder"]: DFLT,
 
@@ -182,7 +175,7 @@ let jsonObject = {
 		//Input control
 		//Colors for input controls such as in the Search view or the Find/Replace dialog.
 
-		["input.background"]: grey.G70,
+		["input.background"]: grey.G90,
 		["input.border"]: DFLT,
 		["input.foreground"]: DFLT,
 		["input.placeholderForeground"]: placeholder,
@@ -190,15 +183,15 @@ let jsonObject = {
 		["inputOption.activeBorder"]: selectActiveStrong,
 		["inputOption.activeForeground"]: DFLT,
 		["inputOption.hoverBackground"]: DFLT,
-		["inputValidation.errorBackground"]: errorSoft,
+		["inputValidation.errorBackground"]: errorLight,
 		["inputValidation.errorForeground"]: DFLT,
-		["inputValidation.errorBorder"]: errorStrong,
-		["inputValidation.infoBackground"]: infoSoft,
+		["inputValidation.errorBorder"]: errorDark,
+		["inputValidation.infoBackground"]: infoDark,
 		["inputValidation.infoForeground"]: DFLT,
-		["inputValidation.infoBorder"]: infoStrong,
-		["inputValidation.warningBackground"]: warningSoft,
+		["inputValidation.infoBorder"]: infoLight,
+		["inputValidation.warningBackground"]: warningDark,
 		["inputValidation.warningForeground"]: DFLT,
-		["inputValidation.warningBorder"]: warningStrong,
+		["inputValidation.warningBorder"]: warningLight,
 
 		//Scrollbar control
 
@@ -208,7 +201,7 @@ let jsonObject = {
 		["scrollbarSlider.hoverBackground"]: hover,
 
 		//Badge
-		//Badges are small infoStrongrmation labels, for example, search results count.
+		//Badges are small infoLightrmation labels, for example, search results count.
 
 		["badge.foreground"]: DFLT,
 		["badge.background"]: DFLT,
@@ -238,8 +231,8 @@ let jsonObject = {
 		["list.inactiveFocusBackground"]: DFLT,
 		["list.inactiveFocusOutline"]: DFLT,
 		["list.invalidItemForeground"]: DFLT,
-		["list.errorForeground"]: errorStrong,
-		["list.warningForeground"]: warningStrong,
+		["list.errorForeground"]: errorLight,
+		["list.warningForeground"]: warningLight,
 		["listFilterWidget.background"]: DFLT,
 		["listFilterWidget.outline"]: DFLT,
 		["listFilterWidget.noMatchesOutline"]: DFLT,
@@ -256,15 +249,15 @@ let jsonObject = {
 		//Activity Bar
 		//The Activity Bar is usually displayed either on the far left or right of the workbench and allows fast switching between views of the Side Bar.
 
-		["activityBar.background"]: grey.G75,
+		["activityBar.background"]: grey.G80,
 		["activityBar.dropBorder"]: DFLT,
-		["activityBar.foreground"]: DFLT,
-		["activityBar.inactiveForeground"]: DFLT,
+		["activityBar.foreground"]: grey.G20,
+		["activityBar.inactiveForeground"]: grey.G40,
 		["activityBar.border"]: DFLT,
-		["activityBarBadge.background"]: infoStrong,
+		["activityBarBadge.background"]: infoLight,
 		["activityBarBadge.foreground"]: DFLT,
 		["activityBar.activeBorder"]: selectActiveStrong,
-		["activityBar.activeBackground"]: grey.G80,
+		["activityBar.activeBackground"]: grey.G85,
 		["activityBar.activeFocusBorder"]: DFLT,
 		["activityBarTop.foreground"]: DFLT,
 		["activityBarTop.activeBorder"]: DFLT,
@@ -273,9 +266,9 @@ let jsonObject = {
 		["activityBarTop.background"]: DFLT,
 		["activityBarTop.activeBackground"]: DFLT,
 		["activityWarningBadge.foreground"]: DFLT,
-		["activityWarningBadge.background"]: warningStrong,
+		["activityWarningBadge.background"]: warningLight,
 		["activityErrorBadge.foreground"]: DFLT,
-		["activityErrorBadge.background"]: errorStrong,
+		["activityErrorBadge.background"]: errorLight,
 
 		//Profiles
 
@@ -286,13 +279,13 @@ let jsonObject = {
 		//Side Bar
 		//The Side Bar contains views like the Explorer and Search.
 
-		["sideBar.background"]: grey.G80,
-		["sideBar.foreground"]: grey.G15,
+		["sideBar.background"]: grey.G85,
+		["sideBar.foreground"]: grey.G20,
 		["sideBar.border"]: DFLT,
 		["sideBar.dropBackground"]: drop,
-		["sideBarTitle.foreground"]: grey.G10,
-		["sideBarSectionHeader.background"]: grey.G65,
-		["sideBarSectionHeader.foreground"]: grey.G10,
+		["sideBarTitle.foreground"]: grey.G15,
+		["sideBarSectionHeader.background"]: grey.G75,
+		["sideBarSectionHeader.foreground"]: grey.G15,
 		["sideBarSectionHeader.border"]: DFLT,
 		["sideBarActivityBarTop.border"]: DFLT,
 		["sideBarTitle.background"]: DFLT,
@@ -306,28 +299,28 @@ let jsonObject = {
 
 		["minimap.findMatchHighlight"]: findMatchAllTRANSPARENT,
 		["minimap.selectionHighlight"]: selectActiveTRANSPARENT,
-		["minimap.errorHighlight"]: errorStrong,
-		["minimap.warningHighlight"]: warningStrong,
+		["minimap.errorHighlight"]: errorLight,
+		["minimap.warningHighlight"]: warningLight,
 		["minimap.background"]: DFLT,
 		["minimap.selectionOccurrenceHighlight"]: DFLT,
 		["minimap.foregroundOpacity"]: DFLT,
-		["minimap.infoHighlight"]: infoStrong,
+		["minimap.infoHighlight"]: infoLight,
 		["minimap.chatEditHighlight"]: DFLT,
 		["minimapSlider.background"]: sliderNormal,
 		["minimapSlider.hoverBackground"]: hover,
 		["minimapSlider.activeBackground"]: click,
-		["minimapGutter.addedBackground"]: addStrong,
-		["minimapGutter.modifiedBackground"]: modifyStrong,
-		["minimapGutter.deletedBackground"]: deleteStrong,
+		["minimapGutter.addedBackground"]: addLight,
+		["minimapGutter.modifiedBackground"]: modifyLight,
+		["minimapGutter.deletedBackground"]: deleteLight,
 		["editorMinimap.inlineChatInserted"]: DFLT,
 
 		//Editor Groups & Tabs
 		//Editor Groups are the containers of editors. There can be many editor groups. A Tab is the container of an editor. Multiple Tabs can be opened in one editor group.
 
-		["editorGroup.border"]: DFLT,
+		["editorGroup.border"]: grey.G75,
 		["editorGroup.dropBackground"]: drop,
-		["editorGroupHeader.noTabsBackground"]: grey.G85,
-		["editorGroupHeader.tabsBackground"]: grey.G80,
+		["editorGroupHeader.noTabsBackground"]: grey.G90,
+		["editorGroupHeader.tabsBackground"]: grey.G85,
 		["editorGroupHeader.tabsBorder"]: DFLT,
 		["editorGroupHeader.border"]: DFLT,
 		["editorGroup.emptyBackground"]: DFLT,
@@ -335,15 +328,15 @@ let jsonObject = {
 		["editorGroup.dropIntoPromptForeground"]: DFLT,
 		["editorGroup.dropIntoPromptBackground"]: DFLT,
 		["editorGroup.dropIntoPromptBorder"]: DFLT,
-		["tab.activeBackground"]: grey.G85,
-		["tab.activeForeground"]: grey.G10,
-		["tab.inactiveBackground"]: grey.G75,
-		["tab.inactiveForeground"]: grey.G10,
-		["tab.unfocusedActiveBackground"]: grey.G80,
-		["tab.unfocusedActiveForeground"]: grey.G20,
-		["tab.unfocusedInactiveBackground"]: grey.G75,
-		["tab.unfocusedInactiveForeground"]: grey.G20,
-		["tab.border"]: DFLT,
+		["tab.activeBackground"]: grey.G90,
+		["tab.activeForeground"]: grey.G15,
+		["tab.inactiveBackground"]: grey.G80,
+		["tab.inactiveForeground"]: grey.G15,
+		["tab.unfocusedActiveBackground"]: grey.G85,
+		["tab.unfocusedActiveForeground"]: grey.G25,
+		["tab.unfocusedInactiveBackground"]: grey.G80,
+		["tab.unfocusedInactiveForeground"]: grey.G25,
+		["tab.border"]: grey.G65,
 		["tab.activeBorder"]: DFLT,
 		["tab.selectedBorderTop"]: DFLT,
 		["tab.selectedBackground"]: DFLT,
@@ -372,10 +365,10 @@ let jsonObject = {
 
 		//All other editor colors are listed here:
 
-		["editor.background"]: grey.G85,
-		["editor.foreground"]: grey.G15,
-		["editorLineNumber.foreground"]: grey.G55,
-		["editorLineNumber.activeForeground"]: grey.G35,
+		["editor.background"]: grey.G90,
+		["editor.foreground"]: grey.G20,
+		["editorLineNumber.foreground"]: grey.G60,
+		["editorLineNumber.activeForeground"]: grey.G40,
 		["editorLineNumber.dimmedForeground"]: DFLT,
 		["editorCursor.background"]: DFLT,
 		["editorCursor.foreground"]: DFLT,
@@ -461,7 +454,7 @@ let jsonObject = {
 
 		//To see the editor white spaces, enable Toggle Render Whitespace.
 
-		["editorWhitespace.foreground"]: infoSoft,
+		["editorWhitespace.foreground"]: infoDark,
 
 		//To see the editor indent guides, set ["editor.guides.indentation"]:
 
@@ -480,7 +473,7 @@ let jsonObject = {
 		["editorIndentGuide.activeBackground5"]: IndentGuideActive,
 		["editorIndentGuide.activeBackground6"]: IndentGuideActive,
 
-		//To see the editor inline hintStrongs, set ["editor.inlineSuggest.enabled"]:
+		//To see the editor inline hintLights, set ["editor.inlineSuggest.enabled"]:
 
 		["editorInlayHint.background"]: DFLT,
 		["editorInlayHint.foreground"]: DFLT,
@@ -517,7 +510,7 @@ let jsonObject = {
 		["editorBracketHighlight.foreground4"]: colour.L76_C10_H180,
 		["editorBracketHighlight.foreground5"]: colour.L76_C10_H060,
 		["editorBracketHighlight.foreground6"]: colour.L76_C10_H300,
-		["editorBracketHighlight.unexpectedBracket.foreground"]: errorStrong,
+		["editorBracketHighlight.unexpectedBracket.foreground"]: errorDark,
 
 		//Bracket pair guides:
 
@@ -550,32 +543,32 @@ let jsonObject = {
 		["editorOverviewRuler.wordHighlightForeground"]: wordHighlightRead,
 		["editorOverviewRuler.wordHighlightStrongForeground"]: wordHighlightWrite,
 		["editorOverviewRuler.wordHighlightTextForeground"]: wordHighlightText,
-		["editorOverviewRuler.modifiedForeground"]: modifyStrong,
-		["editorOverviewRuler.addedForeground"]: addStrong,
-		["editorOverviewRuler.deletedForeground"]: deleteStrong,
-		["editorOverviewRuler.errorForeground"]: errorStrong,
-		["editorOverviewRuler.warningForeground"]: warningStrong,
-		["editorOverviewRuler.infoForeground"]: infoStrong,
+		["editorOverviewRuler.modifiedForeground"]: modifyLight,
+		["editorOverviewRuler.addedForeground"]: addLight,
+		["editorOverviewRuler.deletedForeground"]: deleteLight,
+		["editorOverviewRuler.errorForeground"]: errorLight,
+		["editorOverviewRuler.warningForeground"]: warningLight,
+		["editorOverviewRuler.infoForeground"]: infoLight,
 		["editorOverviewRuler.bracketMatchForeground"]: BracketMatchStrong,
 		["editorOverviewRuler.inlineChatInserted"]: DFLT,
 		["editorOverviewRuler.inlineChatRemoved"]: DFLT,
 
-		//Errors and warningStrongs:
+		//Errors and warningLights:
 
-		["editorError.foreground"]: errorStrong,
+		["editorError.foreground"]: errorDark,
 		["editorError.border"]: DFLT,
 		["editorError.background"]: DFLT,
-		["editorWarning.foreground"]: warningStrong,
+		["editorWarning.foreground"]: warningLight,
 		["editorWarning.border"]: DFLT,
 		["editorWarning.background"]: DFLT,
-		["editorInfo.foreground"]: infoStrong,
+		["editorInfo.foreground"]: infoLight,
 		["editorInfo.border"]: DFLT,
 		["editorInfo.background"]: DFLT,
-		["editorHint.foreground"]: hintStrong,
-		["editorHint.border"]: hintStrong,
-		["problemsErrorIcon.foreground"]: errorStrong,
-		["problemsWarningIcon.foreground"]: warningStrong,
-		["problemsInfoIcon.foreground"]: infoStrong,
+		["editorHint.foreground"]: hintLight,
+		["editorHint.border"]: hintLight,
+		["problemsErrorIcon.foreground"]: errorLight,
+		["problemsWarningIcon.foreground"]: warningLight,
+		["problemsInfoIcon.foreground"]: infoLight,
 
 		//Unused source code:
 
@@ -585,9 +578,9 @@ let jsonObject = {
 		//The gutter contains the glyph margins and the line numbers:
 
 		["editorGutter.background"]: DFLT,
-		["editorGutter.modifiedBackground"]: modifyStrong,
-		["editorGutter.addedBackground"]: addStrong,
-		["editorGutter.deletedBackground"]: deleteStrong,
+		["editorGutter.modifiedBackground"]: modifyLight,
+		["editorGutter.addedBackground"]: addLight,
+		["editorGutter.deletedBackground"]: deleteLight,
 		["editorGutter.commentRangeForeground"]: commentRangeForeground,
 		["editorGutter.commentGlyphForeground"]: DFLT,
 		["editorGutter.commentUnresolvedGlyphForeground"]: DFLT,
@@ -627,22 +620,22 @@ let jsonObject = {
 		//Diff editor colors
 		//For coloring inserted and removed text, use either a background or a border color but not both.
 
-		["diffEditor.insertedTextBackground"]: addSoftTRANSPARENT,
+		["diffEditor.insertedTextBackground"]: addDarkTRANSPARENT,
 		["diffEditor.insertedTextBorder"]: TRANSPARENT,
-		["diffEditor.removedTextBackground"]: deleteSoftTRANSPARENT,
+		["diffEditor.removedTextBackground"]: deleteDarkTRANSPARENT,
 		["diffEditor.removedTextBorder"]: TRANSPARENT,
 		["diffEditor.border"]: DFLT,
 		["diffEditor.diagonalFill"]: DFLT,
-		["diffEditor.insertedLineBackground"]: addSoftTRANSPARENT,
-		["diffEditor.removedLineBackground"]: deleteSoftTRANSPARENT,
+		["diffEditor.insertedLineBackground"]: addDarkTRANSPARENT,
+		["diffEditor.removedLineBackground"]: deleteDarkTRANSPARENT,
 		["diffEditorGutter.insertedLineBackground"]: TRANSPARENT,
 		["diffEditorGutter.removedLineBackground"]: TRANSPARENT,
 		["diffEditorOverview.insertedForeground"]: DFLT,
 		["diffEditorOverview.removedForeground"]: DFLT,
-		["diffEditor.unchangedRegionBackground"]: grey.G75,
+		["diffEditor.unchangedRegionBackground"]: grey.G80,
 		["diffEditor.unchangedRegionForeground"]: DFLT,
 		["diffEditor.unchangedRegionShadow"]: shadow,
-		["diffEditor.unchangedCodeBackground"]: grey.G75,
+		["diffEditor.unchangedCodeBackground"]: grey.G80,
 		["diffEditor.move.border"]: DFLT,
 		["diffEditor.moveActive.border"]: DFLT,
 		["multiDiffEditor.headerBackground"]: DFLT,
@@ -681,7 +674,7 @@ let jsonObject = {
 		//The Editor widget is shown in front of the editor content. Examples are the Find/Replace dialog, the suggestion widget, and the editor hover.
 
 		["editorWidget.foreground"]: DFLT,
-		["editorWidget.background"]: grey.G75,
+		["editorWidget.background"]: grey.G85,
 		["editorWidget.border"]: DFLT,
 		["editorWidget.resizeBorder"]: DFLT,
 		["editorSuggestWidget.background"]: DFLT,
@@ -711,7 +704,7 @@ let jsonObject = {
 		["debugExceptionWidget.background"]: DFLT,
 		["debugExceptionWidget.border"]: DFLT,
 
-		//The editor marker view shows when navigating to errorStrongs and warningStrongs in the editor (Go to Next Error or Warning command).
+		//The editor marker view shows when navigating to errors and warnings in the editor (Go to Next Error or Warning command).
 
 		["editorMarkerNavigation.background"]: DFLT,
 		["editorMarkerNavigationError.background"]: DFLT,
@@ -726,7 +719,7 @@ let jsonObject = {
 		//Peek view
 
 		["peekView.border"]: DFLT,
-		["peekViewEditor.background"]: grey.G75,
+		["peekViewEditor.background"]: grey.G80,
 		["peekViewEditorGutter.background"]: DFLT,
 		["peekViewEditor.matchHighlightBackground"]: DFLT,
 		["peekViewEditor.matchHighlightBorder"]: DFLT,
@@ -778,9 +771,9 @@ let jsonObject = {
 		["panel.border"]: DFLT,
 		["panel.dropBorder"]: drop,
 		["panelTitle.activeBorder"]: selectActiveStrong,
-		["panelTitle.activeForeground"]: grey.G10,
-		["panelTitle.inactiveForeground"]: grey.G35,
-		["panelTitle.border"]: grey.G70,
+		["panelTitle.activeForeground"]: grey.G15,
+		["panelTitle.inactiveForeground"]: grey.G40,
+		["panelTitle.border"]: grey.G75,
 		["panelTitleBadge.background"]: DFLT,
 		["panelTitleBadge.foreground"]: DFLT,
 		["panelInput.border"]: DFLT,
@@ -792,39 +785,39 @@ let jsonObject = {
 		["panelStickyScroll.border"]: DFLT,
 		["panelStickyScroll.shadow"]: shadow,
 		["panelSectionHeader.border"]: DFLT,
-		["outputView.background"]: grey.G85,
+		["outputView.background"]: grey.G90,
 		["outputViewStickyScroll.background"]: DFLT,
 
 		//Status Bar colors
 		//The Status Bar is shown in the bottom of the workbench.
 
-		["statusBar.background"]: grey.G75,
-		["statusBar.foreground"]: grey.G15,
+		["statusBar.background"]: grey.G80,
+		["statusBar.foreground"]: grey.G20,
 		["statusBar.border"]: DFLT,
 		["statusBar.debuggingBackground"]: statusBarDebuggingBackground,
-		["statusBar.debuggingForeground"]: grey.G85,
+		["statusBar.debuggingForeground"]: grey.G90,
 		["statusBar.debuggingBorder"]: DFLT,
-		["statusBar.noFolderBackground"]: grey.G85,
-		["statusBar.noFolderForeground"]: grey.G30,
-		["statusBar.noFolderBorder"]: grey.G70,
+		["statusBar.noFolderBackground"]: grey.G90,
+		["statusBar.noFolderForeground"]: grey.G35,
+		["statusBar.noFolderBorder"]: grey.G75,
 		["statusBar.focusBorder"]: selectActiveStrong,
 		["statusBarItem.activeBackground"]: click,
 		["statusBarItem.hoverForeground"]: DFLT,
 		["statusBarItem.hoverBackground"]: hover,
-		["statusBarItem.prominentForeground"]: warningStrong,
-		["statusBarItem.prominentBackground"]: grey.G70,
-		["statusBarItem.prominentHoverForeground"]: warningStrong,
+		["statusBarItem.prominentForeground"]: warningLight,
+		["statusBarItem.prominentBackground"]: grey.G75,
+		["statusBarItem.prominentHoverForeground"]: warningLight,
 		["statusBarItem.prominentHoverBackground"]: hover,
-		["statusBarItem.remoteBackground"]: grey.G70,
+		["statusBarItem.remoteBackground"]: grey.G75,
 		["statusBarItem.remoteForeground"]: DFLT,
 		["statusBarItem.remoteHoverBackground"]: hover,
 		["statusBarItem.remoteHoverForeground"]: DFLT,
-		["statusBarItem.errorBackground"]: errorStrong,
-		["statusBarItem.errorForeground"]: grey.G85,
+		["statusBarItem.errorBackground"]: errorLight,
+		["statusBarItem.errorForeground"]: grey.G90,
 		["statusBarItem.errorHoverBackground"]: DFLT,
 		["statusBarItem.errorHoverForeground"]: DFLT,
-		["statusBarItem.warningBackground"]: warningStrong,
-		["statusBarItem.warningForeground"]: grey.G75,
+		["statusBarItem.warningBackground"]: warningLight,
+		["statusBarItem.warningForeground"]: grey.G80,
 		["statusBarItem.warningHoverBackground"]: DFLT,
 		["statusBarItem.warningHoverForeground"]: DFLT,
 		["statusBarItem.compactHoverBackground"]: DFLT,
@@ -837,10 +830,10 @@ let jsonObject = {
 		//Prominent items stand out from other Status Bar entries to indicate importance. One example is the Toggle Tab Key Moves Focus command change mode indicator.
 		//Title Bar colors
 
-		["titleBar.activeBackground"]: grey.G75,
-		["titleBar.activeForeground"]: grey.G15,
-		["titleBar.inactiveBackground"]: grey.G70,
-		["titleBar.inactiveForeground"]: grey.G30,
+		["titleBar.activeBackground"]: grey.G80,
+		["titleBar.activeForeground"]: grey.G20,
+		["titleBar.inactiveBackground"]: grey.G75,
+		["titleBar.inactiveForeground"]: grey.G35,
 		["titleBar.border"]: DFLT,
 
 		//Menu Bar colors
@@ -848,8 +841,8 @@ let jsonObject = {
 		["menubar.selectionForeground"]: DFLT,
 		["menubar.selectionBackground"]: hover,
 		["menubar.selectionBorder"]: DFLT,
-		["menu.foreground"]: grey.G15,
-		["menu.background"]: grey.G75,
+		["menu.foreground"]: grey.G20,
+		["menu.background"]: grey.G80,
 		["menu.selectionForeground"]: DFLT,
 		["menu.selectionBackground"]: hover,
 		["menu.selectionBorder"]: DFLT,
@@ -859,7 +852,7 @@ let jsonObject = {
 		//Command Center colors
 
 		["commandCenter.foreground"]: DFLT,
-		["commandCenter.background"]: grey.G70,
+		["commandCenter.background"]: grey.G75,
 		["commandCenter.activeForeground"]: DFLT,
 		["commandCenter.activeBackground"]: hover,
 		["commandCenter.border"]: DFLT,
@@ -876,10 +869,10 @@ let jsonObject = {
 
 		["notificationCenter.border"]: DFLT,
 		["notificationCenterHeader.foreground"]: DFLT,
-		["notificationCenterHeader.background"]: grey.G70,
+		["notificationCenterHeader.background"]: grey.G75,
 		["notificationToast.border"]: DFLT,
 		["notifications.foreground"]: DFLT,
-		["notifications.background"]: grey.G75,
+		["notifications.background"]: grey.G80,
 		["notifications.border"]: DFLT,
 		["notificationLink.foreground"]: DFLT,
 		["notificationsErrorIcon.foreground"]: DFLT,
@@ -914,7 +907,7 @@ let jsonObject = {
 
 		["pickerGroup.border"]: DFLT,
 		["pickerGroup.foreground"]: DFLT,
-		["quickInput.background"]: grey.G75,
+		["quickInput.background"]: grey.G80,
 		["quickInput.foreground"]: DFLT,
 		["quickInputList.focusBackground"]: DFLT,
 		["quickInputList.focusForeground"]: DFLT,
@@ -930,8 +923,8 @@ let jsonObject = {
 		//	The "feature contribution" section of an extension's marketplace page
 		//The following customizations are available:
 
-		["keybindingLabel.background"]: grey.G65,
-		["keybindingLabel.foreground"]: grey.G15,
+		["keybindingLabel.background"]: grey.G70,
+		["keybindingLabel.foreground"]: grey.G20,
 		["keybindingLabel.border"]: DFLT,
 		["keybindingLabel.bottomBorder"]: TRANSPARENT,
 
@@ -1063,16 +1056,16 @@ let jsonObject = {
 
 		//Git colors
 
-		["gitDecoration.addedResourceForeground"]: addSoft,
-		["gitDecoration.modifiedResourceForeground"]: modifySoft,
-		["gitDecoration.deletedResourceForeground"]: deleteSoft,
-		["gitDecoration.renamedResourceForeground"]: renameStrong,
-		["gitDecoration.stageModifiedResourceForeground"]: modifyStrong,
-		["gitDecoration.stageDeletedResourceForeground"]: deleteStrong,
-		["gitDecoration.untrackedResourceForeground"]: untrackStrong,
-		["gitDecoration.ignoredResourceForeground"]: ignoreStrong,
-		["gitDecoration.conflictingResourceForeground"]: conflictStrong,
-		["gitDecoration.submoduleResourceForeground"]: submoduleStrong,
+		["gitDecoration.addedResourceForeground"]: addDark,
+		["gitDecoration.modifiedResourceForeground"]: gitModify,
+		["gitDecoration.deletedResourceForeground"]: deleteDark,
+		["gitDecoration.renamedResourceForeground"]: gitRename,
+		["gitDecoration.stageModifiedResourceForeground"]: gitModify,
+		["gitDecoration.stageDeletedResourceForeground"]: deleteLight,
+		["gitDecoration.untrackedResourceForeground"]: gitUntrack,
+		["gitDecoration.ignoredResourceForeground"]: gitIgnore,
+		["gitDecoration.conflictingResourceForeground"]: gitConflict,
+		["gitDecoration.submoduleResourceForeground"]: gitSubmodule,
 		["git.blame.editorDecorationForeground"]: DFLT,
 
 		//Source Control Graph colors
@@ -1095,19 +1088,19 @@ let jsonObject = {
 		//Note:
 
 		["settings.headerForeground"]: DFLT,
-		["settings.modifiedItemIndicator"]: modifyStrong,
-		["settings.dropdownBackground"]: grey.G75,
+		["settings.modifiedItemIndicator"]: modifyLight,
+		["settings.dropdownBackground"]: grey.G80,
 		["settings.dropdownForeground"]: DFLT,
 		["settings.dropdownBorder"]: DFLT,
 		["settings.dropdownListBorder"]: DFLT,
-		["settings.checkboxBackground"]: grey.G75,
+		["settings.checkboxBackground"]: grey.G80,
 		["settings.checkboxForeground"]: DFLT,
 		["settings.checkboxBorder"]: DFLT,
 		["settings.rowHoverBackground"]: hover,
-		["settings.textInputBackground"]: grey.G75,
+		["settings.textInputBackground"]: grey.G80,
 		["settings.textInputForeground"]: DFLT,
 		["settings.textInputBorder"]: DFLT,
-		["settings.numberInputBackground"]: grey.G75,
+		["settings.numberInputBackground"]: grey.G80,
 		["settings.numberInputForeground"]: DFLT,
 		["settings.numberInputBorder"]: DFLT,
 		["settings.focusedRowBackground"]: DFLT,
@@ -1119,10 +1112,10 @@ let jsonObject = {
 		//Breadcrumbs colors
 		//The theme colors for breadcrumbs navigation:
 
-		["breadcrumb.foreground"]: grey.G30,
-		["breadcrumb.background"]: grey.G85,
-		["breadcrumb.focusForeground"]: grey.G20,
-		["breadcrumb.activeSelectionForeground"]: grey.G15,
+		["breadcrumb.foreground"]: grey.G35,
+		["breadcrumb.background"]: grey.G90,
+		["breadcrumb.focusForeground"]: grey.G25,
+		["breadcrumb.activeSelectionForeground"]: grey.G20,
 		["breadcrumbPicker.background"]: DFLT,
 
 		//Snippets colors
@@ -1187,9 +1180,9 @@ let jsonObject = {
 		["debugIcon.stepOutForeground"]: DFLT,
 		["debugIcon.continueForeground"]: DFLT,
 		["debugIcon.stepBackForeground"]: DFLT,
-		["debugConsole.infoForeground"]: DFLT,
-		["debugConsole.warningForeground"]: DFLT,
-		["debugConsole.errorForeground"]: DFLT,
+		["debugConsole.infoForeground"]: infoDark,
+		["debugConsole.warningForeground"]: warningDark,
+		["debugConsole.errorForeground"]: errorDark,
 		["debugConsole.sourceForeground"]: DFLT,
 		["debugConsoleInputIcon.foreground"]: DFLT,
 

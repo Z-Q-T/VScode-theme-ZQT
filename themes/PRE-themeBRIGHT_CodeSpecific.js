@@ -23,7 +23,7 @@ let GREY90 = "#dedede";
 let GREY95 = "#eeeeee";
 let WHITE = "#FFF";
 
-import colour from "./coloursBRIGHT.js";
+import colour from "./palette-coloursBRIGHT.js";
 
 import fs from "fs";
 

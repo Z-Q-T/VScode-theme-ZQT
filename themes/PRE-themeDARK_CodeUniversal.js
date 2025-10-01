@@ -25,7 +25,7 @@ let WHITE = "#FFF";
 
 let errorStrong = "#fc4734"; //oklch(0.66 0.22 30)
 
-import colour from "./coloursDARK.js";
+import colour from "./palette-coloursDARK.js";
 
 import fs from "fs";
 
