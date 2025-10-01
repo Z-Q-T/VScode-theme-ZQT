@@ -50,6 +50,9 @@ let ignoreStrong = "#848484";
 let conflictStrong = "#b16edd";
 let submoduleStrong = "#7b79e0";
 
+let SourceControlGraphRef = "#bb8822";
+let SourceControlGraphRemote = "#3344aa";
+
 let errorStrong = "#fc4734";//oklch(0.66 0.22 30)
 let errorSoft = "#62160e"; //oklch(0.33 0.11 30)
 // let errorTRANSPARENT = "#fc47347f"; //transparent是strong加半透明
@@ -122,7 +125,7 @@ let jsonObject = {
 
 		["focusBorder"]: selectActiveStrong,
 		["foreground"]: GREY90,
-		["disabledForeground"]: GREY20,
+		["disabledForeground"]: GREY80,
 		["widget.border"]: DFLT,
 		["widget.shadow"]: shadow,
 		["selection.background"]: selectActiveStrong,
@@ -340,7 +343,7 @@ let jsonObject = {
 
 		["editorGroup.border"]: DFLT,
 		["editorGroup.dropBackground"]: drop,
-		["editorGroupHeader.noTabsBackground"]: GREY80,
+		["editorGroupHeader.noTabsBackground"]: GREY30,
 		["editorGroupHeader.tabsBackground"]: GREY25,
 		["editorGroupHeader.tabsBorder"]: DFLT,
 		["editorGroupHeader.border"]: DFLT,
@@ -349,7 +352,7 @@ let jsonObject = {
 		["editorGroup.dropIntoPromptForeground"]: DFLT,
 		["editorGroup.dropIntoPromptBackground"]: DFLT,
 		["editorGroup.dropIntoPromptBorder"]: DFLT,
-		["tab.activeBackground"]: GREY80,
+		["tab.activeBackground"]: GREY30,
 		["tab.activeForeground"]: GREY95,
 		["tab.inactiveBackground"]: GREY30,
 		["tab.inactiveForeground"]: GREY95,
@@ -386,7 +389,7 @@ let jsonObject = {
 
 		//All other editor colors are listed here:
 
-		["editor.background"]: GREY80,
+		["editor.background"]: GREY30,
 		["editor.foreground"]: GREY90,
 		["editorLineNumber.foreground"]: GREY50,
 		["editorLineNumber.activeForeground"]: GREY70,
@@ -525,22 +528,22 @@ let jsonObject = {
 
 		//Bracket pair colorization:
 
-		["editorBracketHighlight.foreground1"]: colour.L60_C14_H220,
-		["editorBracketHighlight.foreground2"]: colour.L60_C14_H100,
-		["editorBracketHighlight.foreground3"]: colour.L60_C14_H340,
-		["editorBracketHighlight.foreground4"]: colour.L60_C14_H180,
-		["editorBracketHighlight.foreground5"]: colour.L60_C14_H060,
-		["editorBracketHighlight.foreground6"]: colour.L60_C14_H300,
+		["editorBracketHighlight.foreground1"]: colour.L76_C10_H220,
+		["editorBracketHighlight.foreground2"]: colour.L76_C10_H100,
+		["editorBracketHighlight.foreground3"]: colour.L76_C10_H340,
+		["editorBracketHighlight.foreground4"]: colour.L76_C10_H180,
+		["editorBracketHighlight.foreground5"]: colour.L76_C10_H060,
+		["editorBracketHighlight.foreground6"]: colour.L76_C10_H300,
 		["editorBracketHighlight.unexpectedBracket.foreground"]: errorStrong,
 
 		//Bracket pair guides:
 
-		["editorBracketPairGuide.activeBackground1"]: colour.L54_C12_H220,
-		["editorBracketPairGuide.activeBackground2"]: colour.L54_C12_H100,
-		["editorBracketPairGuide.activeBackground3"]: colour.L54_C12_H340,
-		["editorBracketPairGuide.activeBackground4"]: colour.L54_C12_H180,
-		["editorBracketPairGuide.activeBackground5"]: colour.L54_C12_H060,
-		["editorBracketPairGuide.activeBackground6"]: colour.L54_C12_H300,
+		["editorBracketPairGuide.activeBackground1"]: colour.L70_C08_H220,
+		["editorBracketPairGuide.activeBackground2"]: colour.L70_C08_H100,
+		["editorBracketPairGuide.activeBackground3"]: colour.L70_C08_H340,
+		["editorBracketPairGuide.activeBackground4"]: colour.L70_C08_H180,
+		["editorBracketPairGuide.activeBackground5"]: colour.L70_C08_H060,
+		["editorBracketPairGuide.activeBackground6"]: colour.L70_C08_H300,
 		["editorBracketPairGuide.background1"]: DFLT,
 		["editorBracketPairGuide.background2"]: DFLT,
 		["editorBracketPairGuide.background3"]: DFLT,
@@ -806,7 +809,7 @@ let jsonObject = {
 		["panelStickyScroll.border"]: DFLT,
 		["panelStickyScroll.shadow"]: shadow,
 		["panelSectionHeader.border"]: DFLT,
-		["outputView.background"]: GREY80,
+		["outputView.background"]: GREY30,
 		["outputViewStickyScroll.background"]: DFLT,
 
 		//Status Bar colors
@@ -816,9 +819,9 @@ let jsonObject = {
 		["statusBar.foreground"]: GREY90,
 		["statusBar.border"]: DFLT,
 		["statusBar.debuggingBackground"]: statusBarDebuggingBackground,
-		["statusBar.debuggingForeground"]: GREY80,
+		["statusBar.debuggingForeground"]: GREY30,
 		["statusBar.debuggingBorder"]: DFLT,
-		["statusBar.noFolderBackground"]: GREY80,
+		["statusBar.noFolderBackground"]: GREY30,
 		["statusBar.noFolderForeground"]: GREY75,
 		["statusBar.noFolderBorder"]: GREY35,
 		["statusBar.focusBorder"]: selectActiveStrong,
@@ -834,7 +837,7 @@ let jsonObject = {
 		["statusBarItem.remoteHoverBackground"]: hover,
 		["statusBarItem.remoteHoverForeground"]: DFLT,
 		["statusBarItem.errorBackground"]: errorStrong,
-		["statusBarItem.errorForeground"]: GREY80,
+		["statusBarItem.errorForeground"]: GREY30,
 		["statusBarItem.errorHoverBackground"]: DFLT,
 		["statusBarItem.errorHoverForeground"]: DFLT,
 		["statusBarItem.warningBackground"]: warningStrong,
@@ -1092,15 +1095,15 @@ let jsonObject = {
 		//Source Control Graph colors
 
 		["scmGraph.historyItemHoverLabelForeground"]: DFLT,
-		["scmGraph.foreground1"]: DFLT,
-		["scmGraph.foreground2"]: DFLT,
-		["scmGraph.foreground3"]: DFLT,
-		["scmGraph.foreground4"]: DFLT,
-		["scmGraph.foreground5"]: DFLT,
+		["scmGraph.foreground1"]: colour.L70_C10_H100,
+		["scmGraph.foreground2"]: colour.L70_C10_H150,
+		["scmGraph.foreground3"]: colour.L70_C10_H200,
+		["scmGraph.foreground4"]: colour.L70_C10_H250,
+		["scmGraph.foreground5"]: colour.L70_C10_H300,
 		["scmGraph.historyItemHoverAdditionsForeground"]: DFLT,
 		["scmGraph.historyItemHoverDeletionsForeground"]: DFLT,
-		["scmGraph.historyItemRefColor"]: DFLT,
-		["scmGraph.historyItemRemoteRefColor"]: DFLT,
+		["scmGraph.historyItemRefColor"]: SourceControlGraphRef,
+		["scmGraph.historyItemRemoteRefColor"]: SourceControlGraphRemote,
 		["scmGraph.historyItemBaseRefColor"]: DFLT,
 		["scmGraph.historyItemHoverDefaultLabelForeground"]: DFLT,
 		["scmGraph.historyItemHoverDefaultLabelBackground"]: DFLT,
@@ -1134,7 +1137,7 @@ let jsonObject = {
 		//The theme colors for breadcrumbs navigation:
 
 		["breadcrumb.foreground"]: GREY75,
-		["breadcrumb.background"]: GREY80,
+		["breadcrumb.background"]: GREY30,
 		["breadcrumb.focusForeground"]: GREY85,
 		["breadcrumb.activeSelectionForeground"]: GREY90,
 		["breadcrumbPicker.background"]: DFLT,

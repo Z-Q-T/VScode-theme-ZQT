@@ -45,9 +45,10 @@ function generateTokenColors(rules) {
 	};
 }
 
+
 //[10,30]的范围太接近大红色，避免使用高色度颜色
-//通常的用亮度L52，特殊的可以用L54。L56只用于括号高亮
-//一大长串的用色度C11，短的可以更饱和
+//通常的用亮度L72，特殊的可以用L74。L76只用于括号高亮
+//一大长串的用色度C08，短的可以更饱和
 //scopes里的token至少要有两个，单个的token宁愿不写（特殊的除外）
 //越常见的色度越低，防止扎眼
 //运算符-控制：橙红
@@ -62,39 +63,39 @@ const colorRules = [
 	{ scopes: "punctuation.definition.comment", color: commentColour }, //
 	{ scopes: "invalid", color: errorStrong }, //
 	//函数
-	{ scopes: "entity.name.function", color: colour.L54_C12_H080 }, //函数名：calcAll()
-	{ scopes: "support.function", color: colour.L56_C14_H080 }, //print()
+	{ scopes: "entity.name.function", color: colour.L74_C10_H080 }, //函数名：calcAll()
+	{ scopes: "support.function", color: colour.L76_C14_H080 }, //print()
 	//变量名
-	{ scopes: "variable.language", color: colour.L56_C12_H160 }, //this
-	{ scopes: "variable.parameter", color: colour.L56_C11_H140 }, //def cmpt(s, A, t):
-	{ scopes: "variable.other.property", color: colour.L54_C10_H100 }, 
-	{ scopes: "support.variable.property", color: colour.L56_C13_H100 }, //.length
-	{ scopes: "variable", color: colour.L54_C10_H140 }, //combinations、targetvalue //
-	{ scopes: "support.variable", color: colour.L56_C13_H140 }, //.length
+	{ scopes: "variable.language", color: colour.L76_C10_H160 }, //this
+	{ scopes: "variable.parameter", color: colour.L76_C08_H140 }, //def cmpt(s, A, t):
+	{ scopes: "variable.other.property", color: colour.L74_C06_H100 }, 
+	{ scopes: "support.variable.property", color: colour.L76_C12_H100 }, //.length
+	{ scopes: "variable", color: colour.L74_C06_H140 }, //combinations、targetvalue //
+	{ scopes: "support.variable", color: colour.L76_C12_H140 }, //.length
 	//值
-	{ scopes: "constant.language", color: colour.L54_C14_H250 }, //true、False、undefined
-	{ scopes: "constant.numeric", color: colour.L56_C12_H300 }, //数值：423、1.67
-	{ scopes: "string", color: colour.L54_C10_H340 }, //字符串："bienzu"、"32i4hen9"
-	{ scopes: "string.regexp", color: colour.L54_C13_H340 }, // /(\w+ab)/
-	{ scopes: ["string.interpolated", "string.template"], color: colour.L54_C13_H340 }, //$(pwd)、`date`
-	{ scopes: ["constant.character","punctuation.definition.entity"], color: colour.L54_C13_H340 }, //&lt;、&ensp;、\031
+	{ scopes: "constant.language", color: colour.L74_C14_H250 }, //true、False、undefined
+	{ scopes: "constant.numeric", color: colour.L76_C10_H300 }, //数值：423、1.67
+	{ scopes: "string", color: colour.L74_C06_H340 }, //字符串："bienzu"、"32i4hen9"
+	{ scopes: "string.regexp", color: colour.L74_C12_H340 }, // /(\w+ab)/
+	{ scopes: ["string.interpolated", "string.template"], color: colour.L74_C12_H340 }, //$(pwd)、`date`
+	{ scopes: ["constant.character","punctuation.definition.entity"], color: colour.L74_C12_H340 }, //&lt;、&ensp;、\031
 	//控制语句
-	{ scopes: "keyword.control", color: colour.L54_C13_H000 }, //for、while、else、return
+	{ scopes: "keyword.control", color: colour.L74_C12_H000 }, //for、while、else、return
 	//运算符
-	{ scopes: "keyword.operator", color: colour.L56_C11_H040 }, //运算符：+、-、*、/、||、==
+	{ scopes: "keyword.operator", color: colour.L76_C08_H040 }, //运算符：+、-、*、/、||、==
 	//类型 
-	{ scopes: "storage.type", color: colour.L54_C12_H280 }, //var、let、const、function
-	{ scopes: "support.type", color: colour.L56_C13_H280 }, //float()
-	{ scopes: "entity.name.type", color: colour.L56_C12_H260 }, //这是啥？不知道
+	{ scopes: "storage.type", color: colour.L74_C10_H280 }, //var、let、const、function
+	{ scopes: "support.type", color: colour.L76_C12_H280 }, //float()
+	{ scopes: "entity.name.type", color: colour.L76_C10_H260 }, //这是啥？不知道
 	//标点
-	{ scopes: "punctuation.definition", color: colour.L52_C10_H240 }, //""、<>
+	{ scopes: "punctuation.definition", color: colour.L72_C06_H240 }, //""、<>
 	{ scopes: "punctuation.separator", color: GREY80 }, //,、;
 	
-	// { scopes: "keyword", color: colour.L56_C14_H000 },//未明确指定的
-	// { scopes: "storage", color: colour.L56_C14_H000 }, //
-	// { scopes: "support", color: colour.L56_C14_H000 },
-	// { scopes: "entity", color: colour.L54_C12_H200 },
-	// { scopes: "meta", color: colour.L54_C10_H240 },
+	// { scopes: "keyword", color: colour.L76_C14_H000 },//未明确指定的
+	// { scopes: "storage", color: colour.L76_C14_H000 }, //
+	// { scopes: "support", color: colour.L76_C14_H000 },
+	// { scopes: "entity", color: colour.L74_C10_H200 },
+	// { scopes: "meta", color: colour.L74_C06_H240 },
 ];
 
 // 生成JSON对象
