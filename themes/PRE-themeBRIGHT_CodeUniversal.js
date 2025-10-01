@@ -67,14 +67,14 @@ const colorRules = [
 	//变量名
 	{ scopes: "variable.language", color: colour.L60_C14_H160 }, //this
 	{ scopes: "variable.parameter", color: colour.L60_C12_H140 }, //def cmpt(s, A, t):
-	{ scopes: "variable.other.property", color: colour.L58_C06_H100 }, 
+	{ scopes: "variable.other.property", color: colour.L58_C10_H100 }, 
 	{ scopes: "support.variable.property", color: colour.L60_C16_H100 }, //.length
-	{ scopes: "variable", color: colour.L58_C06_H140 }, //combinations、targetvalue //
+	{ scopes: "variable", color: colour.L58_C10_H140 }, //combinations、targetvalue //
 	{ scopes: "support.variable", color: colour.L60_C16_H140 }, //.length
 	//值
-	{ scopes: "constant.language", color: colour.L58_C18_H260 }, //true、False、undefined
+	{ scopes: "constant.language", color: colour.L58_C18_H250 }, //true、False、undefined
 	{ scopes: "constant.numeric", color: colour.L60_C14_H300 }, //数值：423、1.67
-	{ scopes: "string", color: colour.L58_C06_H340 }, //字符串："bienzu"、"32i4hen9"
+	{ scopes: "string", color: colour.L58_C10_H340 }, //字符串："bienzu"、"32i4hen9"
 	{ scopes: "string.regexp", color: colour.L58_C16_H340 }, // /(\w+ab)/
 	{ scopes: ["string.interpolated", "string.template"], color: colour.L58_C16_H340 }, //$(pwd)、`date`
 	{ scopes: ["constant.character","punctuation.definition.entity"], color: colour.L58_C16_H340 }, //&lt;、&ensp;、\031
@@ -87,14 +87,14 @@ const colorRules = [
 	{ scopes: "support.type", color: colour.L60_C16_H280 }, //float()
 	{ scopes: "entity.name.type", color: colour.L60_C14_H260 }, //这是啥？不知道
 	//标点
-	{ scopes: "punctuation.definition", color: colour.L56_C06_H240 }, //""、<>
+	{ scopes: "punctuation.definition", color: colour.L56_C10_H240 }, //""、<>
 	{ scopes: "punctuation.separator", color: GREY80 }, //,、;
 	
 	// { scopes: "keyword", color: colour.L60_C18_H000 },//未明确指定的
 	// { scopes: "storage", color: colour.L60_C18_H000 }, //
 	// { scopes: "support", color: colour.L60_C18_H000 },
 	// { scopes: "entity", color: colour.L58_C14_H200 },
-	// { scopes: "meta", color: colour.L58_C06_H240 },
+	// { scopes: "meta", color: colour.L58_C10_H240 },
 ];
 
 // 生成JSON对象

@@ -72,7 +72,7 @@ const colorRules = [
 	{ scopes: "variable", color: colour.L74_C06_H140 }, //combinations、targetvalue //
 	{ scopes: "support.variable", color: colour.L76_C12_H140 }, //.length
 	//值
-	{ scopes: "constant.language", color: colour.L74_C14_H260 }, //true、False、undefined
+	{ scopes: "constant.language", color: colour.L74_C14_H250 }, //true、False、undefined
 	{ scopes: "constant.numeric", color: colour.L76_C10_H300 }, //数值：423、1.67
 	{ scopes: "string", color: colour.L74_C06_H340 }, //字符串："bienzu"、"32i4hen9"
 	{ scopes: "string.regexp", color: colour.L74_C12_H340 }, // /(\w+ab)/

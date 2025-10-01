@@ -43,7 +43,9 @@
 		},
 		{
 			"scope": "variable.other.property",
-			"settings": {}
+			"settings": {
+				"foreground": "#887b2c"
+			}
 		},
 		{
 			"scope": "support.variable.property",
@@ -51,7 +53,9 @@
 		},
 		{
 			"scope": "variable",
-			"settings": {}
+			"settings": {
+				"foreground": "#59894f"
+			}
 		},
 		{
 			"scope": "support.variable",
@@ -62,7 +66,7 @@
 		{
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#3375e3"
+				"foreground": "#007cdf"
 			}
 		},
 		{
@@ -73,7 +77,9 @@
 		},
 		{
 			"scope": "string",
-			"settings": {}
+			"settings": {
+				"foreground": "#a1628d"
+			}
 		},
 		{
 			"scope": "string.regexp",
@@ -131,7 +137,9 @@
 		},
 		{
 			"scope": "punctuation.definition",
-			"settings": {}
+			"settings": {
+				"foreground": "#347ca9"
+			}
 		},
 		{
 			"scope": "punctuation.separator",
