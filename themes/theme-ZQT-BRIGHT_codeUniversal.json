@@ -23,9 +23,7 @@
 		},
 		{
 			"scope": "entity.name.function",
-			"settings": {
-				"foreground": "#7b5600"
-			}
+			"settings": {}
 		},
 		{
 			"scope": "support.function",
@@ -34,20 +32,18 @@
 		{
 			"scope": "variable.language",
 			"settings": {
-				"foreground": "#1f744f"
+				"foreground": "#009962"
 			}
 		},
 		{
 			"scope": "variable.parameter",
 			"settings": {
-				"foreground": "#4a6e42"
+				"foreground": "#57914a"
 			}
 		},
 		{
 			"scope": "variable.other.property",
-			"settings": {
-				"foreground": "#655f35"
-			}
+			"settings": {}
 		},
 		{
 			"scope": "support.variable.property",
@@ -55,38 +51,34 @@
 		},
 		{
 			"scope": "variable",
-			"settings": {
-				"foreground": "#4b6646"
-			}
+			"settings": {}
 		},
 		{
 			"scope": "support.variable",
 			"settings": {
-				"foreground": "#3a732c"
+				"foreground": "#449630"
 			}
 		},
 		{
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#2a5aab"
+				"foreground": "#3375e3"
 			}
 		},
 		{
 			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#6c5594"
+				"foreground": "#8e6ac7"
 			}
 		},
 		{
 			"scope": "string",
-			"settings": {
-				"foreground": "#755068"
-			}
+			"settings": {}
 		},
 		{
 			"scope": "string.regexp",
 			"settings": {
-				"foreground": "#883f73"
+				"foreground": "#b54d98"
 			}
 		},
 		{
@@ -95,7 +87,7 @@
 				"string.template"
 			],
 			"settings": {
-				"foreground": "#883f73"
+				"foreground": "#b54d98"
 			}
 		},
 		{
@@ -104,44 +96,42 @@
 				"punctuation.definition.entity"
 			],
 			"settings": {
-				"foreground": "#883f73"
+				"foreground": "#b54d98"
 			}
 		},
 		{
 			"scope": "keyword.control",
 			"settings": {
-				"foreground": "#913c5b"
+				"foreground": "#c24976"
 			}
 		},
 		{
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#8a533f"
+				"foreground": "#bb6546"
 			}
 		},
 		{
 			"scope": "storage.type",
 			"settings": {
-				"foreground": "#535695"
+				"foreground": "#6c6ecb"
 			}
 		},
 		{
 			"scope": "support.type",
 			"settings": {
-				"foreground": "#5759a6"
+				"foreground": "#7071dd"
 			}
 		},
 		{
 			"scope": "entity.name.type",
 			"settings": {
-				"foreground": "#40639c"
+				"foreground": "#4c7fd3"
 			}
 		},
 		{
 			"scope": "punctuation.definition",
-			"settings": {
-				"foreground": "#375d76"
-			}
+			"settings": {}
 		},
 		{
 			"scope": "punctuation.separator",
