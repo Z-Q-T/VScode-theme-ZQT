@@ -117,6 +117,6 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonData, "./theme-ZQT_codeHighlightUniversal.json");
+saveObjectToTxtFile(jsonData, "./theme-ZQT_codeUniversal.json");
 // saveObjectToTxtFjsonObject, "./_ZQT.json");
 // // console.loonObject);

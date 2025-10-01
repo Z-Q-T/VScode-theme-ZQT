@@ -111,7 +111,7 @@ let jsonObject = {
 	//The contrast colors are typically only set for high contrast themes. If set, they add an additional border around items across the UI to increase the contrast.
 
 	["$schema"]: "vscode://schemas/color-theme",
-	["name"]: "User Interface Colours - ZQT DARK Theme",
+	["name"]: "User Interface Colours - ZQT BRIGHT Theme",
 	["//description"]: "编辑器的界面外观",
 	["include"]: "./theme-ZQT_codeSpecifc.json",
 	["colors"]: {
@@ -1294,5 +1294,5 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonObject, "./theme-ZQT-DARK_interface.json");
+saveObjectToTxtFile(jsonObject, "./theme-ZQT-BRIGHT_interface.json");
 // console.log(jsonObject);

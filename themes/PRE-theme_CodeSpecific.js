@@ -90,6 +90,6 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonData, "./theme-ZQT.json");
+saveObjectToTxtFile(jsonData, "./theme-ZQT_codeSpecific.json");
 // saveObjectToTxtFjsonObject, "./_ZQT.json");
 // // console.loonObject);
