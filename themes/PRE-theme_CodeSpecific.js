@@ -33,7 +33,7 @@ function generateTokenColors(rules) {
 		$schema: "vscode://schemas/color-theme",
 		name: "Specific Code Highlight - ZQT Theme",
 		"//description": "各个语言专有的代码高亮",
-		include: "./theme-ZQT_codeHighlightUniversal.json",
+		include: "./theme-ZQT_codeUniversal.json",
 		tokenColors: rules.map((rule) => ({
 			scope: rule.scopes, // 支持字符串或数组
 			settings: {

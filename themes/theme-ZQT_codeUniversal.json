@@ -2,7 +2,6 @@
 	"$schema": "vscode://schemas/color-theme",
 	"name": "Universal Code Highlight - ZQT Theme",
 	"//description": "通用的代码高亮",
-	"include": "./theme-ZQT_interface.json",
 	"tokenColors": [
 		{
 			"scope": "comment",

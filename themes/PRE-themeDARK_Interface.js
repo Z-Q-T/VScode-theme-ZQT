@@ -111,8 +111,9 @@ let jsonObject = {
 	//The contrast colors are typically only set for high contrast themes. If set, they add an additional border around items across the UI to increase the contrast.
 
 	["$schema"]: "vscode://schemas/color-theme",
-	["name"]: "User Interface Colours - ZQT Theme",
+	["name"]: "User Interface Colours - ZQT DARK Theme",
 	["//description"]: "编辑器的界面外观",
+	["include"]: "./theme-ZQT_codeSpecifc.json",
 	["colors"]: {
 		["contrastActiveBorder"]: DFLT,
 		["contrastBorder"]: DFLT,
