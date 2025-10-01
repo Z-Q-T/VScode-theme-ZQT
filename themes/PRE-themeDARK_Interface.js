@@ -1294,5 +1294,5 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonObject, "./theme-ZQT-DARK_interface.json");
+saveObjectToTxtFile(jsonObject, "./themes/theme-ZQT-DARK_interface.json");
 // console.log(jsonObject);
