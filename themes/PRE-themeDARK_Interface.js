@@ -50,6 +50,9 @@ let ignoreStrong = "#848484";
 let conflictStrong = "#b16edd";
 let submoduleStrong = "#7b79e0";
 
+let SourceControlGraphRef = "#bb8822";
+let SourceControlGraphRemote = "#3344aa";
+
 let errorStrong = "#fc4734";//oklch(0.66 0.22 30)
 let errorSoft = "#62160e"; //oklch(0.33 0.11 30)
 // let errorTRANSPARENT = "#fc47347f"; //transparent是strong加半透明
@@ -586,7 +589,7 @@ let jsonObject = {
 		["editorInfo.border"]: DFLT,
 		["editorInfo.background"]: DFLT,
 		["editorHint.foreground"]: hintStrong,
-		["editorHint.border"]: DFLT,
+		["editorHint.border"]: hintStrong,
 		["problemsErrorIcon.foreground"]: errorStrong,
 		["problemsWarningIcon.foreground"]: warningStrong,
 		["problemsInfoIcon.foreground"]: infoStrong,
@@ -1092,15 +1095,15 @@ let jsonObject = {
 		//Source Control Graph colors
 
 		["scmGraph.historyItemHoverLabelForeground"]: DFLT,
-		["scmGraph.foreground1"]: DFLT,
-		["scmGraph.foreground2"]: DFLT,
-		["scmGraph.foreground3"]: DFLT,
-		["scmGraph.foreground4"]: DFLT,
-		["scmGraph.foreground5"]: DFLT,
+		["scmGraph.foreground1"]: colour.L70_C10_H100,
+		["scmGraph.foreground2"]: colour.L70_C10_H150,
+		["scmGraph.foreground3"]: colour.L70_C10_H200,
+		["scmGraph.foreground4"]: colour.L70_C10_H250,
+		["scmGraph.foreground5"]: colour.L70_C10_H300,
 		["scmGraph.historyItemHoverAdditionsForeground"]: DFLT,
 		["scmGraph.historyItemHoverDeletionsForeground"]: DFLT,
-		["scmGraph.historyItemRefColor"]: DFLT,
-		["scmGraph.historyItemRemoteRefColor"]: DFLT,
+		["scmGraph.historyItemRefColor"]: SourceControlGraphRef,
+		["scmGraph.historyItemRemoteRefColor"]: SourceControlGraphRemote,
 		["scmGraph.historyItemBaseRefColor"]: DFLT,
 		["scmGraph.historyItemHoverDefaultLabelForeground"]: DFLT,
 		["scmGraph.historyItemHoverDefaultLabelBackground"]: DFLT,

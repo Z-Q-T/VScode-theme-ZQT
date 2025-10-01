@@ -23,7 +23,7 @@ let GREY90 = "#dedede";
 let GREY95 = "#eeeeee";
 let WHITE = "#FFF";
 
-import colour from "./palette-color.js";
+import colour from "./coloursBRIGHT.js";
 
 let shadow = "#000";
 let drop = "#90909030";
@@ -525,22 +525,22 @@ let jsonObject = {
 
 		//Bracket pair colorization:
 
-		["editorBracketHighlight.foreground1"]: colour.L76_C10_H220,
-		["editorBracketHighlight.foreground2"]: colour.L76_C10_H100,
-		["editorBracketHighlight.foreground3"]: colour.L76_C10_H340,
-		["editorBracketHighlight.foreground4"]: colour.L76_C10_H180,
-		["editorBracketHighlight.foreground5"]: colour.L76_C10_H060,
-		["editorBracketHighlight.foreground6"]: colour.L76_C10_H300,
+		["editorBracketHighlight.foreground1"]: colour.L60_C14_H220,
+		["editorBracketHighlight.foreground2"]: colour.L60_C14_H100,
+		["editorBracketHighlight.foreground3"]: colour.L60_C14_H340,
+		["editorBracketHighlight.foreground4"]: colour.L60_C14_H180,
+		["editorBracketHighlight.foreground5"]: colour.L60_C14_H060,
+		["editorBracketHighlight.foreground6"]: colour.L60_C14_H300,
 		["editorBracketHighlight.unexpectedBracket.foreground"]: errorStrong,
 
 		//Bracket pair guides:
 
-		["editorBracketPairGuide.activeBackground1"]: colour.L70_C08_H220,
-		["editorBracketPairGuide.activeBackground2"]: colour.L70_C08_H100,
-		["editorBracketPairGuide.activeBackground3"]: colour.L70_C08_H340,
-		["editorBracketPairGuide.activeBackground4"]: colour.L70_C08_H180,
-		["editorBracketPairGuide.activeBackground5"]: colour.L70_C08_H060,
-		["editorBracketPairGuide.activeBackground6"]: colour.L70_C08_H300,
+		["editorBracketPairGuide.activeBackground1"]: colour.L54_C12_H220,
+		["editorBracketPairGuide.activeBackground2"]: colour.L54_C12_H100,
+		["editorBracketPairGuide.activeBackground3"]: colour.L54_C12_H340,
+		["editorBracketPairGuide.activeBackground4"]: colour.L54_C12_H180,
+		["editorBracketPairGuide.activeBackground5"]: colour.L54_C12_H060,
+		["editorBracketPairGuide.activeBackground6"]: colour.L54_C12_H300,
 		["editorBracketPairGuide.background1"]: DFLT,
 		["editorBracketPairGuide.background2"]: DFLT,
 		["editorBracketPairGuide.background3"]: DFLT,
@@ -586,7 +586,7 @@ let jsonObject = {
 		["editorInfo.border"]: DFLT,
 		["editorInfo.background"]: DFLT,
 		["editorHint.foreground"]: hintStrong,
-		["editorHint.border"]: DFLT,
+		["editorHint.border"]: hintStrong,
 		["problemsErrorIcon.foreground"]: errorStrong,
 		["problemsWarningIcon.foreground"]: warningStrong,
 		["problemsInfoIcon.foreground"]: infoStrong,
