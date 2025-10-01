@@ -9,53 +9,55 @@ import grey from "./palette-greyscales.js";
 import colour from "./palette-coloursBRIGHT.js";
 
 let shadow = "#44444466";
-let drop = "#90909030";
-let placeholder = "#7f7f7f";
-let hover = "#ffffff30";
-let click = "#ffffff50";
-let foldArea = "#00a0cc2f";
-let foldHint = "#00a0cc";
+let drop = "#70707030";
+let placeholder = "#9d9d9dff";
+let sliderNormal = "#00000011";
+let hover = "#00000022";
+let click = "#00000055";
 
 let addLight = "#40cc6d";//oklch(0.75 0.18 150)
-let addDark = "#00bf54";//oklch(0.7 0.2 150)
-let addDarkTRANSPARENT = "#6edd8a3f";
+let addLightTRANSPARENT = "#40cc6d44";
+let addDark = "#6fb07d";//oklch(0.7 0.10 150)
 let modifyLight = "#c8ae00";//oklch(0.75 0.18 100)
 let deleteLight = "#ff76a9";//oklch(0.75 0.18 0)
-let deleteDark = "#d6809c";//oklch(0.7 0.11 0)
-let deleteDarkTRANSPARENT = "#f0769b3f";
+let deleteLightTRANSPARENT = "#ff76a944";
+let deleteDark = "#d2849c";//oklch(0.7 0.10 0)
 
-let gitModify = "#9d6300";//oklch(0.55 0.12 70)
+let gitModify = "#934f00";//oklch(0.5 0.12 60)
 let gitRename = "#046dafff";
 let gitUntrack = "#70a50fff";
 let gitIgnore = "#959595ff";
-let gitConflict = "#b16edd";
+let gitConflict = "#dd6edbff";
 let gitSubmodule = "#7b79e0";
-let SourceControlGraphRef = "#bb8822";
-let SourceControlGraphRemote = "#3344aa";
+let SourceControlGraphRef = "#e9aa2dff";
+let SourceControlGraphRemote = "#4960dfff";
 
 let errorLight = "#df8071"; //oklch(0.7 0.12 30)
 let errorDark = "#d64938";//oklch(0.6 0.18 30)
-let warningLight = "#fbad00";//oklch(0.8 0.2 80)
+let warningLight = "#c5953b";//oklch(0.7 0.12 80)
 let warningDark = "#ac7400";//oklch(0.6 0.18 80)
 let infoLight = "#69a1e8";//oklch(0.7 0.12 255)
 let infoDark = "#207fe8";//oklch(0.6 0.18 255)
-let hintLight = "#36b348";
+let hintLight = "#6cb26f";//oklch(0.7 0.12 145)
+let hintDark = "#189a30";//oklch(0.6 0.18 145)
 
-let selectActiveDark = "#5285ff";//oklch(0.65 0.2 265)
-let selectActiveDarkTRANSPARENT = "#5285ffbb";
-let selectInactiveDark = "#b6becb";//oklch(0.80 0.02 260)
-let selectInactiveDarkTRANSPARENT = "#b6becb77";
-let selectOthersTRANSPARENT = "#3e89ff22";
+let selectActive = "#5285ff";//oklch(0.65 0.20 265)
+let selectActiveTRANSPARENT1 = "#5285ffbb";
+let selectActiveTRANSPARENT2 = "#5285ff77";
+let selectActiveTRANSPARENT3 = "#5285ff22";
+let selectInactiveTRANSPARENT1 = "#b6becbbb";//oklch(0.80 0.02 265)
+let selectInactiveTRANSPARENT2 = "#b6becb77";
 
 let findMatchAllTRANSPARENT1 = "#9076f377";//oklch(0.65 0.18 290)
 let findMatchAllTRANSPARENT2 = "#9076f322";
 
-let linkEdit = "#33ffff5f";
 
+let foldArea = "#00a0cc2f";
+let foldHint = "#00a0cc";
 let wordHighlightRead = "#00bde3bf";
 let wordHighlightWrite = "#7ef10bbf";
 let wordHighlightText = "#02d66cbf";
-let unicodeHighlight = "#8080407f";
+let unicodeHighlight = "#c96e287f";
 let BracketMatchStrong = "#ff00ffbf";
 let BracketMatchTRANSPARENT = "#ff00ff3f";
 let lineHighlightBackground = "#ffffff11";
@@ -64,7 +66,7 @@ let IndentGuideActive = "#7f7f7fbf";
 let editorRulerLine = "#7f7f7f3f";
 let UnusedCodeOpacity = "#00000085";
 
-let sliderNormal = "#ffffff20";
+let linkEdit = "#33ffff5f";
 // let sliderActive = "#ffffff45";
 // let hoverHighlightBackground = "#b4b4b436";
 // let editorLinkActiveForeground = "#73ff009f";
@@ -95,12 +97,12 @@ let jsonObject = {
 
 		//Base colors
 
-		["focusBorder"]: selectActiveDark,
+		["focusBorder"]: selectActive,
 		["foreground"]: grey.G20,
 		["disabledForeground"]: grey.G30,
 		["widget.border"]: DFLT,
 		["widget.shadow"]: shadow,
-		["selection.background"]: selectActiveDarkTRANSPARENT,
+		["selection.background"]: selectActiveTRANSPARENT1,
 		["descriptionForeground"]: grey.G20,
 		["errorForeground"]: errorLight,
 		["icon.foreground"]: DFLT,
@@ -176,18 +178,18 @@ let jsonObject = {
 		["input.foreground"]: DFLT,
 		["input.placeholderForeground"]: placeholder,
 		["inputOption.activeBackground"]: DFLT,
-		["inputOption.activeBorder"]: selectActiveDark,
+		["inputOption.activeBorder"]: selectActive,
 		["inputOption.activeForeground"]: DFLT,
 		["inputOption.hoverBackground"]: DFLT,
 		["inputValidation.errorBackground"]: errorLight,
 		["inputValidation.errorForeground"]: DFLT,
 		["inputValidation.errorBorder"]: errorDark,
-		["inputValidation.infoBackground"]: infoDark,
+		["inputValidation.infoBackground"]: infoLight,
 		["inputValidation.infoForeground"]: DFLT,
-		["inputValidation.infoBorder"]: infoLight,
-		["inputValidation.warningBackground"]: warningDark,
+		["inputValidation.infoBorder"]: infoDark,
+		["inputValidation.warningBackground"]: warningLight,
 		["inputValidation.warningForeground"]: DFLT,
-		["inputValidation.warningBorder"]: warningLight,
+		["inputValidation.warningBorder"]: warningDark,
 
 		//Scrollbar control
 
@@ -209,26 +211,26 @@ let jsonObject = {
 		//Lists and trees
 		//Colors for list and trees like the File Explorer. An active list/tree has keyboard focus, an inactive does not.
 
-		["list.activeSelectionBackground"]: selectActiveDarkTRANSPARENT,
+		["list.activeSelectionBackground"]: selectActiveTRANSPARENT2,
 		["list.activeSelectionForeground"]: grey.G20,
 		["list.activeSelectionIconForeground"]: DFLT,
 		["list.dropBackground"]: DFLT,
-		["list.focusBackground"]: DFLT,
+		["list.focusBackground"]: selectActiveTRANSPARENT3,
 		["list.focusForeground"]: DFLT,
 		["list.focusHighlightForeground"]: DFLT,
-		["list.focusOutline"]: selectActiveDark,
+		["list.focusOutline"]: selectActive,
 		["list.focusAndSelectionOutline"]: DFLT,
 		["list.highlightForeground"]: DFLT,
 		["list.hoverBackground"]: hover,
 		["list.hoverForeground"]: DFLT,
-		["list.inactiveSelectionBackground"]: selectInactiveDarkTRANSPARENT,
+		["list.inactiveSelectionBackground"]: selectInactiveTRANSPARENT1,
 		["list.inactiveSelectionForeground"]: DFLT,
 		["list.inactiveSelectionIconForeground"]: DFLT,
 		["list.inactiveFocusBackground"]: DFLT,
 		["list.inactiveFocusOutline"]: DFLT,
 		["list.invalidItemForeground"]: DFLT,
-		["list.errorForeground"]: errorLight,
-		["list.warningForeground"]: warningLight,
+		["list.errorForeground"]: errorDark,
+		["list.warningForeground"]: warningDark,
 		["listFilterWidget.background"]: DFLT,
 		["listFilterWidget.outline"]: DFLT,
 		["listFilterWidget.noMatchesOutline"]: DFLT,
@@ -252,7 +254,7 @@ let jsonObject = {
 		["activityBar.border"]: DFLT,
 		["activityBarBadge.background"]: infoDark,
 		["activityBarBadge.foreground"]: DFLT,
-		["activityBar.activeBorder"]: selectActiveDark,
+		["activityBar.activeBorder"]: selectActive,
 		["activityBar.activeBackground"]: grey.G85,
 		["activityBar.activeFocusBorder"]: DFLT,
 		["activityBarTop.foreground"]: DFLT,
@@ -294,7 +296,7 @@ let jsonObject = {
 		//The Minimap shows a minified version of the current file.
 
 		["minimap.findMatchHighlight"]: findMatchAllTRANSPARENT2,
-		["minimap.selectionHighlight"]: selectActiveDarkTRANSPARENT,
+		["minimap.selectionHighlight"]: selectActiveTRANSPARENT1,
 		["minimap.errorHighlight"]: errorLight,
 		["minimap.warningHighlight"]: warningLight,
 		["minimap.background"]: DFLT,
@@ -339,8 +341,8 @@ let jsonObject = {
 		["tab.selectedForeground"]: DFLT,
 		["tab.dragAndDropBorder"]: DFLT,
 		["tab.unfocusedActiveBorder"]: DFLT,
-		["tab.activeBorderTop"]: selectActiveDark,
-		["tab.unfocusedActiveBorderTop"]: selectInactiveDarkTRANSPARENT,
+		["tab.activeBorderTop"]: selectActive,
+		["tab.unfocusedActiveBorderTop"]: selectInactiveTRANSPARENT2,
 		["tab.lastPinnedBorder"]: DFLT,
 		["tab.hoverBackground"]: hover,
 		["tab.unfocusedHoverBackground"]: DFLT,
@@ -377,10 +379,10 @@ let jsonObject = {
 
 		//Selection colors are visible when selecting one or more characters. In addition to the selection also all regions with the same content are highlighted.
 
-		["editor.selectionBackground"]: selectActiveDarkTRANSPARENT,
+		["editor.selectionBackground"]: selectActiveTRANSPARENT1,
 		["editor.selectionForeground"]: DFLT,
-		["editor.inactiveSelectionBackground"]: selectInactiveDarkTRANSPARENT,
-		["editor.selectionHighlightBackground"]: selectOthersTRANSPARENT,
+		["editor.inactiveSelectionBackground"]: selectInactiveTRANSPARENT2,
+		["editor.selectionHighlightBackground"]: selectActiveTRANSPARENT3,
 		["editor.selectionHighlightBorder"]: DFLT,
 
 		//Word highlight colors are visible when the cursor is inside a symbol or a word. Depending on the language support available for the file type, all matching references and declarations are highlighted and read and write accesses get different colors. If document symbol language support is not available, this falls back to word highlighting.
@@ -397,7 +399,7 @@ let jsonObject = {
 		//Find colors depend on the current find string in the Find/Replace dialog.
 		//Find matches
 
-		["editor.findMatchBackground"]: selectActiveDarkTRANSPARENT,
+		["editor.findMatchBackground"]: selectActiveTRANSPARENT1,
 		["editor.findMatchForeground"]: DFLT,
 		["editor.findMatchHighlightForeground"]: DFLT,
 		["editor.findMatchHighlightBackground"]: findMatchAllTRANSPARENT1,
@@ -436,7 +438,7 @@ let jsonObject = {
 
 		//The link color is visible when clicking on a link.
 
-		["editorLink.activeForeground"]: selectActiveDark,
+		["editorLink.activeForeground"]: selectActive,
 
 		//The range highlight is visible when selecting a search result.
 
@@ -469,7 +471,7 @@ let jsonObject = {
 		["editorIndentGuide.activeBackground5"]: IndentGuideActive,
 		["editorIndentGuide.activeBackground6"]: IndentGuideActive,
 
-		//To see the editor inline hintLights, set ["editor.inlineSuggest.enabled"]:
+		//To see the editor inline hints, set "editor.inlineSuggest.enabled": true.
 
 		["editorInlayHint.background"]: DFLT,
 		["editorInlayHint.foreground"]: DFLT,
@@ -535,7 +537,7 @@ let jsonObject = {
 		["editorOverviewRuler.border"]: DFLT,
 		["editorOverviewRuler.findMatchForeground"]: findMatchAllTRANSPARENT1,
 		["editorOverviewRuler.rangeHighlightForeground"]: findMatchAllTRANSPARENT2,
-		["editorOverviewRuler.selectionHighlightForeground"]: selectActiveDarkTRANSPARENT,
+		["editorOverviewRuler.selectionHighlightForeground"]: selectActiveTRANSPARENT1,
 		["editorOverviewRuler.wordHighlightForeground"]: wordHighlightRead,
 		["editorOverviewRuler.wordHighlightStrongForeground"]: wordHighlightWrite,
 		["editorOverviewRuler.wordHighlightTextForeground"]: wordHighlightText,
@@ -560,8 +562,8 @@ let jsonObject = {
 		["editorInfo.foreground"]: infoLight,
 		["editorInfo.border"]: DFLT,
 		["editorInfo.background"]: DFLT,
-		["editorHint.foreground"]: hintLight,
-		["editorHint.border"]: hintLight,
+		["editorHint.foreground"]: hintDark,
+		["editorHint.border"]: hintDark,
 		["problemsErrorIcon.foreground"]: errorLight,
 		["problemsWarningIcon.foreground"]: warningLight,
 		["problemsInfoIcon.foreground"]: infoLight,
@@ -616,14 +618,14 @@ let jsonObject = {
 		//Diff editor colors
 		//For coloring inserted and removed text, use either a background or a border color but not both.
 
-		["diffEditor.insertedTextBackground"]: addDarkTRANSPARENT,
+		["diffEditor.insertedTextBackground"]: addLightTRANSPARENT,
 		["diffEditor.insertedTextBorder"]: TRANSPARENT,
-		["diffEditor.removedTextBackground"]: deleteDarkTRANSPARENT,
+		["diffEditor.removedTextBackground"]: deleteLightTRANSPARENT,
 		["diffEditor.removedTextBorder"]: TRANSPARENT,
 		["diffEditor.border"]: DFLT,
 		["diffEditor.diagonalFill"]: DFLT,
-		["diffEditor.insertedLineBackground"]: addDarkTRANSPARENT,
-		["diffEditor.removedLineBackground"]: deleteDarkTRANSPARENT,
+		["diffEditor.insertedLineBackground"]: addLightTRANSPARENT,
+		["diffEditor.removedLineBackground"]: deleteLightTRANSPARENT,
 		["diffEditorGutter.insertedLineBackground"]: TRANSPARENT,
 		["diffEditorGutter.removedLineBackground"]: TRANSPARENT,
 		["diffEditorOverview.insertedForeground"]: DFLT,
@@ -766,7 +768,7 @@ let jsonObject = {
 		["panel.background"]: grey.G80,
 		["panel.border"]: DFLT,
 		["panel.dropBorder"]: drop,
-		["panelTitle.activeBorder"]: selectActiveDark,
+		["panelTitle.activeBorder"]: selectActive,
 		["panelTitle.activeForeground"]: grey.G15,
 		["panelTitle.inactiveForeground"]: grey.G40,
 		["panelTitle.border"]: grey.G75,
@@ -796,7 +798,7 @@ let jsonObject = {
 		["statusBar.noFolderBackground"]: grey.G90,
 		["statusBar.noFolderForeground"]: grey.G35,
 		["statusBar.noFolderBorder"]: grey.G75,
-		["statusBar.focusBorder"]: selectActiveDark,
+		["statusBar.focusBorder"]: selectActive,
 		["statusBarItem.activeBackground"]: click,
 		["statusBarItem.hoverForeground"]: DFLT,
 		["statusBarItem.hoverBackground"]: hover,
