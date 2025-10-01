@@ -23,6 +23,7 @@ let GREY90 = "#dedede";
 let GREY95 = "#eeeeee";
 let WHITE = "#FFF";
 
+import grey from "./greyscales.js";
 import colour from "./coloursBRIGHT.js";
 
 let shadow = "#000";
@@ -343,7 +344,7 @@ let jsonObject = {
 
 		["editorGroup.border"]: DFLT,
 		["editorGroup.dropBackground"]: drop,
-		["editorGroupHeader.noTabsBackground"]: GREY30,
+		["editorGroupHeader.noTabsBackground"]: GREY20,
 		["editorGroupHeader.tabsBackground"]: GREY25,
 		["editorGroupHeader.tabsBorder"]: DFLT,
 		["editorGroupHeader.border"]: DFLT,
@@ -352,7 +353,7 @@ let jsonObject = {
 		["editorGroup.dropIntoPromptForeground"]: DFLT,
 		["editorGroup.dropIntoPromptBackground"]: DFLT,
 		["editorGroup.dropIntoPromptBorder"]: DFLT,
-		["tab.activeBackground"]: GREY30,
+		["tab.activeBackground"]: GREY20,
 		["tab.activeForeground"]: GREY95,
 		["tab.inactiveBackground"]: GREY30,
 		["tab.inactiveForeground"]: GREY95,
@@ -389,7 +390,7 @@ let jsonObject = {
 
 		//All other editor colors are listed here:
 
-		["editor.background"]: GREY30,
+		["editor.background"]: GREY20,
 		["editor.foreground"]: GREY90,
 		["editorLineNumber.foreground"]: GREY50,
 		["editorLineNumber.activeForeground"]: GREY70,
@@ -809,7 +810,7 @@ let jsonObject = {
 		["panelStickyScroll.border"]: DFLT,
 		["panelStickyScroll.shadow"]: shadow,
 		["panelSectionHeader.border"]: DFLT,
-		["outputView.background"]: GREY30,
+		["outputView.background"]: GREY20,
 		["outputViewStickyScroll.background"]: DFLT,
 
 		//Status Bar colors
@@ -819,9 +820,9 @@ let jsonObject = {
 		["statusBar.foreground"]: GREY90,
 		["statusBar.border"]: DFLT,
 		["statusBar.debuggingBackground"]: statusBarDebuggingBackground,
-		["statusBar.debuggingForeground"]: GREY30,
+		["statusBar.debuggingForeground"]: GREY20,
 		["statusBar.debuggingBorder"]: DFLT,
-		["statusBar.noFolderBackground"]: GREY30,
+		["statusBar.noFolderBackground"]: GREY20,
 		["statusBar.noFolderForeground"]: GREY75,
 		["statusBar.noFolderBorder"]: GREY35,
 		["statusBar.focusBorder"]: selectActiveStrong,
@@ -837,7 +838,7 @@ let jsonObject = {
 		["statusBarItem.remoteHoverBackground"]: hover,
 		["statusBarItem.remoteHoverForeground"]: DFLT,
 		["statusBarItem.errorBackground"]: errorStrong,
-		["statusBarItem.errorForeground"]: GREY30,
+		["statusBarItem.errorForeground"]: GREY20,
 		["statusBarItem.errorHoverBackground"]: DFLT,
 		["statusBarItem.errorHoverForeground"]: DFLT,
 		["statusBarItem.warningBackground"]: warningStrong,
@@ -1137,7 +1138,7 @@ let jsonObject = {
 		//The theme colors for breadcrumbs navigation:
 
 		["breadcrumb.foreground"]: GREY75,
-		["breadcrumb.background"]: GREY30,
+		["breadcrumb.background"]: GREY20,
 		["breadcrumb.focusForeground"]: GREY85,
 		["breadcrumb.activeSelectionForeground"]: GREY90,
 		["breadcrumbPicker.background"]: DFLT,
