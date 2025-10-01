@@ -113,7 +113,7 @@ let jsonObject = {
 	["$schema"]: "vscode://schemas/color-theme",
 	["name"]: "User Interface Colours - ZQT DARK Theme",
 	["//description"]: "编辑器的界面外观",
-	["include"]: "theme-ZQT_codeSpecific.json",
+	["include"]: "theme-ZQT-DARK_codeSpecific.json",
 	["colors"]: {
 		["contrastActiveBorder"]: DFLT,
 		["contrastBorder"]: DFLT,

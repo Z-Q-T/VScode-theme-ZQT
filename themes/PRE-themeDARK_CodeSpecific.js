@@ -33,7 +33,7 @@ function generateTokenColors(rules) {
 		$schema: "vscode://schemas/color-theme",
 		name: "Specific Code Highlight - ZQT Theme",
 		"//description": "各个语言专有的代码高亮",
-		include: "theme-ZQT_codeUniversal.json",
+		include: "theme-ZQT-DARK_codeUniversal.json",
 		tokenColors: rules.map((rule) => ({
 			scope: rule.scopes, // 支持字符串或数组
 			settings: {
@@ -90,6 +90,6 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonData, "./themes/theme-ZQT_codeSpecific.json");
+saveObjectToTxtFile(jsonData, "./themes/theme-ZQT-DARK_codeSpecific.json");
 // saveObjectToTxtFjsonObject, "./_ZQT.json");
 // // console.loonObject);
