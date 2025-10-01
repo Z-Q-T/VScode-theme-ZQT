@@ -2,6 +2,6 @@
 	"$schema": "vscode://schemas/color-theme",
 	"name": "Overall - ZQT BRIGHT Theme",
 	"//description": "总体",
-	"include": "./theme-ZQT-DARK_interface.json",
+	"include": "theme-ZQT-BRIGHT_interface.json",
 
 }
