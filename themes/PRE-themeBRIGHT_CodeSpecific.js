@@ -23,7 +23,7 @@ let GREY90 = "#dedede";
 let GREY95 = "#eeeeee";
 let WHITE = "#FFF";
 
-import colour from "./coloursDARK.js";
+import colour from "./coloursBRIGHT.js";
 
 import fs from "fs";
 
@@ -31,9 +31,9 @@ import fs from "fs";
 function generateTokenColors(rules) {
 	return {
 		$schema: "vscode://schemas/color-theme",
-		name: "Specific Code Highlight - ZQT DARK Theme",
+		name: "Specific Code Highlight - ZQT BRIGHT Theme",
 		"//description": "各个语言专有的代码高亮",
-		include: "theme-ZQT-DARK_codeUniversal.json",
+		include: "theme-ZQT-BRIGHT_codeUniversal.json",
 		tokenColors: rules.map((rule) => ({
 			scope: rule.scopes, // 支持字符串或数组
 			settings: {
@@ -90,6 +90,6 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonData, "./themes/theme-ZQT-DARK_codeSpecific.json");
+saveObjectToTxtFile(jsonData, "./themes/theme-ZQT-BRIGHT_codeSpecific.json");
 // saveObjectToTxtFjsonObject, "./_ZQT.json");
 // // console.loonObject);

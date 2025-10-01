@@ -25,7 +25,7 @@ let WHITE = "#FFF";
 
 let errorStrong = "#fc4734"; //oklch(0.66 0.22 30)
 
-import colour from "./coloursDARK.js";
+import colour from "./coloursBRIGHT.js";
 
 import fs from "fs";
 
@@ -33,7 +33,7 @@ import fs from "fs";
 function generateTokenColors(rules) {
 	return {
 		$schema: "vscode://schemas/color-theme",
-		name: "Universal Code Highlight - ZQT DARK Theme",
+		name: "Universal Code Highlight - ZQT BRIGHT Theme",
 		"//description": "通用的代码高亮",
 		// include: "./theme-ZQT_interface.json",
 		tokenColors: rules.map((rule) => ({
@@ -46,7 +46,7 @@ function generateTokenColors(rules) {
 }
 
 //[10,30]的范围太接近大红色，避免使用高色度颜色
-//通常的用亮度L72，特殊的可以用L74。L76只用于括号高亮
+//通常的用亮度L46，特殊的可以用L48。L50只用于括号高亮
 //一大长串的用色度C08，短的可以更饱和
 //scopes里的token至少要有两个，单个的token宁愿不写（特殊的除外）
 //越常见的色度越低，防止扎眼
@@ -62,39 +62,39 @@ const colorRules = [
 	{ scopes: "punctuation.definition.comment", color: commentColour }, //
 	{ scopes: "invalid", color: errorStrong }, //
 	//函数
-	{ scopes: "entity.name.function", color: colour.L74_C10_H080 }, //函数名：calcAll()
-	{ scopes: "support.function", color: colour.L76_C14_H080 }, //print()
+	{ scopes: "entity.name.function", color: colour.L48_C10_H080 }, //函数名：calcAll()
+	{ scopes: "support.function", color: colour.L50_C14_H080 }, //print()
 	//变量名
-	{ scopes: "variable.language", color: colour.L76_C10_H160 }, //this
-	{ scopes: "variable.parameter", color: colour.L76_C08_H140 }, //def cmpt(s, A, t):
-	{ scopes: "variable.other.property", color: colour.L74_C06_H100 }, 
-	{ scopes: "support.variable.property", color: colour.L76_C12_H100 }, //.length
-	{ scopes: "variable", color: colour.L74_C06_H140 }, //combinations、targetvalue //
-	{ scopes: "support.variable", color: colour.L76_C12_H140 }, //.length
+	{ scopes: "variable.language", color: colour.L50_C10_H160 }, //this
+	{ scopes: "variable.parameter", color: colour.L50_C08_H140 }, //def cmpt(s, A, t):
+	{ scopes: "variable.other.property", color: colour.L48_C06_H100 }, 
+	{ scopes: "support.variable.property", color: colour.L50_C12_H100 }, //.length
+	{ scopes: "variable", color: colour.L48_C06_H140 }, //combinations、targetvalue //
+	{ scopes: "support.variable", color: colour.L50_C12_H140 }, //.length
 	//值
-	{ scopes: "constant.language", color: colour.L74_C14_H260 }, //true、False、undefined
-	{ scopes: "constant.numeric", color: colour.L76_C10_H300 }, //数值：423、1.67
-	{ scopes: "string", color: colour.L74_C06_H340 }, //字符串："bienzu"、"32i4hen9"
-	{ scopes: "string.regexp", color: colour.L74_C12_H340 }, // /(\w+ab)/
-	{ scopes: ["string.interpolated", "string.template"], color: colour.L74_C12_H340 }, //$(pwd)、`date`
-	{ scopes: ["constant.character","punctuation.definition.entity"], color: colour.L74_C12_H340 }, //&lt;、&ensp;、\031
+	{ scopes: "constant.language", color: colour.L48_C14_H260 }, //true、False、undefined
+	{ scopes: "constant.numeric", color: colour.L50_C10_H300 }, //数值：423、1.67
+	{ scopes: "string", color: colour.L48_C06_H340 }, //字符串："bienzu"、"32i4hen9"
+	{ scopes: "string.regexp", color: colour.L48_C12_H340 }, // /(\w+ab)/
+	{ scopes: ["string.interpolated", "string.template"], color: colour.L48_C12_H340 }, //$(pwd)、`date`
+	{ scopes: ["constant.character","punctuation.definition.entity"], color: colour.L48_C12_H340 }, //&lt;、&ensp;、\031
 	//控制语句
-	{ scopes: "keyword.control", color: colour.L74_C12_H000 }, //for、while、else、return
+	{ scopes: "keyword.control", color: colour.L48_C12_H000 }, //for、while、else、return
 	//运算符
-	{ scopes: "keyword.operator", color: colour.L76_C08_H040 }, //运算符：+、-、*、/、||、==
+	{ scopes: "keyword.operator", color: colour.L50_C08_H040 }, //运算符：+、-、*、/、||、==
 	//类型 
-	{ scopes: "storage.type", color: colour.L74_C10_H280 }, //var、let、const、function
-	{ scopes: "support.type", color: colour.L76_C12_H280 }, //float()
-	{ scopes: "entity.name.type", color: colour.L76_C10_H260 }, //这是啥？不知道
+	{ scopes: "storage.type", color: colour.L48_C10_H280 }, //var、let、const、function
+	{ scopes: "support.type", color: colour.L50_C12_H280 }, //float()
+	{ scopes: "entity.name.type", color: colour.L50_C10_H260 }, //这是啥？不知道
 	//标点
-	{ scopes: "punctuation.definition", color: colour.L72_C06_H240 }, //""、<>
+	{ scopes: "punctuation.definition", color: colour.L46_C06_H240 }, //""、<>
 	{ scopes: "punctuation.separator", color: GREY80 }, //,、;
 	
-	// { scopes: "keyword", color: colour.L76_C14_H000 },//未明确指定的
-	// { scopes: "storage", color: colour.L76_C14_H000 }, //
-	// { scopes: "support", color: colour.L76_C14_H000 },
-	// { scopes: "entity", color: colour.L74_C10_H200 },
-	// { scopes: "meta", color: colour.L74_C06_H240 },
+	// { scopes: "keyword", color: colour.L50_C14_H000 },//未明确指定的
+	// { scopes: "storage", color: colour.L50_C14_H000 }, //
+	// { scopes: "support", color: colour.L50_C14_H000 },
+	// { scopes: "entity", color: colour.L48_C10_H200 },
+	// { scopes: "meta", color: colour.L48_C06_H240 },
 ];
 
 // 生成JSON对象
@@ -117,6 +117,6 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonData, "./themes/theme-ZQT-DARK_codeUniversal.json");
+saveObjectToTxtFile(jsonData, "./themes/theme-ZQT-BRIGHT_codeUniversal.json");
 // saveObjectToTxtFjsonObject, "./_ZQT.json");
 // // console.loonObject);
