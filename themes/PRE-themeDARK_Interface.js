@@ -23,7 +23,7 @@ let GREY90 = "#dedede";
 let GREY95 = "#eeeeee";
 let WHITE = "#FFF";
 
-import colour from "./palette-color.js";
+import colour from "./coloursDARK.js";
 
 let shadow = "#000";
 let drop = "#90909030";

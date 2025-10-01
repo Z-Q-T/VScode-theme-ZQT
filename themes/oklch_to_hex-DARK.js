@@ -67,6 +67,6 @@ for (let [L, C, H] of combinations) {
 }
 hexColors.push("}");
 // 将结果写入本地 txt 文件
-fs.writeFileSync("palette-color.js", hexColors.join("\n"), "utf-8");
+fs.writeFileSync("./themes/coloursDARK.js", hexColors.join("\n"), "utf-8");
 
 console.log("HEX色值已写入文件");
