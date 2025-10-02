@@ -1,10 +1,9 @@
 import Color from "colorjs.io";
 import fs from "fs"; // 引入文件系统模块
 
-let chromaArray = ["10", "11", "12", "13", "14"];
+let lightnessArray = [0.46, 0.48, 0.5, 0.52];
+let chromaArray = ["08", "10", "12", "14", "16"];
 let hueArray = [
-
-
 	"000",
 	"010",
 	"020",
@@ -68,6 +67,6 @@ for (let [L, C, H] of combinations) {
 }
 hexColors.push("}");
 // 将结果写入本地 txt 文件
-fs.writeFileSync("./themes/coloursBRIGHT.js", hexColors.join("\n"), "utf-8");
+fs.writeFileSync("./themes/palette-coloursBRIGHT.js", hexColors.join("\n"), "utf-8");
 
 console.log("HEX色值已写入文件");

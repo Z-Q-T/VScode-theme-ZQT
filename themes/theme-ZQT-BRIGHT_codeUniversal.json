@@ -6,36 +6,44 @@
 		{
 			"scope": "comment",
 			"settings": {
-				"foreground": "#717171"
+				"foreground": "#8f8f8f"
 			}
 		},
 		{
 			"scope": "punctuation.definition.comment",
 			"settings": {
-				"foreground": "#717171"
+				"foreground": "#8f8f8f"
 			}
 		},
 		{
 			"scope": "invalid",
 			"settings": {
-				"foreground": "#fc4734"
+				"foreground": "#ca545a"
 			}
 		},
 		{
 			"scope": "entity.name.function",
-			"settings": {}
+			"settings": {
+				"foreground": "#6c5594"
+			}
 		},
 		{
 			"scope": "support.function",
-			"settings": {}
+			"settings": {
+				"foreground": "#7652ac"
+			}
 		},
 		{
 			"scope": "variable.language",
-			"settings": {}
+			"settings": {
+				"foreground": "#277a55"
+			}
 		},
 		{
 			"scope": "variable.parameter",
-			"settings": {}
+			"settings": {
+				"foreground": "#507448"
+			}
 		},
 		{
 			"scope": "variable.other.property",
@@ -51,15 +59,21 @@
 		},
 		{
 			"scope": "support.variable",
-			"settings": {}
+			"settings": {
+				"foreground": "#3f7932"
+			}
 		},
 		{
 			"scope": "constant.language",
-			"settings": {}
+			"settings": {
+				"foreground": "#0465af"
+			}
 		},
 		{
 			"scope": "constant.numeric",
-			"settings": {}
+			"settings": {
+				"foreground": "#725b9a"
+			}
 		},
 		{
 			"scope": "string",
@@ -67,41 +81,57 @@
 		},
 		{
 			"scope": "string.regexp",
-			"settings": {}
+			"settings": {
+				"foreground": "#8f4478"
+			}
 		},
 		{
 			"scope": [
 				"string.interpolated",
 				"string.template"
 			],
-			"settings": {}
+			"settings": {
+				"foreground": "#8f4478"
+			}
 		},
 		{
 			"scope": [
 				"constant.character",
 				"punctuation.definition.entity"
 			],
-			"settings": {}
+			"settings": {
+				"foreground": "#8f4478"
+			}
 		},
 		{
 			"scope": "keyword.control",
-			"settings": {}
+			"settings": {
+				"foreground": "#a62f5f"
+			}
 		},
 		{
 			"scope": "keyword.operator",
-			"settings": {}
+			"settings": {
+				"foreground": "#99533b"
+			}
 		},
 		{
 			"scope": "storage.type",
-			"settings": {}
+			"settings": {
+				"foreground": "#595c9b"
+			}
 		},
 		{
 			"scope": "support.type",
-			"settings": {}
+			"settings": {
+				"foreground": "#5c5fac"
+			}
 		},
 		{
 			"scope": "entity.name.type",
-			"settings": {}
+			"settings": {
+				"foreground": "#4669a2"
+			}
 		},
 		{
 			"scope": "punctuation.definition",
@@ -110,7 +140,7 @@
 		{
 			"scope": "punctuation.separator",
 			"settings": {
-				"foreground": "#bebebe"
+				"foreground": "#555"
 			}
 		}
 	]

@@ -9,8 +9,8 @@ import grey from "./palette-greyscales.js";
 import colour from "./palette-coloursBRIGHT.js";
 
 let shadow = "#44444466";
-let drop = "#70707030";
-let placeholder = "#9d9d9dff";
+let drop = "#66666644";
+let placeholder = "#999999ff";
 let sliderNormal = "#00000011";
 let hover = "#00000022";
 let click = "#00000055";
@@ -33,14 +33,14 @@ let gitSubmodule = "#495da7";//oklch(0.5 0.12 270)
 let SourceControlGraphRef = "#888";
 let SourceControlGraphRemote = "#444";
 
-let errorLight = "#eb7289"; //oklch(0.7 0.15 10)
-let errorDark = "#cc4f6a";//oklch(0.6 0.16 10)
-let warningLight = "#e18528";//oklch(0.7 0.15 60)
-let warningDark = "#c26300";//oklch(0.6 0.16 60)
-let infoLight = "#59a0f9";//oklch(0.7 0.15 255)
-let infoDark = "#3280dd";//oklch(0.6 0.16 255)
-let hintLight = "#5bb661";//oklch(0.7 0.15 145)
-let hintDark = "#31983d";//oklch(0.6 0.16 145)
+let errorLight = "#ff8386"; //oklch(0.75 0.15 20)
+let errorDark = "#ca545a";//oklch(0.6 0.15 20)
+let warningLight = "#dea052";//oklch(0.75 0.12 70)
+let warningDark = "#ad721c";//oklch(0.6 0.12 70)
+let infoLight = "#79b1f9";//oklch(0.75 0.12 255)
+let infoDark = "#4c82c6";//oklch(0.6 0.12 255)
+let hintLight = "#7bc27e";//oklch(0.75 0.12 145)
+let hintDark = "#4d9351";//oklch(0.6 0.12 145)
 
 let selectActive = "#5285ff";//oklch(0.65 0.20 265)
 let selectActiveTRANSPARENT1 = "#5285ffbb";
@@ -268,9 +268,9 @@ let jsonObject = {
 		["activityBarTop.background"]: DFLT,
 		["activityBarTop.activeBackground"]: DFLT,
 		["activityWarningBadge.foreground"]: DFLT,
-		["activityWarningBadge.background"]: warningLight,
+		["activityWarningBadge.background"]: warningDark,
 		["activityErrorBadge.foreground"]: DFLT,
-		["activityErrorBadge.background"]: errorLight,
+		["activityErrorBadge.background"]: errorDark,
 
 		//Profiles
 
