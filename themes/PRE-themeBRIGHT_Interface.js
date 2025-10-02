@@ -32,10 +32,10 @@ let gitSubmodule = "#495da7";//oklch(0.5 0.12 270)
 let SourceControlGraphRef = "#888";
 let SourceControlGraphRemote = "#444";
 
-let errorLight = "#df8071"; //oklch(0.7 0.12 30)
-let errorDark = "#d64938";//oklch(0.6 0.18 30)
-let warningLight = "#c5953b";//oklch(0.7 0.12 80)
-let warningDark = "#ac7400";//oklch(0.6 0.18 80)
+let errorLight = "#df7e7f"; //oklch(0.7 0.12 20)
+let errorDark = "#d64651";//oklch(0.6 0.18 20)
+let warningLight = "#ce9042";//oklch(0.7 0.12 70)
+let warningDark = "#b76c00";//oklch(0.6 0.18 70)
 let infoLight = "#69a1e8";//oklch(0.7 0.12 255)
 let infoDark = "#207fe8";//oklch(0.6 0.18 255)
 let hintLight = "#6cb26f";//oklch(0.7 0.12 145)
@@ -54,28 +54,30 @@ let findMatchAllTRANSPARENT2 = "#9076f322";
 
 let foldArea = "#00a0cc2f";
 let foldHint = "#00a0cc";
-let wordHighlightRead = "#00bde3bf";
-let wordHighlightWrite = "#7ef10bbf";
-let wordHighlightText = "#02d66cbf";
-let unicodeHighlight = "#c96e287f";
-let BracketMatchStrong = "#ff00ffbf";
-let BracketMatchTRANSPARENT = "#ff00ff3f";
-let lineHighlightBackground = "#ffffff11";
-let IndentGuide = "#7f7f7f3f";
-let IndentGuideActive = "#7f7f7fbf";
-let editorRulerLine = "#7f7f7f3f";
-let UnusedCodeOpacity = "#00000085";
+let wordHighlightWriteTRANSPARENT1 = "#839d00bb";//oklch(0.65 0.18 120)
+let wordHighlightWriteTRANSPARENT2 = "#839d0011";
+let wordHighlightReadTRANSPARENT1 = "#00a1c9bb";//oklch(0.65 0.18 220)
+let wordHighlightReadTRANSPARENT2 = "#00a1c911";
+let wordHighlightTextTRANSPARENT1 = "#00ac4ebb";//oklch(0.65 0.18 150)
+let wordHighlightTextTRANSPARENT2 = "#00ac4e11";
+let unicodeHighlight = "#e26500";//oklch(0.65 0.18 50)
+let BracketMatchStrong = "#fb2af4bb";//oklch(0.7 0.3 330)
+let lineHighlightBackground = "#00000011";
+let editorRulerLine = "#00000011";
+let IndentGuide = "#00000022";
+let IndentGuideActive = "#00000033";
+let UnusedCodeOpacity = "#00000088";
 
 let linkEdit = "#33ffff5f";
+let statusBarDebuggingBackground = "#ceb32c";
+let commentRangeForeground = "#686868";
 // let sliderActive = "#ffffff45";
 // let hoverHighlightBackground = "#b4b4b436";
 // let editorLinkActiveForeground = "#73ff009f";
 let editorWhitespaceForeground = "#4692c55e";
-let commentRangeForeground = "#686868";
 // let statusBarForeground = "#dddddd";
 // let statusBarBackground = "#2d3b53";
 // let statusBarDebuggingForeground = "#0f0f0f";
-let statusBarDebuggingBackground = "#ceb32c";
 // let statusBarNoFolderBackground = "#444";
 // let statusBarItemRemoteBackground = "#1284ff99";
 // let statusBarItemRemoteForeground = "#FFF";
@@ -389,12 +391,12 @@ let jsonObject = {
 
 		//occurrences
 
-		["editor.wordHighlightBackground"]: TRANSPARENT,
-		["editor.wordHighlightBorder"]: wordHighlightRead,
-		["editor.wordHighlightStrongBackground"]: TRANSPARENT,
-		["editor.wordHighlightStrongBorder"]: wordHighlightWrite,
-		["editor.wordHighlightTextBackground"]: TRANSPARENT,
-		["editor.wordHighlightTextBorder"]: wordHighlightText,
+		["editor.wordHighlightBackground"]: wordHighlightReadTRANSPARENT2,
+		["editor.wordHighlightBorder"]: wordHighlightReadTRANSPARENT1,
+		["editor.wordHighlightStrongBackground"]: wordHighlightWriteTRANSPARENT2,
+		["editor.wordHighlightStrongBorder"]: wordHighlightWriteTRANSPARENT1,
+		["editor.wordHighlightTextBackground"]: wordHighlightTextTRANSPARENT2,
+		["editor.wordHighlightTextBorder"]: wordHighlightTextTRANSPARENT1,
 
 		//Find colors depend on the current find string in the Find/Replace dialog.
 		//Find matches
@@ -538,9 +540,9 @@ let jsonObject = {
 		["editorOverviewRuler.findMatchForeground"]: findMatchAllTRANSPARENT1,
 		["editorOverviewRuler.rangeHighlightForeground"]: findMatchAllTRANSPARENT2,
 		["editorOverviewRuler.selectionHighlightForeground"]: selectActiveTRANSPARENT1,
-		["editorOverviewRuler.wordHighlightForeground"]: wordHighlightRead,
-		["editorOverviewRuler.wordHighlightStrongForeground"]: wordHighlightWrite,
-		["editorOverviewRuler.wordHighlightTextForeground"]: wordHighlightText,
+		["editorOverviewRuler.wordHighlightForeground"]: wordHighlightReadTRANSPARENT1,
+		["editorOverviewRuler.wordHighlightStrongForeground"]: wordHighlightWriteTRANSPARENT1,
+		["editorOverviewRuler.wordHighlightTextForeground"]: wordHighlightTextTRANSPARENT1,
 		["editorOverviewRuler.modifiedForeground"]: modifyLight,
 		["editorOverviewRuler.addedForeground"]: addLight,
 		["editorOverviewRuler.deletedForeground"]: deleteLight,
