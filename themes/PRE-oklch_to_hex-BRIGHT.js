@@ -1,7 +1,7 @@
 import Color from "colorjs.io";
 import fs from "fs"; // 引入文件系统模块
 
-let lightnessArray = [0.46, 0.48, 0.5, 0.52];
+let lightnessArray = [0.46, 0.48, 0.50, 0.52];
 let chromaArray = ["08", "10", "12", "14", "16"];
 let hueArray = [
 	"000",
