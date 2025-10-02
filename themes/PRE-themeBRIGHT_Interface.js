@@ -14,6 +14,7 @@ let placeholder = "#9d9d9dff";
 let sliderNormal = "#00000011";
 let hover = "#00000022";
 let click = "#00000055";
+let buttonColour="#396fc8";//oklch(0.55 0.15 260)
 
 let addLight = "#40cc6d";//oklch(0.75 0.18 150)
 let addLightTRANSPARENT = "#40cc6d44";
@@ -32,28 +33,26 @@ let gitSubmodule = "#495da7";//oklch(0.5 0.12 270)
 let SourceControlGraphRef = "#888";
 let SourceControlGraphRemote = "#444";
 
-let errorLight = "#df7e7f"; //oklch(0.7 0.12 20)
-let errorDark = "#d64651";//oklch(0.6 0.18 20)
-let warningLight = "#ce9042";//oklch(0.7 0.12 70)
-let warningDark = "#b76c00";//oklch(0.6 0.18 70)
-let infoLight = "#69a1e8";//oklch(0.7 0.12 255)
-let infoDark = "#207fe8";//oklch(0.6 0.18 255)
-let hintLight = "#6cb26f";//oklch(0.7 0.12 145)
-let hintDark = "#189a30";//oklch(0.6 0.18 145)
+let errorLight = "#eb7289"; //oklch(0.7 0.15 10)
+let errorDark = "#cc4f6a";//oklch(0.6 0.16 10)
+let warningLight = "#e18528";//oklch(0.7 0.15 60)
+let warningDark = "#c26300";//oklch(0.6 0.16 60)
+let infoLight = "#59a0f9";//oklch(0.7 0.15 255)
+let infoDark = "#3280dd";//oklch(0.6 0.16 255)
+let hintLight = "#5bb661";//oklch(0.7 0.15 145)
+let hintDark = "#31983d";//oklch(0.6 0.16 145)
 
 let selectActive = "#5285ff";//oklch(0.65 0.20 265)
 let selectActiveTRANSPARENT1 = "#5285ffbb";
 let selectActiveTRANSPARENT2 = "#5285ff77";
 let selectActiveTRANSPARENT3 = "#5285ff22";
-let selectInactiveTRANSPARENT1 = "#b6becbbb";//oklch(0.80 0.02 265)
+let selectInactive = "#b6becb";//oklch(0.80 0.02 265)
+let selectInactiveTRANSPARENT1 = "#b6becbbb";
 let selectInactiveTRANSPARENT2 = "#b6becb77";
 
 let findMatchAllTRANSPARENT1 = "#9076f377";//oklch(0.65 0.18 290)
 let findMatchAllTRANSPARENT2 = "#9076f322";
 
-
-let foldArea = "#00a0cc2f";
-let foldHint = "#00a0cc";
 let wordHighlightWriteTRANSPARENT1 = "#839d00bb";//oklch(0.65 0.18 120)
 let wordHighlightWriteTRANSPARENT2 = "#839d0011";
 let wordHighlightReadTRANSPARENT1 = "#00a1c9bb";//oklch(0.65 0.18 220)
@@ -67,6 +66,9 @@ let editorRulerLine = "#00000011";
 let IndentGuide = "#00000022";
 let IndentGuideActive = "#00000033";
 let UnusedCodeOpacity = "#00000088";
+
+let foldArea = "#00a0cc2f";
+let foldHint = "#00a0cc";
 
 let linkEdit = "#33ffff5f";
 let statusBarDebuggingBackground = "#ceb32c";
@@ -143,7 +145,7 @@ let jsonObject = {
 		//Button control
 		//A set of colors for button widgets such as Open Folder button in the Explorer of a new window.
 
-		["button.background"]: DFLT,
+		["button.background"]: buttonColour,
 		["button.foreground"]: DFLT,
 		["button.border"]: DFLT,
 		["button.separator"]: DFLT,
@@ -151,7 +153,7 @@ let jsonObject = {
 		["button.secondaryForeground"]: DFLT,
 		["button.secondaryBackground"]: DFLT,
 		["button.secondaryHoverBackground"]: DFLT,
-		["checkbox.background"]: DFLT,
+		["checkbox.background"]: grey.G95,
 		["checkbox.foreground"]: DFLT,
 		["checkbox.border"]: DFLT,
 		["checkbox.selectBackground"]: DFLT,
@@ -167,7 +169,7 @@ let jsonObject = {
 		//Dropdown control
 		//A set of colors for all Dropdown widgets such as in the Integrated Terminal or the Output panel. Note that the Dropdown control is not used on macOS currently.
 
-		["dropdown.background"]: DFLT,
+		["dropdown.background"]: grey.G95,
 		["dropdown.listBackground"]: DFLT,
 		["dropdown.border"]: DFLT,
 		["dropdown.foreground"]: DFLT,
@@ -175,7 +177,7 @@ let jsonObject = {
 		//Input control
 		//Colors for input controls such as in the Search view or the Find/Replace dialog.
 
-		["input.background"]: grey.G90,
+		["input.background"]: grey.G95,
 		["input.border"]: DFLT,
 		["input.foreground"]: DFLT,
 		["input.placeholderForeground"]: placeholder,
@@ -767,8 +769,8 @@ let jsonObject = {
 		//Panel colors
 		//Panels are shown below the editor area and contain views like Output and Integrated Terminal.
 
-		["panel.background"]: grey.G80,
-		["panel.border"]: DFLT,
+		["panel.background"]: grey.G85,
+		["panel.border"]: grey.G75,
 		["panel.dropBorder"]: drop,
 		["panelTitle.activeBorder"]: selectActive,
 		["panelTitle.activeForeground"]: grey.G15,
@@ -797,19 +799,19 @@ let jsonObject = {
 		["statusBar.debuggingBackground"]: statusBarDebuggingBackground,
 		["statusBar.debuggingForeground"]: grey.G90,
 		["statusBar.debuggingBorder"]: DFLT,
-		["statusBar.noFolderBackground"]: grey.G90,
+		["statusBar.noFolderBackground"]: grey.G85,
 		["statusBar.noFolderForeground"]: grey.G35,
 		["statusBar.noFolderBorder"]: grey.G75,
 		["statusBar.focusBorder"]: selectActive,
 		["statusBarItem.activeBackground"]: click,
 		["statusBarItem.hoverForeground"]: DFLT,
 		["statusBarItem.hoverBackground"]: hover,
-		["statusBarItem.prominentForeground"]: warningLight,
+		["statusBarItem.prominentForeground"]: warningDark,
 		["statusBarItem.prominentBackground"]: grey.G75,
-		["statusBarItem.prominentHoverForeground"]: warningLight,
+		["statusBarItem.prominentHoverForeground"]: warningDark,
 		["statusBarItem.prominentHoverBackground"]: hover,
 		["statusBarItem.remoteBackground"]: grey.G75,
-		["statusBarItem.remoteForeground"]: DFLT,
+		["statusBarItem.remoteForeground"]: grey.G20,
 		["statusBarItem.remoteHoverBackground"]: hover,
 		["statusBarItem.remoteHoverForeground"]: DFLT,
 		["statusBarItem.errorBackground"]: errorLight,
@@ -1089,18 +1091,18 @@ let jsonObject = {
 
 		["settings.headerForeground"]: DFLT,
 		["settings.modifiedItemIndicator"]: modifyLight,
-		["settings.dropdownBackground"]: grey.G80,
+		["settings.dropdownBackground"]: DFLT,
 		["settings.dropdownForeground"]: DFLT,
 		["settings.dropdownBorder"]: DFLT,
 		["settings.dropdownListBorder"]: DFLT,
-		["settings.checkboxBackground"]: grey.G80,
+		["settings.checkboxBackground"]: DFLT,
 		["settings.checkboxForeground"]: DFLT,
 		["settings.checkboxBorder"]: DFLT,
 		["settings.rowHoverBackground"]: hover,
-		["settings.textInputBackground"]: grey.G80,
+		["settings.textInputBackground"]: grey.G95,
 		["settings.textInputForeground"]: DFLT,
 		["settings.textInputBorder"]: DFLT,
-		["settings.numberInputBackground"]: grey.G80,
+		["settings.numberInputBackground"]: grey.G95,
 		["settings.numberInputForeground"]: DFLT,
 		["settings.numberInputBorder"]: DFLT,
 		["settings.focusedRowBackground"]: DFLT,
