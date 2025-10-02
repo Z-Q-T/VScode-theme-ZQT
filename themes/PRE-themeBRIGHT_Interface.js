@@ -3,41 +3,51 @@ let TRANSPARENT = "#00000000";
 let DEBUG_RED = "#ff0000";
 let DEBUG_GREEN = "#00ff00";
 let DEBUG_PINK = "#ff00ff";
+let DEBUG_BLUE = "#00ffff";
 let BLACK = "#000";
 let WHITE = "#FFF";
 
 import grey from "./palette-greyscales.js";
 import colour from "./palette-coloursBRIGHT.js";
 
-let mainBackground1 = grey.G94;
-let mainBackground2 = grey.G92;
-let mainBackground3 = grey.G90;
-let mainBackground4 = grey.G88;
-let mainBackground5 = grey.G86;
-let mainBackground6 = grey.G84;
-let mainBackground7 = grey.G82;
-let mainBackground8 = grey.G80;
-
-let mainForeground1 = grey.G20;
-let mainForeground2 = grey.G18;
-let mainForeground3 = grey.G16;
-let mainForeground4 = grey.G14;
-let mainForeground5 = grey.G12;
+let mainBackground0=grey.G98;
+let mainBackground1=grey.G96;
+let mainBackground2 = grey.G94;
+let mainBackground3 = grey.G92;
+let mainBackground4 = grey.G90;
+let mainBackground5 = grey.G88;
+let mainBackground6 = grey.G86;
+let mainBackground7 = grey.G84;
+let mainBackground8 = grey.G82;
+let mainBackground9 = grey.G80;
+let secondaryForeground1 = grey.G76;
+let secondaryForeground2 = grey.G72;
+let secondaryForeground3 = grey.G68;
+let secondaryForeground4 = grey.G64;
+let secondaryForeground5 = grey.G60;
+let secondaryForeground6 = grey.G56;
+let secondaryForeground7 = grey.G52;
+let secondaryForeground8 = grey.G48;
+let secondaryForeground9 = grey.G44;
+let mainForeground1 = grey.G40;
+let mainForeground2 = grey.G34;
+let mainForeground3 = grey.G28;
+let mainForeground4 = grey.G22;
+let mainForeground5 = grey.G16;
 let mainForeground6 = grey.G10;
-let mainForeground7 = grey.G08;
-let mainForeground8 = grey.G06;
 
 let shadow = "#44444466";
 let drop = "#66666644";
 let placeholder = "#999999cc";
 let sliderNormal = "#00000011";
-let hover = "#00000022";
+let hover = "#00000011";
 let click = "#00000055";
-let buttonColour = "#396fc8"; //oklch(0.55 0.15 260)
-let buttonhoverColour = "#2a5fb7"; //oklch(0.50 0.15 260)
-let checkboxDropdownInputBackground = grey.G96;
-let checkboxDropdownInputForeground = grey.G20;
-let checkboxDropdownInputBorder = grey.G80;
+let buttonHyperlink = "#396fc8"; //oklch(0.55 0.15 260)
+let buttonHover = "#2a5fb7"; //oklch(0.50 0.15 260)
+let hyperlinkHover = "#568de9"; //oklch(0.65 0.15 260)
+let buttonSecondary = "#6b90cc";//oklch(0.65 0.10 260)
+let buttonSecondaryHover = "#5c80bc";//oklch(0.60 0.10 260)
+let buttonForeground = grey.G96;
 
 let addLight = "#40cc6d"; //oklch(0.75 0.18 150)
 let addLightTRANSPARENT = "#40cc6d44";
@@ -90,25 +100,14 @@ let IndentGuide = "#00000022";
 let IndentGuideActive = "#00000033";
 let UnusedCodeOpacity = "#00000088";
 
+//TODO下面的颜色还没调过
 let foldArea = "#00a0cc2f";
 let foldHint = "#00a0cc";
 
 let linkEdit = "#33ffff5f";
 let statusBarDebuggingBackground = "#ceb32c";
 let commentRangeForeground = "#686868";
-// let sliderActive = "#ffffff45";
-// let hoverHighlightBackground = "#b4b4b436";
-// let editorLinkActiveForeground = "#73ff009f";
-let editorWhitespaceForeground = "#4692c55e";
-// let statusBarForeground = "#dddddd";
-// let statusBarBackground = "#2d3b53";
-// let statusBarDebuggingForeground = "#0f0f0f";
-// let statusBarNoFolderBackground = "#444";
-// let statusBarItemRemoteBackground = "#1284ff99";
-// let statusBarItemRemoteForeground = "#FFF";
-let statusBarItemProminentForeground = "#eebbaa";
-let statusBarItemProminentBackground = "#eebbaa";
-// let statusBarItemProminentHoverBackground = "#003847";
+
 
 let jsonObject = {
 	//Contrast colors
@@ -119,25 +118,27 @@ let jsonObject = {
 	["//description"]: "编辑器的界面外观",
 	["include"]: "theme-ZQT-BRIGHT_codeSpecific.json",
 	["colors"]: {
+		//Contrast colors
+		//这个不需要
 		["contrastActiveBorder"]: DFLT,
 		["contrastBorder"]: DFLT,
 
 		//Base colors
 
 		["focusBorder"]: selectActive,
-		["foreground"]: grey.G20,
-		["disabledForeground"]: grey.G30,
+		["foreground"]: mainForeground5,
+		["disabledForeground"]: secondaryForeground6,
 		["widget.border"]: DFLT,
 		["widget.shadow"]: shadow,
-		["selection.background"]: selectActiveTRANSPARENT1,
-		["descriptionForeground"]: grey.G20,
-		["errorForeground"]: errorLight,
-		["icon.foreground"]: DFLT,
-		["sash.hoverBorder"]: DFLT,
+		["selection.background"]: selectActiveTRANSPARENT1,//这个对编辑器和终端里的选择无效
+		["descriptionForeground"]: mainForeground1,
+		["errorForeground"]: errorDark,
+		["icon.foreground"]: mainForeground5,
+		["sash.hoverBorder"]: selectActiveTRANSPARENT2,
 
 		//Window border
 		//The theme colors for VS Code window border.
-
+		//这个不需要
 		["window.activeBorder"]: DFLT,
 		["window.inactiveBorder"]: DFLT,
 		//The window border colors are only supported on macOS and Linux (not Windows) and only when the custom title bar is enabled (["window.titleBarStyle"]: "custom").
@@ -145,40 +146,41 @@ let jsonObject = {
 		//Text colors
 		//Colors inside a text document, such as the welcome page.
 
-		["textBlockQuote.background"]: DFLT,
+		["textBlockQuote.background"]: DEBUG_RED,
 		["textBlockQuote.border"]: DFLT,
-		["textCodeBlock.background"]: DFLT,
-		["textLink.activeForeground"]: DFLT,
-		["textLink.foreground"]: DFLT,
-		["textPreformat.foreground"]: DFLT,
-		["textPreformat.background"]: DFLT,
-		["textSeparator.foreground"]: DFLT,
+		["textCodeBlock.background"]: mainBackground2,
+		["textLink.activeForeground"]: hyperlinkHover,
+		["textLink.foreground"]: buttonHyperlink,
+		["textPreformat.foreground"]: mainForeground3,
+		["textPreformat.background"]: mainBackground6,
+		["textSeparator.foreground"]: DEBUG_BLUE,
 
 		//Action colors
 		//A set of colors to control the interactions with actions across the workbench.
-
+		//copilot界面最下面的几个按钮属于这几个
 		["toolbar.hoverBackground"]: hover,
 		["toolbar.hoverOutline"]: DFLT,
-		["toolbar.activeBackground"]: DFLT,
-		["editorActionList.background"]: DFLT,
+		["toolbar.activeBackground"]: mainBackground9,
+		["editorActionList.background"]: mainBackground3,
 		["editorActionList.foreground"]: DFLT,
 		["editorActionList.focusForeground"]: DFLT,
-		["editorActionList.focusBackground"]: DFLT,
-
+		["editorActionList.focusBackground"]: hover,
+		
 		//Button control
 		//A set of colors for button widgets such as Open Folder button in the Explorer of a new window.
-
-		["button.background"]: buttonColour,
-		["button.foreground"]: grey.G96,
+		
+		//TODO下面的属性还没调过
+		["button.background"]: buttonHyperlink,
+		["button.foreground"]: buttonForeground,
+		["button.hoverBackground"]: buttonHover,
 		["button.border"]: DFLT,
-		["button.separator"]: grey.G96,
-		["button.hoverBackground"]: buttonhoverColour,
-		["button.secondaryForeground"]: DFLT,
-		["button.secondaryBackground"]: DFLT,
-		["button.secondaryHoverBackground"]: DFLT,
-		["checkbox.background"]: checkboxDropdownInputBackground,
-		["checkbox.foreground"]: checkboxDropdownInputForeground,
-		["checkbox.border"]: checkboxDropdownInputBorder,
+		["button.separator"]: buttonForeground,
+		["button.secondaryForeground"]: buttonForeground,
+		["button.secondaryBackground"]: buttonSecondary,
+		["button.secondaryHoverBackground"]: buttonSecondaryHover,
+		["checkbox.background"]: mainBackground1,
+		["checkbox.foreground"]: mainForeground4,
+		["checkbox.border"]: mainBackground9,
 		["checkbox.selectBackground"]: DFLT,
 		["checkbox.selectBorder"]: DFLT,
 		["radio.activeForeground"]: DFLT,
@@ -188,28 +190,28 @@ let jsonObject = {
 		["radio.inactiveBackground"]: DFLT,
 		["radio.inactiveBorder"]: DFLT,
 		["radio.inactiveHoverBackground"]: DFLT,
-
+		
 		//Dropdown control
 		//A set of colors for all Dropdown widgets such as in the Integrated Terminal or the Output panel. Note that the Dropdown control is not used on macOS currently.
 
-		["dropdown.background"]: checkboxDropdownInputBackground,
+		["dropdown.background"]: mainBackground1,
 		["dropdown.listBackground"]: DFLT,
-		["dropdown.border"]: checkboxDropdownInputBorder,
-		["dropdown.foreground"]: checkboxDropdownInputForeground,
+		["dropdown.border"]: mainBackground9,
+		["dropdown.foreground"]: mainForeground4,
 
 		//Input control
 		//Colors for input controls such as in the Search view or the Find/Replace dialog.
 
 		["input.placeholderForeground"]: placeholder,
-		["input.background"]: checkboxDropdownInputBackground,
-		["input.foreground"]: checkboxDropdownInputForeground,
-		["input.border"]: checkboxDropdownInputBorder,
+		["input.background"]: mainBackground1,
+		["input.foreground"]: mainForeground4,
+		["input.border"]: mainBackground9,
 		["inputOption.activeBackground"]: DFLT,
 		["inputOption.activeBorder"]: selectActive,
 		["inputOption.activeForeground"]: DFLT,
 		["inputOption.hoverBackground"]: DFLT,
 		["inputValidation.errorBackground"]: errorLight,
-		["inputValidation.errorForeground"]: mainForeground8,
+		["inputValidation.errorForeground"]: mainForeground6,
 		["inputValidation.errorBorder"]: errorDark,
 		["inputValidation.infoBackground"]: infoLight,
 		["inputValidation.infoForeground"]: mainForeground5,
@@ -228,7 +230,7 @@ let jsonObject = {
 		//Badge
 		//Badges are small information labels, for example, search results count.
 
-		["badge.foreground"]: mainForeground4,
+		["badge.foreground"]: mainForeground6,
 		["badge.background"]: infoLight,
 
 		//Progress bar
@@ -274,7 +276,7 @@ let jsonObject = {
 		//Activity Bar
 		//The Activity Bar is usually displayed either on the far left or right of the workbench and allows fast switching between views of the Side Bar.
 
-		["activityBar.background"]: mainBackground5,
+		["activityBar.background"]: mainBackground6,
 		["activityBar.dropBorder"]: DFLT,
 		["activityBar.foreground"]: grey.G20,
 		["activityBar.inactiveForeground"]: grey.G40,
@@ -282,7 +284,7 @@ let jsonObject = {
 		["activityBarBadge.background"]: infoDark,
 		["activityBarBadge.foreground"]: DFLT,
 		["activityBar.activeBorder"]: selectActive,
-		["activityBar.activeBackground"]: mainBackground3,
+		["activityBar.activeBackground"]: mainBackground4,
 		["activityBar.activeFocusBorder"]: DFLT,
 		["activityBarTop.foreground"]: DFLT,
 		["activityBarTop.activeBorder"]: DFLT,
@@ -304,16 +306,16 @@ let jsonObject = {
 		//Side Bar
 		//The Side Bar contains views like the Explorer and Search.
 
-		["sideBar.background"]: mainBackground3,
-		["sideBar.foreground"]: grey.G20,
+		["sideBar.background"]: mainBackground4,
+		["sideBar.foreground"]: DFLT,
 		["sideBar.border"]: DFLT,
-		["sideBarSectionHeader.background"]: grey.G80,
-		["sideBarSectionHeader.foreground"]: grey.G16,
+		["sideBarSectionHeader.background"]: mainBackground8,
+		["sideBarSectionHeader.foreground"]: DFLT,
 		["sideBarSectionHeader.border"]: DFLT,
 		["sideBar.dropBackground"]: drop,
 		["sideBarActivityBarTop.border"]: DFLT,
-		["sideBarTitle.foreground"]: grey.G16,
-		["sideBarTitle.background"]: DFLT,
+		["sideBarTitle.foreground"]: DFLT,
+		["sideBarTitle.background"]: mainBackground4,
 		["sideBarTitle.border"]: DFLT,
 		["sideBarStickyScroll.background"]: DFLT,
 		["sideBarStickyScroll.border"]: DFLT,
@@ -345,7 +347,7 @@ let jsonObject = {
 		["editorGroup.border"]: grey.G76,
 		["editorGroup.dropBackground"]: drop,
 		["editorGroupHeader.noTabsBackground"]: DEBUG_RED,
-		["editorGroupHeader.tabsBackground"]: mainBackground5,
+		["editorGroupHeader.tabsBackground"]: mainBackground6,
 		["editorGroupHeader.tabsBorder"]: TRANSPARENT,
 		["editorGroupHeader.border"]: TRANSPARENT,
 		["editorGroup.emptyBackground"]: grey.G94,
@@ -353,14 +355,14 @@ let jsonObject = {
 		["editorGroup.dropIntoPromptForeground"]: DFLT,
 		["editorGroup.dropIntoPromptBackground"]: DFLT,
 		["editorGroup.dropIntoPromptBorder"]: DFLT,
-		["tab.border"]: mainBackground8,
-		["tab.activeBackground"]: mainBackground2,
+		["tab.border"]: mainBackground9,
+		["tab.activeBackground"]: mainBackground3,
 		["tab.activeForeground"]: mainForeground5,
-		["tab.inactiveBackground"]: mainBackground5,
+		["tab.inactiveBackground"]: mainBackground6,
 		["tab.inactiveForeground"]: mainForeground5,
-		["tab.unfocusedActiveBackground"]: mainBackground4,
+		["tab.unfocusedActiveBackground"]: mainBackground5,
 		["tab.unfocusedActiveForeground"]: mainForeground2,
-		["tab.unfocusedInactiveBackground"]: mainBackground5,
+		["tab.unfocusedInactiveBackground"]: mainBackground6,
 		["tab.unfocusedInactiveForeground"]: mainForeground2,
 		["tab.activeBorderTop"]: selectActive,
 		["tab.activeBorder"]: DFLT,
@@ -390,11 +392,11 @@ let jsonObject = {
 
 		//All other editor colors are listed here:
 
-		["editor.background"]: mainBackground1,
+		["editor.background"]: mainBackground2,
 		["editor.foreground"]: grey.G20,
-		["editorLineNumber.foreground"]: grey.G60,
-		["editorLineNumber.activeForeground"]: grey.G40,
-		["editorLineNumber.dimmedForeground"]: DFLT,
+		["editorLineNumber.foreground"]: secondaryForeground1,
+		["editorLineNumber.activeForeground"]: secondaryForeground5,
+		["editorLineNumber.dimmedForeground"]: hintLight,
 		["editorCursor.background"]: DFLT,
 		["editorCursor.foreground"]: DFLT,
 		["editorMultiCursor.primary.foreground"]: DFLT,
@@ -474,7 +476,7 @@ let jsonObject = {
 
 		//The symbol highlight is visible when navigating to a symbol via a command such as Go to Definition.
 
-		["editor.symbolHighlightBackground"]: DFLT,
+		["editor.symbolHighlightBackground"]: findMatchAllTRANSPARENT1,
 		["editor.symbolHighlightBorder"]: DFLT,
 
 		//To see the editor white spaces, enable Toggle Render Whitespace.
@@ -792,7 +794,7 @@ let jsonObject = {
 		//Panel colors
 		//Panels are shown below the editor area and contain views like Output and Integrated Terminal.
 
-		["panel.background"]: mainBackground4,
+		["panel.background"]: mainBackground5,
 		["panel.border"]: TRANSPARENT,
 		["panel.dropBorder"]: drop,
 		["panelTitle.activeBorder"]: selectActive,
@@ -810,39 +812,39 @@ let jsonObject = {
 		["panelStickyScroll.border"]: DFLT,
 		["panelStickyScroll.shadow"]: shadow,
 		["panelSectionHeader.border"]: DFLT,
-		["outputView.background"]: mainBackground3,
+		["outputView.background"]: mainBackground4,
 		["outputViewStickyScroll.background"]: DFLT,
 
 		//Status Bar colors
 		//The Status Bar is shown in the bottom of the workbench.
 
-		["statusBar.background"]: mainBackground6,
-		["statusBar.foreground"]: grey.G20,
-		["statusBar.border"]: DFLT,
+		["statusBar.background"]: mainBackground7,
+		["statusBar.foreground"]: mainForeground6,
+		["statusBar.border"]: TRANSPARENT,
 		["statusBar.debuggingBackground"]: statusBarDebuggingBackground,
-		["statusBar.debuggingForeground"]: grey.G90,
-		["statusBar.debuggingBorder"]: DFLT,
-		["statusBar.noFolderBackground"]: grey.G86,
-		["statusBar.noFolderForeground"]: grey.G36,
-		["statusBar.noFolderBorder"]: grey.G76,
+		["statusBar.debuggingForeground"]: mainForeground4,
+		["statusBar.debuggingBorder"]: TRANSPARENT,
+		["statusBar.noFolderBackground"]: mainBackground4,
+		["statusBar.noFolderForeground"]: mainForeground3,
+		["statusBar.noFolderBorder"]: TRANSPARENT,
 		["statusBar.focusBorder"]: selectActive,
 		["statusBarItem.activeBackground"]: click,
 		["statusBarItem.hoverForeground"]: DFLT,
 		["statusBarItem.hoverBackground"]: hover,
 		["statusBarItem.prominentForeground"]: warningDark,
-		["statusBarItem.prominentBackground"]: grey.G76,
+		["statusBarItem.prominentBackground"]: mainBackground9,
 		["statusBarItem.prominentHoverForeground"]: warningDark,
 		["statusBarItem.prominentHoverBackground"]: hover,
-		["statusBarItem.remoteBackground"]: grey.G76,
-		["statusBarItem.remoteForeground"]: grey.G20,
+		["statusBarItem.remoteBackground"]: mainBackground9,
+		["statusBarItem.remoteForeground"]: mainForeground6,
 		["statusBarItem.remoteHoverBackground"]: hover,
 		["statusBarItem.remoteHoverForeground"]: DFLT,
 		["statusBarItem.errorBackground"]: errorLight,
-		["statusBarItem.errorForeground"]: grey.G90,
+		["statusBarItem.errorForeground"]: mainForeground6,
 		["statusBarItem.errorHoverBackground"]: DFLT,
 		["statusBarItem.errorHoverForeground"]: DFLT,
 		["statusBarItem.warningBackground"]: warningLight,
-		["statusBarItem.warningForeground"]: grey.G80,
+		["statusBarItem.warningForeground"]: mainForeground6,
 		["statusBarItem.warningHoverBackground"]: DFLT,
 		["statusBarItem.warningHoverForeground"]: DFLT,
 		["statusBarItem.compactHoverBackground"]: DFLT,
@@ -855,7 +857,7 @@ let jsonObject = {
 		//Prominent items stand out from other Status Bar entries to indicate importance. One example is the Toggle Tab Key Moves Focus command change mode indicator.
 		//Title Bar colors
 
-		["titleBar.activeBackground"]: mainBackground6,
+		["titleBar.activeBackground"]: mainBackground7,
 		["titleBar.activeForeground"]: grey.G20,
 		["titleBar.inactiveBackground"]: grey.G76,
 		["titleBar.inactiveForeground"]: grey.G36,
@@ -867,7 +869,7 @@ let jsonObject = {
 		["menubar.selectionBackground"]: hover,
 		["menubar.selectionBorder"]: DFLT,
 		["menu.foreground"]: grey.G20,
-		["menu.background"]: mainBackground5,
+		["menu.background"]: mainBackground6,
 		["menu.selectionForeground"]: DFLT,
 		["menu.selectionBackground"]: hover,
 		["menu.selectionBorder"]: DFLT,
@@ -894,10 +896,10 @@ let jsonObject = {
 
 		["notificationCenter.border"]: DFLT,
 		["notificationCenterHeader.foreground"]: DFLT,
-		["notificationCenterHeader.background"]: mainBackground6,
+		["notificationCenterHeader.background"]: mainBackground7,
 		["notificationToast.border"]: DFLT,
 		["notifications.foreground"]: DFLT,
-		["notifications.background"]: mainBackground4,
+		["notifications.background"]: mainBackground5,
 		["notifications.border"]: DFLT,
 		["notificationLink.foreground"]: DFLT,
 		["notificationsErrorIcon.foreground"]: errorLight,
@@ -907,8 +909,8 @@ let jsonObject = {
 		//Banner colors
 		//The banner appears below the title bar and spans the entire width of the workbench when visible.
 
-		["banner.background"]: DFLT,
-		["banner.foreground"]: DFLT,
+		["banner.background"]: infoDark,
+		["banner.foreground"]: mainBackground2,
 		["banner.iconForeground"]: DFLT,
 
 		//Extensions colors
@@ -930,14 +932,14 @@ let jsonObject = {
 
 		//Quick picker colors
 
-		["pickerGroup.border"]: DFLT,
-		["pickerGroup.foreground"]: DFLT,
-		["quickInput.background"]: grey.G84,
-		["quickInput.foreground"]: DFLT,
-		["quickInputList.focusBackground"]: DFLT,
-		["quickInputList.focusForeground"]: DFLT,
-		["quickInputList.focusIconForeground"]: DFLT,
-		["quickInputTitle.background"]: DFLT,
+		["pickerGroup.border"]: secondaryForeground2,
+		["pickerGroup.foreground"]: infoDark,
+		["quickInput.background"]: mainBackground6,
+		["quickInput.foreground"]: mainForeground5,
+		["quickInputList.focusBackground"]: mainBackground8,
+		["quickInputList.focusForeground"]: mainForeground6,
+		["quickInputList.focusIconForeground"]: mainBackground8,
+		["quickInputTitle.background"]: DEBUG_PINK,
 
 		//Keybinding label colors
 		//Keybinding labels are shown when there is a keybinding associated with a command. An example of the keybinding label can be seen in the Command Palette:
@@ -948,10 +950,10 @@ let jsonObject = {
 		//	The "feature contribution" section of an extension's marketplace page
 		//The following customizations are available:
 
-		["keybindingLabel.background"]: grey.G70,
-		["keybindingLabel.foreground"]: grey.G20,
-		["keybindingLabel.border"]: DFLT,
-		["keybindingLabel.bottomBorder"]: TRANSPARENT,
+		["keybindingLabel.background"]: mainBackground8,
+		["keybindingLabel.foreground"]: mainForeground6,
+		["keybindingLabel.border"]: grey.G50,
+		["keybindingLabel.bottomBorder"]: grey.G50,
 
 		//Keyboard shortcut table colors
 
@@ -960,7 +962,7 @@ let jsonObject = {
 
 		//Integrated Terminal colors
 
-		["terminal.background"]: mainBackground2,
+		["terminal.background"]: mainBackground3,
 		["terminal.border"]: DFLT,
 		["terminal.foreground"]: DFLT,
 		["terminal.ansiBlack"]: DFLT,
@@ -1112,7 +1114,7 @@ let jsonObject = {
 		//Settings Editor colors
 		//Note:
 
-		["settings.headerForeground"]: DFLT,
+		["settings.headerForeground"]: mainForeground5,
 		["settings.modifiedItemIndicator"]: modifyLight,
 		["settings.dropdownBackground"]: DFLT,
 		["settings.dropdownForeground"]: DFLT,
@@ -1138,7 +1140,7 @@ let jsonObject = {
 		//The theme colors for breadcrumbs navigation:
 
 		["breadcrumb.foreground"]: grey.G36,
-		["breadcrumb.background"]: mainBackground2,
+		["breadcrumb.background"]: mainBackground3,
 		["breadcrumb.focusForeground"]: grey.G26,
 		["breadcrumb.activeSelectionForeground"]: grey.G20,
 		["breadcrumbPicker.background"]: DFLT,
