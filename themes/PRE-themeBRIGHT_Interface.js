@@ -10,41 +10,41 @@ let WHITE = "#FFF";
 import grey from "./palette-greyscales.js";
 import colour from "./palette-coloursBRIGHT.js";
 
-let inputBack=grey.G98;
-let editorBack=grey.G96;
-let panelsBack1=grey.G94;
-let panelsBack2=grey.G92;
-let panelsBack3=grey.G90;
-let panelsBack4=grey.G88;
-let panelsBack5=grey.G86;
-let panelsBack6=grey.G84;
-let panelsBack7=grey.G82;
-let panelsBack8=grey.G80;
+let inputBack = grey.G98;
+let editorBack = grey.G96;
+let panelsBack1 = grey.G94;
+let panelsBack2 = grey.G92;
+let panelsBack3 = grey.G90;
+let panelsBack4 = grey.G88;
+let panelsBack5 = grey.G86;
+let panelsBack6 = grey.G84;
+let panelsBack7 = grey.G82;
+let panelsBack8 = grey.G80;
 
-let crucialFore=grey.G08;
-let mainFore=grey.G16;
-let secondaryFore=grey.G40;
-let dimFore=grey.G58
-let unimportantFore=grey.G78;
-let whiteFore=grey.G98;
+let crucialFore = grey.G08;
+let mainFore = grey.G16;
+let secondaryFore = grey.G40;
+let dimFore = grey.G58;
+let unimportantFore = grey.G78;
+let whiteFore = grey.G98;
 
 let shadow = "#44444466";
 let placeholder = "#999999cc";
 let sliderNormal = "#00000011";
 let hover = "#00000022";
 let click = "#00000055";
-let buttonBack = grey.G36
+let buttonBack = grey.G36;
 let buttonHover = grey.G44;
 let buttonForeground = grey.G98;
 let buttonBorder = grey.G54;
 let buttonSecondary = grey.G46;
 let buttonSecondaryHover = grey.G54;
-let inputBorder=grey.G76;
+let inputBorder = grey.G76;
 let dropInto = "#99999944";
 let dropBetween = "#444444bb";
 
-let keyboardLabel=grey.G94;
-let preformatText=grey.G84;
+let keyboardLabel = grey.G94;
+let preformatText = grey.G84;
 
 let hyperlinkFore = "#2266a4"; //oklch(0.50 0.12 250)
 let hyperlinkHover = "#3275b4"; //oklch(0.55 0.12 250)
@@ -84,18 +84,18 @@ let selectInactiveTRANSPARENT1 = "#b1bed8bb";
 let selectInactiveTRANSPARENT2 = "#b1bed866";
 
 let findMatchAllSolid = "#9076f3"; //oklch(0.65 0.18 290)
-let findMatchAllTRANSPARENT1 = "#9076f377"; 
+let findMatchAllTRANSPARENT1 = "#9076f377";
 let findMatchAllTRANSPARENT2 = "#9076f322";
 
-let wordHighlightWriteTRANSPARENT1 = "#839d00bb"; //oklch(0.65 0.18 120)
-let wordHighlightWriteTRANSPARENT2 = "#839d0011";
-let wordHighlightReadTRANSPARENT1 = "#00a1c9bb"; //oklch(0.65 0.18 220)
-let wordHighlightReadTRANSPARENT2 = "#00a1c911";
-let wordHighlightTextTRANSPARENT1 = "#00ac4ebb"; //oklch(0.65 0.18 150)
-let wordHighlightTextTRANSPARENT2 = "#00ac4e11";
+let wordHighlightWriteSOLID = "#839d00"; //oklch(0.65 0.18 120)
+let wordHighlightWriteTRANSPARENT = "#839d0077";
+let wordHighlightReadSOLID = "#00a1c9"; //oklch(0.65 0.18 220)
+let wordHighlightReadTRANSPARENT = "#00a1c977";
+let wordHighlightTextSOLID = "#00ac4e"; //oklch(0.65 0.18 150)
+let wordHighlightTextTRANSPARENT = "#00ac4e77"; //oklch(0.65 0.18 150)
 let unicodeHighlight = "#e26500"; //oklch(0.65 0.18 50)
 let BracketMatchStrong = "#fb2af4bb"; //oklch(0.7 0.3 330)
-let whitespaceCharacter = "#9bce9077";//=hintLight
+let whitespaceCharacter = "#9bce9077"; //=hintLight
 
 let lineHighlightBackground = "#00000011";
 let editorRulerLine = "#00000011";
@@ -110,7 +110,6 @@ let foldHint = "#00a0cc";
 let linkEdit = "#33ffff5f";
 let statusBarDebuggingBackground = "#ceb32c";
 let commentRangeForeground = "#686868";
-
 
 let jsonObject = {
 	//Contrast colors
@@ -133,7 +132,7 @@ let jsonObject = {
 		["disabledForeground"]: dimFore,
 		["widget.border"]: DFLT,
 		["widget.shadow"]: shadow,
-		["selection.background"]: selectActiveTRANSPARENT1,//这个对编辑器和终端里的选择无效
+		["selection.background"]: selectActiveTRANSPARENT1, //这个对编辑器和终端里的选择无效
 		["descriptionForeground"]: secondaryFore,
 		["errorForeground"]: errorDark,
 		["icon.foreground"]: mainFore,
@@ -168,10 +167,10 @@ let jsonObject = {
 		["editorActionList.foreground"]: DFLT,
 		["editorActionList.focusBackground"]: hover,
 		["editorActionList.focusForeground"]: DFLT,
-		
+
 		//Button control
 		//A set of colors for button widgets such as Open Folder button in the Explorer of a new window.
-		
+
 		["button.background"]: buttonBack,
 		["button.foreground"]: buttonForeground,
 		["button.hoverBackground"]: buttonHover,
@@ -192,7 +191,7 @@ let jsonObject = {
 		["radio.inactiveBackground"]: DFLT,
 		["radio.inactiveBorder"]: DFLT,
 		["radio.inactiveHoverBackground"]: DFLT,
-		
+
 		//Dropdown control
 		//A set of colors for all Dropdown widgets such as in the Integrated Terminal or the Output panel. Note that the Dropdown control is not used on macOS currently.
 
@@ -334,14 +333,14 @@ let jsonObject = {
 		["minimap.selectionOccurrenceHighlight"]: DFLT,
 		["minimap.foregroundOpacity"]: DFLT,
 		["minimap.infoHighlight"]: infoLight,
-		["minimap.chatEditHighlight"]: DFLT,//TODO
+		["minimap.chatEditHighlight"]: DFLT, //TODO
 		["minimapSlider.background"]: sliderNormal,
 		["minimapSlider.hoverBackground"]: hover,
 		["minimapSlider.activeBackground"]: click,
 		["minimapGutter.addedBackground"]: addLight,
 		["minimapGutter.modifiedBackground"]: modifyLight,
 		["minimapGutter.deletedBackground"]: deleteLight,
-		["editorMinimap.inlineChatInserted"]: DFLT,//TODO
+		["editorMinimap.inlineChatInserted"]: DFLT, //TODO
 
 		//Editor Groups & Tabs
 		//Editor Groups are the containers of editors. There can be many editor groups. A Tab is the container of an editor. Multiple Tabs can be opened in one editor group.
@@ -374,14 +373,14 @@ let jsonObject = {
 		["tab.selectedBackground"]: selectActiveTRANSPARENT3,
 		["tab.selectedForeground"]: DFLT,
 		["tab.dragAndDropBorder"]: dropBetween,
-		["tab.lastPinnedBorder"]: DFLT,//TODO
+		["tab.lastPinnedBorder"]: DFLT, //TODO
 		["tab.hoverBackground"]: hover,
 		["tab.unfocusedHoverBackground"]: DFLT,
 		["tab.hoverForeground"]: DFLT,
 		["tab.unfocusedHoverForeground"]: DFLT,
 		["tab.hoverBorder"]: DFLT,
 		["tab.unfocusedHoverBorder"]: DFLT,
-		["tab.activeModifiedBorder"]:  DEBUG_GREEN,
+		["tab.activeModifiedBorder"]: DEBUG_GREEN,
 		["tab.inactiveModifiedBorder"]: DFLT,
 		["tab.unfocusedActiveModifiedBorder"]: DFLT,
 		["tab.unfocusedInactiveModifiedBorder"]: DFLT,
@@ -414,12 +413,12 @@ let jsonObject = {
 		["editor.selectionHighlightBackground"]: selectActiveTRANSPARENT3,
 		["editor.selectionHighlightBorder"]: DFLT,
 		//Word highlight colors are visible when the cursor is inside a symbol or a word. Depending on the language support available for the file type, all matching references and declarations are highlighted and read and write accesses get different colors. If document symbol language support is not available, this falls back to word highlighting.
-		["editor.wordHighlightBackground"]: wordHighlightReadTRANSPARENT2,
-		["editor.wordHighlightBorder"]: wordHighlightReadTRANSPARENT1,
-		["editor.wordHighlightStrongBackground"]: wordHighlightWriteTRANSPARENT2,
-		["editor.wordHighlightStrongBorder"]: wordHighlightWriteTRANSPARENT1,
-		["editor.wordHighlightTextBackground"]: wordHighlightTextTRANSPARENT2,
-		["editor.wordHighlightTextBorder"]: wordHighlightTextTRANSPARENT1,
+		["editor.wordHighlightStrongBackground"]: TRANSPARENT,
+		["editor.wordHighlightStrongBorder"]: wordHighlightWriteSOLID,
+		["editor.wordHighlightBackground"]: TRANSPARENT,
+		["editor.wordHighlightBorder"]: wordHighlightReadSOLID,
+		["editor.wordHighlightTextBackground"]: TRANSPARENT,
+		["editor.wordHighlightTextBorder"]: wordHighlightTextSOLID,
 		//Find colors depend on the current find string in the Find/Replace dialog.
 		["editor.findMatchBackground"]: selectActiveTRANSPARENT1,
 		["editor.findMatchForeground"]: DFLT,
@@ -493,10 +492,10 @@ let jsonObject = {
 		["editor.linkedEditingBackground"]: DEBUG_BLUE,
 
 		//CodeLens:
-		["editorCodeLens.foreground"]: DFLT,//TODO
+		["editorCodeLens.foreground"]: DFLT, //TODO
 
 		//Lightbulb:
-		["editorLightBulb.foreground"]: DFLT,//TODO
+		["editorLightBulb.foreground"]: DFLT, //TODO
 		["editorLightBulbAutoFix.foreground"]: DFLT,
 		["editorLightBulbAi.foreground"]: DFLT,
 
@@ -505,7 +504,7 @@ let jsonObject = {
 		["editorBracketMatch.border"]: BracketMatchStrong,
 
 		//Bracket pair colorization:
-		["editorBracketHighlight.foreground1"]: colour.L76_C10_H220,//TODO
+		["editorBracketHighlight.foreground1"]: colour.L76_C10_H220, //TODO
 		["editorBracketHighlight.foreground2"]: colour.L76_C10_H100,
 		["editorBracketHighlight.foreground3"]: colour.L76_C10_H340,
 		["editorBracketHighlight.foreground4"]: colour.L76_C10_H180,
@@ -514,7 +513,7 @@ let jsonObject = {
 		["editorBracketHighlight.unexpectedBracket.foreground"]: errorDark,
 
 		//Bracket pair guides:
-		["editorBracketPairGuide.activeBackground1"]: colour.L70_C08_H220,//TODO
+		["editorBracketPairGuide.activeBackground1"]: colour.L70_C08_H220, //TODO
 		["editorBracketPairGuide.activeBackground2"]: colour.L70_C08_H100,
 		["editorBracketPairGuide.activeBackground3"]: colour.L70_C08_H340,
 		["editorBracketPairGuide.activeBackground4"]: colour.L70_C08_H180,
@@ -538,9 +537,9 @@ let jsonObject = {
 		["editorOverviewRuler.findMatchForeground"]: findMatchAllTRANSPARENT1,
 		["editorOverviewRuler.rangeHighlightForeground"]: findMatchAllTRANSPARENT2,
 		["editorOverviewRuler.selectionHighlightForeground"]: selectActiveTRANSPARENT1,
-		["editorOverviewRuler.wordHighlightForeground"]: wordHighlightReadTRANSPARENT1,
-		["editorOverviewRuler.wordHighlightStrongForeground"]: wordHighlightWriteTRANSPARENT1,
-		["editorOverviewRuler.wordHighlightTextForeground"]: wordHighlightTextTRANSPARENT1,
+		["editorOverviewRuler.wordHighlightStrongForeground"]: wordHighlightWriteTRANSPARENT,
+		["editorOverviewRuler.wordHighlightForeground"]: wordHighlightReadTRANSPARENT,
+		["editorOverviewRuler.wordHighlightTextForeground"]: wordHighlightTextTRANSPARENT,
 		["editorOverviewRuler.modifiedForeground"]: modifyLight,
 		["editorOverviewRuler.addedForeground"]: addLight,
 		["editorOverviewRuler.deletedForeground"]: deleteLight,
@@ -548,7 +547,7 @@ let jsonObject = {
 		["editorOverviewRuler.warningForeground"]: warningLight,
 		["editorOverviewRuler.infoForeground"]: infoLight,
 		["editorOverviewRuler.bracketMatchForeground"]: BracketMatchStrong,
-		["editorOverviewRuler.inlineChatInserted"]: DFLT,//TODO
+		["editorOverviewRuler.inlineChatInserted"]: DFLT, //TODO
 		["editorOverviewRuler.inlineChatRemoved"]: DFLT,
 //TODO做到这里，从下面继续
 		//Errors and warningLights:
@@ -880,7 +879,7 @@ let jsonObject = {
 		//The banner appears below the title bar and spans the entire width of the workbench when visible.
 
 		["banner.background"]: infoDark,
-		["banner.foreground"]: whiteFore ,
+		["banner.foreground"]: whiteFore,
 		["banner.iconForeground"]: DFLT,
 
 		//Extensions colors
