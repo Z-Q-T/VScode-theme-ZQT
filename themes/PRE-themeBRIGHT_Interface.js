@@ -30,9 +30,9 @@ let whiteFore = grey.G98;
 
 let shadow = "#44444466";
 let placeholder = "#999999cc";
-let sliderNormal = "#00000011";
-let hover = "#00000022";
-let hoverDarker = "#00000044";
+let sliderNormal = "#00000022";
+let hover = "#00000011";
+let hoverDarker = "#00000033";
 let click = "#00000055";
 let buttonBack = grey.G36;
 let buttonHover = grey.G44;
@@ -87,6 +87,7 @@ let selectInactiveTRANSPARENT2 = "#b1bed866";
 let findMatchAllSolid = "#9076f3"; //oklch(0.65 0.18 290)
 let findMatchAllTRANSPARENT1 = "#9076f377";
 let findMatchAllTRANSPARENT2 = "#9076f322";
+let findMatchAllFore = "#6647c0"; //oklch(0.50 0.18 290)
 
 let wordHighlightWriteSOLID = "#839d00"; //oklch(0.65 0.18 120)
 let wordHighlightWriteTRANSPARENT = "#839d0077";
@@ -130,7 +131,6 @@ let jsonObject = {
 		["contrastBorder"]: DFLT,
 
 		//Base colors
-
 		["focusBorder"]: selectActive,
 		["foreground"]: mainFore,
 		["disabledForeground"]: dimFore,
@@ -151,10 +151,9 @@ let jsonObject = {
 
 		//Text colors
 		//Colors inside a text document, such as the welcome page.
-
 		["textBlockQuote.background"]: DEBUG_RED,
 		["textBlockQuote.border"]: DFLT,
-		["textCodeBlock.background"]: DEBUG_GREEN,
+		["textCodeBlock.background"]: preformatText,
 		["textLink.activeForeground"]: hyperlinkHover,
 		["textLink.foreground"]: hyperlinkFore,
 		["textPreformat.foreground"]: mainFore,
@@ -174,7 +173,6 @@ let jsonObject = {
 
 		//Button control
 		//A set of colors for button widgets such as Open Folder button in the Explorer of a new window.
-
 		["button.background"]: buttonBack,
 		["button.foreground"]: buttonForeground,
 		["button.hoverBackground"]: buttonHover,
@@ -198,7 +196,6 @@ let jsonObject = {
 
 		//Dropdown control
 		//A set of colors for all Dropdown widgets such as in the Integrated Terminal or the Output panel. Note that the Dropdown control is not used on macOS currently.
-
 		["dropdown.background"]: inputBack,
 		["dropdown.listBackground"]: DFLT,
 		["dropdown.border"]: inputBorder,
@@ -206,7 +203,6 @@ let jsonObject = {
 
 		//Input control
 		//Colors for input controls such as in the Search view or the Find/Replace dialog.
-
 		["input.placeholderForeground"]: placeholder,
 		["input.background"]: inputBack,
 		["input.foreground"]: mainFore,
@@ -226,11 +222,10 @@ let jsonObject = {
 		["inputValidation.warningBorder"]: warningDark,
 
 		//Scrollbar control
-
 		["scrollbar.shadow"]: shadow,
 		["scrollbarSlider.activeBackground"]: click,
 		["scrollbarSlider.background"]: sliderNormal,
-		["scrollbarSlider.hoverBackground"]: hover,
+		["scrollbarSlider.hoverBackground"]: hoverDarker,
 
 		//Badge
 		//Badges are small information labels, for example, search results count.
@@ -239,12 +234,10 @@ let jsonObject = {
 		["badge.background"]: infoDark,
 
 		//Progress bar
-
 		["progressBar.background"]: infoDark,
 
 		//Lists and trees
 		//Colors for list and trees like the File Explorer. An active list/tree has keyboard focus, an inactive does not.
-
 		["list.activeSelectionBackground"]: selectActiveTRANSPARENT3,
 		["list.activeSelectionForeground"]: mainFore,
 		["list.activeSelectionIconForeground"]: DFLT,
@@ -254,13 +247,13 @@ let jsonObject = {
 		["list.focusBackground"]: selectActiveTRANSPARENT2,
 		["list.focusForeground"]: DFLT,
 		["list.focusOutline"]: selectActive,
-		["list.focusHighlightForeground"]: findMatchAllSolid,
+		["list.focusHighlightForeground"]: findMatchAllFore,
 		["list.focusAndSelectionOutline"]: DFLT,
 		["list.inactiveFocusBackground"]: selectInactiveTRANSPARENT2,
 		["list.inactiveFocusOutline"]: selectInactive,
 		["list.dropBackground"]: dropInto,
 		["list.dropBetweenBackground"]: dropBetween,
-		["list.highlightForeground"]: findMatchAllSolid,
+		["list.highlightForeground"]: findMatchAllFore,
 		["list.hoverBackground"]: hover,
 		["list.hoverForeground"]: DFLT,
 		["list.invalidItemForeground"]: DFLT,
@@ -280,7 +273,6 @@ let jsonObject = {
 
 		//Activity Bar
 		//The Activity Bar is usually displayed either on the far left or right of the workbench and allows fast switching between views of the Side Bar.
-
 		["activityBar.background"]: panelsBack5,
 		["activityBar.dropBorder"]: dropBetween,
 		["activityBar.foreground"]: mainFore,
@@ -303,14 +295,12 @@ let jsonObject = {
 		["activityErrorBadge.background"]: errorDark,
 
 		//Profiles
-
 		["profileBadge.background"]: DEBUG_GREEN,
 		["profileBadge.foreground"]: DFLT,
 		["profiles.sashBorder"]: DFLT,
 
 		//Side Bar
 		//The Side Bar contains views like the Explorer and Search.
-
 		["sideBarTitle.foreground"]: DFLT,
 		["sideBarTitle.background"]: panelsBack3,
 		["sideBarTitle.border"]: DFLT,
@@ -328,7 +318,6 @@ let jsonObject = {
 
 		//Minimap
 		//The Minimap shows a minified version of the current file.
-
 		["minimap.findMatchHighlight"]: findMatchAllTRANSPARENT2,
 		["minimap.selectionHighlight"]: selectActiveTRANSPARENT1,
 		["minimap.errorHighlight"]: errorLight,
@@ -338,9 +327,9 @@ let jsonObject = {
 		["minimap.foregroundOpacity"]: DFLT,
 		["minimap.infoHighlight"]: infoLight,
 		["minimap.chatEditHighlight"]: DFLT, //TODO
-		["minimapSlider.background"]: sliderNormal,
-		["minimapSlider.hoverBackground"]: hover,
-		["minimapSlider.activeBackground"]: click,
+		["minimapSlider.background"]: DFLT,
+		["minimapSlider.hoverBackground"]: DFLT,
+		["minimapSlider.activeBackground"]: DFLT,
 		["minimapGutter.addedBackground"]: addLight,
 		["minimapGutter.modifiedBackground"]: modifyLight,
 		["minimapGutter.deletedBackground"]: deleteLight,
@@ -348,7 +337,6 @@ let jsonObject = {
 
 		//Editor Groups & Tabs
 		//Editor Groups are the containers of editors. There can be many editor groups. A Tab is the container of an editor. Multiple Tabs can be opened in one editor group.
-
 		["editorGroup.border"]: unimportantFore,
 		["editorGroup.dropBackground"]: dropInto,
 		["editorGroupHeader.noTabsBackground"]: DEBUG_RED,
@@ -394,7 +382,6 @@ let jsonObject = {
 
 		//Editor colors
 		//The most prominent editor colors are the token colors used for syntax highlighting and are based on the language grammar installed. These colors are defined by the Color Theme but can also be customized with the editor.tokenColorCustomizations setting. See Customizing a Color Theme for details on updating a Color Theme and the available token types.
-
 		//All other editor colors are listed here:
 		//主编辑器区域的颜色
 		["editor.background"]: editorBack,
@@ -406,8 +393,8 @@ let jsonObject = {
 		["editorCursor.background"]: WHITE,
 		["editorMultiCursor.primary.foreground"]: BLACK,
 		["editorMultiCursor.primary.background"]: WHITE,
-		["editorMultiCursor.secondary.foreground"]: DEBUG_PINK,
-		["editorMultiCursor.secondary.background"]: DEBUG_BLUE,
+		["editorMultiCursor.secondary.foreground"]: grey.G50,
+		["editorMultiCursor.secondary.background"]: WHITE,
 		["editor.placeholder.foreground"]: placeholder,
 		["editor.compositionBorder"]: DFLT,
 		//Selection colors are visible when selecting one or more characters. In addition to the selection also all regions with the same content are highlighted.
@@ -890,14 +877,14 @@ let jsonObject = {
 		["extensionIcon.privateForeground"]: DFLT,
 
 		//Quick picker colors
-		["pickerGroup.border"]: dimFore,
-		["pickerGroup.foreground"]: infoDark,
+		["pickerGroup.border"]: unimportantFore,
+		["pickerGroup.foreground"]: secondaryFore,
 		["quickInput.background"]: panelsBack4,
 		["quickInput.foreground"]: mainFore,
-		["quickInputList.focusBackground"]: panelsBack7,
+		["quickInputList.focusBackground"]: panelsBack6,
 		["quickInputList.focusForeground"]: DFLT,
 		["quickInputList.focusIconForeground"]: DFLT,
-		["quickInputTitle.background"]: DEBUG_PINK,
+		["quickInputTitle.background"]: panelsBack6,
 
 		//Keybinding label colors
 		//Keybinding labels are shown when there is a keybinding associated with a command. An example of the keybinding label can be seen in the Command Palette:
@@ -920,22 +907,22 @@ let jsonObject = {
 		["terminal.background"]: panelsBack1,
 		["terminal.border"]: DFLT,
 		["terminal.foreground"]: DFLT,
-		["terminal.ansiBlack"]: DFLT,//TODO
-		["terminal.ansiBlue"]: DFLT,
-		["terminal.ansiBrightBlack"]: DFLT,
-		["terminal.ansiBrightBlue"]: DFLT,
-		["terminal.ansiBrightCyan"]: DFLT,
-		["terminal.ansiBrightGreen"]: DFLT,
-		["terminal.ansiBrightMagenta"]: DFLT,
-		["terminal.ansiBrightRed"]: DFLT,
-		["terminal.ansiBrightWhite"]: DFLT,
-		["terminal.ansiBrightYellow"]: DFLT,
-		["terminal.ansiCyan"]: DFLT,
-		["terminal.ansiGreen"]: DFLT,
-		["terminal.ansiMagenta"]: DFLT,
-		["terminal.ansiRed"]: DFLT,
-		["terminal.ansiWhite"]: DFLT,
-		["terminal.ansiYellow"]: DFLT,
+		["terminal.ansiBlack"]: "#0b0b0b",//oklch(0.15 0 360)
+		["terminal.ansiWhite"]: "#717171",//oklch(0.55 0 360)
+		["terminal.ansiRed"]: "#b14f42",//oklch(0.55 0.13 30)
+		["terminal.ansiYellow"]: "#8f6c00",//oklch(0.55 0.13 90)
+		["terminal.ansiGreen"]: "#298646",//oklch(0.55 0.13 150)
+		["terminal.ansiCyan"]: "#008396",//oklch(0.55 0.13 210)
+		["terminal.ansiBlue"]: "#546bbd",//oklch(0.55 0.13 270)
+		["terminal.ansiMagenta"]: "#9b5295",//oklch(0.55 0.13 330)
+		["terminal.ansiBrightBlack"]: "#8f8f8f",//oklch(0.65 0 360)
+		["terminal.ansiBrightWhite"]: "#cecece",//oklch(0.85 0 360)
+		["terminal.ansiBrightRed"]: "#d76a5a",//oklch(0.65 0.14 30)
+		["terminal.ansiBrightYellow"]: "#b08a00",//oklch(0.65 0.14 90)
+		["terminal.ansiBrightGreen"]: "#43a65f",//oklch(0.65 0.14 150)
+		["terminal.ansiBrightCyan"]: "#00a4bb",//oklch(0.65 0.14 210)
+		["terminal.ansiBrightBlue"]: "#6e89e4",//oklch(0.65 0.14 270)
+		["terminal.ansiBrightMagenta"]: "#be6db7",//oklch(0.65 0.14 330)
 		["terminal.selectionBackground"]: selectActiveTRANSPARENT1,
 		["terminal.selectionForeground"]: DFLT,
 		["terminal.inactiveSelectionBackground"]: selectInactiveTRANSPARENT2,
