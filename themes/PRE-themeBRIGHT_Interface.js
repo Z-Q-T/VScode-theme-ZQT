@@ -40,6 +40,7 @@ let buttonForeground = grey.G98;
 let buttonBorder = grey.G54;
 let buttonSecondary = grey.G46;
 let buttonSecondaryHover = grey.G54;
+let inputBorder=grey.G76;
 
 let keyboardLabel=grey.G94;
 let preformatText=grey.G84;
@@ -167,7 +168,6 @@ let jsonObject = {
 		//Button control
 		//A set of colors for button widgets such as Open Folder button in the Explorer of a new window.
 		
-		//TODO下面的属性还没调过
 		["button.background"]: buttonBack,
 		["button.foreground"]: buttonForeground,
 		["button.hoverBackground"]: buttonHover,
@@ -178,7 +178,7 @@ let jsonObject = {
 		["button.secondaryHoverBackground"]: buttonSecondaryHover,
 		["checkbox.background"]: inputBack,
 		["checkbox.foreground"]: mainFore,
-		["checkbox.border"]: panelsBack8,
+		["checkbox.border"]: inputBorder,
 		["checkbox.selectBackground"]: DFLT,
 		["checkbox.selectBorder"]: DFLT,
 		["radio.activeForeground"]: DFLT,
@@ -194,7 +194,7 @@ let jsonObject = {
 
 		["dropdown.background"]: inputBack,
 		["dropdown.listBackground"]: DFLT,
-		["dropdown.border"]: panelsBack8,
+		["dropdown.border"]: inputBorder,
 		["dropdown.foreground"]: mainFore,
 
 		//Input control
@@ -203,7 +203,7 @@ let jsonObject = {
 		["input.placeholderForeground"]: placeholder,
 		["input.background"]: inputBack,
 		["input.foreground"]: mainFore,
-		["input.border"]: panelsBack8,
+		["input.border"]: inputBorder,
 		["inputOption.activeBackground"]: DFLT,
 		["inputOption.activeBorder"]: selectActive,
 		["inputOption.activeForeground"]: DFLT,
@@ -233,28 +233,29 @@ let jsonObject = {
 
 		//Progress bar
 
-		["progressBar.background"]: DFLT,
+		["progressBar.background"]: DEBUG_GREEN,
 
 		//Lists and trees
 		//Colors for list and trees like the File Explorer. An active list/tree has keyboard focus, an inactive does not.
 
-		["list.activeSelectionBackground"]: selectActiveTRANSPARENT2,
-		["list.activeSelectionForeground"]: grey.G20,
+		//TODO下面的属性还没调过
+		["list.activeSelectionBackground"]: selectActiveTRANSPARENT3,
+		["list.activeSelectionForeground"]: mainFore,
 		["list.activeSelectionIconForeground"]: DFLT,
-		["list.dropBackground"]: DFLT,
-		["list.focusBackground"]: selectActiveTRANSPARENT3,
-		["list.focusForeground"]: DFLT,
-		["list.focusHighlightForeground"]: DFLT,
-		["list.focusOutline"]: selectActive,
-		["list.focusAndSelectionOutline"]: DFLT,
-		["list.highlightForeground"]: DFLT,
-		["list.hoverBackground"]: hover,
-		["list.hoverForeground"]: DFLT,
-		["list.inactiveSelectionBackground"]: selectInactiveTRANSPARENT1,
+		["list.inactiveSelectionBackground"]: panelsBack1,
 		["list.inactiveSelectionForeground"]: DFLT,
 		["list.inactiveSelectionIconForeground"]: DFLT,
 		["list.inactiveFocusBackground"]: DFLT,
 		["list.inactiveFocusOutline"]: DFLT,
+		["list.focusBackground"]: selectActiveTRANSPARENT2,
+		["list.focusForeground"]: DFLT,
+		["list.focusHighlightForeground"]: DFLT,
+		["list.focusOutline"]: selectActive,
+		["list.focusAndSelectionOutline"]: DFLT,
+		["list.dropBackground"]: DFLT,
+		["list.highlightForeground"]: DFLT,
+		["list.hoverBackground"]: hover,
+		["list.hoverForeground"]: DFLT,
 		["list.invalidItemForeground"]: DFLT,
 		["list.errorForeground"]: errorDark,
 		["list.warningForeground"]: warningDark,
