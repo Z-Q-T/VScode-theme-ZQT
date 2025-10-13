@@ -29,10 +29,9 @@ let unimportantFore=grey.G78;
 let whiteFore=grey.G98;
 
 let shadow = "#44444466";
-let drop = "#66666644";
 let placeholder = "#999999cc";
 let sliderNormal = "#00000011";
-let hover = "#00000011";
+let hover = "#00000022";
 let click = "#00000055";
 let buttonBack = grey.G36
 let buttonHover = grey.G44;
@@ -41,6 +40,8 @@ let buttonBorder = grey.G54;
 let buttonSecondary = grey.G46;
 let buttonSecondaryHover = grey.G54;
 let inputBorder=grey.G76;
+let dropInto = "#99999944";
+let dropBetween = "#444444bb";
 
 let keyboardLabel=grey.G94;
 let preformatText=grey.G84;
@@ -76,13 +77,14 @@ let hintDark = "#499537"; //oklch(0.60 0.15 140)
 
 let selectActive = "#5285ff"; //oklch(0.65 0.20 265)
 let selectActiveTRANSPARENT1 = "#5285ffbb";
-let selectActiveTRANSPARENT2 = "#5285ff77";
+let selectActiveTRANSPARENT2 = "#5285ff66";
 let selectActiveTRANSPARENT3 = "#5285ff22";
-let selectInactive = "#b6becb"; //oklch(0.80 0.02 265)
-let selectInactiveTRANSPARENT1 = "#b6becbbb";
-let selectInactiveTRANSPARENT2 = "#b6becb77";
+let selectInactive = "#b1bed8"; //oklch(0.80 0.05 265)
+let selectInactiveTRANSPARENT1 = "#b1bed8bb";
+let selectInactiveTRANSPARENT2 = "#b1bed866";
 
-let findMatchAllTRANSPARENT1 = "#9076f377"; //oklch(0.65 0.18 290)
+let findMatchAllSolid = "#9076f3"; //oklch(0.65 0.18 290)
+let findMatchAllTRANSPARENT1 = "#9076f377"; 
 let findMatchAllTRANSPARENT2 = "#9076f322";
 
 let wordHighlightWriteTRANSPARENT1 = "#839d00bb"; //oklch(0.65 0.18 120)
@@ -93,6 +95,8 @@ let wordHighlightTextTRANSPARENT1 = "#00ac4ebb"; //oklch(0.65 0.18 150)
 let wordHighlightTextTRANSPARENT2 = "#00ac4e11";
 let unicodeHighlight = "#e26500"; //oklch(0.65 0.18 50)
 let BracketMatchStrong = "#fb2af4bb"; //oklch(0.7 0.3 330)
+let whitespaceCharacter = "#9bce9077";//=hintLight
+
 let lineHighlightBackground = "#00000011";
 let editorRulerLine = "#00000011";
 let IndentGuide = "#00000022";
@@ -238,22 +242,22 @@ let jsonObject = {
 		//Lists and trees
 		//Colors for list and trees like the File Explorer. An active list/tree has keyboard focus, an inactive does not.
 
-		//TODO下面的属性还没调过
 		["list.activeSelectionBackground"]: selectActiveTRANSPARENT3,
 		["list.activeSelectionForeground"]: mainFore,
 		["list.activeSelectionIconForeground"]: DFLT,
 		["list.inactiveSelectionBackground"]: panelsBack1,
 		["list.inactiveSelectionForeground"]: DFLT,
 		["list.inactiveSelectionIconForeground"]: DFLT,
-		["list.inactiveFocusBackground"]: DFLT,
-		["list.inactiveFocusOutline"]: DFLT,
 		["list.focusBackground"]: selectActiveTRANSPARENT2,
 		["list.focusForeground"]: DFLT,
-		["list.focusHighlightForeground"]: DFLT,
 		["list.focusOutline"]: selectActive,
+		["list.focusHighlightForeground"]: findMatchAllSolid,
 		["list.focusAndSelectionOutline"]: DFLT,
-		["list.dropBackground"]: DFLT,
-		["list.highlightForeground"]: DFLT,
+		["list.inactiveFocusBackground"]: selectInactiveTRANSPARENT2,
+		["list.inactiveFocusOutline"]: selectInactive,
+		["list.dropBackground"]: dropInto,
+		["list.dropBetweenBackground"]: dropBetween,
+		["list.highlightForeground"]: findMatchAllSolid,
 		["list.hoverBackground"]: hover,
 		["list.hoverForeground"]: DFLT,
 		["list.invalidItemForeground"]: DFLT,
@@ -266,9 +270,8 @@ let jsonObject = {
 		["list.filterMatchBackground"]: DFLT,
 		["list.filterMatchBorder"]: DFLT,
 		["list.deemphasizedForeground"]: DFLT,
-		["list.dropBetweenBackground"]: DFLT,
-		["tree.indentGuidesStroke"]: DFLT,
-		["tree.inactiveIndentGuidesStroke"]: DFLT,
+		["tree.indentGuidesStroke"]: IndentGuideActive,
+		["tree.inactiveIndentGuidesStroke"]: IndentGuide,
 		["tree.tableColumnsBorder"]: DFLT,
 		["tree.tableOddRowsBackground"]: DFLT,
 
@@ -276,46 +279,46 @@ let jsonObject = {
 		//The Activity Bar is usually displayed either on the far left or right of the workbench and allows fast switching between views of the Side Bar.
 
 		["activityBar.background"]: panelsBack5,
-		["activityBar.dropBorder"]: DFLT,
-		["activityBar.foreground"]: grey.G20,
-		["activityBar.inactiveForeground"]: grey.G40,
+		["activityBar.dropBorder"]: dropBetween,
+		["activityBar.foreground"]: mainFore,
+		["activityBar.inactiveForeground"]: secondaryFore,
 		["activityBar.border"]: DFLT,
 		["activityBarBadge.background"]: infoDark,
-		["activityBarBadge.foreground"]: DFLT,
+		["activityBarBadge.foreground"]: whiteFore,
 		["activityBar.activeBorder"]: selectActive,
 		["activityBar.activeBackground"]: panelsBack3,
 		["activityBar.activeFocusBorder"]: DFLT,
-		["activityBarTop.foreground"]: DFLT,
-		["activityBarTop.activeBorder"]: DFLT,
+		["activityBarTop.foreground"]: DEBUG_PINK,
+		["activityBarTop.activeBorder"]: DEBUG_BLUE,
 		["activityBarTop.inactiveForeground"]: DFLT,
-		["activityBarTop.dropBorder"]: DFLT,
-		["activityBarTop.background"]: DFLT,
+		["activityBarTop.dropBorder"]: dropBetween,
+		["activityBarTop.background"]: DEBUG_GREEN,
 		["activityBarTop.activeBackground"]: DFLT,
-		["activityWarningBadge.foreground"]: DFLT,
+		["activityWarningBadge.foreground"]: whiteFore,
 		["activityWarningBadge.background"]: warningDark,
-		["activityErrorBadge.foreground"]: DFLT,
+		["activityErrorBadge.foreground"]: whiteFore,
 		["activityErrorBadge.background"]: errorDark,
 
 		//Profiles
 
-		["profileBadge.background"]: DFLT,
+		["profileBadge.background"]: DEBUG_GREEN,
 		["profileBadge.foreground"]: DFLT,
 		["profiles.sashBorder"]: DFLT,
 
 		//Side Bar
 		//The Side Bar contains views like the Explorer and Search.
 
+		["sideBarTitle.foreground"]: DFLT,
+		["sideBarTitle.background"]: panelsBack3,
+		["sideBarTitle.border"]: DFLT,
 		["sideBar.background"]: panelsBack3,
 		["sideBar.foreground"]: DFLT,
 		["sideBar.border"]: DFLT,
 		["sideBarSectionHeader.background"]: panelsBack7,
 		["sideBarSectionHeader.foreground"]: DFLT,
 		["sideBarSectionHeader.border"]: DFLT,
-		["sideBar.dropBackground"]: drop,
-		["sideBarActivityBarTop.border"]: DFLT,
-		["sideBarTitle.foreground"]: DFLT,
-		["sideBarTitle.background"]: panelsBack3,
-		["sideBarTitle.border"]: DFLT,
+		["sideBar.dropBackground"]: dropInto,
+		["sideBarActivityBarTop.border"]: DEBUG_RED,
 		["sideBarStickyScroll.background"]: DFLT,
 		["sideBarStickyScroll.border"]: DFLT,
 		["sideBarStickyScroll.shadow"]: shadow,
@@ -331,20 +334,20 @@ let jsonObject = {
 		["minimap.selectionOccurrenceHighlight"]: DFLT,
 		["minimap.foregroundOpacity"]: DFLT,
 		["minimap.infoHighlight"]: infoLight,
-		["minimap.chatEditHighlight"]: DFLT,
+		["minimap.chatEditHighlight"]: DFLT,//TODO
 		["minimapSlider.background"]: sliderNormal,
 		["minimapSlider.hoverBackground"]: hover,
 		["minimapSlider.activeBackground"]: click,
 		["minimapGutter.addedBackground"]: addLight,
 		["minimapGutter.modifiedBackground"]: modifyLight,
 		["minimapGutter.deletedBackground"]: deleteLight,
-		["editorMinimap.inlineChatInserted"]: DFLT,
+		["editorMinimap.inlineChatInserted"]: DFLT,//TODO
 
 		//Editor Groups & Tabs
 		//Editor Groups are the containers of editors. There can be many editor groups. A Tab is the container of an editor. Multiple Tabs can be opened in one editor group.
 
-		["editorGroup.border"]: grey.G76,
-		["editorGroup.dropBackground"]: drop,
+		["editorGroup.border"]: unimportantFore,
+		["editorGroup.dropBackground"]: dropInto,
 		["editorGroupHeader.noTabsBackground"]: DEBUG_RED,
 		["editorGroupHeader.tabsBackground"]: panelsBack5,
 		["editorGroupHeader.tabsBorder"]: TRANSPARENT,
@@ -354,12 +357,12 @@ let jsonObject = {
 		["editorGroup.dropIntoPromptForeground"]: DFLT,
 		["editorGroup.dropIntoPromptBackground"]: DFLT,
 		["editorGroup.dropIntoPromptBorder"]: DFLT,
-		["tab.border"]: panelsBack8,
+		["tab.border"]: unimportantFore,
 		["tab.activeBackground"]: panelsBack1,
 		["tab.activeForeground"]: mainFore,
 		["tab.inactiveBackground"]: panelsBack5,
 		["tab.inactiveForeground"]: mainFore,
-		["tab.unfocusedActiveBackground"]: panelsBack4,
+		["tab.unfocusedActiveBackground"]: panelsBack3,
 		["tab.unfocusedActiveForeground"]: mainFore,
 		["tab.unfocusedInactiveBackground"]: panelsBack5,
 		["tab.unfocusedInactiveForeground"]: mainFore,
@@ -370,20 +373,20 @@ let jsonObject = {
 		["tab.selectedBorderTop"]: DFLT,
 		["tab.selectedBackground"]: selectActiveTRANSPARENT3,
 		["tab.selectedForeground"]: DFLT,
-		["tab.dragAndDropBorder"]: DFLT,
-		["tab.lastPinnedBorder"]: DFLT,
+		["tab.dragAndDropBorder"]: dropBetween,
+		["tab.lastPinnedBorder"]: DFLT,//TODO
 		["tab.hoverBackground"]: hover,
 		["tab.unfocusedHoverBackground"]: DFLT,
 		["tab.hoverForeground"]: DFLT,
 		["tab.unfocusedHoverForeground"]: DFLT,
 		["tab.hoverBorder"]: DFLT,
 		["tab.unfocusedHoverBorder"]: DFLT,
-		["tab.activeModifiedBorder"]: DFLT,
+		["tab.activeModifiedBorder"]:  DEBUG_GREEN,
 		["tab.inactiveModifiedBorder"]: DFLT,
 		["tab.unfocusedActiveModifiedBorder"]: DFLT,
 		["tab.unfocusedInactiveModifiedBorder"]: DFLT,
 		["editorPane.background"]: DFLT,
-		["sideBySideEditor.horizontalBorder"]: DFLT,
+		["sideBySideEditor.horizontalBorder"]: DEBUG_PINK,
 		["sideBySideEditor.verticalBorder"]: DFLT,
 
 		//Editor colors
@@ -396,94 +399,72 @@ let jsonObject = {
 		["editorLineNumber.foreground"]: unimportantFore,
 		["editorLineNumber.activeForeground"]: dimFore,
 		["editorLineNumber.dimmedForeground"]: hintLight,
-		["editorCursor.background"]: DFLT,
-		["editorCursor.foreground"]: DFLT,
-		["editorMultiCursor.primary.foreground"]: DFLT,
-		["editorMultiCursor.primary.background"]: DFLT,
-		["editorMultiCursor.secondary.foreground"]: DFLT,
-		["editorMultiCursor.secondary.background"]: DFLT,
+		["editorCursor.foreground"]: BLACK,
+		["editorCursor.background"]: WHITE,
+		["editorMultiCursor.primary.foreground"]: BLACK,
+		["editorMultiCursor.primary.background"]: WHITE,
+		["editorMultiCursor.secondary.foreground"]: DEBUG_PINK,
+		["editorMultiCursor.secondary.background"]: DEBUG_BLUE,
 		["editor.placeholder.foreground"]: placeholder,
 		["editor.compositionBorder"]: DFLT,
-
 		//Selection colors are visible when selecting one or more characters. In addition to the selection also all regions with the same content are highlighted.
-
 		["editor.selectionBackground"]: selectActiveTRANSPARENT1,
 		["editor.selectionForeground"]: DFLT,
 		["editor.inactiveSelectionBackground"]: selectInactiveTRANSPARENT2,
 		["editor.selectionHighlightBackground"]: selectActiveTRANSPARENT3,
 		["editor.selectionHighlightBorder"]: DFLT,
-
 		//Word highlight colors are visible when the cursor is inside a symbol or a word. Depending on the language support available for the file type, all matching references and declarations are highlighted and read and write accesses get different colors. If document symbol language support is not available, this falls back to word highlighting.
-
-		//occurrences
-
 		["editor.wordHighlightBackground"]: wordHighlightReadTRANSPARENT2,
 		["editor.wordHighlightBorder"]: wordHighlightReadTRANSPARENT1,
 		["editor.wordHighlightStrongBackground"]: wordHighlightWriteTRANSPARENT2,
 		["editor.wordHighlightStrongBorder"]: wordHighlightWriteTRANSPARENT1,
 		["editor.wordHighlightTextBackground"]: wordHighlightTextTRANSPARENT2,
 		["editor.wordHighlightTextBorder"]: wordHighlightTextTRANSPARENT1,
-
 		//Find colors depend on the current find string in the Find/Replace dialog.
-		//Find matches
-
 		["editor.findMatchBackground"]: selectActiveTRANSPARENT1,
 		["editor.findMatchForeground"]: DFLT,
+		["editor.findMatchBorder"]: DFLT,
 		["editor.findMatchHighlightForeground"]: DFLT,
 		["editor.findMatchHighlightBackground"]: findMatchAllTRANSPARENT1,
-		["editor.findRangeHighlightBackground"]: findMatchAllTRANSPARENT2,
-		["editor.findMatchBorder"]: DFLT,
 		["editor.findMatchHighlightBorder"]: DFLT,
+		["editor.findRangeHighlightBackground"]: findMatchAllTRANSPARENT2,
 		["editor.findRangeHighlightBorder"]: DFLT,
 
 		//Search colors are used in the search viewlet's global search results.
-
-		["search.resultsInfoForeground"]: DFLT,
-
+		["search.resultsInfoForeground"]: secondaryFore,
 		//Search Editor colors highlight results in a Search Editor. This can be configured separately from other find matches in order to better differentiate between different classes of match in the same editor.
-
 		["searchEditor.findMatchBackground"]: DFLT,
 		["searchEditor.findMatchBorder"]: DFLT,
 		["searchEditor.textInputBorder"]: DFLT,
 
 		//The hover highlight is shown behind the symbol for which a hover is shown.
-
 		["editor.hoverHighlightBackground"]: hover,
-
 		//The current line is typically shown as either background highlight or a border (not both).
-
 		["editor.lineHighlightBackground"]: lineHighlightBackground,
 		["editor.lineHighlightBorder"]: DFLT,
 
 		//The color for the editor watermark
-
-		["editorWatermark.foreground"]: DFLT,
+		["editorWatermark.foreground"]: DEBUG_RED,
 
 		//The color for unicode highlights
-
 		["editorUnicodeHighlight.border"]: unicodeHighlight,
 		["editorUnicodeHighlight.background"]: DFLT,
 
 		//The link color is visible when clicking on a link.
-
-		["editorLink.activeForeground"]: selectActive,
+		["editorLink.activeForeground"]: hyperlinkHover,
 
 		//The range highlight is visible when selecting a search result.
-
 		["editor.rangeHighlightBackground"]: findMatchAllTRANSPARENT2,
 		["editor.rangeHighlightBorder"]: DFLT,
 
 		//The symbol highlight is visible when navigating to a symbol via a command such as Go to Definition.
-
 		["editor.symbolHighlightBackground"]: findMatchAllTRANSPARENT1,
 		["editor.symbolHighlightBorder"]: DFLT,
 
 		//To see the editor white spaces, enable Toggle Render Whitespace.
-
-		["editorWhitespace.foreground"]: infoLight,
+		["editorWhitespace.foreground"]: whitespaceCharacter,
 
 		//To see the editor indent guides, set ["editor.guides.indentation"]:
-
 		// ["editorIndentGuide.background"]: IndentGuide,
 		["editorIndentGuide.background1"]: IndentGuide,
 		["editorIndentGuide.background2"]: IndentGuide,
@@ -500,8 +481,7 @@ let jsonObject = {
 		["editorIndentGuide.activeBackground6"]: IndentGuideActive,
 
 		//To see the editor inline hints, set "editor.inlineSuggest.enabled": true.
-
-		["editorInlayHint.background"]: DFLT,
+		["editorInlayHint.background"]: DEBUG_GREEN,
 		["editorInlayHint.foreground"]: DFLT,
 		["editorInlayHint.typeForeground"]: DFLT,
 		["editorInlayHint.typeBackground"]: DFLT,
@@ -509,28 +489,23 @@ let jsonObject = {
 		["editorInlayHint.parameterBackground"]: DFLT,
 
 		//To see editor rulers, define their location with "editor.rulers"
-
 		["editorRuler.foreground"]: editorRulerLine,
-		["editor.linkedEditingBackground"]: linkEdit,
+		["editor.linkedEditingBackground"]: DEBUG_BLUE,
 
 		//CodeLens:
-
-		["editorCodeLens.foreground"]: DFLT,
+		["editorCodeLens.foreground"]: DFLT,//TODO
 
 		//Lightbulb:
-
-		["editorLightBulb.foreground"]: DFLT,
+		["editorLightBulb.foreground"]: DFLT,//TODO
 		["editorLightBulbAutoFix.foreground"]: DFLT,
 		["editorLightBulbAi.foreground"]: DFLT,
 
 		//Bracket matches:
-
 		["editorBracketMatch.background"]: TRANSPARENT,
 		["editorBracketMatch.border"]: BracketMatchStrong,
 
 		//Bracket pair colorization:
-
-		["editorBracketHighlight.foreground1"]: colour.L76_C10_H220,
+		["editorBracketHighlight.foreground1"]: colour.L76_C10_H220,//TODO
 		["editorBracketHighlight.foreground2"]: colour.L76_C10_H100,
 		["editorBracketHighlight.foreground3"]: colour.L76_C10_H340,
 		["editorBracketHighlight.foreground4"]: colour.L76_C10_H180,
@@ -539,8 +514,7 @@ let jsonObject = {
 		["editorBracketHighlight.unexpectedBracket.foreground"]: errorDark,
 
 		//Bracket pair guides:
-
-		["editorBracketPairGuide.activeBackground1"]: colour.L70_C08_H220,
+		["editorBracketPairGuide.activeBackground1"]: colour.L70_C08_H220,//TODO
 		["editorBracketPairGuide.activeBackground2"]: colour.L70_C08_H100,
 		["editorBracketPairGuide.activeBackground3"]: colour.L70_C08_H340,
 		["editorBracketPairGuide.activeBackground4"]: colour.L70_C08_H180,
@@ -554,15 +528,13 @@ let jsonObject = {
 		["editorBracketPairGuide.background6"]: DFLT,
 
 		//Folding:
-
 		["editor.foldBackground"]: foldArea,
 		["editor.foldPlaceholderForeground"]: foldHint,
 
 		//Overview ruler:
 		//This ruler is located beneath the scroll bar on the right edge of the editor and gives an overview of the decorations in the editor.
-
 		["editorOverviewRuler.background"]: DFLT,
-		["editorOverviewRuler.border"]: DFLT,
+		["editorOverviewRuler.border"]: dimFore,
 		["editorOverviewRuler.findMatchForeground"]: findMatchAllTRANSPARENT1,
 		["editorOverviewRuler.rangeHighlightForeground"]: findMatchAllTRANSPARENT2,
 		["editorOverviewRuler.selectionHighlightForeground"]: selectActiveTRANSPARENT1,
@@ -576,11 +548,10 @@ let jsonObject = {
 		["editorOverviewRuler.warningForeground"]: warningLight,
 		["editorOverviewRuler.infoForeground"]: infoLight,
 		["editorOverviewRuler.bracketMatchForeground"]: BracketMatchStrong,
-		["editorOverviewRuler.inlineChatInserted"]: DFLT,
+		["editorOverviewRuler.inlineChatInserted"]: DFLT,//TODO
 		["editorOverviewRuler.inlineChatRemoved"]: DFLT,
-
+//TODO做到这里，从下面继续
 		//Errors and warningLights:
-
 		["editorError.foreground"]: errorDark,
 		["editorError.border"]: DFLT,
 		["editorError.background"]: DFLT,
@@ -723,7 +694,7 @@ let jsonObject = {
 		["editorStickyScroll.background"]: DFLT,
 		["editorStickyScroll.border"]: DFLT,
 		["editorStickyScroll.shadow"]: shadow,
-		["editorStickyScrollHover.background"]: DFLT,
+		["editorStickyScrollHover.background"]: hover,
 
 		//The Debug Exception widget is a peek view that shows in the editor when debug stops at an exception.
 
@@ -795,7 +766,7 @@ let jsonObject = {
 
 		["panel.background"]: panelsBack4,
 		["panel.border"]: TRANSPARENT,
-		["panel.dropBorder"]: drop,
+		["panel.dropBorder"]: dropInto,
 		["panelTitle.activeBorder"]: selectActive,
 		["panelTitle.activeForeground"]: mainFore,
 		["panelTitle.inactiveForeground"]: mainFore,
