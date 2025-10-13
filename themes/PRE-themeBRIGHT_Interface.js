@@ -32,6 +32,7 @@ let shadow = "#44444466";
 let placeholder = "#999999cc";
 let sliderNormal = "#00000011";
 let hover = "#00000022";
+let hoverDarker = "#00000044";
 let click = "#00000055";
 let buttonBack = grey.G36;
 let buttonHover = grey.G44;
@@ -549,7 +550,7 @@ let jsonObject = {
 		["editorOverviewRuler.bracketMatchForeground"]: BracketMatchStrong,
 		["editorOverviewRuler.inlineChatInserted"]: DFLT, //TODO
 		["editorOverviewRuler.inlineChatRemoved"]: DFLT,
-//TODO做到这里，从下面继续
+
 		//Errors and warningLights:
 		["editorError.foreground"]: errorDark,
 		["editorError.border"]: DFLT,
@@ -567,34 +568,30 @@ let jsonObject = {
 		["problemsInfoIcon.foreground"]: infoLight,
 
 		//Unused source code:
-
 		["editorUnnecessaryCode.border"]: DFLT,
 		["editorUnnecessaryCode.opacity"]: UnusedCodeOpacity,
 
 		//The gutter contains the glyph margins and the line numbers:
-
 		["editorGutter.background"]: DFLT,
 		["editorGutter.modifiedBackground"]: modifyLight,
 		["editorGutter.addedBackground"]: addLight,
 		["editorGutter.deletedBackground"]: deleteLight,
-		["editorGutter.commentRangeForeground"]: commentRangeForeground,
+		["editorGutter.commentRangeForeground"]: DEBUG_BLUE,
 		["editorGutter.commentGlyphForeground"]: DFLT,
 		["editorGutter.commentUnresolvedGlyphForeground"]: DFLT,
-		["editorGutter.foldingControlForeground"]: DFLT,
+		["editorGutter.foldingControlForeground"]: buttonBack,
 		["editorGutter.itemGlyphForeground"]: DFLT,
 		["editorGutter.itemBackground"]: DFLT,
 
 		//The editor comments widget can be seen when reviewing pull requests:
-
-		["editorCommentsWidget.resolvedBorder"]: DFLT,
+		["editorCommentsWidget.resolvedBorder"]: DFLT, //TODO
 		["editorCommentsWidget.unresolvedBorder"]: DFLT,
 		["editorCommentsWidget.rangeBackground"]: DFLT,
 		["editorCommentsWidget.rangeActiveBackground"]: DFLT,
 		["editorCommentsWidget.replyInputBackground"]: DFLT,
 
 		//Editor inline edits can be seen when using Copilot to suggest the next change to make:
-
-		["inlineEdit.gutterIndicator.primaryBorder"]: DFLT,
+		["inlineEdit.gutterIndicator.primaryBorder"]: DFLT, //TODO
 		["inlineEdit.gutterIndicator.primaryForeground"]: DFLT,
 		["inlineEdit.gutterIndicator.primaryBackground"]: DFLT,
 		["inlineEdit.gutterIndicator.secondaryForeground"]: DFLT,
@@ -615,41 +612,44 @@ let jsonObject = {
 
 		//Diff editor colors
 		//For coloring inserted and removed text, use either a background or a border color but not both.
-
+		["diffEditor.border"]: DFLT,
+		["diffEditor.diagonalFill"]: DEBUG_PINK,
 		["diffEditor.insertedTextBackground"]: addLightTRANSPARENT,
 		["diffEditor.insertedTextBorder"]: TRANSPARENT,
 		["diffEditor.removedTextBackground"]: deleteLightTRANSPARENT,
 		["diffEditor.removedTextBorder"]: TRANSPARENT,
-		["diffEditor.border"]: DFLT,
-		["diffEditor.diagonalFill"]: DFLT,
 		["diffEditor.insertedLineBackground"]: addLightTRANSPARENT,
 		["diffEditor.removedLineBackground"]: deleteLightTRANSPARENT,
 		["diffEditorGutter.insertedLineBackground"]: TRANSPARENT,
 		["diffEditorGutter.removedLineBackground"]: TRANSPARENT,
 		["diffEditorOverview.insertedForeground"]: DFLT,
 		["diffEditorOverview.removedForeground"]: DFLT,
-		["diffEditor.unchangedRegionBackground"]: grey.G80,
+		["diffEditor.unchangedRegionBackground"]: DFLT, //TODO
 		["diffEditor.unchangedRegionForeground"]: DFLT,
 		["diffEditor.unchangedRegionShadow"]: shadow,
-		["diffEditor.unchangedCodeBackground"]: grey.G80,
+		["diffEditor.unchangedCodeBackground"]: DFLT,
 		["diffEditor.move.border"]: DFLT,
 		["diffEditor.moveActive.border"]: DFLT,
 		["multiDiffEditor.headerBackground"]: DFLT,
-		["multiDiffEditor.background"]: DFLT,
+		["multiDiffEditor.background"]: DEBUG_RED,
 		["multiDiffEditor.border"]: DFLT,
 
 		//Chat colors
-
-		["chat.requestBorder"]: DFLT,
-		["chat.requestBackground"]: DFLT,
+		["chat.requestBorder"]: DFLT,//TODO
+		["chat.requestBackground"]: DEBUG_RED,
 		["chat.slashCommandBackground"]: DFLT,
 		["chat.slashCommandForeground"]: DFLT,
 		["chat.avatarBackground"]: DFLT,
 		["chat.avatarForeground"]: DFLT,
 		["chat.editedFileForeground"]: DFLT,
+		["chat.linesAddedForeground"]: DFLT,
+		["chat.linesRemovedForeground"]: DFLT,
+		["chat.requestCodeBorder"]: DFLT,
+		["chat.requestBubbleBackground"]: DFLT,
+		["chat.requestBubbleHoverBackground"]: DFLT,
+		["chat.checkpointSeparator"]: DFLT,
 
 		//Inline Chat colors
-
 		["inlineChat.background"]: DFLT,
 		["inlineChat.foreground"]: DFLT,
 		["inlineChat.border"]: DFLT,
@@ -662,18 +662,16 @@ let jsonObject = {
 		["inlineChatDiff.removed"]: DFLT,
 
 		//Panel Chat colors
-
 		["interactive.activeCodeBorder"]: DFLT,
 		["interactive.inactiveCodeBorder"]: DFLT,
 
 		//Editor widget colors
 		//The Editor widget is shown in front of the editor content. Examples are the Find/Replace dialog, the suggestion widget, and the editor hover.
-
 		["editorWidget.foreground"]: DFLT,
-		["editorWidget.background"]: grey.G86,
+		["editorWidget.background"]: panelsBack2,
 		["editorWidget.border"]: DFLT,
 		["editorWidget.resizeBorder"]: DFLT,
-		["editorSuggestWidget.background"]: DFLT,
+		["editorSuggestWidget.background"]: DFLT,//TODO
 		["editorSuggestWidget.border"]: DFLT,
 		["editorSuggestWidget.foreground"]: DFLT,
 		["editorSuggestWidget.focusHighlightForeground"]: DFLT,
@@ -682,27 +680,25 @@ let jsonObject = {
 		["editorSuggestWidget.selectedForeground"]: DFLT,
 		["editorSuggestWidget.selectedIconForeground"]: DFLT,
 		["editorSuggestWidgetStatus.foreground"]: DFLT,
-		["editorHoverWidget.foreground"]: DFLT,
+		["editorHoverWidget.foreground"]: DFLT,//TODO
 		["editorHoverWidget.background"]: DFLT,
 		["editorHoverWidget.border"]: DFLT,
 		["editorHoverWidget.highlightForeground"]: DFLT,
 		["editorHoverWidget.statusBarBackground"]: DFLT,
 		["editorGhostText.border"]: DFLT,
 		["editorGhostText.background"]: DFLT,
-		["editorGhostText.foreground"]: DFLT,
+		["editorGhostText.foreground"]: hintLight,//TODO
 		["editorStickyScroll.background"]: DFLT,
 		["editorStickyScroll.border"]: DFLT,
 		["editorStickyScroll.shadow"]: shadow,
 		["editorStickyScrollHover.background"]: hover,
 
 		//The Debug Exception widget is a peek view that shows in the editor when debug stops at an exception.
-
-		["debugExceptionWidget.background"]: DFLT,
+		["debugExceptionWidget.background"]: DFLT,//TODO
 		["debugExceptionWidget.border"]: DFLT,
 
 		//The editor marker view shows when navigating to errors and warnings in the editor (Go to Next Error or Warning command).
-
-		["editorMarkerNavigation.background"]: DFLT,
+		["editorMarkerNavigation.background"]: DFLT,//TODO
 		["editorMarkerNavigationError.background"]: DFLT,
 		["editorMarkerNavigationWarning.background"]: DFLT,
 		["editorMarkerNavigationInfo.background"]: DFLT,
@@ -712,29 +708,27 @@ let jsonObject = {
 
 		//Peek view colors
 		//Peek views are used to show references and declarations as a view inside the editor.
-		//Peek view
-
 		["peekView.border"]: DFLT,
-		["peekViewEditor.background"]: grey.G80,
+		["peekViewEditor.background"]: panelsBack1,
 		["peekViewEditorGutter.background"]: DFLT,
-		["peekViewEditor.matchHighlightBackground"]: DFLT,
+		["peekViewEditor.matchHighlightBackground"]: findMatchAllTRANSPARENT1,
 		["peekViewEditor.matchHighlightBorder"]: DFLT,
-		["peekViewResult.background"]: DFLT,
-		["peekViewResult.fileForeground"]: DFLT,
-		["peekViewResult.lineForeground"]: DFLT,
-		["peekViewResult.matchHighlightBackground"]: DFLT,
-		["peekViewResult.selectionBackground"]: DFLT,
-		["peekViewResult.selectionForeground"]: DFLT,
-		["peekViewTitle.background"]: DFLT,
-		["peekViewTitleDescription.foreground"]: DFLT,
+		["peekViewResult.background"]: panelsBack3,
+		["peekViewResult.fileForeground"]: mainFore,
+		["peekViewResult.lineForeground"]: mainFore,
+		["peekViewResult.matchHighlightBackground"]: findMatchAllTRANSPARENT2,
+		["peekViewResult.selectionBackground"]: selectActiveTRANSPARENT3,
+		["peekViewResult.selectionForeground"]: mainFore,
+		["peekViewTitle.background"]: panelsBack3,
+		["peekViewTitleDescription.foreground"]: secondaryFore,
 		["peekViewTitleLabel.foreground"]: DFLT,
 		["peekViewEditorStickyScroll.background"]: DFLT,
+		["peekViewEditorStickyScrollGutter.background"]: DFLT,
 
 		//Merge conflicts colors
 		//Merge conflict decorations are shown when the editor contains special diff ranges.
 		//Merge ranges
-
-		["merge.currentHeaderBackground"]: DFLT,
+		["merge.currentHeaderBackground"]: DFLT,//TODO
 		["merge.currentContentBackground"]: DFLT,
 		["merge.incomingHeaderBackground"]: DFLT,
 		["merge.incomingContentBackground"]: DFLT,
@@ -762,18 +756,17 @@ let jsonObject = {
 
 		//Panel colors
 		//Panels are shown below the editor area and contain views like Output and Integrated Terminal.
-
-		["panel.background"]: panelsBack4,
+		["panel.background"]: panelsBack3,
 		["panel.border"]: TRANSPARENT,
-		["panel.dropBorder"]: dropInto,
+		["panel.dropBorder"]: dropBetween,
 		["panelTitle.activeBorder"]: selectActive,
-		["panelTitle.activeForeground"]: mainFore,
+		["panelTitle.activeForeground"]: crucialFore,
 		["panelTitle.inactiveForeground"]: mainFore,
 		["panelTitle.border"]: TRANSPARENT,
 		["panelTitleBadge.background"]: DFLT,
 		["panelTitleBadge.foreground"]: DFLT,
-		["panelInput.border"]: DFLT,
-		["panelSection.border"]: DFLT,
+		["panelInput.border"]: inputBorder,
+		["panelSection.border"]: DFLT,//TODO
 		["panelSection.dropBackground"]: DFLT,
 		["panelSectionHeader.background"]: DFLT,
 		["panelSectionHeader.foreground"]: DFLT,
@@ -781,19 +774,18 @@ let jsonObject = {
 		["panelStickyScroll.border"]: DFLT,
 		["panelStickyScroll.shadow"]: shadow,
 		["panelSectionHeader.border"]: DFLT,
-		["outputView.background"]: panelsBack5,
+		["outputView.background"]: panelsBack2,
 		["outputViewStickyScroll.background"]: DFLT,
 
 		//Status Bar colors
 		//The Status Bar is shown in the bottom of the workbench.
-
 		["statusBar.background"]: panelsBack6,
 		["statusBar.foreground"]: mainFore,
 		["statusBar.border"]: TRANSPARENT,
 		["statusBar.debuggingBackground"]: statusBarDebuggingBackground,
 		["statusBar.debuggingForeground"]: mainFore,
 		["statusBar.debuggingBorder"]: TRANSPARENT,
-		["statusBar.noFolderBackground"]: panelsBack5,
+		["statusBar.noFolderBackground"]: panelsBack2,
 		["statusBar.noFolderForeground"]: mainFore,
 		["statusBar.noFolderBorder"]: TRANSPARENT,
 		["statusBar.focusBorder"]: selectActive,
@@ -810,30 +802,29 @@ let jsonObject = {
 		["statusBarItem.remoteHoverForeground"]: DFLT,
 		["statusBarItem.errorBackground"]: errorLight,
 		["statusBarItem.errorForeground"]: mainFore,
-		["statusBarItem.errorHoverBackground"]: DFLT,
+		["statusBarItem.errorHoverBackground"]: hover,
 		["statusBarItem.errorHoverForeground"]: DFLT,
 		["statusBarItem.warningBackground"]: warningLight,
 		["statusBarItem.warningForeground"]: mainFore,
-		["statusBarItem.warningHoverBackground"]: DFLT,
+		["statusBarItem.warningHoverBackground"]: hover,
 		["statusBarItem.warningHoverForeground"]: DFLT,
-		["statusBarItem.compactHoverBackground"]: DFLT,
+		["statusBarItem.compactHoverBackground"]: hoverDarker,
 		["statusBarItem.focusBorder"]: DFLT,
 		["statusBarItem.offlineBackground"]: DFLT,
 		["statusBarItem.offlineForeground"]: DFLT,
 		["statusBarItem.offlineHoverForeground"]: DFLT,
 		["statusBarItem.offlineHoverBackground"]: DFLT,
-
 		//Prominent items stand out from other Status Bar entries to indicate importance. One example is the Toggle Tab Key Moves Focus command change mode indicator.
-		//Title Bar colors
 
+		//Title Bar colors
 		["titleBar.activeBackground"]: panelsBack6,
-		["titleBar.activeForeground"]: grey.G20,
-		["titleBar.inactiveBackground"]: grey.G76,
-		["titleBar.inactiveForeground"]: grey.G36,
+		["titleBar.activeForeground"]: mainFore,
+		["titleBar.inactiveBackground"]: panelsBack8,
+		["titleBar.inactiveForeground"]: mainFore,
 		["titleBar.border"]: DFLT,
 
 		//Menu Bar colors
-
+		
 		["menubar.selectionForeground"]: DFLT,
 		["menubar.selectionBackground"]: hover,
 		["menubar.selectionBorder"]: DFLT,
