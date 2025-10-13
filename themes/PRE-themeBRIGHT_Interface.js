@@ -104,12 +104,15 @@ let IndentGuide = "#00000022";
 let IndentGuideActive = "#00000033";
 let UnusedCodeOpacity = "#00000088";
 
+
 //TODO下面的颜色还没调过
+let statusBarDebuggingBackground = "#dec02dff";
+let extensionStar= "#dea62dff";
+let extensionPreRelease= "#de2dc1ff";
+let extensionVerified= "#129123ff";
 let foldArea = "#00a0cc2f";
 let foldHint = "#00a0cc";
-
 let linkEdit = "#33ffff5f";
-let statusBarDebuggingBackground = "#ceb32c";
 let commentRangeForeground = "#686868";
 
 let jsonObject = {
@@ -237,7 +240,7 @@ let jsonObject = {
 
 		//Progress bar
 
-		["progressBar.background"]: DEBUG_GREEN,
+		["progressBar.background"]: infoDark,
 
 		//Lists and trees
 		//Colors for list and trees like the File Explorer. An active list/tree has keyboard focus, an inactive does not.
@@ -824,25 +827,23 @@ let jsonObject = {
 		["titleBar.border"]: DFLT,
 
 		//Menu Bar colors
-		
 		["menubar.selectionForeground"]: DFLT,
 		["menubar.selectionBackground"]: hover,
 		["menubar.selectionBorder"]: DFLT,
-		["menu.foreground"]: grey.G20,
+		["menu.foreground"]: mainFore,
 		["menu.background"]: panelsBack5,
 		["menu.selectionForeground"]: DFLT,
 		["menu.selectionBackground"]: hover,
 		["menu.selectionBorder"]: DFLT,
-		["menu.separatorBackground"]: grey.G74,
+		["menu.separatorBackground"]: unimportantFore,
 		["menu.border"]: DFLT,
 
 		//Command Center colors
-
 		["commandCenter.foreground"]: DFLT,
-		["commandCenter.background"]: grey.G76,
+		["commandCenter.background"]: panelsBack2,
 		["commandCenter.activeForeground"]: DFLT,
-		["commandCenter.activeBackground"]: hover,
-		["commandCenter.border"]: DFLT,
+		["commandCenter.activeBackground"]: panelsBack2,
+		["commandCenter.border"]: inputBorder,
 		["commandCenter.inactiveForeground"]: DFLT,
 		["commandCenter.inactiveBorder"]: DFLT,
 		["commandCenter.activeBorder"]: DFLT,
@@ -862,19 +863,17 @@ let jsonObject = {
 		["notifications.background"]: panelsBack4,
 		["notifications.border"]: DFLT,
 		["notificationLink.foreground"]: DFLT,
-		["notificationsErrorIcon.foreground"]: errorLight,
-		["notificationsWarningIcon.foreground"]: warningLight,
-		["notificationsInfoIcon.foreground"]: infoLight,
+		["notificationsErrorIcon.foreground"]: errorDark,
+		["notificationsWarningIcon.foreground"]: warningDark,
+		["notificationsInfoIcon.foreground"]: infoDark,
 
 		//Banner colors
 		//The banner appears below the title bar and spans the entire width of the workbench when visible.
-
 		["banner.background"]: infoDark,
 		["banner.foreground"]: whiteFore,
-		["banner.iconForeground"]: DFLT,
+		["banner.iconForeground"]: whiteFore,
 
 		//Extensions colors
-
 		["extensionButton.prominentForeground"]: DFLT,
 		["extensionButton.prominentBackground"]: DFLT,
 		["extensionButton.prominentHoverBackground"]: DFLT,
@@ -884,21 +883,20 @@ let jsonObject = {
 		["extensionButton.separator"]: DFLT,
 		["extensionBadge.remoteBackground"]: DFLT,
 		["extensionBadge.remoteForeground"]: DFLT,
-		["extensionIcon.starForeground"]: DFLT,
-		["extensionIcon.verifiedForeground"]: DFLT,
-		["extensionIcon.preReleaseForeground"]: DFLT,
-		["extensionIcon.sponsorForeground"]: DFLT,
+		["extensionIcon.starForeground"]: extensionStar,
+		["extensionIcon.verifiedForeground"]: extensionVerified,
+		["extensionIcon.preReleaseForeground"]: extensionPreRelease,
+		["extensionIcon.sponsorForeground"]: DFLT,//TODO
 		["extensionIcon.privateForeground"]: DFLT,
 
 		//Quick picker colors
-
 		["pickerGroup.border"]: dimFore,
 		["pickerGroup.foreground"]: infoDark,
-		["quickInput.background"]: panelsBack5,
+		["quickInput.background"]: panelsBack4,
 		["quickInput.foreground"]: mainFore,
 		["quickInputList.focusBackground"]: panelsBack7,
-		["quickInputList.focusForeground"]: mainFore,
-		["quickInputList.focusIconForeground"]: panelsBack7,
+		["quickInputList.focusForeground"]: DFLT,
+		["quickInputList.focusIconForeground"]: DFLT,
 		["quickInputTitle.background"]: DEBUG_PINK,
 
 		//Keybinding label colors
@@ -909,23 +907,20 @@ let jsonObject = {
 		//	The Keyboard Shortcuts recorder modal
 		//	The "feature contribution" section of an extension's marketplace page
 		//The following customizations are available:
-
 		["keybindingLabel.background"]: keyboardLabel,
 		["keybindingLabel.foreground"]: mainFore,
-		["keybindingLabel.border"]: grey.G50,
-		["keybindingLabel.bottomBorder"]: grey.G50,
+		["keybindingLabel.border"]: dimFore,
+		["keybindingLabel.bottomBorder"]: dimFore,
 
 		//Keyboard shortcut table colors
-
 		["keybindingTable.headerBackground"]: DFLT,
 		["keybindingTable.rowsBackground"]: DFLT,
 
 		//Integrated Terminal colors
-
 		["terminal.background"]: panelsBack1,
 		["terminal.border"]: DFLT,
 		["terminal.foreground"]: DFLT,
-		["terminal.ansiBlack"]: DFLT,
+		["terminal.ansiBlack"]: DFLT,//TODO
 		["terminal.ansiBlue"]: DFLT,
 		["terminal.ansiBrightBlack"]: DFLT,
 		["terminal.ansiBrightBlue"]: DFLT,
@@ -941,19 +936,19 @@ let jsonObject = {
 		["terminal.ansiRed"]: DFLT,
 		["terminal.ansiWhite"]: DFLT,
 		["terminal.ansiYellow"]: DFLT,
-		["terminal.selectionBackground"]: DFLT,
+		["terminal.selectionBackground"]: selectActiveTRANSPARENT1,
 		["terminal.selectionForeground"]: DFLT,
-		["terminal.inactiveSelectionBackground"]: DFLT,
-		["terminal.findMatchBackground"]: DFLT,
+		["terminal.inactiveSelectionBackground"]: selectInactiveTRANSPARENT2,
+		["terminal.findMatchBackground"]: selectActiveTRANSPARENT1,
 		["terminal.findMatchBorder"]: DFLT,
-		["terminal.findMatchHighlightBackground"]: DFLT,
+		["terminal.findMatchHighlightBackground"]: findMatchAllTRANSPARENT1,
 		["terminal.findMatchHighlightBorder"]: DFLT,
-		["terminal.hoverHighlightBackground"]: DFLT,
-		["terminalCursor.background"]: DFLT,
-		["terminalCursor.foreground"]: DFLT,
-		["terminal.dropBackground"]: DFLT,
+		["terminal.hoverHighlightBackground"]: hover,
+		["terminalCursor.background"]: WHITE,
+		["terminalCursor.foreground"]: BLACK,
+		["terminal.dropBackground"]: dropInto,
 		["terminal.tab.activeBorder"]: DFLT,
-		["terminalCommandDecoration.defaultBackground"]: DFLT,
+		["terminalCommandDecoration.defaultBackground"]: DFLT,//TODO
 		["terminalCommandDecoration.successBackground"]: DFLT,
 		["terminalCommandDecoration.errorBackground"]: DFLT,
 		["terminalOverviewRuler.cursorForeground"]: DFLT,
@@ -975,8 +970,7 @@ let jsonObject = {
 		["terminalSymbolIcon.folderForeground"]: DFLT,
 
 		//Debug colors
-
-		["debugToolBar.background"]: DFLT,
+		["debugToolBar.background"]: DFLT,//TODO
 		["debugToolBar.border"]: DFLT,
 		["editor.stackFrameHighlightBackground"]: DFLT,
 		["editor.focusedStackFrameHighlightBackground"]: DFLT,
@@ -996,8 +990,7 @@ let jsonObject = {
 		["debugTokenExpression.type"]: DFLT,
 
 		//Testing colors
-
-		["testing.runAction"]: DFLT,
+		["testing.runAction"]: DFLT,//TODO
 		["testing.iconErrored"]: DFLT,
 		["testing.iconFailed"]: DFLT,
 		["testing.iconPassed"]: DFLT,
@@ -1031,10 +1024,9 @@ let jsonObject = {
 		["testing.message.error.badgeForeground"]: DFLT,
 
 		//Welcome page colors
-
 		["welcomePage.background"]: DFLT,
-		["welcomePage.progress.background"]: DFLT,
-		["welcomePage.progress.foreground"]: DFLT,
+		["welcomePage.progress.background"]: inputBack,
+		["welcomePage.progress.foreground"]: infoDark,
 		["welcomePage.tileBackground"]: DFLT,
 		["welcomePage.tileHoverBackground"]: DFLT,
 		["welcomePage.tileBorder"]: DFLT,
@@ -1042,7 +1034,6 @@ let jsonObject = {
 		["walkthrough.stepTitle.foreground"]: DFLT,
 
 		//Git colors
-
 		["gitDecoration.addedResourceForeground"]: gitAdd,
 		["gitDecoration.modifiedResourceForeground"]: gitModify,
 		["gitDecoration.deletedResourceForeground"]: gitDelete,
@@ -1056,7 +1047,6 @@ let jsonObject = {
 		["git.blame.editorDecorationForeground"]: DFLT,
 
 		//Source Control Graph colors
-
 		["scmGraph.historyItemHoverLabelForeground"]: DFLT,
 		["scmGraph.foreground1"]: colour.L70_C10_H100,
 		["scmGraph.foreground2"]: colour.L70_C10_H150,
@@ -1072,8 +1062,7 @@ let jsonObject = {
 		["scmGraph.historyItemHoverDefaultLabelBackground"]: DFLT,
 
 		//Settings Editor colors
-		//Note:
-
+		//Note:These colors are for the GUI settings editor which can be opened with the Preferences: Open Settings (UI) command.
 		["settings.headerForeground"]: mainFore,
 		["settings.modifiedItemIndicator"]: modifyLight,
 		["settings.dropdownBackground"]: DFLT,
@@ -1090,33 +1079,31 @@ let jsonObject = {
 		["settings.numberInputBackground"]: DFLT,
 		["settings.numberInputForeground"]: DFLT,
 		["settings.numberInputBorder"]: DFLT,
-		["settings.focusedRowBackground"]: DFLT,
-		["settings.focusedRowBorder"]: DFLT,
+		["settings.focusedRowBackground"]: selectActiveTRANSPARENT3,
+		["settings.focusedRowBorder"]: selectActive,
 		["settings.headerBorder"]: DFLT,
 		["settings.sashBorder"]: DFLT,
 		["settings.settingsHeaderHoverForeground"]: DFLT,
 
 		//Breadcrumbs colors
 		//The theme colors for breadcrumbs navigation:
-
+		//选项卡标签和编辑器中间的那一小条
 		["breadcrumb.foreground"]: dimFore,
 		["breadcrumb.background"]: panelsBack1,
 		["breadcrumb.focusForeground"]: mainFore,
-		["breadcrumb.activeSelectionForeground"]: selectActive,
+		["breadcrumb.activeSelectionForeground"]: crucialFore,
 		["breadcrumbPicker.background"]: DFLT,
 
 		//Snippets colors
 		//The theme colors for snippets:
-
-		["editor.snippetTabstopHighlightBackground"]: DFLT,
+		["editor.snippetTabstopHighlightBackground"]: DEBUG_PINK,
 		["editor.snippetTabstopHighlightBorder"]: DFLT,
 		["editor.snippetFinalTabstopHighlightBackground"]: DFLT,
 		["editor.snippetFinalTabstopHighlightBorder"]: DFLT,
 
 		//Symbol Icons colors
 		//The theme colors for symbol icons that appears in the Outline view, breadcrumb navigation, and suggest widget:
-
-		["symbolIcon.arrayForeground"]: DFLT,
+		["symbolIcon.arrayForeground"]: DFLT,//TODO
 		["symbolIcon.booleanForeground"]: DFLT,
 		["symbolIcon.classForeground"]: DFLT,
 		["symbolIcon.colorForeground"]: DFLT,
@@ -1151,8 +1138,7 @@ let jsonObject = {
 		["symbolIcon.variableForeground"]: DFLT,
 
 		//Debug Icons colors
-
-		["debugIcon.breakpointForeground"]: DFLT,
+		["debugIcon.breakpointForeground"]: DFLT,//TODO
 		["debugIcon.breakpointDisabledForeground"]: DFLT,
 		["debugIcon.breakpointUnverifiedForeground"]: DFLT,
 		["debugIcon.breakpointCurrentStackframeForeground"]: DFLT,
@@ -1174,7 +1160,6 @@ let jsonObject = {
 		["debugConsoleInputIcon.foreground"]: DFLT,
 
 		//Notebook colors
-
 		["notebook.editorBackground"]: DFLT,
 		["notebook.cellBorderColor"]: DFLT,
 		["notebook.cellHoverBackground"]: DFLT,
@@ -1201,8 +1186,7 @@ let jsonObject = {
 		["notebookEditorOverviewRuler.runningCellForeground"]: DFLT,
 
 		//Chart colors
-
-		["charts.foreground"]: DFLT,
+		["charts.foreground"]: DFLT,//TODO
 		["charts.lines"]: DFLT,
 		["charts.red"]: DFLT,
 		["charts.blue"]: DFLT,
@@ -1215,24 +1199,19 @@ let jsonObject = {
 		["chart.guide"]: DFLT,
 
 		//Ports colors
-
-		["ports.iconRunningProcessForeground"]: DFLT,
+		["ports.iconRunningProcessForeground"]: DFLT,//TODO
 
 		//Comments View colors
-
-		["commentsView.resolvedIcon"]: DFLT,
+		["commentsView.resolvedIcon"]: DFLT,//TODO
 		["commentsView.unresolvedIcon"]: DFLT,
 
 		//Action Bar colors
-
-		["actionBar.toggledBackground"]: DFLT,
+		["actionBar.toggledBackground"]: DEBUG_RED,
 
 		//Simple Find Widget colors
-
 		["simpleFindWidget.sashBorder"]: DFLT,
 
 		//Gauge colors
-
 		["gauge.background"]: DFLT,
 		["gauge.foreground"]: DFLT,
 		["gauge.border"]: DFLT,
