@@ -34,8 +34,8 @@ let sliderNormal = "#00000022";
 let hover = "#00000011";
 let hoverDarker = "#00000033";
 let click = "#00000055";
-let buttonBack = grey.G36;
-let buttonHover = grey.G44;
+let buttonBack = grey.G34;
+let buttonHover = grey.G42;
 let buttonForeground = grey.G98;
 let buttonBorder = grey.G54;
 let buttonSecondary = grey.G46;
@@ -844,10 +844,10 @@ let jsonObject = {
 
 		["notificationCenter.border"]: DFLT,
 		["notificationCenterHeader.foreground"]: DFLT,
-		["notificationCenterHeader.background"]: panelsBack6,
+		["notificationCenterHeader.background"]: panelsBack5,
 		["notificationToast.border"]: DFLT,
 		["notifications.foreground"]: DFLT,
-		["notifications.background"]: panelsBack4,
+		["notifications.background"]: panelsBack3,
 		["notifications.border"]: DFLT,
 		["notificationLink.foreground"]: DFLT,
 		["notificationsErrorIcon.foreground"]: errorDark,
