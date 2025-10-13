@@ -9,6 +9,7 @@ let WHITE = "#FFF";
 
 import grey from "./palette-greyscales.js";
 import colour from "./palette-coloursBRIGHT.js";
+// import colour from "./palette-coloursDARK.js";
 
 let mainBackground0=grey.G98;
 let mainBackground1=grey.G96;
@@ -20,33 +21,55 @@ let mainBackground6 = grey.G86;
 let mainBackground7 = grey.G84;
 let mainBackground8 = grey.G82;
 let mainBackground9 = grey.G80;
-// let secondaryForeground1 = grey.G76;
-// let secondaryForeground2 = grey.G72;
-// let secondaryForeground3 = grey.G68;
-// let secondaryForeground4 = grey.G64;
-// let secondaryForeground5 = grey.G60;
-// let secondaryForeground6 = grey.G56;
-// let secondaryForeground7 = grey.G52;
-// let secondaryForeground8 = grey.G48;
-// let secondaryForeground9 = grey.G44;
-// let mainFore = grey.G40;
-// let mainFore = grey.G34;
-// let mainFore = grey.G28;
-// let mainFore = grey.G22;
-// let mainFore = grey.G16;
-// let mainFore = grey.G10;
+let secondaryForeground1 = grey.G76;
+let secondaryForeground2 = grey.G72;
+let secondaryForeground3 = grey.G68;
+let secondaryForeground4 = grey.G64;
+let secondaryForeground5 = grey.G60;
+let secondaryForeground6 = grey.G56;
+let secondaryForeground7 = grey.G52;
+let secondaryForeground8 = grey.G48;
+let secondaryForeground9 = grey.G44;
+// let panelsFore5 = grey.G40;
+// let panelsFore5 = grey.G34;
+// let panelsFore5 = grey.G28;
+// let panelsFore5 = grey.G22;
+// let panelsFore5 = grey.G16;
+// let panelsFore5 = grey.G10;
 
-let inputBack=grey.G98;
-let editorBack=grey.G96;
-let panelsBack1=grey.G94;
-let panelsBack2=grey.G92;
-let panelsBack3=grey.G90;
-let panelsBack4=grey.G88;
-let panelsBack5=grey.G86;
-let crucialFore=grey.G08;
-let mainFore=grey.G16;
-let dimFore=grey.G58
-let unimportantFore=grey.G78;
+let editorBack1 = grey.G88;
+let editorBack2 = grey.G90;
+let editorBack3 = grey.G92;
+let editorBack4 = grey.G94;
+let editorBack5 = grey.G96;
+let editorBack6 = grey.G98;
+
+let editorFore1 = grey.G12;
+let editorFore2 = grey.G14;
+let editorFore3 = grey.G16;
+let editorFore4 = grey.G18;
+let editorFore5 = grey.G20;
+let editorFore6 = grey.G98;
+
+let panelsBack1 = grey.G28;
+let panelsBack2 = grey.G32;
+let panelsBack3 = grey.G36;
+let panelsBack4 = grey.G40;
+let panelsBack5 = grey.G44;
+let panelsBack6 = grey.G48;
+let panelsBack7 = grey.G52;
+let panelsBack8 = grey.G56;
+let panelsBack9 = grey.G60;
+
+let panelsFore1 = grey.G82;
+let panelsFore2 = grey.G84;
+let panelsFore3 = grey.G86;
+let panelsFore4 = grey.G88;
+let panelsFore5 = grey.G90;
+let panelsFore6 = grey.G92;
+let panelsFore7 = grey.G94;
+let panelsFore8 = grey.G96;
+let panelsFore9 = grey.G98;
 
 let shadow = "#44444466";
 let drop = "#66666644";
@@ -54,21 +77,12 @@ let placeholder = "#999999cc";
 let sliderNormal = "#00000011";
 let hover = "#00000011";
 let click = "#00000055";
-
-let hyperlinkFore = "#1c50a7"; //oklch(0.45 0.15 260)
-let hyperlinkHover = "#2a5fb7"; //oklch(0.50 0.15 260)
-let buttonBack = grey.G36
-let buttonHover = grey.G44;
-let buttonForeground = grey.G98;
-let buttonBorder = grey.G54;
-let buttonSecondary = grey.G46;
-let buttonSecondaryHover = grey.G54;
-
-let addLight = "#40cc6d"; //oklch(0.75 0.18 150)
-let addLightTRANSPARENT = "#40cc6d44";
-let modifyLight = "#c8ae00"; //oklch(0.75 0.18 100)
-let deleteLight = "#ff76a9"; //oklch(0.75 0.18 0)
-let deleteLightTRANSPARENT = "#ff76a944";
+let buttonHyperlink = "#396fc8"; //oklch(0.55 0.15 260)
+let buttonHover = "#2a5fb7"; //oklch(0.50 0.15 260)
+let hyperlinkHover = "#568de9"; //oklch(0.65 0.15 260)
+let buttonSecondary = "#6b90cc";//oklch(0.65 0.10 260)
+let buttonSecondaryHover = "#5c80bc";//oklch(0.60 0.10 260)
+let buttonForeground = grey.G96;
 
 let gitAdd = "#21763c"; //oklch(0.5 0.12 150)
 let gitModify = "#746300"; //oklch(0.5 0.12 100)
@@ -81,12 +95,18 @@ let gitSubmodule = "#495da7"; //oklch(0.5 0.12 270)
 let SourceControlGraphRef = "#888";
 let SourceControlGraphRemote = "#444";
 
+let addLight = "#40cc6d"; //oklch(0.75 0.18 150)
+let addLightTRANSPARENT = "#40cc6d44";
+let modifyLight = "#c8ae00"; //oklch(0.75 0.18 100)
+let deleteLight = "#ff76a9"; //oklch(0.75 0.18 0)
+let deleteLightTRANSPARENT = "#ff76a944";
+
 let errorLight = "#ff9d9e"; //oklch(0.80 0.12 20)
 let errorDark = "#e85760"; //oklch(0.65 0.18 20)
 let warningLight = "#e7b375"; //oklch(0.80 0.10 70)
 let warningDark = "#c87b00"; //oklch(0.65 0.15 70)
-let infoLight = "#75caf2"; //oklch(0.80 0.10 230)
-let infoDark = "#449ac0"; //oklch(0.65 0.15 230)
+let infoLight = "#92c1fd"; //oklch(0.80 0.10 255)
+let infoDark = "#4990e8"; //oklch(0.65 0.15 255)
 let hintLight = "#95cf96"; //oklch(0.80 0.10 145)
 let hintDark = "#4aa651"; //oklch(0.65 0.15 145)
 
@@ -129,9 +149,9 @@ let jsonObject = {
 	//The contrast colors are typically only set for high contrast themes. If set, they add an additional border around items across the UI to increase the contrast.
 
 	["$schema"]: "vscode://schemas/color-theme",
-	["name"]: "User Interface Colours - ZQT BRIGHT Theme",
+	["name"]: "User Interface Colours - ZQT DESIGN Theme",
 	["//description"]: "编辑器的界面外观",
-	["include"]: "theme-ZQT-BRIGHT_codeSpecific.json",
+	["include"]: "theme-ZQT-DESIGN_codeSpecific.json",
 	["colors"]: {
 		//Contrast colors
 		//这个不需要
@@ -141,14 +161,14 @@ let jsonObject = {
 		//Base colors
 
 		["focusBorder"]: selectActive,
-		["foreground"]: mainFore,
-		["disabledForeground"]: dimFore,
+		["foreground"]: panelsFore5,
+		["disabledForeground"]: panelsFore1,
 		["widget.border"]: DFLT,
 		["widget.shadow"]: shadow,
 		["selection.background"]: selectActiveTRANSPARENT1,//这个对编辑器和终端里的选择无效
-		["descriptionForeground"]: DEBUG_RED,
+		["descriptionForeground"]: panelsFore3,
 		["errorForeground"]: errorDark,
-		["icon.foreground"]: mainFore,
+		["icon.foreground"]: panelsFore5,
 		["sash.hoverBorder"]: selectActiveTRANSPARENT2,
 
 		//Window border
@@ -165,8 +185,8 @@ let jsonObject = {
 		["textBlockQuote.border"]: DFLT,
 		["textCodeBlock.background"]: mainBackground2,
 		["textLink.activeForeground"]: hyperlinkHover,
-		["textLink.foreground"]: infoDark,
-		["textPreformat.foreground"]: mainFore,
+		["textLink.foreground"]: buttonHyperlink,
+		["textPreformat.foreground"]: panelsFore5,
 		["textPreformat.background"]: mainBackground6,
 		["textSeparator.foreground"]: DEBUG_BLUE,
 
@@ -184,17 +204,16 @@ let jsonObject = {
 		//Button control
 		//A set of colors for button widgets such as Open Folder button in the Explorer of a new window.
 		
-		//TODO下面的属性还没调过
-		["button.background"]: buttonBack,
-		["button.foreground"]: buttonForeground,
+		["button.background"]: buttonHyperlink,
+		["button.foregrounxd"]: buttonForeground,
 		["button.hoverBackground"]: buttonHover,
-		["button.border"]: buttonBorder,
-		["button.separator"]: buttonBorder,
+		["button.border"]: DFLT,
+		["button.separator"]: buttonForeground,
 		["button.secondaryForeground"]: buttonForeground,
 		["button.secondaryBackground"]: buttonSecondary,
 		["button.secondaryHoverBackground"]: buttonSecondaryHover,
-		["checkbox.background"]: inputBack,
-		["checkbox.foreground"]: mainFore,
+		["checkbox.background"]: mainBackground1,
+		["checkbox.foreground"]: panelsFore5,
 		["checkbox.border"]: mainBackground9,
 		["checkbox.selectBackground"]: DFLT,
 		["checkbox.selectBorder"]: DFLT,
@@ -212,27 +231,27 @@ let jsonObject = {
 		["dropdown.background"]: mainBackground1,
 		["dropdown.listBackground"]: DFLT,
 		["dropdown.border"]: mainBackground9,
-		["dropdown.foreground"]: mainFore,
+		["dropdown.foreground"]: panelsFore5,
 
 		//Input control
 		//Colors for input controls such as in the Search view or the Find/Replace dialog.
 
 		["input.placeholderForeground"]: placeholder,
-		["input.background"]: mainBackground1,
-		["input.foreground"]: mainFore,
-		["input.border"]: mainBackground9,
+		["input.background"]: panelsBack2,
+		["input.foreground"]: panelsFore5,
+		["input.border"]: panelsBack8,
 		["inputOption.activeBackground"]: DFLT,
 		["inputOption.activeBorder"]: selectActive,
 		["inputOption.activeForeground"]: DFLT,
 		["inputOption.hoverBackground"]: DFLT,
 		["inputValidation.errorBackground"]: errorLight,
-		["inputValidation.errorForeground"]: mainFore,
+		["inputValidation.errorForeground"]: panelsFore5,
 		["inputValidation.errorBorder"]: errorDark,
 		["inputValidation.infoBackground"]: infoLight,
-		["inputValidation.infoForeground"]: mainFore,
+		["inputValidation.infoForeground"]: panelsFore5,
 		["inputValidation.infoBorder"]: infoDark,
 		["inputValidation.warningBackground"]: warningLight,
-		["inputValidation.warningForeground"]: mainFore,
+		["inputValidation.warningForeground"]: panelsFore5,
 		["inputValidation.warningBorder"]: warningDark,
 
 		//Scrollbar control
@@ -245,7 +264,7 @@ let jsonObject = {
 		//Badge
 		//Badges are small information labels, for example, search results count.
 
-		["badge.foreground"]: mainFore,
+		["badge.foreground"]: panelsFore5,
 		["badge.background"]: infoLight,
 
 		//Progress bar
@@ -291,15 +310,15 @@ let jsonObject = {
 		//Activity Bar
 		//The Activity Bar is usually displayed either on the far left or right of the workbench and allows fast switching between views of the Side Bar.
 
-		["activityBar.background"]: mainBackground6,
+		["activityBar.background"]: panelsBack4,
 		["activityBar.dropBorder"]: DFLT,
-		["activityBar.foreground"]: grey.G20,
-		["activityBar.inactiveForeground"]: grey.G40,
+		["activityBar.foreground"]: panelsFore5,
+		["activityBar.inactiveForeground"]: panelsFore5,
 		["activityBar.border"]: DFLT,
 		["activityBarBadge.background"]: infoDark,
 		["activityBarBadge.foreground"]: DFLT,
 		["activityBar.activeBorder"]: selectActive,
-		["activityBar.activeBackground"]: mainBackground4,
+		["activityBar.activeBackground"]: panelsBack5,
 		["activityBar.activeFocusBorder"]: DFLT,
 		["activityBarTop.foreground"]: DFLT,
 		["activityBarTop.activeBorder"]: DFLT,
@@ -321,16 +340,16 @@ let jsonObject = {
 		//Side Bar
 		//The Side Bar contains views like the Explorer and Search.
 
-		["sideBar.background"]: mainBackground4,
+		["sideBar.background"]: panelsBack5,
 		["sideBar.foreground"]: DFLT,
 		["sideBar.border"]: DFLT,
-		["sideBarSectionHeader.background"]: mainBackground8,
+		["sideBarSectionHeader.background"]: panelsBack3,
 		["sideBarSectionHeader.foreground"]: DFLT,
 		["sideBarSectionHeader.border"]: DFLT,
 		["sideBar.dropBackground"]: drop,
 		["sideBarActivityBarTop.border"]: DFLT,
 		["sideBarTitle.foreground"]: DFLT,
-		["sideBarTitle.background"]: mainBackground4,
+		["sideBarTitle.background"]: panelsBack5,
 		["sideBarTitle.border"]: DFLT,
 		["sideBarStickyScroll.background"]: DFLT,
 		["sideBarStickyScroll.border"]: DFLT,
@@ -362,7 +381,7 @@ let jsonObject = {
 		["editorGroup.border"]: grey.G76,
 		["editorGroup.dropBackground"]: drop,
 		["editorGroupHeader.noTabsBackground"]: DEBUG_RED,
-		["editorGroupHeader.tabsBackground"]: mainBackground6,
+		["editorGroupHeader.tabsBackground"]: panelsBack4,
 		["editorGroupHeader.tabsBorder"]: TRANSPARENT,
 		["editorGroupHeader.border"]: TRANSPARENT,
 		["editorGroup.emptyBackground"]: grey.G94,
@@ -371,14 +390,14 @@ let jsonObject = {
 		["editorGroup.dropIntoPromptBackground"]: DFLT,
 		["editorGroup.dropIntoPromptBorder"]: DFLT,
 		["tab.border"]: mainBackground9,
-		["tab.activeBackground"]: panelsBack1,
-		["tab.activeForeground"]: mainFore,
-		["tab.inactiveBackground"]: mainBackground6,
-		["tab.inactiveForeground"]: mainFore,
-		["tab.unfocusedActiveBackground"]: mainBackground5,
-		["tab.unfocusedActiveForeground"]: mainFore,
-		["tab.unfocusedInactiveBackground"]: mainBackground6,
-		["tab.unfocusedInactiveForeground"]: mainFore,
+		["tab.activeBackground"]: mainBackground3,
+		["tab.activeForeground"]: panelsFore5,
+		["tab.inactiveBackground"]: panelsBack4,
+		["tab.inactiveForeground"]: panelsFore5,
+		["tab.unfocusedActiveBackground"]: panelsBack4,
+		["tab.unfocusedActiveForeground"]: panelsFore5,
+		["tab.unfocusedInactiveBackground"]: panelsBack4,
+		["tab.unfocusedInactiveForeground"]: panelsFore5,
 		["tab.activeBorderTop"]: selectActive,
 		["tab.activeBorder"]: DFLT,
 		["tab.unfocusedActiveBorderTop"]: TRANSPARENT,
@@ -406,11 +425,11 @@ let jsonObject = {
 		//The most prominent editor colors are the token colors used for syntax highlighting and are based on the language grammar installed. These colors are defined by the Color Theme but can also be customized with the editor.tokenColorCustomizations setting. See Customizing a Color Theme for details on updating a Color Theme and the available token types.
 
 		//All other editor colors are listed here:
-		//主编辑器区域的颜色
-		["editor.background"]: editorBack,
-		["editor.foreground"]: mainFore,
-		["editorLineNumber.foreground"]: unimportantFore,
-		["editorLineNumber.activeForeground"]: dimFore,
+
+		["editor.background"]: editorBack5,
+		["editor.foreground"]: editorFore5,
+		["editorLineNumber.foreground"]: secondaryForeground1,
+		["editorLineNumber.activeForeground"]: secondaryForeground5,
 		["editorLineNumber.dimmedForeground"]: hintLight,
 		["editorCursor.background"]: DFLT,
 		["editorCursor.foreground"]: DFLT,
@@ -809,12 +828,12 @@ let jsonObject = {
 		//Panel colors
 		//Panels are shown below the editor area and contain views like Output and Integrated Terminal.
 
-		["panel.background"]: mainBackground5,
+		["panel.background"]: panelsBack4,
 		["panel.border"]: TRANSPARENT,
 		["panel.dropBorder"]: drop,
 		["panelTitle.activeBorder"]: selectActive,
-		["panelTitle.activeForeground"]: mainFore,
-		["panelTitle.inactiveForeground"]: mainFore,
+		["panelTitle.activeForeground"]: grey.G16,
+		["panelTitle.inactiveForeground"]: grey.G40,
 		["panelTitle.border"]: TRANSPARENT,
 		["panelTitleBadge.background"]: DFLT,
 		["panelTitleBadge.foreground"]: DFLT,
@@ -833,14 +852,14 @@ let jsonObject = {
 		//Status Bar colors
 		//The Status Bar is shown in the bottom of the workbench.
 
-		["statusBar.background"]: mainBackground7,
-		["statusBar.foreground"]: mainFore,
+		["statusBar.background"]: panelsBack2,
+		["statusBar.foreground"]: panelsFore5,
 		["statusBar.border"]: TRANSPARENT,
 		["statusBar.debuggingBackground"]: statusBarDebuggingBackground,
-		["statusBar.debuggingForeground"]: mainFore,
+		["statusBar.debuggingForeground"]: panelsFore5,
 		["statusBar.debuggingBorder"]: TRANSPARENT,
 		["statusBar.noFolderBackground"]: mainBackground4,
-		["statusBar.noFolderForeground"]: mainFore,
+		["statusBar.noFolderForeground"]: panelsFore5,
 		["statusBar.noFolderBorder"]: TRANSPARENT,
 		["statusBar.focusBorder"]: selectActive,
 		["statusBarItem.activeBackground"]: click,
@@ -851,15 +870,15 @@ let jsonObject = {
 		["statusBarItem.prominentHoverForeground"]: warningDark,
 		["statusBarItem.prominentHoverBackground"]: hover,
 		["statusBarItem.remoteBackground"]: mainBackground9,
-		["statusBarItem.remoteForeground"]: mainFore,
+		["statusBarItem.remoteForeground"]: panelsFore5,
 		["statusBarItem.remoteHoverBackground"]: hover,
 		["statusBarItem.remoteHoverForeground"]: DFLT,
 		["statusBarItem.errorBackground"]: errorLight,
-		["statusBarItem.errorForeground"]: mainFore,
+		["statusBarItem.errorForeground"]: panelsFore5,
 		["statusBarItem.errorHoverBackground"]: DFLT,
 		["statusBarItem.errorHoverForeground"]: DFLT,
 		["statusBarItem.warningBackground"]: warningLight,
-		["statusBarItem.warningForeground"]: mainFore,
+		["statusBarItem.warningForeground"]: panelsFore5,
 		["statusBarItem.warningHoverBackground"]: DFLT,
 		["statusBarItem.warningHoverForeground"]: DFLT,
 		["statusBarItem.compactHoverBackground"]: DFLT,
@@ -872,10 +891,10 @@ let jsonObject = {
 		//Prominent items stand out from other Status Bar entries to indicate importance. One example is the Toggle Tab Key Moves Focus command change mode indicator.
 		//Title Bar colors
 
-		["titleBar.activeBackground"]: mainBackground7,
-		["titleBar.activeForeground"]: grey.G20,
+		["titleBar.activeBackground"]: panelsBack2,
+		["titleBar.activeForeground"]: panelsFore5,
 		["titleBar.inactiveBackground"]: grey.G76,
-		["titleBar.inactiveForeground"]: grey.G36,
+		["titleBar.inactiveForeground"]: panelsFore5,
 		["titleBar.border"]: DFLT,
 
 		//Menu Bar colors
@@ -883,8 +902,8 @@ let jsonObject = {
 		["menubar.selectionForeground"]: DFLT,
 		["menubar.selectionBackground"]: hover,
 		["menubar.selectionBorder"]: DFLT,
-		["menu.foreground"]: grey.G20,
-		["menu.background"]: mainBackground6,
+		["menu.foreground"]: panelsFore5,
+		["menu.background"]: panelsBack4,
 		["menu.selectionForeground"]: DFLT,
 		["menu.selectionBackground"]: hover,
 		["menu.selectionBorder"]: DFLT,
@@ -894,7 +913,7 @@ let jsonObject = {
 		//Command Center colors
 
 		["commandCenter.foreground"]: DFLT,
-		["commandCenter.background"]: grey.G76,
+		["commandCenter.background"]: grey.G26,
 		["commandCenter.activeForeground"]: DFLT,
 		["commandCenter.activeBackground"]: hover,
 		["commandCenter.border"]: DFLT,
@@ -911,10 +930,10 @@ let jsonObject = {
 
 		["notificationCenter.border"]: DFLT,
 		["notificationCenterHeader.foreground"]: DFLT,
-		["notificationCenterHeader.background"]: mainBackground7,
+		["notificationCenterHeader.background"]: panelsBack2,
 		["notificationToast.border"]: DFLT,
 		["notifications.foreground"]: DFLT,
-		["notifications.background"]: mainBackground5,
+		["notifications.background"]: panelsBack4,
 		["notifications.border"]: DFLT,
 		["notificationLink.foreground"]: DFLT,
 		["notificationsErrorIcon.foreground"]: errorLight,
@@ -947,12 +966,12 @@ let jsonObject = {
 
 		//Quick picker colors
 
-		["pickerGroup.border"]: dimFore,
+		["pickerGroup.border"]: secondaryForeground2,
 		["pickerGroup.foreground"]: infoDark,
-		["quickInput.background"]: mainBackground6,
-		["quickInput.foreground"]: mainFore,
+		["quickInput.background"]: panelsBack4,
+		["quickInput.foreground"]: panelsFore5,
 		["quickInputList.focusBackground"]: mainBackground8,
-		["quickInputList.focusForeground"]: mainFore,
+		["quickInputList.focusForeground"]: panelsFore5,
 		["quickInputList.focusIconForeground"]: mainBackground8,
 		["quickInputTitle.background"]: DEBUG_PINK,
 
@@ -966,7 +985,7 @@ let jsonObject = {
 		//The following customizations are available:
 
 		["keybindingLabel.background"]: mainBackground8,
-		["keybindingLabel.foreground"]: mainFore,
+		["keybindingLabel.foreground"]: panelsFore5,
 		["keybindingLabel.border"]: grey.G50,
 		["keybindingLabel.bottomBorder"]: grey.G50,
 
@@ -1129,7 +1148,7 @@ let jsonObject = {
 		//Settings Editor colors
 		//Note:
 
-		["settings.headerForeground"]: mainFore,
+		["settings.headerForeground"]: panelsFore5,
 		["settings.modifiedItemIndicator"]: modifyLight,
 		["settings.dropdownBackground"]: DFLT,
 		["settings.dropdownForeground"]: DFLT,
@@ -1154,10 +1173,10 @@ let jsonObject = {
 		//Breadcrumbs colors
 		//The theme colors for breadcrumbs navigation:
 
-		["breadcrumb.foreground"]: dimFore,
-		["breadcrumb.background"]: panelsBack1,
-		["breadcrumb.focusForeground"]: mainFore,
-		["breadcrumb.activeSelectionForeground"]: selectActive,
+		["breadcrumb.foreground"]: grey.G36,
+		["breadcrumb.background"]: mainBackground3,
+		["breadcrumb.focusForeground"]: grey.G26,
+		["breadcrumb.activeSelectionForeground"]: grey.G20,
 		["breadcrumbPicker.background"]: DFLT,
 
 		//Snippets colors
@@ -1314,5 +1333,5 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonObject, "./themes/theme-ZQT-BRIGHT_interface.json");
+saveObjectToTxtFile(jsonObject, "./themes/theme-ZQT-DESIGN_interface.json");
 // console.log(jsonObject);

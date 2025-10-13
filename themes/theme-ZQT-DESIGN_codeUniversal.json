@@ -1,0 +1,155 @@
+{
+	"$schema": "vscode://schemas/color-theme",
+	"name": "Universal Code Highlight - ZQT DESIGN Theme",
+	"//description": "通用的代码高亮",
+	"tokenColors": [
+		{
+			"scope": "comment",
+			"settings": {
+				"foreground": "#9e9e9e"
+			}
+		},
+		{
+			"scope": "punctuation.definition.comment",
+			"settings": {
+				"foreground": "#9e9e9e"
+			}
+		},
+		{
+			"scope": "invalid",
+			"settings": {
+				"foreground": "#ca545a"
+			}
+		},
+		{
+			"scope": "entity.name.function",
+			"settings": {
+				"foreground": "#6e519d"
+			}
+		},
+		{
+			"scope": "support.function",
+			"settings": {
+				"foreground": "#794db6"
+			}
+		},
+		{
+			"scope": "variable.language",
+			"settings": {
+				"foreground": "#007d50"
+			}
+		},
+		{
+			"scope": "variable.parameter",
+			"settings": {
+				"foreground": "#48773e"
+			}
+		},
+		{
+			"scope": "variable.other.property",
+			"settings": {
+				"foreground": "#71640b"
+			}
+		},
+		{
+			"scope": "support.variable.property",
+			"settings": {
+				"foreground": "#776a15"
+			}
+		},
+		{
+			"scope": "variable",
+			"settings": {
+				"foreground": "#427138"
+			}
+		},
+		{
+			"scope": "support.variable",
+			"settings": {
+				"foreground": "#367b24"
+			}
+		},
+		{
+			"scope": "constant.language",
+			"settings": {
+				"foreground": "#0064b9"
+			}
+		},
+		{
+			"scope": "constant.numeric",
+			"settings": {
+				"foreground": "#7457a3"
+			}
+		},
+		{
+			"scope": "string",
+			"settings": {
+				"foreground": "#904961"
+			}
+		},
+		{
+			"scope": "string.regexp",
+			"settings": {
+				"foreground": "#953d7c"
+			}
+		},
+		{
+			"scope": [
+				"string.interpolated",
+				"string.template"
+			],
+			"settings": {
+				"foreground": "#953d7c"
+			}
+		},
+		{
+			"scope": [
+				"constant.character",
+				"punctuation.definition.entity"
+			],
+			"settings": {
+				"foreground": "#953d7c"
+			}
+		},
+		{
+			"scope": "keyword.control",
+			"settings": {
+				"foreground": "#a62f5f"
+			}
+		},
+		{
+			"scope": "keyword.operator",
+			"settings": {
+				"foreground": "#a14d2f"
+			}
+		},
+		{
+			"scope": "storage.type",
+			"settings": {
+				"foreground": "#5552bb"
+			}
+		},
+		{
+			"scope": "support.type",
+			"settings": {
+				"foreground": "#5b5cb7"
+			}
+		},
+		{
+			"scope": "entity.name.type",
+			"settings": {
+				"foreground": "#3e68ad"
+			}
+		},
+		{
+			"scope": "punctuation.definition",
+			"settings": {
+				"foreground": "#176490"
+			}
+		},
+		{
+			"scope": "punctuation.separator",
+			"settings": {}
+		}
+	]
+}

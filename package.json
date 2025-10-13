@@ -24,6 +24,12 @@
 				"label": "ZQT Bright+",
 				"uiTheme": "vs",
 				"path": "./themes/theme-ZQT-BRIGHT.json"
+			},
+			{
+				"id": "ZQT DESIGN",
+				"label": "ZQT DESIGN",
+				"uiTheme": "vs-dark",
+				"path": "./themes/theme-ZQT-DESIGN.json"
 			}
 		],
 		"iconThemes": [
