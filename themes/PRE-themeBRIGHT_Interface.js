@@ -99,6 +99,8 @@ let wordHighlightTextTRANSPARENT = "#00ac4e77"; //oklch(0.65 0.18 150)
 let unicodeHighlight = "#e26500"; //oklch(0.65 0.18 50)
 let BracketMatchStrong = "#fb2af4bb"; //oklch(0.7 0.3 330)
 let whitespaceCharacter = "#9bce9077"; //=hintLight
+let foldHint = "#61911c";//oklch(0.6 0.15 130)
+let foldArea = "#61911c33";
 
 let lineHighlightBackground = "#00000011";
 let editorRulerLine = "#00000011";
@@ -113,8 +115,6 @@ let debugBreakPointDisabled="#d3cbce";//oklch(0.85 0.01 350)
 let extensionStar = "#dea62dff";
 let extensionPreRelease = "#de2dc1ff";
 let extensionVerified = "#129123ff";
-let foldArea = "#00a0cc2f";
-let foldHint = "#00a0cc";
 let linkEdit = "#33ffff5f";
 let commentRangeForeground = "#686868";
 
@@ -536,7 +536,7 @@ let jsonObject = {
 		["editorOverviewRuler.modifiedForeground"]: modifyLight,
 		["editorOverviewRuler.addedForeground"]: addLight,
 		["editorOverviewRuler.deletedForeground"]: deleteLight,
-		["editorOverviewRuler.errorForeground"]: errorLight,
+		["editorOverviewRuler.errorForeground"]: errorDark,
 		["editorOverviewRuler.warningForeground"]: warningLight,
 		["editorOverviewRuler.infoForeground"]: infoLight,
 		["editorOverviewRuler.bracketMatchForeground"]: BracketMatchStrong,
