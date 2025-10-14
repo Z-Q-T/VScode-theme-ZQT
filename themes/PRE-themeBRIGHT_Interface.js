@@ -106,8 +106,10 @@ let IndentGuide = "#00000022";
 let IndentGuideActive = "#00000033";
 let UnusedCodeOpacity = "#00000088";
 
+let statusBarDebuggingBackground = "#ddaec3";//oklch(0.8 0.06 350)
+let debugBreakPointMain="#e274ab";//oklch(0.7 0.15 350)
+let debugBreakPointDisabled="#d3cbce";//oklch(0.85 0.01 350)
 //TODO下面的颜色还没调过
-let statusBarDebuggingBackground = "#d4cba6";//oklch(0.84 0.05 95)
 let extensionStar = "#dea62dff";
 let extensionPreRelease = "#de2dc1ff";
 let extensionVerified = "#129123ff";
@@ -614,10 +616,10 @@ let jsonObject = {
 		["diffEditorGutter.removedLineBackground"]: TRANSPARENT,
 		["diffEditorOverview.insertedForeground"]: DFLT,
 		["diffEditorOverview.removedForeground"]: DFLT,
-		["diffEditor.unchangedRegionBackground"]: DFLT, //TODO
-		["diffEditor.unchangedRegionForeground"]: DFLT,
+		["diffEditor.unchangedRegionBackground"]: DEBUG_BLUE, //TODO
+		["diffEditor.unchangedRegionForeground"]: DEBUG_PINK,
 		["diffEditor.unchangedRegionShadow"]: shadow,
-		["diffEditor.unchangedCodeBackground"]: DFLT,
+		["diffEditor.unchangedCodeBackground"]: DEBUG_RED,
 		["diffEditor.move.border"]: DFLT,
 		["diffEditor.moveActive.border"]: DFLT,
 		["multiDiffEditor.headerBackground"]: DFLT,
@@ -910,7 +912,7 @@ let jsonObject = {
 		["terminal.ansiBlack"]: "#0b0b0b", //oklch(0.15 0 360)
 		["terminal.ansiWhite"]: "#717171", //oklch(0.55 0 360)
 		["terminal.ansiRed"]: "#b14f42", //oklch(0.55 0.13 30)
-		["terminal.ansiYellow"]: "#8f6c00", //oklch(0.55 0.13 90)
+		["terminal.ansiYellow"]: "#546bbd", //oklch(0.55 0.13 90)
 		["terminal.ansiGreen"]: "#298646", //oklch(0.55 0.13 150)
 		["terminal.ansiCyan"]: "#008396", //oklch(0.55 0.13 210)
 		["terminal.ansiBlue"]: "#546bbd", //oklch(0.55 0.13 270)
@@ -1125,9 +1127,9 @@ let jsonObject = {
 		["symbolIcon.variableForeground"]: DFLT,
 
 		//Debug Icons colors
-		["debugIcon.breakpointForeground"]: DFLT, //TODO
-		["debugIcon.breakpointDisabledForeground"]: DFLT,
-		["debugIcon.breakpointUnverifiedForeground"]: DFLT,
+		["debugIcon.breakpointForeground"]: debugBreakPointMain, 
+		["debugIcon.breakpointDisabledForeground"]: debugBreakPointDisabled,
+		["debugIcon.breakpointUnverifiedForeground"]: DFLT,//TODO
 		["debugIcon.breakpointCurrentStackframeForeground"]: DFLT,
 		["debugIcon.breakpointStackframeForeground"]: DFLT,
 		["debugIcon.startForeground"]: DFLT,
