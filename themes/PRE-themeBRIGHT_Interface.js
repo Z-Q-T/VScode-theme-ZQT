@@ -1,11 +1,11 @@
 let DFLT = "default";
 let TRANSPARENT = "#00000000";
+let BLACK = "#000";
+let WHITE = "#FFF";
 let DEBUG_RED = "#ff0000";
 let DEBUG_GREEN = "#00ff00";
 let DEBUG_PINK = "#ff00ff";
 let DEBUG_BLUE = "#00ffff";
-let BLACK = "#000";
-let WHITE = "#FFF";
 
 import grey from "./palette-greyscales.js";
 import colour from "./palette-coloursBRIGHT.js";
@@ -20,6 +20,7 @@ let panelsBack5 = grey.G86;
 let panelsBack6 = grey.G84;
 let panelsBack7 = grey.G82;
 let panelsBack8 = grey.G80;
+let popUpPanelsBack = panelsBack3;
 
 let crucialFore = grey.G08;
 let mainFore = grey.G16;
@@ -34,15 +35,15 @@ let sliderNormal = "#00000022";
 let hover = "#00000011";
 let hoverDarker = "#00000033";
 let click = "#00000055";
+let inputBorder = grey.G76;
+let dropInto = "#99999944";
+let dropBetween = "#444444bb";
 let buttonBack = grey.G34;
 let buttonHover = grey.G42;
 let buttonForeground = grey.G98;
 let buttonBorder = grey.G54;
 let buttonSecondary = grey.G46;
 let buttonSecondaryHover = grey.G54;
-let inputBorder = grey.G76;
-let dropInto = "#99999944";
-let dropBetween = "#444444bb";
 
 let keyboardLabel = grey.G94;
 let preformatText = grey.G84;
@@ -105,12 +106,11 @@ let IndentGuide = "#00000022";
 let IndentGuideActive = "#00000033";
 let UnusedCodeOpacity = "#00000088";
 
-
 //TODO下面的颜色还没调过
-let statusBarDebuggingBackground = "#dec02dff";
-let extensionStar= "#dea62dff";
-let extensionPreRelease= "#de2dc1ff";
-let extensionVerified= "#129123ff";
+let statusBarDebuggingBackground = "#d4cba6";//oklch(0.84 0.05 95)
+let extensionStar = "#dea62dff";
+let extensionPreRelease = "#de2dc1ff";
+let extensionVerified = "#129123ff";
 let foldArea = "#00a0cc2f";
 let foldHint = "#00a0cc";
 let linkEdit = "#33ffff5f";
@@ -166,7 +166,7 @@ let jsonObject = {
 		["toolbar.hoverBackground"]: hover,
 		["toolbar.hoverOutline"]: DFLT,
 		["toolbar.activeBackground"]: DFLT,
-		["editorActionList.background"]: panelsBack2,
+		["editorActionList.background"]: popUpPanelsBack,
 		["editorActionList.foreground"]: DFLT,
 		["editorActionList.focusBackground"]: hover,
 		["editorActionList.focusForeground"]: DFLT,
@@ -625,7 +625,7 @@ let jsonObject = {
 		["multiDiffEditor.border"]: DFLT,
 
 		//Chat colors
-		["chat.requestBorder"]: DFLT,//TODO
+		["chat.requestBorder"]: DFLT, //TODO
 		["chat.requestBackground"]: DEBUG_RED,
 		["chat.slashCommandBackground"]: DFLT,
 		["chat.slashCommandForeground"]: DFLT,
@@ -658,10 +658,10 @@ let jsonObject = {
 		//Editor widget colors
 		//The Editor widget is shown in front of the editor content. Examples are the Find/Replace dialog, the suggestion widget, and the editor hover.
 		["editorWidget.foreground"]: DFLT,
-		["editorWidget.background"]: panelsBack2,
+		["editorWidget.background"]: popUpPanelsBack,
 		["editorWidget.border"]: DFLT,
 		["editorWidget.resizeBorder"]: DFLT,
-		["editorSuggestWidget.background"]: DFLT,//TODO
+		["editorSuggestWidget.background"]: DFLT, //TODO
 		["editorSuggestWidget.border"]: DFLT,
 		["editorSuggestWidget.foreground"]: DFLT,
 		["editorSuggestWidget.focusHighlightForeground"]: DFLT,
@@ -670,25 +670,25 @@ let jsonObject = {
 		["editorSuggestWidget.selectedForeground"]: DFLT,
 		["editorSuggestWidget.selectedIconForeground"]: DFLT,
 		["editorSuggestWidgetStatus.foreground"]: DFLT,
-		["editorHoverWidget.foreground"]: DFLT,//TODO
+		["editorHoverWidget.foreground"]: DFLT, //TODO
 		["editorHoverWidget.background"]: DFLT,
 		["editorHoverWidget.border"]: DFLT,
 		["editorHoverWidget.highlightForeground"]: DFLT,
 		["editorHoverWidget.statusBarBackground"]: DFLT,
 		["editorGhostText.border"]: DFLT,
 		["editorGhostText.background"]: DFLT,
-		["editorGhostText.foreground"]: hintLight,//TODO
+		["editorGhostText.foreground"]: hintLight, //TODO
 		["editorStickyScroll.background"]: DFLT,
 		["editorStickyScroll.border"]: DFLT,
 		["editorStickyScroll.shadow"]: shadow,
 		["editorStickyScrollHover.background"]: hover,
 
 		//The Debug Exception widget is a peek view that shows in the editor when debug stops at an exception.
-		["debugExceptionWidget.background"]: DFLT,//TODO
+		["debugExceptionWidget.background"]: DFLT, //TODO
 		["debugExceptionWidget.border"]: DFLT,
 
 		//The editor marker view shows when navigating to errors and warnings in the editor (Go to Next Error or Warning command).
-		["editorMarkerNavigation.background"]: DFLT,//TODO
+		["editorMarkerNavigation.background"]: DFLT, //TODO
 		["editorMarkerNavigationError.background"]: DFLT,
 		["editorMarkerNavigationWarning.background"]: DFLT,
 		["editorMarkerNavigationInfo.background"]: DFLT,
@@ -718,7 +718,7 @@ let jsonObject = {
 		//Merge conflicts colors
 		//Merge conflict decorations are shown when the editor contains special diff ranges.
 		//Merge ranges
-		["merge.currentHeaderBackground"]: DFLT,//TODO
+		["merge.currentHeaderBackground"]: DFLT, //TODO
 		["merge.currentContentBackground"]: DFLT,
 		["merge.incomingHeaderBackground"]: DFLT,
 		["merge.incomingContentBackground"]: DFLT,
@@ -756,7 +756,7 @@ let jsonObject = {
 		["panelTitleBadge.background"]: DFLT,
 		["panelTitleBadge.foreground"]: DFLT,
 		["panelInput.border"]: inputBorder,
-		["panelSection.border"]: DFLT,//TODO
+		["panelSection.border"]: DFLT, //TODO
 		["panelSection.dropBackground"]: DFLT,
 		["panelSectionHeader.background"]: DFLT,
 		["panelSectionHeader.foreground"]: DFLT,
@@ -764,7 +764,7 @@ let jsonObject = {
 		["panelStickyScroll.border"]: DFLT,
 		["panelStickyScroll.shadow"]: shadow,
 		["panelSectionHeader.border"]: DFLT,
-		["outputView.background"]: panelsBack2,
+		["outputView.background"]: panelsBack1,
 		["outputViewStickyScroll.background"]: DFLT,
 
 		//Status Bar colors
@@ -782,10 +782,10 @@ let jsonObject = {
 		["statusBarItem.activeBackground"]: click,
 		["statusBarItem.hoverForeground"]: DFLT,
 		["statusBarItem.hoverBackground"]: hover,
-		["statusBarItem.prominentForeground"]: warningDark,
-		["statusBarItem.prominentBackground"]: panelsBack8,
-		["statusBarItem.prominentHoverForeground"]: warningDark,
-		["statusBarItem.prominentHoverBackground"]: hover,
+		["statusBarItem.prominentForeground"]: mainFore,
+		["statusBarItem.prominentBackground"]: warningLight,
+		["statusBarItem.prominentHoverForeground"]: DFLT,
+		["statusBarItem.prominentHoverBackground"]: DFLT,
 		["statusBarItem.remoteBackground"]: panelsBack8,
 		["statusBarItem.remoteForeground"]: mainFore,
 		["statusBarItem.remoteHoverBackground"]: hover,
@@ -818,7 +818,7 @@ let jsonObject = {
 		["menubar.selectionBackground"]: hover,
 		["menubar.selectionBorder"]: DFLT,
 		["menu.foreground"]: mainFore,
-		["menu.background"]: panelsBack5,
+		["menu.background"]: popUpPanelsBack,
 		["menu.selectionForeground"]: DFLT,
 		["menu.selectionBackground"]: hover,
 		["menu.selectionBorder"]: DFLT,
@@ -847,7 +847,7 @@ let jsonObject = {
 		["notificationCenterHeader.background"]: panelsBack5,
 		["notificationToast.border"]: DFLT,
 		["notifications.foreground"]: DFLT,
-		["notifications.background"]: panelsBack3,
+		["notifications.background"]: popUpPanelsBack,
 		["notifications.border"]: DFLT,
 		["notificationLink.foreground"]: DFLT,
 		["notificationsErrorIcon.foreground"]: errorDark,
@@ -873,13 +873,13 @@ let jsonObject = {
 		["extensionIcon.starForeground"]: extensionStar,
 		["extensionIcon.verifiedForeground"]: extensionVerified,
 		["extensionIcon.preReleaseForeground"]: extensionPreRelease,
-		["extensionIcon.sponsorForeground"]: DFLT,//TODO
+		["extensionIcon.sponsorForeground"]: DFLT, //TODO
 		["extensionIcon.privateForeground"]: DFLT,
 
 		//Quick picker colors
 		["pickerGroup.border"]: unimportantFore,
 		["pickerGroup.foreground"]: secondaryFore,
-		["quickInput.background"]: panelsBack4,
+		["quickInput.background"]: popUpPanelsBack,
 		["quickInput.foreground"]: mainFore,
 		["quickInputList.focusBackground"]: panelsBack6,
 		["quickInputList.focusForeground"]: DFLT,
@@ -904,25 +904,25 @@ let jsonObject = {
 		["keybindingTable.rowsBackground"]: DFLT,
 
 		//Integrated Terminal colors
-		["terminal.background"]: panelsBack1,
+		["terminal.background"]: inputBack,
 		["terminal.border"]: DFLT,
-		["terminal.foreground"]: DFLT,
-		["terminal.ansiBlack"]: "#0b0b0b",//oklch(0.15 0 360)
-		["terminal.ansiWhite"]: "#717171",//oklch(0.55 0 360)
-		["terminal.ansiRed"]: "#b14f42",//oklch(0.55 0.13 30)
-		["terminal.ansiYellow"]: "#8f6c00",//oklch(0.55 0.13 90)
-		["terminal.ansiGreen"]: "#298646",//oklch(0.55 0.13 150)
-		["terminal.ansiCyan"]: "#008396",//oklch(0.55 0.13 210)
-		["terminal.ansiBlue"]: "#546bbd",//oklch(0.55 0.13 270)
-		["terminal.ansiMagenta"]: "#9b5295",//oklch(0.55 0.13 330)
-		["terminal.ansiBrightBlack"]: "#8f8f8f",//oklch(0.65 0 360)
-		["terminal.ansiBrightWhite"]: "#cecece",//oklch(0.85 0 360)
-		["terminal.ansiBrightRed"]: "#d76a5a",//oklch(0.65 0.14 30)
-		["terminal.ansiBrightYellow"]: "#b08a00",//oklch(0.65 0.14 90)
-		["terminal.ansiBrightGreen"]: "#43a65f",//oklch(0.65 0.14 150)
-		["terminal.ansiBrightCyan"]: "#00a4bb",//oklch(0.65 0.14 210)
-		["terminal.ansiBrightBlue"]: "#6e89e4",//oklch(0.65 0.14 270)
-		["terminal.ansiBrightMagenta"]: "#be6db7",//oklch(0.65 0.14 330)
+		["terminal.foreground"]: mainFore,
+		["terminal.ansiBlack"]: "#0b0b0b", //oklch(0.15 0 360)
+		["terminal.ansiWhite"]: "#717171", //oklch(0.55 0 360)
+		["terminal.ansiRed"]: "#b14f42", //oklch(0.55 0.13 30)
+		["terminal.ansiYellow"]: "#8f6c00", //oklch(0.55 0.13 90)
+		["terminal.ansiGreen"]: "#298646", //oklch(0.55 0.13 150)
+		["terminal.ansiCyan"]: "#008396", //oklch(0.55 0.13 210)
+		["terminal.ansiBlue"]: "#546bbd", //oklch(0.55 0.13 270)
+		["terminal.ansiMagenta"]: "#9b5295", //oklch(0.55 0.13 330)
+		["terminal.ansiBrightBlack"]: "#8f8f8f", //oklch(0.65 0 360)
+		["terminal.ansiBrightWhite"]: "#cecece", //oklch(0.85 0 360)
+		["terminal.ansiBrightRed"]: "#fa8978", //oklch(0.75 0.14 30)
+		["terminal.ansiBrightYellow"]: "#d0a92d", //oklch(0.75 0.14 90)
+		["terminal.ansiBrightGreen"]: "#65c67d", //oklch(0.75 0.14 150)
+		["terminal.ansiBrightCyan"]: "#00c5de", //oklch(0.75 0.14 210)
+		["terminal.ansiBrightBlue"]: "#8ca8ff", //oklch(0.75 0.14 270)
+		["terminal.ansiBrightMagenta"]: "#df8cd8", //oklch(0.75 0.14 330)
 		["terminal.selectionBackground"]: selectActiveTRANSPARENT1,
 		["terminal.selectionForeground"]: DFLT,
 		["terminal.inactiveSelectionBackground"]: selectInactiveTRANSPARENT2,
@@ -935,17 +935,17 @@ let jsonObject = {
 		["terminalCursor.foreground"]: BLACK,
 		["terminal.dropBackground"]: dropInto,
 		["terminal.tab.activeBorder"]: DFLT,
-		["terminalCommandDecoration.defaultBackground"]: DFLT,//TODO
-		["terminalCommandDecoration.successBackground"]: DFLT,
-		["terminalCommandDecoration.errorBackground"]: DFLT,
-		["terminalOverviewRuler.cursorForeground"]: DFLT,
+		["terminalCommandDecoration.defaultBackground"]: hintDark,
+		["terminalCommandDecoration.successBackground"]: infoDark, 
+		["terminalCommandDecoration.errorBackground"]: errorDark,
+		["terminalOverviewRuler.cursorForeground"]: DFLT,//TODO
 		["terminalOverviewRuler.findMatchForeground"]: DFLT,
-		["terminalStickyScroll.background"]: DFLT,
-		["terminalStickyScroll.border"]: DFLT,
-		["terminalStickyScrollHover.background"]: DFLT,
-		["terminal.initialHintForeground"]: DFLT,
-		["terminalOverviewRuler.border"]: DFLT,
-		["terminalCommandGuide.foreground"]: DFLT,
+		["terminalStickyScroll.background"]: DEBUG_PINK,
+		["terminalStickyScroll.border"]: DEBUG_RED,
+		["terminalStickyScrollHover.background"]: DEBUG_GREEN,
+		["terminal.initialHintForeground"]: DEBUG_BLUE,
+		["terminalOverviewRuler.border"]: unimportantFore,
+		["terminalCommandGuide.foreground"]: hoverDarker,
 		["terminalSymbolIcon.aliasForeground"]: DFLT,
 		["terminalSymbolIcon.flagForeground"]: DFLT,
 		["terminalSymbolIcon.optionForeground"]: DFLT,
@@ -957,7 +957,7 @@ let jsonObject = {
 		["terminalSymbolIcon.folderForeground"]: DFLT,
 
 		//Debug colors
-		["debugToolBar.background"]: DFLT,//TODO
+		["debugToolBar.background"]: DFLT, //TODO
 		["debugToolBar.border"]: DFLT,
 		["editor.stackFrameHighlightBackground"]: DFLT,
 		["editor.focusedStackFrameHighlightBackground"]: DFLT,
@@ -977,7 +977,7 @@ let jsonObject = {
 		["debugTokenExpression.type"]: DFLT,
 
 		//Testing colors
-		["testing.runAction"]: DFLT,//TODO
+		["testing.runAction"]: DFLT, //TODO
 		["testing.iconErrored"]: DFLT,
 		["testing.iconFailed"]: DFLT,
 		["testing.iconPassed"]: DFLT,
@@ -1090,7 +1090,7 @@ let jsonObject = {
 
 		//Symbol Icons colors
 		//The theme colors for symbol icons that appears in the Outline view, breadcrumb navigation, and suggest widget:
-		["symbolIcon.arrayForeground"]: DFLT,//TODO
+		["symbolIcon.arrayForeground"]: DFLT, //TODO
 		["symbolIcon.booleanForeground"]: DFLT,
 		["symbolIcon.classForeground"]: DFLT,
 		["symbolIcon.colorForeground"]: DFLT,
@@ -1125,7 +1125,7 @@ let jsonObject = {
 		["symbolIcon.variableForeground"]: DFLT,
 
 		//Debug Icons colors
-		["debugIcon.breakpointForeground"]: DFLT,//TODO
+		["debugIcon.breakpointForeground"]: DFLT, //TODO
 		["debugIcon.breakpointDisabledForeground"]: DFLT,
 		["debugIcon.breakpointUnverifiedForeground"]: DFLT,
 		["debugIcon.breakpointCurrentStackframeForeground"]: DFLT,
@@ -1173,7 +1173,7 @@ let jsonObject = {
 		["notebookEditorOverviewRuler.runningCellForeground"]: DFLT,
 
 		//Chart colors
-		["charts.foreground"]: DFLT,//TODO
+		["charts.foreground"]: DFLT, //TODO
 		["charts.lines"]: DFLT,
 		["charts.red"]: DFLT,
 		["charts.blue"]: DFLT,
@@ -1186,10 +1186,10 @@ let jsonObject = {
 		["chart.guide"]: DFLT,
 
 		//Ports colors
-		["ports.iconRunningProcessForeground"]: DFLT,//TODO
+		["ports.iconRunningProcessForeground"]: DFLT, //TODO
 
 		//Comments View colors
-		["commentsView.resolvedIcon"]: DFLT,//TODO
+		["commentsView.resolvedIcon"]: DFLT, //TODO
 		["commentsView.unresolvedIcon"]: DFLT,
 
 		//Action Bar colors
