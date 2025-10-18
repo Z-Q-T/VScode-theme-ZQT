@@ -6,7 +6,9 @@
 	"tokenColors": [
 		{
 			"scope": "keyword.other.important.css",
-			"settings": {}
+			"settings": {
+				"foreground": "#c13425"
+			}
 		}
 	]
 }

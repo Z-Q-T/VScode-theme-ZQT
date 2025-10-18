@@ -46,7 +46,8 @@ let buttonSecondary = grey.G46;
 let buttonSecondaryHover = grey.G54;
 
 let keyboardLabel = grey.G94;
-let preformatText = grey.G84;
+let quoteText=grey.G90
+let preformatText = grey.G86;
 
 let hyperlinkFore = "#2266a4"; //oklch(0.50 0.12 250)
 let hyperlinkHover = "#3275b4"; //oklch(0.55 0.12 250)
@@ -153,8 +154,8 @@ let jsonObject = {
 
 		//Text colors
 		//Colors inside a text document, such as the welcome page.
-		["textBlockQuote.background"]: DEBUG_RED,
-		["textBlockQuote.border"]: DFLT,
+		["textBlockQuote.background"]: quoteText,
+		["textBlockQuote.border"]: preformatText,
 		["textCodeBlock.background"]: preformatText,
 		["textLink.activeForeground"]: hyperlinkHover,
 		["textLink.foreground"]: hyperlinkFore,
@@ -341,7 +342,7 @@ let jsonObject = {
 		//Editor Groups are the containers of editors. There can be many editor groups. A Tab is the container of an editor. Multiple Tabs can be opened in one editor group.
 		["editorGroup.border"]: unimportantFore,
 		["editorGroup.dropBackground"]: dropInto,
-		["editorGroupHeader.noTabsBackground"]: DEBUG_RED,
+		["editorGroupHeader.noTabsBackground"]: DEBUG_BLUE,
 		["editorGroupHeader.tabsBackground"]: panelsBack5,
 		["editorGroupHeader.tabsBorder"]: TRANSPARENT,
 		["editorGroupHeader.border"]: TRANSPARENT,
@@ -436,7 +437,7 @@ let jsonObject = {
 		["editor.lineHighlightBorder"]: DFLT,
 
 		//The color for the editor watermark
-		["editorWatermark.foreground"]: DEBUG_RED,
+		["editorWatermark.foreground"]: secondaryFore,//空白背景上的“︁显示所有命令”︁“︁打开文件”︁等提示字符
 
 		//The color for unicode highlights
 		["editorUnicodeHighlight.border"]: unicodeHighlight,
@@ -473,7 +474,7 @@ let jsonObject = {
 		["editorIndentGuide.activeBackground6"]: IndentGuideActive,
 
 		//To see the editor inline hints, set "editor.inlineSuggest.enabled": true.
-		["editorInlayHint.background"]: DEBUG_GREEN,
+		["editorInlayHint.background"]: DEBUG_PINK,
 		["editorInlayHint.foreground"]: DFLT,
 		["editorInlayHint.typeForeground"]: DFLT,
 		["editorInlayHint.typeBackground"]: DFLT,
@@ -497,21 +498,21 @@ let jsonObject = {
 		["editorBracketMatch.border"]: BracketMatchStrong,
 
 		//Bracket pair colorization:
-		["editorBracketHighlight.foreground1"]: colour.L76_C10_H220, //TODO
-		["editorBracketHighlight.foreground2"]: colour.L76_C10_H100,
-		["editorBracketHighlight.foreground3"]: colour.L76_C10_H340,
-		["editorBracketHighlight.foreground4"]: colour.L76_C10_H180,
-		["editorBracketHighlight.foreground5"]: colour.L76_C10_H060,
-		["editorBracketHighlight.foreground6"]: colour.L76_C10_H300,
+		["editorBracketHighlight.foreground1"]: colour.L54_C14_H130, 
+		["editorBracketHighlight.foreground2"]: colour.L54_C14_H230,
+		["editorBracketHighlight.foreground3"]: colour.L54_C14_H330,
+		["editorBracketHighlight.foreground4"]: colour.L54_C14_H180,
+		["editorBracketHighlight.foreground5"]: colour.L54_C14_H280,
+		["editorBracketHighlight.foreground6"]: colour.L54_C14_H020,
 		["editorBracketHighlight.unexpectedBracket.foreground"]: errorDark,
 
 		//Bracket pair guides:
-		["editorBracketPairGuide.activeBackground1"]: colour.L70_C08_H220, //TODO
-		["editorBracketPairGuide.activeBackground2"]: colour.L70_C08_H100,
-		["editorBracketPairGuide.activeBackground3"]: colour.L70_C08_H340,
-		["editorBracketPairGuide.activeBackground4"]: colour.L70_C08_H180,
-		["editorBracketPairGuide.activeBackground5"]: colour.L70_C08_H060,
-		["editorBracketPairGuide.activeBackground6"]: colour.L70_C08_H300,
+		["editorBracketPairGuide.activeBackground1"]: colour.L54_C14_H130, 
+		["editorBracketPairGuide.activeBackground2"]: colour.L54_C14_H230,
+		["editorBracketPairGuide.activeBackground3"]: colour.L54_C14_H330,
+		["editorBracketPairGuide.activeBackground4"]: colour.L54_C14_H180,
+		["editorBracketPairGuide.activeBackground5"]: colour.L54_C14_H280,
+		["editorBracketPairGuide.activeBackground6"]: colour.L54_C14_H020,
 		["editorBracketPairGuide.background1"]: DFLT,
 		["editorBracketPairGuide.background2"]: DFLT,
 		["editorBracketPairGuide.background3"]: DFLT,
@@ -679,7 +680,7 @@ let jsonObject = {
 		["editorHoverWidget.statusBarBackground"]: DFLT,
 		["editorGhostText.border"]: DFLT,
 		["editorGhostText.background"]: DFLT,
-		["editorGhostText.foreground"]: hintLight, //TODO
+		["editorGhostText.foreground"]: hintDark, //TODO
 		["editorStickyScroll.background"]: DFLT,
 		["editorStickyScroll.border"]: DFLT,
 		["editorStickyScroll.shadow"]: shadow,
@@ -1037,11 +1038,11 @@ let jsonObject = {
 
 		//Source Control Graph colors
 		["scmGraph.historyItemHoverLabelForeground"]: DFLT,
-		["scmGraph.foreground1"]: colour.L70_C10_H100,
-		["scmGraph.foreground2"]: colour.L70_C10_H150,
-		["scmGraph.foreground3"]: colour.L70_C10_H200,
-		["scmGraph.foreground4"]: colour.L70_C10_H250,
-		["scmGraph.foreground5"]: colour.L70_C10_H300,
+		["scmGraph.foreground1"]: colour.L50_C14_H130,
+		["scmGraph.foreground2"]: colour.L50_C14_H190,
+		["scmGraph.foreground3"]: colour.L50_C14_H250,
+		["scmGraph.foreground4"]: colour.L50_C14_H310,
+		["scmGraph.foreground5"]: colour.L50_C14_H010,
 		["scmGraph.historyItemHoverAdditionsForeground"]: DFLT,
 		["scmGraph.historyItemHoverDeletionsForeground"]: DFLT,
 		["scmGraph.historyItemRefColor"]: SourceControlGraphRef,

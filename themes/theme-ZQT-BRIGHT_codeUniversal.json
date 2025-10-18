@@ -4,89 +4,69 @@
 	"//description": "通用的代码高亮",
 	"tokenColors": [
 		{
-			"scope": "comment",
-			"settings": {
-				"foreground": "#9e9e9e"
-			}
-		},
-		{
-			"scope": "punctuation.definition.comment",
-			"settings": {
-				"foreground": "#9e9e9e"
-			}
-		},
-		{
-			"scope": "invalid",
-			"settings": {
-				"foreground": "#ca545a"
-			}
-		},
-		{
 			"scope": "entity.name.function",
 			"settings": {
-				"foreground": "#7347af"
+				"foreground": "#af2938"
 			}
 		},
 		{
 			"scope": "support.function",
 			"settings": {
-				"foreground": "#7b47bf"
+				"foreground": "#bd3743"
 			}
 		},
 		{
 			"scope": "variable.language",
 			"settings": {
-				"foreground": "#00814b"
+				"foreground": "#008663"
 			}
-		},
-		{
-			"scope": "variable.parameter",
-			"settings": {
-				"foreground": "#307c1b"
-			}
-		},
-		{
-			"scope": "variable.other.property",
-			"settings": {}
-		},
-		{
-			"scope": "support.variable.property",
-			"settings": {}
 		},
 		{
 			"scope": "variable",
 			"settings": {
-				"foreground": "#297613"
+				"foreground": "#007858"
 			}
 		},
 		{
 			"scope": "support.variable",
 			"settings": {
-				"foreground": "#227e00"
+				"foreground": "#008663"
+			}
+		},
+		{
+			"scope": "variable.other.property",
+			"settings": {
+				"foreground": "#227702"
+			}
+		},
+		{
+			"scope": "support.variable.property",
+			"settings": {
+				"foreground": "#308319"
 			}
 		},
 		{
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#0063c3"
+				"foreground": "#a53d9f"
 			}
 		},
 		{
 			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#794db6"
+				"foreground": "#953490"
 			}
 		},
 		{
 			"scope": "string",
 			"settings": {
-				"foreground": "#a33460"
+				"foreground": "#953490"
 			}
 		},
 		{
 			"scope": "string.regexp",
 			"settings": {
-				"foreground": "#9e3081"
+				"foreground": "#a53d9f"
 			}
 		},
 		{
@@ -95,7 +75,7 @@
 				"string.template"
 			],
 			"settings": {
-				"foreground": "#9e3081"
+				"foreground": "#a53d9f"
 			}
 		},
 		{
@@ -104,48 +84,62 @@
 				"punctuation.definition.entity"
 			],
 			"settings": {
-				"foreground": "#9e3081"
+				"foreground": "#a53d9f"
 			}
 		},
 		{
 			"scope": "keyword.control",
 			"settings": {
-				"foreground": "#ad215f"
-			}
-		},
-		{
-			"scope": "keyword.operator",
-			"settings": {
-				"foreground": "#b13e06"
+				"foreground": "#006fd1"
 			}
 		},
 		{
 			"scope": "storage.type",
 			"settings": {
-				"foreground": "#544ec5"
+				"foreground": "#7a4aba"
 			}
 		},
 		{
 			"scope": "support.type",
 			"settings": {
-				"foreground": "#5a56c7"
+				"foreground": "#814ec6"
 			}
 		},
 		{
-			"scope": "entity.name.type",
+			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#2b64c3"
+				"foreground": "#007d9e"
 			}
 		},
 		{
 			"scope": "punctuation.definition",
 			"settings": {
-				"foreground": "#0064a2"
+				"foreground": "#ad215f"
 			}
 		},
 		{
 			"scope": "punctuation.separator",
-			"settings": {}
+			"settings": {
+				"foreground": "#6f6f6f"
+			}
+		},
+		{
+			"scope": "comment",
+			"settings": {
+				"foreground": "#ababab"
+			}
+		},
+		{
+			"scope": "punctuation.definition.comment",
+			"settings": {
+				"foreground": "#ababab"
+			}
+		},
+		{
+			"scope": "invalid",
+			"settings": {
+				"foreground": "#d64651"
+			}
 		}
 	]
 }

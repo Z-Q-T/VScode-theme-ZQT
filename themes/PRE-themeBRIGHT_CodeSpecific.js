@@ -3,26 +3,27 @@ let TRANSPARENT = "#00000000";
 let DEBUG_RED = "#ff0000";
 let DEBUG_GREEN = "#00ff00";
 let BLACK = "#000";
-let GREY10 = "#030303"; //按照oklch色域 #030303
-let GREY15 = "#0b0b0b";
-let GREY20 = "#161616";
-let GREY25 = "#222222";
-let GREY30 = "#2e2e2e";
-let GREY35 = "#3a3a3a";
-let GREY40 = "#484848";
-let GREY45 = "#555555";
-let GREY50 = "#636363";
-let GREY55 = "#717171";
-let GREY60 = "#808080";
-let GREY65 = "#8f8f8f";
-let GREY70 = "#9e9e9e";
-let GREY75 = "#aeaeae";
-let GREY80 = "#bebebe";
-let GREY85 = "#cecece";
-let GREY90 = "#dedede";
-let GREY95 = "#eeeeee";
 let WHITE = "#FFF";
+// let GREY10 = "#030303"; //按照oklch色域 #030303
+// let GREY15 = "#0b0b0b";
+// let GREY20 = "#161616";
+// let GREY25 = "#222222";
+// let GREY30 = "#2e2e2e";
+// let GREY35 = "#3a3a3a";
+// let GREY40 = "#484848";
+// let GREY45 = "#555555";
+// let GREY50 = "#636363";
+// let GREY55 = "#717171";
+// let GREY60 = "#808080";
+// let GREY65 = "#8f8f8f";
+// let GREY70 = "#9e9e9e";
+// let GREY75 = "#aeaeae";
+// let GREY80 = "#bebebe";
+// let GREY85 = "#cecece";
+// let GREY90 = "#dedede";
+// let GREY95 = "#eeeeee";
 
+import grey from "./palette-greyscales.js";
 import colour from "./palette-coloursBRIGHT.js";
 
 import fs from "fs";
@@ -66,7 +67,7 @@ const colorRules = [
 	// { scopes: ["meta.function-call.python"], color: colour.L74_C15_H080 }, 
 	// { scopes: ["meta.function-call.arguments.python"], color: colour.L76_C14_H140 }, 
 
-	{ scopes: "keyword.other.important.css", color: colour.L76_C17_H220 },
+	{ scopes: "keyword.other.important.css", color: colour.L54_C18_H030 },
 ];
 //js、html、python都好了，再改一改css就好了
 
