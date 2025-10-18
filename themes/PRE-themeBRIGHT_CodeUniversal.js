@@ -37,31 +37,27 @@ function generateTokenColors(rules) {
 let commentColour = grey.G74;
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
-	//函数//蓝
-	{ scopes: "entity.name.function", color: colour.L50_C17_H020 }, //函数名：calcAll()
-	{ scopes: "support.function", color: colour.L54_C17_H020 }, //print()
-	//变量名//绿
-	{ scopes: "variable.language", color: colour.L54_C17_H170 }, //this
-	{ scopes: "variable", color: colour.L50_C17_H170 }, //combinations、targetvalue //
-	{ scopes: "support.variable", color: colour.L54_C17_H170 }, //???
-	{ scopes: "variable.other.property", color: colour.L50_C16_H140 }, 
-	{ scopes: "support.variable.property", color: colour.L54_C16_H140 }, //.length
-	// { scopes: "variable.parameter", color: colour.L52_C15_H140 }, //def cmpt(s, A, t):
+	//函数
+	{ scopes: "entity.name.function", color: colour.L52_C18_H350 }, //函数名：calcAll()
+	{ scopes: "support.function", color: colour.L56_C18_H350 }, //print()
+	//变量名
+	{ scopes: "variable", color: colour.L52_C14_H170 }, //combinations、targetvalue //
+	{ scopes: "support.variable", color: colour.L56_C16_H170 }, //???
+	{ scopes: "variable.language", color: colour.L56_C16_H170 }, //this
+	{ scopes: "variable.other.property", color: colour.L56_C12_H110 }, 
+	{ scopes: "support.variable.property", color: colour.L58_C12_H110 }, //.length
 	//值
-	{ scopes: "constant.language", color: colour.L54_C18_H330 }, //true、False、undefined
-	{ scopes: "constant.numeric", color: colour.L50_C17_H330 }, //数值：423、1.67
-	{ scopes: "string", color: colour.L50_C17_H330 }, //字符串："bienzu"、"32i4hen9"
-	{ scopes: "string.regexp", color: colour.L54_C18_H330 }, // /(\w+ab)/
-	{ scopes: ["string.interpolated", "string.template"], color: colour.L54_C18_H330 }, //$(pwd)、`date`
-	{ scopes: ["constant.character","punctuation.definition.entity"], color: colour.L54_C18_H330 }, //&lt;、&ensp;、\031
+	{ scopes: ["string","constant.numeric"], color: colour.L50_C14_H300 }, //数值：423、1.67；字符串："bienzu"、"32i4hen9 "
+	{ scopes: ["string.regexp","string.interpolated", "string.template","constant.character","punctuation.definition.entity"], color: colour.L54_C18_H300 }, ///(\w+ab)/、$(pwd)、`date`、&lt;、&ensp;、\031
+	{ scopes: "constant.language", color: colour.L58_C18_H300 }, //true、False、undefined
 	//控制语句
-	{ scopes: "keyword.control", color: colour.L54_C18_H250 }, //for、while、else、return
+	{ scopes: "keyword.control", color: colour.L56_C12_H060 }, //for、while、else、return
 	//类型 
-	{ scopes: "storage.type", color: colour.L52_C17_H300 }, //var、let、const、function
-	{ scopes: "support.type", color: colour.L54_C18_H300 }, //float()
+	{ scopes: "storage.type", color: colour.L56_C16_H240 }, //var、let、const、function
+	{ scopes: "support.type", color: colour.L56_C18_H240 }, //float()
 	// { scopes: "entity.name.type", color: colour.L52_C16_H260 }, //这是啥？不知道
 	//运算符
-	{ scopes: "keyword.operator", color: colour.L54_C16_H220 }, //运算符：+、-、*、/、||、==
+	{ scopes: "keyword.operator", color: colour.L54_C12_H000 }, //运算符：+、-、*、/、||、==
 	//标点
 	{ scopes: "punctuation.definition", color: colour.L50_C18_H000 }, //""、<>
 	{ scopes: "punctuation.separator", color: grey.G54 }, //,、;

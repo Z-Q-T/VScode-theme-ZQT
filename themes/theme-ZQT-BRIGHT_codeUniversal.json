@@ -6,109 +6,94 @@
 		{
 			"scope": "entity.name.function",
 			"settings": {
-				"foreground": "#af2938"
+				"foreground": "#ae2c77"
 			}
 		},
 		{
 			"scope": "support.function",
 			"settings": {
-				"foreground": "#bd3743"
-			}
-		},
-		{
-			"scope": "variable.language",
-			"settings": {
-				"foreground": "#008663"
+				"foreground": "#bc3a83"
 			}
 		},
 		{
 			"scope": "variable",
 			"settings": {
-				"foreground": "#007858"
+				"foreground": "#007f5e"
 			}
 		},
 		{
 			"scope": "support.variable",
 			"settings": {
-				"foreground": "#008663"
+				"foreground": "#008c68"
+			}
+		},
+		{
+			"scope": "variable.language",
+			"settings": {
+				"foreground": "#008c68"
 			}
 		},
 		{
 			"scope": "variable.other.property",
 			"settings": {
-				"foreground": "#227702"
+				"foreground": "#797a08"
 			}
 		},
 		{
 			"scope": "support.variable.property",
 			"settings": {
-				"foreground": "#308319"
-			}
-		},
-		{
-			"scope": "constant.language",
-			"settings": {
-				"foreground": "#a53d9f"
-			}
-		},
-		{
-			"scope": "constant.numeric",
-			"settings": {
-				"foreground": "#953490"
-			}
-		},
-		{
-			"scope": "string",
-			"settings": {
-				"foreground": "#953490"
-			}
-		},
-		{
-			"scope": "string.regexp",
-			"settings": {
-				"foreground": "#a53d9f"
+				"foreground": "#7f8015"
 			}
 		},
 		{
 			"scope": [
-				"string.interpolated",
-				"string.template"
+				"string",
+				"constant.numeric"
 			],
 			"settings": {
-				"foreground": "#a53d9f"
+				"foreground": "#714ca6"
 			}
 		},
 		{
 			"scope": [
+				"string.regexp",
+				"string.interpolated",
+				"string.template",
 				"constant.character",
 				"punctuation.definition.entity"
 			],
-			"settings": {
-				"foreground": "#a53d9f"
-			}
-		},
-		{
-			"scope": "keyword.control",
-			"settings": {
-				"foreground": "#006fd1"
-			}
-		},
-		{
-			"scope": "storage.type",
-			"settings": {
-				"foreground": "#7a4aba"
-			}
-		},
-		{
-			"scope": "support.type",
 			"settings": {
 				"foreground": "#814ec6"
 			}
 		},
 		{
+			"scope": "constant.language",
+			"settings": {
+				"foreground": "#8c5ad3"
+			}
+		},
+		{
+			"scope": "keyword.control",
+			"settings": {
+				"foreground": "#a7611b"
+			}
+		},
+		{
+			"scope": "storage.type",
+			"settings": {
+				"foreground": "#007dc5"
+			}
+		},
+		{
+			"scope": "support.type",
+			"settings": {
+				"foreground": "#007dc5"
+			}
+		},
+		{
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#007d9e"
+				"foreground": "#a54d6c"
 			}
 		},
 		{
