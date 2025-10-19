@@ -4,24 +4,6 @@ let DEBUG_RED = "#ff0000";
 let DEBUG_GREEN = "#00ff00";
 let BLACK = "#000";
 let WHITE = "#FFF";
-// let GREY10 = "#030303"; //按照oklch色域 #030303
-// let GREY15 = "#0b0b0b";
-// let GREY20 = "#161616";
-// let GREY25 = "#222222";
-// let GREY30 = "#2e2e2e";
-// let GREY35 = "#3a3a3a";
-// let GREY40 = "#484848";
-// let GREY45 = "#555555";
-// let GREY50 = "#636363";
-// let GREY55 = "#717171";
-// let GREY60 = "#808080";
-// let GREY65 = "#8f8f8f";
-// let GREY70 = "#9e9e9e";
-// let GREY75 = "#aeaeae";
-// let GREY80 = "#bebebe";
-// let GREY85 = "#cecece";
-// let GREY90 = "#dedede";
-// let GREY95 = "#eeeeee";
 
 import grey from "./palette-greyscales.js";
 import colour from "./palette-coloursBRIGHT.js";
@@ -44,21 +26,16 @@ function generateTokenColors(rules) {
 	};
 }
 
-//通常的用亮度L72，特殊的可以更亮
-//一大长串的用色度C14，短的可以更饱和
-//html、css、json、yaml、toml等由于不是编程语言，因此单独处理
-//越常见的色度越低，防止扎眼
+
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
-	// { scopes: ["entity.name.tag","entity.name.tag.css"], color: colour.L76_C14_H280 }, 
-	// { scopes: ["entity.name.tag.custom"], color: colour.L74_C17_H280 }, 
+	{ scopes: ["entity.name.tag","entity.name.tag.css"], color: colour.L54_C10_H090 }, 
+	{ scopes: ["entity.name.tag.custom"], color: colour.L56_C12_H090 }, 
 	// { scopes: "meta.attribute", color: colour.L74_C15_H130 }, 
-	// { scopes: ["meta.attribute.class.html","entity.other.attribute-name.class.css"], color: colour.L74_C16_H080 }, 
-	// { scopes: ["meta.attribute.id.html","entity.other.attribute-name.id.css"], color: colour.L74_C16_H040 }, 
+	// { scopes: ["meta.attribute.class.html","entity.other.attribute-name.class.css"], color: colour.L50_C14_H260 }, 
+	// { scopes: ["meta.attribute.id.html","entity.other.attribute-name.id.css"], color: colour.L50_C14_H330 }, 
 	// { scopes: "punctuation.definition.entity.css", color: colour.L72_C06_H240 }, 
 	// { scopes: "entity.other.attribute-name.css", color: colour.L74_C16_H150 }, 
-	// { scopes: "entity.other.attribute-name.pseudo-element.css", color: colour.L76_C15_H310 }, 
-	// { scopes: "entity.other.attribute-name.pseudo-class.css", color: colour.L74_C17_H110 }, 
 	// { scopes: "support.type.property-name", color: colour.L74_C06_H130 }, 
 	// { scopes: "support.type.vendored.property-name.css", color: colour.L74_C14_H170 }, 
 	// { scopes: ["support.constant.property-value.css","constant.numeric.css"], color: colour.L74_C06_H340 }, 

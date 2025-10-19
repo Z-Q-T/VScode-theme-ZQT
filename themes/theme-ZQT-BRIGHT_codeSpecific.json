@@ -5,6 +5,23 @@
 	"include": "theme-ZQT-BRIGHT_codeUniversal.json",
 	"tokenColors": [
 		{
+			"scope": [
+				"entity.name.tag",
+				"entity.name.tag.css"
+			],
+			"settings": {
+				"foreground": "#856b1b"
+			}
+		},
+		{
+			"scope": [
+				"entity.name.tag.custom"
+			],
+			"settings": {
+				"foreground": "#907000"
+			}
+		},
+		{
 			"scope": "keyword.other.important.css",
 			"settings": {
 				"foreground": "#c13425"

@@ -29,26 +29,22 @@ function generateTokenColors(rules) {
 }
 
 
-//运算符-控制：橙红
-//函数：蓝
-//变量：绿
-//值-类型：紫红
 //support的颜色在对应原颜色的基础上，L+2，C+6
 let commentColour = grey.G74;
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
 	//函数
-	{ scopes: "entity.name.function", color: colour.L52_C18_H350 }, //函数名：calcAll()
+	{ scopes: ["entity.name.function","meta.selector.css"], color: colour.L52_C18_H350 }, //函数名：calcAll()
 	{ scopes: "support.function", color: colour.L56_C18_H350 }, //print()
 	//变量名
 	{ scopes: "variable", color: colour.L52_C14_H170 }, //combinations、targetvalue //
-	{ scopes: "support.variable", color: colour.L56_C16_H170 }, //???
+	{ scopes: ["support.variable","support.type.property-name.css","entity.other.attribute-name.html"], color: colour.L56_C16_H170 }, //???
 	{ scopes: "variable.language", color: colour.L56_C16_H170 }, //this
-	{ scopes: "variable.other.property", color: colour.L56_C12_H110 }, 
+	{ scopes: ["variable.other.property","entity.other.attribute-name.pseudo-element.css","entity.other.attribute-name.pseudo-class.css"], color: colour.L56_C12_H110 }, 
 	{ scopes: "support.variable.property", color: colour.L58_C12_H110 }, //.length
 	//值
 	{ scopes: ["string","constant.numeric"], color: colour.L50_C14_H300 }, //数值：423、1.67；字符串："bienzu"、"32i4hen9 "
-	{ scopes: ["string.regexp","string.interpolated", "string.template","constant.character","punctuation.definition.entity"], color: colour.L54_C18_H300 }, ///(\w+ab)/、$(pwd)、`date`、&lt;、&ensp;、\031
+	{ scopes: ["string.regexp","string.interpolated", "string.template","constant.character","punctuation.definition.entity","support.constant.property-value.css"], color: colour.L54_C18_H300 }, ///(\w+ab)/、$(pwd)、`date`、&lt;、&ensp;、\031
 	{ scopes: "constant.language", color: colour.L58_C18_H300 }, //true、False、undefined
 	//控制语句
 	{ scopes: "keyword.control", color: colour.L56_C12_H060 }, //for、while、else、return

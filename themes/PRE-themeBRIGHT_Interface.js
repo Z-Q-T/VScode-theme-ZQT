@@ -46,7 +46,7 @@ let buttonSecondary = grey.G46;
 let buttonSecondaryHover = grey.G54;
 
 let keyboardLabel = grey.G94;
-let quoteText=grey.G90
+let quoteText = grey.G90;
 let preformatText = grey.G86;
 
 let hyperlinkFore = "#2266a4"; //oklch(0.50 0.12 250)
@@ -96,12 +96,14 @@ let wordHighlightWriteTRANSPARENT = "#839d0077";
 let wordHighlightReadSOLID = "#00a1c9"; //oklch(0.65 0.18 220)
 let wordHighlightReadTRANSPARENT = "#00a1c977";
 let wordHighlightTextSOLID = "#00ac4e"; //oklch(0.65 0.18 150)
-let wordHighlightTextTRANSPARENT = "#00ac4e77"; //oklch(0.65 0.18 150)
-let unicodeHighlight = "#e26500"; //oklch(0.65 0.18 50)
-let BracketMatchStrong = "#fb2af4bb"; //oklch(0.7 0.3 330)
-let whitespaceCharacter = "#9bce9077"; //=hintLight
-let foldHint = "#61911c";//oklch(0.6 0.15 130)
+let wordHighlightTextTRANSPARENT = "#00ac4e77";
+let unicodeHighlight = "#dc8900"; //oklch(0.7 0.16 70)
+let BracketMatchSolid = "#fb2af4"; //oklch(0.7 0.3 330)
+let BracketMatchTRANSPARENT = "#fb2af4aa";
+let linkEditBack = "#fb2af422";
+let foldHint = "#61911c"; //oklch(0.6 0.15 130)
 let foldArea = "#61911c33";
+let whitespaceCharacter = "#9bce9077"; //=hintLight
 
 let lineHighlightBackground = "#00000011";
 let editorRulerLine = "#00000011";
@@ -109,14 +111,13 @@ let IndentGuide = "#00000022";
 let IndentGuideActive = "#00000033";
 let UnusedCodeOpacity = "#00000088";
 
-let statusBarDebuggingBackground = "#ddaec3";//oklch(0.8 0.06 350)
-let debugBreakPointMain="#e274ab";//oklch(0.7 0.15 350)
-let debugBreakPointDisabled="#d3cbce";//oklch(0.85 0.01 350)
+let statusBarDebuggingBackground = "#ddaec3"; //oklch(0.8 0.06 350)
+let debugBreakPointMain = "#e274ab"; //oklch(0.7 0.15 350)
+let debugBreakPointDisabled = "#d3cbce"; //oklch(0.85 0.01 350)
 //TODO下面的颜色还没调过
 let extensionStar = "#dea62dff";
 let extensionPreRelease = "#de2dc1ff";
 let extensionVerified = "#129123ff";
-let linkEdit = "#33ffff5f";
 let commentRangeForeground = "#686868";
 
 let jsonObject = {
@@ -437,7 +438,7 @@ let jsonObject = {
 		["editor.lineHighlightBorder"]: DFLT,
 
 		//The color for the editor watermark
-		["editorWatermark.foreground"]: secondaryFore,//空白背景上的“︁显示所有命令”︁“︁打开文件”︁等提示字符
+		["editorWatermark.foreground"]: secondaryFore, //空白背景上的“︁显示所有命令”︁“︁打开文件”︁等提示字符
 
 		//The color for unicode highlights
 		["editorUnicodeHighlight.border"]: unicodeHighlight,
@@ -483,7 +484,7 @@ let jsonObject = {
 
 		//To see editor rulers, define their location with "editor.rulers"
 		["editorRuler.foreground"]: editorRulerLine,
-		["editor.linkedEditingBackground"]: DEBUG_BLUE,
+		["editor.linkedEditingBackground"]: linkEditBack,
 
 		//CodeLens:
 		["editorCodeLens.foreground"]: DFLT, //TODO
@@ -495,10 +496,10 @@ let jsonObject = {
 
 		//Bracket matches:
 		["editorBracketMatch.background"]: TRANSPARENT,
-		["editorBracketMatch.border"]: BracketMatchStrong,
+		["editorBracketMatch.border"]: BracketMatchSolid,
 
 		//Bracket pair colorization:
-		["editorBracketHighlight.foreground1"]: colour.L54_C14_H130, 
+		["editorBracketHighlight.foreground1"]: colour.L54_C14_H130,
 		["editorBracketHighlight.foreground2"]: colour.L54_C14_H230,
 		["editorBracketHighlight.foreground3"]: colour.L54_C14_H330,
 		["editorBracketHighlight.foreground4"]: colour.L54_C14_H180,
@@ -507,7 +508,7 @@ let jsonObject = {
 		["editorBracketHighlight.unexpectedBracket.foreground"]: errorDark,
 
 		//Bracket pair guides:
-		["editorBracketPairGuide.activeBackground1"]: colour.L54_C14_H130, 
+		["editorBracketPairGuide.activeBackground1"]: colour.L54_C14_H130,
 		["editorBracketPairGuide.activeBackground2"]: colour.L54_C14_H230,
 		["editorBracketPairGuide.activeBackground3"]: colour.L54_C14_H330,
 		["editorBracketPairGuide.activeBackground4"]: colour.L54_C14_H180,
@@ -540,7 +541,7 @@ let jsonObject = {
 		["editorOverviewRuler.errorForeground"]: errorDark,
 		["editorOverviewRuler.warningForeground"]: warningLight,
 		["editorOverviewRuler.infoForeground"]: infoLight,
-		["editorOverviewRuler.bracketMatchForeground"]: BracketMatchStrong,
+		["editorOverviewRuler.bracketMatchForeground"]: BracketMatchTRANSPARENT,
 		["editorOverviewRuler.inlineChatInserted"]: DFLT, //TODO
 		["editorOverviewRuler.inlineChatRemoved"]: DFLT,
 
@@ -939,9 +940,9 @@ let jsonObject = {
 		["terminal.dropBackground"]: dropInto,
 		["terminal.tab.activeBorder"]: DFLT,
 		["terminalCommandDecoration.defaultBackground"]: hintDark,
-		["terminalCommandDecoration.successBackground"]: infoDark, 
+		["terminalCommandDecoration.successBackground"]: infoDark,
 		["terminalCommandDecoration.errorBackground"]: errorDark,
-		["terminalOverviewRuler.cursorForeground"]: DFLT,//TODO
+		["terminalOverviewRuler.cursorForeground"]: DFLT, //TODO
 		["terminalOverviewRuler.findMatchForeground"]: DFLT,
 		["terminalStickyScroll.background"]: DEBUG_PINK,
 		["terminalStickyScroll.border"]: DEBUG_RED,
@@ -1128,9 +1129,9 @@ let jsonObject = {
 		["symbolIcon.variableForeground"]: DFLT,
 
 		//Debug Icons colors
-		["debugIcon.breakpointForeground"]: debugBreakPointMain, 
+		["debugIcon.breakpointForeground"]: debugBreakPointMain,
 		["debugIcon.breakpointDisabledForeground"]: debugBreakPointDisabled,
-		["debugIcon.breakpointUnverifiedForeground"]: DFLT,//TODO
+		["debugIcon.breakpointUnverifiedForeground"]: DFLT, //TODO
 		["debugIcon.breakpointCurrentStackframeForeground"]: DFLT,
 		["debugIcon.breakpointStackframeForeground"]: DFLT,
 		["debugIcon.startForeground"]: DFLT,

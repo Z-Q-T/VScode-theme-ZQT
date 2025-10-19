@@ -4,7 +4,10 @@
 	"//description": "通用的代码高亮",
 	"tokenColors": [
 		{
-			"scope": "entity.name.function",
+			"scope": [
+				"entity.name.function",
+				"meta.selector.css"
+			],
 			"settings": {
 				"foreground": "#ae2c77"
 			}
@@ -22,7 +25,11 @@
 			}
 		},
 		{
-			"scope": "support.variable",
+			"scope": [
+				"support.variable",
+				"support.type.property-name.css",
+				"entity.other.attribute-name.html"
+			],
 			"settings": {
 				"foreground": "#008c68"
 			}
@@ -34,7 +41,11 @@
 			}
 		},
 		{
-			"scope": "variable.other.property",
+			"scope": [
+				"variable.other.property",
+				"entity.other.attribute-name.pseudo-element.css",
+				"entity.other.attribute-name.pseudo-class.css"
+			],
 			"settings": {
 				"foreground": "#797a08"
 			}
@@ -60,7 +71,8 @@
 				"string.interpolated",
 				"string.template",
 				"constant.character",
-				"punctuation.definition.entity"
+				"punctuation.definition.entity",
+				"support.constant.property-value.css"
 			],
 			"settings": {
 				"foreground": "#814ec6"
