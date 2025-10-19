@@ -31,22 +31,8 @@ const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
 	{ scopes: ["entity.name.tag","entity.name.tag.css"], color: colour.L54_C10_H090 }, 
 	{ scopes: ["entity.name.tag.custom"], color: colour.L56_C12_H090 }, 
-	// { scopes: "meta.attribute", color: colour.L74_C15_H130 }, 
-	// { scopes: ["meta.attribute.class.html","entity.other.attribute-name.class.css"], color: colour.L50_C14_H260 }, 
-	// { scopes: ["meta.attribute.id.html","entity.other.attribute-name.id.css"], color: colour.L50_C14_H330 }, 
-	// { scopes: "punctuation.definition.entity.css", color: colour.L72_C06_H240 }, 
-	// { scopes: "entity.other.attribute-name.css", color: colour.L74_C16_H150 }, 
-	// { scopes: "support.type.property-name", color: colour.L74_C06_H130 }, 
-	// { scopes: "support.type.vendored.property-name.css", color: colour.L74_C14_H170 }, 
-	// { scopes: ["support.constant.property-value.css","constant.numeric.css"], color: colour.L74_C06_H340 }, 
-	// { scopes: "support.function.misc.css", color: colour.L76_C15_H000 }, 
-	// { scopes: ["variable.css","variable.argument.css"], color: colour.L74_C16_H020 }, 
-	// { scopes: ["meta.function-call.python"], color: colour.L74_C15_H080 }, 
-	// { scopes: ["meta.function-call.arguments.python"], color: colour.L76_C14_H140 }, 
-
 	{ scopes: "keyword.other.important.css", color: colour.L54_C18_H030 },
 ];
-//js、html、python都好了，再改一改css就好了
 
 // 生成JSON对象
 const jsonData = generateTokenColors(colorRules);

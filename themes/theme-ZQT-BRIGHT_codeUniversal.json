@@ -6,7 +6,8 @@
 		{
 			"scope": [
 				"entity.name.function",
-				"meta.selector.css"
+				"meta.selector.css",
+				"meta.function-call"
 			],
 			"settings": {
 				"foreground": "#ae2c77"
@@ -19,7 +20,10 @@
 			}
 		},
 		{
-			"scope": "variable",
+			"scope": [
+				"variable",
+				"meta.function-call.arguments"
+			],
 			"settings": {
 				"foreground": "#007f5e"
 			}
@@ -44,7 +48,8 @@
 			"scope": [
 				"variable.other.property",
 				"entity.other.attribute-name.pseudo-element.css",
-				"entity.other.attribute-name.pseudo-class.css"
+				"entity.other.attribute-name.pseudo-class.css",
+				"meta.attribute"
 			],
 			"settings": {
 				"foreground": "#797a08"
@@ -59,7 +64,8 @@
 		{
 			"scope": [
 				"string",
-				"constant.numeric"
+				"constant.numeric",
+				"meta.item-access.arguments"
 			],
 			"settings": {
 				"foreground": "#714ca6"

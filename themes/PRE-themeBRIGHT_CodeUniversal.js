@@ -34,16 +34,16 @@ let commentColour = grey.G74;
 const colorRules = [
 	// { scopes: ["namespace", "class"], color: WHITE },//多个写在一起的写法
 	//函数
-	{ scopes: ["entity.name.function","meta.selector.css"], color: colour.L52_C18_H350 }, //函数名：calcAll()
+	{ scopes: ["entity.name.function","meta.selector.css","meta.function-call"], color: colour.L52_C18_H350 }, //函数名：calcAll()
 	{ scopes: "support.function", color: colour.L56_C18_H350 }, //print()
 	//变量名
-	{ scopes: "variable", color: colour.L52_C14_H170 }, //combinations、targetvalue //
+	{ scopes: ["variable","meta.function-call.arguments"], color: colour.L52_C14_H170 }, //combinations、targetvalue //
 	{ scopes: ["support.variable","support.type.property-name.css","entity.other.attribute-name.html"], color: colour.L56_C16_H170 }, //???
 	{ scopes: "variable.language", color: colour.L56_C16_H170 }, //this
-	{ scopes: ["variable.other.property","entity.other.attribute-name.pseudo-element.css","entity.other.attribute-name.pseudo-class.css"], color: colour.L56_C12_H110 }, 
+	{ scopes: ["variable.other.property","entity.other.attribute-name.pseudo-element.css","entity.other.attribute-name.pseudo-class.css","meta.attribute"], color: colour.L56_C12_H110 }, 
 	{ scopes: "support.variable.property", color: colour.L58_C12_H110 }, //.length
 	//值
-	{ scopes: ["string","constant.numeric"], color: colour.L50_C14_H300 }, //数值：423、1.67；字符串："bienzu"、"32i4hen9 "
+	{ scopes: ["string","constant.numeric","meta.item-access.arguments"], color: colour.L50_C14_H300 }, //数值：423、1.67；字符串："bienzu"、"32i4hen9 "
 	{ scopes: ["string.regexp","string.interpolated", "string.template","constant.character","punctuation.definition.entity","support.constant.property-value.css"], color: colour.L54_C18_H300 }, ///(\w+ab)/、$(pwd)、`date`、&lt;、&ensp;、\031
 	{ scopes: "constant.language", color: colour.L58_C18_H300 }, //true、False、undefined
 	//控制语句
