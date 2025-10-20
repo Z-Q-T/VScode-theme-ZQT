@@ -114,6 +114,10 @@ let UnusedCodeOpacity = "#00000088";
 let statusBarDebuggingBackground = "#ddaec3"; //oklch(0.8 0.06 350)
 let debugBreakPointMain = "#e274ab"; //oklch(0.7 0.15 350)
 let debugBreakPointDisabled = "#d3cbce"; //oklch(0.85 0.01 350)
+
+let chatMeBack="#b6d1ee"; //oklch(0.85 0.05 250)
+let chatMeHover="#a6c1dd"; //oklch(0.80 0.05 250)
+
 //TODO下面的颜色还没调过
 let extensionStar = "#dea62dff";
 let extensionPreRelease = "#de2dc1ff";
@@ -639,12 +643,12 @@ let jsonObject = {
 		["chat.linesAddedForeground"]: DFLT,
 		["chat.linesRemovedForeground"]: DFLT,
 		["chat.requestCodeBorder"]: DFLT,
-		["chat.requestBubbleBackground"]: DFLT,
-		["chat.requestBubbleHoverBackground"]: DFLT,
-		["chat.checkpointSeparator"]: DFLT,
+		["chat.requestBubbleBackground"]: chatMeBack,
+		["chat.requestBubbleHoverBackground"]: chatMeHover,
+		["chat.checkpointSeparator"]: mainFore,
 
 		//Inline Chat colors
-		["inlineChat.background"]: DFLT,
+		["inlineChat.background"]: DFLT,//TODO
 		["inlineChat.foreground"]: DFLT,
 		["inlineChat.border"]: DFLT,
 		["inlineChat.shadow"]: shadow,
