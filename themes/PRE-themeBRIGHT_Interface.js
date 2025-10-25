@@ -1,3 +1,4 @@
+//所有颜色数值都是指sRGB色域下的数值，在其他色域的显示器上显示时，实际数值不一定相同。
 let DFLT = "default";
 let TRANSPARENT = "#00000000";
 let BLACK = "#000";
@@ -685,7 +686,7 @@ let jsonObject = {
 		["editorHoverWidget.statusBarBackground"]: DFLT,
 		["editorGhostText.border"]: DFLT,
 		["editorGhostText.background"]: DFLT,
-		["editorGhostText.foreground"]: hintDark, //TODO
+		["editorGhostText.foreground"]: hintDark, 
 		["editorStickyScroll.background"]: DFLT,
 		["editorStickyScroll.border"]: DFLT,
 		["editorStickyScroll.shadow"]: shadow,
@@ -948,9 +949,9 @@ let jsonObject = {
 		["terminalCommandDecoration.errorBackground"]: errorDark,
 		["terminalOverviewRuler.cursorForeground"]: DFLT, //TODO
 		["terminalOverviewRuler.findMatchForeground"]: DFLT,
-		["terminalStickyScroll.background"]: DEBUG_PINK,
-		["terminalStickyScroll.border"]: DEBUG_RED,
-		["terminalStickyScrollHover.background"]: DEBUG_GREEN,
+		["terminalStickyScroll.background"]: DFLT,
+		["terminalStickyScroll.border"]: shadow,
+		["terminalStickyScrollHover.background"]: hover,
 		["terminal.initialHintForeground"]: DEBUG_BLUE,
 		["terminalOverviewRuler.border"]: unimportantFore,
 		["terminalCommandGuide.foreground"]: hoverDarker,
