@@ -391,7 +391,7 @@
 		"multiDiffEditor.background": "#ff0000",
 		"multiDiffEditor.border": "default",
 		"chat.requestBorder": "default",
-		"chat.requestBackground": "#ff0000",
+		"chat.requestBackground": "#e7b375",
 		"chat.slashCommandBackground": "default",
 		"chat.slashCommandForeground": "default",
 		"chat.avatarBackground": "default",

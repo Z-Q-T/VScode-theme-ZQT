@@ -635,7 +635,7 @@ let jsonObject = {
 
 		//Chat colors
 		["chat.requestBorder"]: DFLT, //TODO
-		["chat.requestBackground"]: DEBUG_RED,
+		["chat.requestBackground"]: warningLight,
 		["chat.slashCommandBackground"]: DFLT,
 		["chat.slashCommandForeground"]: DFLT,
 		["chat.avatarBackground"]: DFLT,
