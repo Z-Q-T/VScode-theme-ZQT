@@ -573,8 +573,11 @@ let jsonObject = {
 		//The gutter contains the glyph margins and the line numbers:
 		["editorGutter.background"]: DFLT,
 		["editorGutter.modifiedBackground"]: modifyLight,
+		["editorGutter.modifiedSecondaryBackground"]: modifyLight,
 		["editorGutter.addedBackground"]: addLight,
+		["editorGutter.addedSecondaryBackground"]: addLight,
 		["editorGutter.deletedBackground"]: deleteLight,
+		["editorGutter.deletedSecondaryBackground"]: deleteLight,
 		["editorGutter.commentRangeForeground"]: DEBUG_BLUE,
 		["editorGutter.commentGlyphForeground"]: DFLT,
 		["editorGutter.commentUnresolvedGlyphForeground"]: DFLT,
