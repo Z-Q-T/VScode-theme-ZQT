@@ -481,7 +481,7 @@ let jsonObject = {
 
 		//To see the editor inline hints, set "editor.inlineSuggest.enabled": true.
 		["editorInlayHint.background"]: DEBUG_PINK,
-		["editorInlayHint.foreground"]: DFLT,
+		["editorInlayHint.foreground"]: DEBUG_BLUE,
 		["editorInlayHint.typeForeground"]: DFLT,
 		["editorInlayHint.typeBackground"]: DFLT,
 		["editorInlayHint.parameterForeground"]: DFLT,
@@ -688,8 +688,8 @@ let jsonObject = {
 		["editorHoverWidget.highlightForeground"]: DFLT,
 		["editorHoverWidget.statusBarBackground"]: DFLT,
 		["editorGhostText.border"]: DFLT,
-		["editorGhostText.background"]: DFLT,
-		["editorGhostText.foreground"]: hintDark, 
+		["editorGhostText.background"]: hintLight,
+		["editorGhostText.foreground"]: DFLT, 
 		["editorStickyScroll.background"]: DFLT,
 		["editorStickyScroll.border"]: DFLT,
 		["editorStickyScroll.shadow"]: shadow,
