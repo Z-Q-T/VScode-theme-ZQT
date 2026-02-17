@@ -615,7 +615,7 @@ let jsonObject = {
 		//Diff editor colors
 		//For coloring inserted and removed text, use either a background or a border color but not both.
 		["diffEditor.border"]: DFLT,
-		["diffEditor.diagonalFill"]: DEBUG_PINK,
+		["diffEditor.diagonalFill"]: grey.G80,
 		["diffEditor.insertedTextBackground"]: addLightTRANSPARENT,
 		["diffEditor.insertedTextBorder"]: TRANSPARENT,
 		["diffEditor.removedTextBackground"]: deleteLightTRANSPARENT,
@@ -627,13 +627,13 @@ let jsonObject = {
 		["diffEditorOverview.insertedForeground"]: DFLT,
 		["diffEditorOverview.removedForeground"]: DFLT,
 		["diffEditor.unchangedRegionBackground"]: DEBUG_BLUE, //TODO
-		["diffEditor.unchangedRegionForeground"]: DEBUG_PINK,
+		["diffEditor.unchangedRegionForeground"]: DEBUG_GREEN,
 		["diffEditor.unchangedRegionShadow"]: shadow,
 		["diffEditor.unchangedCodeBackground"]: DEBUG_RED,
 		["diffEditor.move.border"]: DFLT,
 		["diffEditor.moveActive.border"]: DFLT,
 		["multiDiffEditor.headerBackground"]: DFLT,
-		["multiDiffEditor.background"]: DEBUG_RED,
+		["multiDiffEditor.background"]: DFLT,
 		["multiDiffEditor.border"]: DFLT,
 
 		//Chat colors
