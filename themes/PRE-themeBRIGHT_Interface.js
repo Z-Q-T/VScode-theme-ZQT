@@ -626,13 +626,13 @@ let jsonObject = {
 		["diffEditorGutter.removedLineBackground"]: TRANSPARENT,
 		["diffEditorOverview.insertedForeground"]: DFLT,
 		["diffEditorOverview.removedForeground"]: DFLT,
-		["diffEditor.unchangedRegionBackground"]: DEBUG_BLUE, //TODO
-		["diffEditor.unchangedRegionForeground"]: DEBUG_GREEN,
+		["diffEditor.unchangedRegionBackground"]: foldArea, //git多文件比较面板未修改内容的背景色
+		["diffEditor.unchangedRegionForeground"]: grey.G50,
 		["diffEditor.unchangedRegionShadow"]: shadow,
-		["diffEditor.unchangedCodeBackground"]: DEBUG_RED,
+		["diffEditor.unchangedCodeBackground"]: grey.G94,
 		["diffEditor.move.border"]: DFLT,
 		["diffEditor.moveActive.border"]: DFLT,
-		["multiDiffEditor.headerBackground"]: DFLT,
+		["multiDiffEditor.headerBackground"]: grey.G84,
 		["multiDiffEditor.background"]: DFLT,
 		["multiDiffEditor.border"]: DFLT,
 
@@ -1205,7 +1205,7 @@ let jsonObject = {
 		["commentsView.unresolvedIcon"]: DFLT,
 
 		//Action Bar colors
-		["actionBar.toggledBackground"]: DEBUG_RED,
+		["actionBar.toggledBackground"]: DFLT,//最大化面板大小的按钮
 
 		//Simple Find Widget colors
 		["simpleFindWidget.sashBorder"]: DFLT,
