@@ -102,8 +102,8 @@ let unicodeHighlight = "#dc8900"; //oklch(0.7 0.16 70)
 let BracketMatchSolid = "#fb2af4"; //oklch(0.7 0.3 330)
 let BracketMatchTRANSPARENT = "#fb2af4aa";
 let linkEditBack = "#fb2af422";
-let foldHint = "#61911c"; //oklch(0.6 0.15 130)
-let foldArea = "#61911c33";
+let foldHint = "#a5a50e"; //oklch(0.7 0.15 110)
+let foldArea = "#a5a50e22";
 let whitespaceCharacter = "#9bce9077"; //=hintLight
 
 let lineHighlightBackground = "#00000011";
@@ -955,7 +955,7 @@ let jsonObject = {
 		["terminalStickyScroll.background"]: DFLT,
 		["terminalStickyScroll.border"]: shadow,
 		["terminalStickyScrollHover.background"]: hover,
-		["terminal.initialHintForeground"]: DEBUG_BLUE,
+		["terminal.initialHintForeground"]: hintDark,
 		["terminalOverviewRuler.border"]: unimportantFore,
 		["terminalCommandGuide.foreground"]: hoverDarker,
 		["terminalSymbolIcon.aliasForeground"]: DFLT,
