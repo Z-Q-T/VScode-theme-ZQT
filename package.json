@@ -17,26 +17,26 @@
 				"id": "ZQT Dark+",
 				"label": "ZQT Dark+",
 				"uiTheme": "vs-dark",
-				"path": "./themes/theme-ZQT-DARK.json"
+				"path": "./color/theme-ZQT-DARK.json"
 			},
 			{
 				"id": "ZQT Bright+",
 				"label": "ZQT Bright+",
 				"uiTheme": "vs",
-				"path": "./themes/theme-ZQT-BRIGHT.json"
+				"path": "./color/theme-ZQT-BRIGHT.json"
 			},
 			{
 				"id": "ZQT DESIGN",
 				"label": "ZQT DESIGN",
 				"uiTheme": "vs-dark",
-				"path": "./themes/theme-ZQT-DESIGN.json"
+				"path": "./color/theme-ZQT-DESIGN.json"
 			}
 		],
 		"iconThemes": [
 			{
 				"id": "vs-minimal",
 				"label": "Minimal (Visual Studio Code)",
-				"path": "./fileicons/vs_minimal-icon-theme.json"
+				"path": "./fileIcon/vs_minimal-icon-theme.json"
 			}
 		]
 	},
