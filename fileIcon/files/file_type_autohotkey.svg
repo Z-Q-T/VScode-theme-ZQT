@@ -1,1 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"><defs><linearGradient id="a" x1="54.604" y1="168.388" x2="54.604" y2="194.885" gradientTransform="translate(-38.604 -165.636)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d8d8d8"/><stop offset="1" stop-color="#a3a3a3"/></linearGradient><linearGradient id="b" x1="68.756" y1="209.152" x2="91.638" y2="209.152" gradientTransform="translate(-50.601 -159.449) scale(0.832 0.837)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d7d7d7"/><stop offset="0.5" stop-color="#e7e7e7"/><stop offset="1" stop-color="#d7d7d7"/></linearGradient></defs><title>file_type_autohotkey</title><rect x="2" y="2.824" width="28" height="26.353" rx="3.088" ry="3.088" style="fill:url(#a)"/><path d="M26.856,29.181H5.144A3.148,3.148,0,0,1,2,26.037V5.963A3.148,3.148,0,0,1,5.144,2.819H26.856A3.148,3.148,0,0,1,30,5.963V26.037A3.148,3.148,0,0,1,26.856,29.181ZM5.144,2.963a3,3,0,0,0-3,3h0V26.037a3,3,0,0,0,3,3H26.856a3,3,0,0,0,3-3V5.963a3,3,0,0,0-3-3Z" style="fill:#8d8d8d"/><rect x="4.313" y="4.641" width="23.169" height="21.94" rx="2.571" ry="2.571" style="fill:url(#b)"/><path d="M24.911,26.641H6.884A2.634,2.634,0,0,1,4.253,24.01V7.212A2.634,2.634,0,0,1,6.884,4.581H24.911a2.634,2.634,0,0,1,2.631,2.631v16.8A2.634,2.634,0,0,1,24.911,26.641ZM6.884,4.7A2.514,2.514,0,0,0,4.373,7.212v16.8a2.514,2.514,0,0,0,2.511,2.511H24.911a2.514,2.514,0,0,0,2.511-2.511V7.212A2.514,2.514,0,0,0,24.911,4.7Z" style="fill:#f8f8f8"/><path d="M6.145,23.9l2.343-6.1h.87l2.5,6.1h-.92l-.712-1.848H7.673L7,23.9ZM7.9,21.4H9.974l-.637-1.7q-.291-.77-.433-1.265A7.776,7.776,0,0,1,8.576,19.6Z"/><path d="M13.607,23.9V17.8h.807v2.5h3.171V17.8h.807v6.1h-.807V21.021h-3.17V23.9Z"/><path d="M20.478,23.9V17.8h.807v3.025l3.03-3.025h1.094L22.85,20.267,25.522,23.9H24.456l-2.172-3.088-1,.974V23.9Z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#_未命名的渐变_191);
+      }
+
+      .st1 {
+        fill: url(#_未命名的渐变_12);
+      }
+
+      .st2 {
+        fill: url(#_未命名的渐变_19);
+      }
+
+      .st3 {
+        fill: url(#_未命名的渐变_121);
+      }
+
+      .st4 {
+        fill: url(#_未命名的渐变_16);
+      }
+
+      .st5 {
+        fill: url(#_未命名的渐变_21);
+      }
+
+      .st6 {
+        fill: #b7b7b7;
+      }
+
+      .st7 {
+        fill: url(#_未命名的渐变_161);
+      }
+
+      .st8 {
+        fill: #f3f3f3;
+      }
+    </style>
+    <linearGradient id="_未命名的渐变_19" data-name="未命名的渐变 19" x1="-235" y1="264.3" x2="-234.2" y2="269" gradientTransform="translate(-915.9 1022.8) rotate(-180) scale(4 3.8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cfd0d1"/>
+      <stop offset="1" stop-color="#dbdbdb"/>
+    </linearGradient>
+    <linearGradient id="_未命名的渐变_12" data-name="未命名的渐变 12" x1="-685.7" y1="-1595.3" x2="-676.9" y2="-1589.3" gradientTransform="translate(145.9 -326.6) scale(.2 -.2)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dbdbdb"/>
+      <stop offset="1" stop-color="#f3f3f3"/>
+    </linearGradient>
+    <linearGradient id="_未命名的渐变_121" data-name="未命名的渐变 12" x1="-1727.8" y1="-1597.6" x2="-1721.5" y2="-1588.6" gradientTransform="translate(-332.5 -326.7) rotate(-180) scale(.2)" xlink:href="#_未命名的渐变_12"/>
+    <linearGradient id="_未命名的渐变_16" data-name="未命名的渐变 16" x1="-1729.4" y1="1255.6" x2="-1720.6" y2="1261.6" gradientTransform="translate(-332.4 -235.4) rotate(-180) scale(.2 -.2)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cfd0d1"/>
+      <stop offset="1" stop-color="#b7b7b7"/>
+    </linearGradient>
+    <linearGradient id="_未命名的渐变_161" data-name="未命名的渐变 16" x1="-683.4" y1="1257.9" x2="-674.7" y2="1263.9" gradientTransform="translate(145.9 -235.6) scale(.2)" xlink:href="#_未命名的渐变_16"/>
+    <linearGradient id="_未命名的渐变_191" data-name="未命名的渐变 19" x1="-174.7" y1="267.9" x2="-174" y2="272.6" gradientTransform="translate(596.7 1083) scale(3.4 -4)" xlink:href="#_未命名的渐变_19"/>
+    <linearGradient id="_未命名的渐变_21" data-name="未命名的渐变 21" x1="-178.6" y1="266.6" x2="-175.4" y2="266.6" gradientTransform="translate(681.3 1022.9) scale(3.8 -3.8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f4f5f7"/>
+      <stop offset="1" stop-color="#e9eaeb"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect class="st2" x="27.1" y="5.9" width="2.9" height="18"/>
+    <rect class="st8" x="4.5" y="2.6" width="21.5" height="1.7"/>
+    <path class="st1" d="M3.9,6.7l-1.9-.6v-1.5c0-1.3,1.2-2.1,2.1-2.1h.4s.7,2.7.7,2.7l-1.3,1.5Z"/>
+    <path class="st3" d="M27.2,7.9l2.8-1.8v-1.6c0-.7-.7-1.9-2.1-2h-1.9s0,3.9,0,3.9l1.3,1.5Z"/>
+    <path class="st4" d="M26.8,23.3l3.2.6v3.5c0,.7-.7,1.9-2.1,2h-1.7l-.7-4.7,1.3-1.5Z"/>
+    <path class="st7" d="M5.2,24.2l-3.2-.3v3.5c0,1.3,1.2,2.1,2.1,2.1h1.8l1.5-3.7-2.2-1.6Z"/>
+    <rect class="st6" x="5.9" y="24.4" width="20.6" height="5"/>
+    <rect class="st0" x="2" y="5.9" width="2.5" height="18.8"/>
+    <rect class="st5" x="4.1" y="3.9" width="23.8" height="23.2" rx="1.9" ry="1.9"/>
+  </g>
+  <g>
+    <path d="M10.1,22.9l.7,1.9h1l-2.4-6.7h-1l-2.5,6.7h.9l.7-1.9h2.7ZM7.7,22.1l1.1-2.9h0l1,2.9h-2.1Z"/>
+    <path d="M17.6,21h-3.5v-2.8h-.9v6.7h.9v-3.1h3.5v3.1h.9v-6.7h-.9v2.8Z"/>
+    <path d="M21.7,22.5l1.1-1,2.3,3.3h1.2l-2.9-4,2.8-2.7h-1.2l-3.2,3.2v-3.2h-.9v6.7h.9v-2.3Z"/>
+  </g>
+</svg>
