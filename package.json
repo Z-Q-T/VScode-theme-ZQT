@@ -1,16 +1,21 @@
 {
 	"name": "zqt-theme",
-	"description": "A theme based on Dark+(default dark)",
+	"description": "A theme",
 	"displayName": "ZQT Theme",
 	"categories": [
 		"Themes"
 	],
 	"version": "1.0.1",
-	"publisher": "ZQT (original publisher: vscode)",
+	"publisher": "ZQT",
 	"license": "MIT",
 	"engines": {
-		"vscode": "^1.40.1"
+		"vscode": "^1.82.0"
 	},
+	"keywords": [
+		"icons",
+		"theme",
+		"icon-theme"
+	],
 	"contributes": {
 		"themes": [
 			{
@@ -20,8 +25,8 @@
 				"path": "./color/theme-ZQT-DARK.json"
 			},
 			{
-				"id": "ZQT Bright+",
-				"label": "ZQT Bright+",
+				"id": "ZQT Bright+ Colour",
+				"label": "ZQT Bright+ Colour",
 				"uiTheme": "vs",
 				"path": "./color/theme-ZQT-BRIGHT.json"
 			},
@@ -34,9 +39,9 @@
 		],
 		"iconThemes": [
 			{
-				"id": "vs-minimal",
-				"label": "Minimal (Visual Studio Code)",
-				"path": "./fileIcon/vs_minimal-icon-theme.json"
+				"id": "ZQT Bright+ Icon",
+				"label": "ZQT Bright+ Icon",
+				"path": "./fileIcon/icon-ZQT-BRIGHT.json"
 			}
 		]
 	},
