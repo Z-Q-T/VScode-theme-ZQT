@@ -67,8 +67,9 @@ let gitUntrack = "#688e3b"; //oklch(0.6 0.12 130)
 let gitIgnore = "#959595";
 let gitConflict = "#a067ac"; //oklch(0.6 0.12 320)
 let gitSubmodule = "#495da7"; //oklch(0.5 0.12 270)
-let SourceControlGraphRef = "#888";
-let SourceControlGraphRemote = "#444";
+let SourceControlGraphRef = "#b69b00";
+let SourceControlGraphRemote = "#909090";
+let SourceControlGraphBase = "#8d5a2b";
 
 let errorLight = "#ff9d9e"; //oklch(0.80 0.12 20)
 let errorDark = "#d64651"; //oklch(0.60 0.18 20)
@@ -1056,7 +1057,7 @@ let jsonObject = {
 		["scmGraph.historyItemHoverDeletionsForeground"]: DFLT,
 		["scmGraph.historyItemRefColor"]: SourceControlGraphRef,
 		["scmGraph.historyItemRemoteRefColor"]: SourceControlGraphRemote,
-		["scmGraph.historyItemBaseRefColor"]: DEBUG_GREEN,
+		["scmGraph.historyItemBaseRefColor"]: SourceControlGraphBase,
 		["scmGraph.historyItemHoverDefaultLabelForeground"]: DFLT,
 		["scmGraph.historyItemHoverDefaultLabelBackground"]: DFLT,
 
@@ -1237,5 +1238,5 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonObject, "./themes/theme-ZQT-BRIGHT_interface.json");
+saveObjectToTxtFile(jsonObject, "./color/theme-ZQT-BRIGHT_interface.json");
 // console.log(jsonObject);
