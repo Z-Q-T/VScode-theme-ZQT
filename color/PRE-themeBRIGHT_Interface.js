@@ -67,9 +67,9 @@ let gitUntrack = "#688e3b"; //oklch(0.6 0.12 130)
 let gitIgnore = "#959595";
 let gitConflict = "#a067ac"; //oklch(0.6 0.12 320)
 let gitSubmodule = "#495da7"; //oklch(0.5 0.12 270)
-let SourceControlGraphRef = "#b69b00";
-let SourceControlGraphRemote = "#909090";
-let SourceControlGraphBase = "#8d5a2b";
+let SourceControlGraphRef = "#3b834e";//oklch(0.55 0.11 150)
+let SourceControlGraphRemote = "#a8564a";//oklch(0.55 0.11 30)
+let SourceControlGraphBase = "#596db2";//oklch(0.55 0.11 270)
 
 let errorLight = "#ff9d9e"; //oklch(0.80 0.12 20)
 let errorDark = "#d64651"; //oklch(0.60 0.18 20)
@@ -102,7 +102,7 @@ let wordHighlightTextTRANSPARENT = "#00ac4e77";
 let unicodeHighlight = "#dc8900"; //oklch(0.7 0.16 70)
 let BracketMatchSolid = "#fb2af4"; //oklch(0.7 0.3 330)
 let BracketMatchTRANSPARENT = "#fb2af4aa";
-let linkEditBack = "#fb2af422";
+let linkEditBack = "#fb2af411";
 let foldHint = "#a5a50e"; //oklch(0.7 0.15 110)
 let foldArea = "#a5a50e22";
 let whitespaceCharacter = "#9bce9077"; //=hintLight
@@ -481,7 +481,7 @@ let jsonObject = {
 		["editorIndentGuide.activeBackground6"]: IndentGuideActive,
 
 		//To see the editor inline hints, set "editor.inlineSuggest.enabled": true.
-		["editorInlayHint.background"]: DEBUG_PINK,
+		["editorInlayHint.background"]: hintLight,
 		["editorInlayHint.foreground"]: DEBUG_BLUE,
 		["editorInlayHint.typeForeground"]: DFLT,
 		["editorInlayHint.typeBackground"]: DFLT,
