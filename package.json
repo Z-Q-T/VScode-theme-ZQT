@@ -5,11 +5,11 @@
 	"categories": [
 		"Themes"
 	],
-	"version": "1.0.1",
-	"publisher": "ZQT",
+	"version": "0.9.0",
+	"publisher": "Z-Q-T",
 	"license": "MIT",
 	"engines": {
-		"vscode": "^1.82.0"
+		"vscode": "^1.110.0"
 	},
 	"keywords": [
 		"icons",
@@ -29,12 +29,6 @@
 				"label": "ZQT Bright+ Colour",
 				"uiTheme": "vs",
 				"path": "./color/theme-ZQT-BRIGHT.json"
-			},
-			{
-				"id": "ZQT DESIGN",
-				"label": "ZQT DESIGN",
-				"uiTheme": "vs-dark",
-				"path": "./color/theme-ZQT-DESIGN.json"
 			}
 		],
 		"iconThemes": [
@@ -45,7 +39,8 @@
 			}
 		]
 	},
-	"__metadata": {
-		"size": 107353
+	"repository": {
+		"type": "git",
+		"url": "https://https://github.com/Z-Q-T/VScode-theme-ZQT.git"
 	}
 }
