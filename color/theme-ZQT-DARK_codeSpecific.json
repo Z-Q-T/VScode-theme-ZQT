@@ -1,6 +1,6 @@
 {
 	"$schema": "vscode://schemas/color-theme",
-	"name": "Specific Code Highlight - ZQT Theme",
+	"name": "Specific Code Highlight - ZQT DARK Theme",
 	"//description": "各个语言专有的代码高亮",
 	"include": "theme-ZQT-DARK_codeUniversal.json",
 	"tokenColors": [
@@ -125,6 +125,12 @@
 			"scope": "keyword.other.important.css",
 			"settings": {
 				"foreground": "#00c5ee"
+			}
+		},
+		{
+			"scope": "punctuation.definition.heading.markdown",
+			"settings": {
+				"foreground": "#636363"
 			}
 		}
 	]

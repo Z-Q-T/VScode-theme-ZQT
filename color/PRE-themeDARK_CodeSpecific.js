@@ -65,8 +65,8 @@ const colorRules = [
 	{ scopes: ["variable.css","variable.argument.css"], color: colour.L74_C12_H020 }, 
 	{ scopes: ["meta.function-call.python"], color: colour.L74_C10_H080 }, 
 	{ scopes: ["meta.function-call.arguments.python"], color: colour.L76_C08_H140 }, 
-
 	{ scopes: "keyword.other.important.css", color: colour.L76_C14_H220 },
+	{ scopes: "punctuation.definition.heading.markdown", color: GREY50 },
 ];
 //js、html、python都好了，再改一改css就好了
 
@@ -90,6 +90,6 @@ function saveObjectToTxtFile(obj, filePath) {
 	});
 }
 
-saveObjectToTxtFile(jsonData, "./themes/theme-ZQT-DARK_codeSpecific.json");
+saveObjectToTxtFile(jsonData, "./color/theme-ZQT-DARK_codeSpecific.json");
 // saveObjectToTxtFjsonObject, "./_ZQT.json");
 // // console.loonObject);
