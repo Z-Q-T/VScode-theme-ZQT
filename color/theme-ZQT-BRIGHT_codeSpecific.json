@@ -38,7 +38,9 @@
 				"punctuation.definition.list.begin.markdown",
 				"punctuation.definition.metadata.markdown",
 				"punctuation.definition.link.title.begin.markdown",
-				"punctuation.definition.link.title.end.markdown"
+				"punctuation.definition.link.title.end.markdown",
+				"fenced_code.block.language.markdown",
+				"markup.underline.link.markdown"
 			],
 			"settings": {
 				"foreground": "#bebebe"
@@ -46,8 +48,7 @@
 		},
 		{
 			"scope": [
-				"meta.separator.markdown",
-				"markup.underline.link.markdown"
+				"meta.separator.markdown"
 			],
 			"settings": {
 				"foreground": "#808080"
@@ -78,9 +79,15 @@
 			}
 		},
 		{
+			"scope": "heading.5.markdown",
+			"settings": {
+				"foreground": "#90502a"
+			}
+		},
+		{
 			"scope": "markup.bold.markdown",
 			"settings": {
-				"foreground": "#595c9b"
+				"foreground": "#6e519d"
 			}
 		},
 		{
@@ -101,7 +108,7 @@
 		{
 			"scope": "string.other.link.title.markdown",
 			"settings": {
-				"foreground": "#0070a6"
+				"foreground": "#27709c"
 			}
 		}
 	]
