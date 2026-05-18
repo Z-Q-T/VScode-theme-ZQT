@@ -1,0 +1,2 @@
+test文件的图标全都基于test.svg拓展
+config文件的图标全都基于config.svg拓展
