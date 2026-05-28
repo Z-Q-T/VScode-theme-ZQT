@@ -5,6 +5,8 @@
 		"_folder_open": { "iconPath": "./folders/default_folder_opened.svg" },
 		"_root_folder": { "iconPath": "./folders/default_root_folder.svg" },
 		"_root_folder_open": { "iconPath": "./folders/default_root_folder_opened.svg" },
+		"_fd_agents": { "iconPath": "./folders/folder_agents.svg" },
+		"_fd_agents_open": { "iconPath": "./folders/folder_agents_opened.svg" },
 		"_fd_android": { "iconPath": "./folders/folder_type_android.svg" },
 		"_fd_android_open": { "iconPath": "./folders/folder_type_android_opened.svg" },
 		"_fd_angular": { "iconPath": "./folders/folder_type_angular.svg" },
@@ -1190,6 +1192,8 @@
 	"hidesExplorerArrows": false,
 
 	"folderNames": {
+		".agents": "_fd_agents",
+		"skills": "_fd_agents",
 		"android": "_folder",
 		".angular": "_folder",
 		"apache": "_folder",
@@ -1668,6 +1672,8 @@
 		".zed": "_folder"
 	},
 	"folderNamesExpanded": {
+		".agents": "_fd_agents_open",
+		"skills": "_fd_agents_open",
 		"android": "_folder_open",
 		".angular": "_folder_open",
 		"apache": "_folder_open",
